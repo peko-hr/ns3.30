@@ -1,0 +1,32 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('hirai', ['internet', 'wifi'])
+    module.includes = '.'
+    module.source = [
+        'model/hirai-packet.cc',
+        'model/hirai-routing-protocol.cc',
+        'helper/hirai-helper.cc',
+        ]
+
+    #hirai_test = bld.create_ns3_module_test_library('hirai')
+   # hirai_test.source = [
+      #  'test/hirai-id-cache-test-suite.cc',
+       # 'test/hirai-test-suite.cc',
+       # 'test/hirai-regression.cc',
+       # 'test/bug-772.cc',
+       # 'test/loopback.cc',
+       # ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'hirai'
+    headers.source = [
+        'model/hirai-packet.h',
+        'model/hirai-routing-protocol.h',
+        'helper/hirai-helper.h',
+        ]
+
+    #if bld.env['ENABLE_EXAMPLES']:
+     #   bld.recurse('examples')
+
+   # bld.ns3_python_bindings()
