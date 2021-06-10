@@ -1,13 +1,13 @@
-# project ns (3-dev) configured on Wed Jun  9 15:47:07 2021 by
-# waf 2.0.18 (abi 20, python 30609f0 on linux)
+# project ns (3-dev) configured on Thu Jun 10 18:13:34 2021 by
+# waf 2.0.18 (abi 20, python 30805f0 on linux)
 # using ./waf configure
 #
 ----------------------------------------
 Setting top to
-/home/nsl-ubu/ns-3-allinone/ns-3.30
+/home/ubupeko20/ns-3-allinone/ns3.30
 ----------------------------------------
 Setting out to
-/home/nsl-ubu/ns-3-allinone/ns-3.30/build
+/home/ubupeko20/ns-3-allinone/ns3.30/build
 ----------------------------------------
 Checking for 'gcc' (C compiler)
 find program=['gcc', 'cc'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CC' -> ['/usr/bin/gcc']
@@ -41,6 +41,7 @@ out: #define __SSP_STRONG__ 3
 #define __FLT_EVAL_METHOD__ 0
 #define __unix__ 1
 #define __FLT64_DECIMAL_DIG__ 17
+#define __CET__ 3
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
 #define __x86_64 1
 #define __UINT_FAST64_MAX__ 0xffffffffffffffffUL
@@ -109,7 +110,7 @@ out: #define __SSP_STRONG__ 3
 #define __FLT64X_MIN_10_EXP__ (-4931)
 #define __LDBL_HAS_QUIET_NAN__ 1
 #define __FLT64_MANT_DIG__ 53
-#define __GNUC__ 7
+#define __GNUC__ 9
 #define __pie__ 2
 #define __MMX__ 1
 #define __FLT_HAS_DENORM__ 1
@@ -119,6 +120,7 @@ out: #define __SSP_STRONG__ 3
 #define __DBL_MAX__ ((double)1.79769313486231570814527423731704357e+308L)
 #define __INT_FAST32_MAX__ 0x7fffffffffffffffL
 #define __DBL_HAS_INFINITY__ 1
+#define __HAVE_SPECULATION_SAFE_VALUE 1
 #define __DEC32_MIN_EXP__ (-94)
 #define __INTPTR_WIDTH__ 64
 #define __FLT32X_HAS_DENORM__ 1
@@ -136,7 +138,6 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_HLE_RELEASE 131072
 #define __PTRDIFF_MAX__ 0x7fffffffffffffffL
 #define __amd64 1
-#define __STDC_NO_THREADS__ 1
 #define __ATOMIC_HLE_ACQUIRE 65536
 #define __FLT32_HAS_QUIET_NAN__ 1
 #define __LONG_LONG_MAX__ 0x7fffffffffffffffLL
@@ -146,7 +147,7 @@ out: #define __SSP_STRONG__ 3
 #define __LONG_LONG_WIDTH__ 64
 #define __FLT32_MAX_EXP__ 128
 #define __GCC_HAVE_DWARF2_CFI_ASM 1
-#define __GXX_ABI_VERSION 1011
+#define __GXX_ABI_VERSION 1013
 #define __FLT_MIN_EXP__ (-125)
 #define __FLT64X_HAS_QUIET_NAN__ 1
 #define __INT_FAST64_TYPE__ long int
@@ -168,7 +169,7 @@ out: #define __SSP_STRONG__ 3
 #define __NO_INLINE__ 1
 #define __FLT_MANT_DIG__ 24
 #define __LDBL_DECIMAL_DIG__ 21
-#define __VERSION__ "7.5.0"
+#define __VERSION__ "9.3.0"
 #define __UINT64_C(c) c ## UL
 #define _STDC_PREDEF_H 1
 #define __GCC_ATOMIC_INT_LOCK_FREE 2
@@ -236,7 +237,7 @@ out: #define __SSP_STRONG__ 3
 #define __INT_LEAST64_TYPE__ long int
 #define __INT16_TYPE__ short int
 #define __INT_LEAST8_TYPE__ signed char
-#define __STDC_VERSION__ 201112L
+#define __STDC_VERSION__ 201710L
 #define __DEC32_MAX_EXP__ 97
 #define __INT_FAST8_MAX__ 0x7f
 #define __FLT128_MAX__ 1.18973149535723176508575932662800702e+4932F128
@@ -329,7 +330,7 @@ out: #define __SSP_STRONG__ 3
 #define __DEC128_MAX_EXP__ 6145
 #define __FLT32X_HAS_QUIET_NAN__ 1
 #define __ATOMIC_CONSUME 1
-#define __GNUC_MINOR__ 5
+#define __GNUC_MINOR__ 3
 #define __INT_FAST16_WIDTH__ 64
 #define __UINTMAX_MAX__ 0xffffffffffffffffUL
 #define __DEC32_MANT_DIG__ 7
@@ -364,7 +365,7 @@ find program=['ar'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/u
 /usr/bin/gcc
 ----------------------------------------
 Checking for cc version
-7.5.0
+9.3.0
 ----------------------------------------
 Checking for 'g++' (C++ compiler)
 find program=['g++', 'c++'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='CXX' -> ['/usr/bin/g++']
@@ -398,6 +399,7 @@ out: #define __SSP_STRONG__ 3
 #define __FLT_EVAL_METHOD__ 0
 #define __unix__ 1
 #define __FLT64_DECIMAL_DIG__ 17
+#define __CET__ 3
 #define __GCC_ATOMIC_CHAR32_T_LOCK_FREE 2
 #define __x86_64 1
 #define __UINT_FAST64_MAX__ 0xffffffffffffffffUL
@@ -466,7 +468,7 @@ out: #define __SSP_STRONG__ 3
 #define __FLT64X_MIN_10_EXP__ (-4931)
 #define __LDBL_HAS_QUIET_NAN__ 1
 #define __FLT64_MANT_DIG__ 53
-#define __GNUC__ 7
+#define __GNUC__ 9
 #define __pie__ 2
 #define __MMX__ 1
 #define __FLT_HAS_DENORM__ 1
@@ -476,6 +478,7 @@ out: #define __SSP_STRONG__ 3
 #define __DBL_MAX__ ((double)1.79769313486231570814527423731704357e+308L)
 #define __INT_FAST32_MAX__ 0x7fffffffffffffffL
 #define __DBL_HAS_INFINITY__ 1
+#define __HAVE_SPECULATION_SAFE_VALUE 1
 #define __DEC32_MIN_EXP__ (-94)
 #define __INTPTR_WIDTH__ 64
 #define __FLT32X_HAS_DENORM__ 1
@@ -493,7 +496,6 @@ out: #define __SSP_STRONG__ 3
 #define __ATOMIC_HLE_RELEASE 131072
 #define __PTRDIFF_MAX__ 0x7fffffffffffffffL
 #define __amd64 1
-#define __STDC_NO_THREADS__ 1
 #define __ATOMIC_HLE_ACQUIRE 65536
 #define __FLT32_HAS_QUIET_NAN__ 1
 #define __LONG_LONG_MAX__ 0x7fffffffffffffffLL
@@ -503,7 +505,7 @@ out: #define __SSP_STRONG__ 3
 #define __LONG_LONG_WIDTH__ 64
 #define __FLT32_MAX_EXP__ 128
 #define __GCC_HAVE_DWARF2_CFI_ASM 1
-#define __GXX_ABI_VERSION 1011
+#define __GXX_ABI_VERSION 1013
 #define __FLT_MIN_EXP__ (-125)
 #define __FLT64X_HAS_QUIET_NAN__ 1
 #define __INT_FAST64_TYPE__ long int
@@ -525,7 +527,7 @@ out: #define __SSP_STRONG__ 3
 #define __NO_INLINE__ 1
 #define __FLT_MANT_DIG__ 24
 #define __LDBL_DECIMAL_DIG__ 21
-#define __VERSION__ "7.5.0"
+#define __VERSION__ "9.3.0"
 #define __UINT64_C(c) c ## UL
 #define _STDC_PREDEF_H 1
 #define __GCC_ATOMIC_INT_LOCK_FREE 2
@@ -593,7 +595,7 @@ out: #define __SSP_STRONG__ 3
 #define __INT_LEAST64_TYPE__ long int
 #define __INT16_TYPE__ short int
 #define __INT_LEAST8_TYPE__ signed char
-#define __STDC_VERSION__ 201112L
+#define __STDC_VERSION__ 201710L
 #define __DEC32_MAX_EXP__ 97
 #define __INT_FAST8_MAX__ 0x7f
 #define __FLT128_MAX__ 1.18973149535723176508575932662800702e+4932F128
@@ -686,7 +688,7 @@ out: #define __SSP_STRONG__ 3
 #define __DEC128_MAX_EXP__ 6145
 #define __FLT32X_HAS_QUIET_NAN__ 1
 #define __ATOMIC_CONSUME 1
-#define __GNUC_MINOR__ 5
+#define __GNUC_MINOR__ 3
 #define __INT_FAST16_WIDTH__ 64
 #define __UINTMAX_MAX__ 0xffffffffffffffffUL
 #define __DEC32_MANT_DIG__ 7
@@ -726,7 +728,7 @@ int main() { return 0; }
 <==
 [1/1] Compiling [32mbuild/.conf_check_92724e97d2a8131cdbabec48e168cdc4/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_92724e97d2a8131cdbabec48e168cdc4/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_92724e97d2a8131cdbabec48e168cdc4/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for compilation flag -std=c++11 support
@@ -735,69 +737,79 @@ int main() { return 0; }
 <==
 [1/1] Compiling [32mbuild/.conf_check_92724e97d2a8131cdbabec48e168cdc4/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_92724e97d2a8131cdbabec48e168cdc4/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_92724e97d2a8131cdbabec48e168cdc4/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking boost includes
-1_65_1
+1_71
 ------------------------------------------------------
 Checking boost libs
 Found the boost path in /usr/lib/x86_64-linux-gnu with the libraries:
-    /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
     /usr/lib/x86_64-linux-gnu/libboost_filesystem.a
     /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.65.1
-    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.65.1
-    /usr/lib/x86_64-linux-gnu/libboost_locale.so.1.65.1
-    /usr/lib/x86_64-linux-gnu/libboost_signals.a
-    /usr/lib/x86_64-linux-gnu/libboost_signals.so
-    /usr/lib/x86_64-linux-gnu/libboost_signals.so.1.65.1
+    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_locale.so.1.71.0
     /usr/lib/x86_64-linux-gnu/libboost_system.a
     /usr/lib/x86_64-linux-gnu/libboost_system.so
-    /usr/lib/x86_64-linux-gnu/libboost_system.so.1.65.1
-    /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.65.1
-Trying pattern boost_system(-gcc[0-9]{0,3})-1_65_1.so$
-Trying pattern boost_system-1_65_1.so$
+    /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+Trying pattern boost_system(-gcc[0-9]{0,3})-1_71.so$
+Trying pattern boost_system-1_71.so$
 Trying pattern boost_system(-gcc[0-9]{0,3}).so$
 Trying pattern boost_system.so$
 Found boost lib /usr/lib/x86_64-linux-gnu/libboost_system.so
-Trying pattern boost_signals(-gcc[0-9]{0,3})-1_65_1.so$
-Trying pattern boost_signals-1_65_1.so$
+Trying pattern boost_signals(-gcc[0-9]{0,3})-1_71.so$
+Trying pattern boost_signals-1_71.so$
 Trying pattern boost_signals(-gcc[0-9]{0,3}).so$
 Trying pattern boost_signals.so$
-Found boost lib /usr/lib/x86_64-linux-gnu/libboost_signals.so
-Trying pattern boost_filesystem(-gcc[0-9]{0,3})-1_65_1.so$
-Trying pattern boost_filesystem-1_65_1.so$
-Trying pattern boost_filesystem(-gcc[0-9]{0,3}).so$
-Trying pattern boost_filesystem.so$
-Found boost lib /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-ok
+Trying pattern boost_signals.so$
+Trying pattern boost_signals
+lib signals not found in /usr/lib/x86_64-linux-gnu
+from /home/ubupeko20/ns-3-allinone/ns3.30: The configuration failed
 ------------------------------------------------------
-Checking for boost linkage
-==>
-
-#include <boost/system/error_code.hpp>
-int main() { boost::system::error_code c; }
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_595f4e7318450590c0c26e80efd1c5bd/test.cpp[0m
-
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-I/usr/include', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_595f4e7318450590c0c26e80efd1c5bd/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_595f4e7318450590c0c26e80efd1c5bd/testbuild/testprog[0m
-
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_595f4e7318450590c0c26e80efd1c5bd/testbuild/testprog', '-Wl,-Bstatic', '-L/usr/lib/x86_64-linux-gnu', '-Wl,-Bdynamic', '-L/usr/lib/x86_64-linux-gnu', '-lboost_system', '-lboost_signals', '-lboost_filesystem']
-ok
+Checking boost includes
+1_71
+------------------------------------------------------
+Checking boost libs
+Found the boost path in /usr/lib/x86_64-linux-gnu with the libraries:
+    /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_filesystem.a
+    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+    /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_locale.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_system.a
+    /usr/lib/x86_64-linux-gnu/libboost_system.so
+    /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+    /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+Trying pattern boost_system(-gcc[0-9]{0,3})-1_71.so$
+Trying pattern boost_system-1_71.so$
+Trying pattern boost_system(-gcc[0-9]{0,3}).so$
+Trying pattern boost_system.so$
+Found boost lib /usr/lib/x86_64-linux-gnu/libboost_system.so
+Trying pattern boost_signals(-gcc[0-9]{0,3})-1_71.so$
+Trying pattern boost_signals-1_71.so$
+Trying pattern boost_signals(-gcc[0-9]{0,3}).so$
+Trying pattern boost_signals.so$
+Trying pattern boost_signals.so$
+Trying pattern boost_signals
+lib signals not found in /usr/lib/x86_64-linux-gnu
+from /home/ubupeko20/ns-3-allinone/ns3.30: The configuration failed
 ------------------------------------------------------
 Checking for program 'python'
 /usr/bin/python3
 find program=['python'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON' -> ['/usr/bin/python3']
 ['/usr/bin/python3', '-c', 'import imp;print(imp.get_tag())']
-out: cpython-36
+out: cpython-38
+
+err: <string>:1: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
 
 ['/usr/bin/python3', '-c', 'import sys\nfor x in sys.version_info: print(str(x))']
 out: 3
-6
-9
+8
+5
 final
 0
 
@@ -813,62 +825,57 @@ out: '/usr/local/lib/python3/dist-packages'
 
 ------------------------------------------------------
 Checking for python version >= 2.3
-3.6.9
+3.8.5
 ['/usr/bin/python3', '-c', "from distutils.sysconfig import get_config_var, get_python_lib\n\nprint(repr(get_config_var('prefix') or ''))\nprint(repr(get_config_var('SO') or ''))\nprint(repr(get_config_var('LDFLAGS') or ''))\nprint(repr(get_config_var('LIBDIR') or ''))\nprint(repr(get_config_var('LIBPL') or ''))\nprint(repr(get_config_var('INCLUDEPY') or ''))\nprint(repr(get_config_var('Py_ENABLE_SHARED') or ''))\nprint(repr(get_config_var('MACOSX_DEPLOYMENT_TARGET') or ''))\nprint(repr(get_config_var('LDSHARED') or ''))\nprint(repr(get_config_var('CFLAGS') or ''))\nprint(repr(get_config_var('LDVERSION') or ''))"]
 out: '/usr'
-'.cpython-36m-x86_64-linux-gnu.so'
-'-Wl,-Bsymbolic-functions  -Wl,-z,relro'
+'.cpython-38-x86_64-linux-gnu.so'
+'-Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
 '/usr/lib'
-'/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu'
-'/usr/include/python3.6m'
+'/usr/lib/python3.8/config-3.8-x86_64-linux-gnu'
+'/usr/include/python3.8'
 1
 ''
-'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions  -Wl,-z,relro'
-'-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g   -fstack-protector-strong -Wformat -Werror=format-security  -g -flto -fuse-linker-plugin -ffat-lto-objects'
-'3.6m'
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
+'-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g   -fstack-protector-strong -Wformat -Werror=format-security  -g -fwrapv -O2   '
+'3.8'
+
+err: <string>:4: DeprecationWarning: SO is deprecated, use EXT_SUFFIX
 
 '/usr'
-'.cpython-36m-x86_64-linux-gnu.so'
-'-Wl,-Bsymbolic-functions  -Wl,-z,relro'
+'.cpython-38-x86_64-linux-gnu.so'
+'-Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
 '/usr/lib'
-'/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu'
-'/usr/include/python3.6m'
+'/usr/lib/python3.8/config-3.8-x86_64-linux-gnu'
+'/usr/include/python3.8'
 1
 ''
-'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions  -Wl,-z,relro'
-'-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g   -fstack-protector-strong -Wformat -Werror=format-security  -g -flto -fuse-linker-plugin -ffat-lto-objects'
-'3.6m'
+'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
+'-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g   -fstack-protector-strong -Wformat -Werror=format-security  -g -fwrapv -O2   '
+'3.8'
 
 Configuration returned from ['/usr/bin/python3']:
 prefix = '/usr'
-SO = '.cpython-36m-x86_64-linux-gnu.so'
-LDFLAGS = '-Wl,-Bsymbolic-functions  -Wl,-z,relro'
+SO = '.cpython-38-x86_64-linux-gnu.so'
+LDFLAGS = '-Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
 LIBDIR = '/usr/lib'
-LIBPL = '/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu'
-INCLUDEPY = '/usr/include/python3.6m'
+LIBPL = '/usr/lib/python3.8/config-3.8-x86_64-linux-gnu'
+INCLUDEPY = '/usr/include/python3.8'
 Py_ENABLE_SHARED = 1
 MACOSX_DEPLOYMENT_TARGET = ''
-LDSHARED = 'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions  -Wl,-z,relro'
-CFLAGS = '-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g   -fstack-protector-strong -Wformat -Werror=format-security  -g -flto -fuse-linker-plugin -ffat-lto-objects'
-LDVERSION = '3.6m'
+LDSHARED = 'x86_64-linux-gnu-gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-Bsymbolic-functions  -Wl,-z,relro -g -fwrapv -O2   '
+CFLAGS = '-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O2 -Wall -g   -fstack-protector-strong -Wformat -Werror=format-security  -g -fwrapv -O2   '
+LDVERSION = '3.8'
 
 ------------------------------------------------------
 python-config
 /usr/bin/python3-config
-find program=['/usr/bin/python3-config', 'python3.6-config', 'python-config-3.6', 'python3.6m-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> ['/usr/bin/python3-config']
+find program=['/usr/bin/python3-config', 'python3.8-config', 'python-config-3.8', 'python3.8m-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> ['/usr/bin/python3-config']
 --------------------------------------------------------------------------
 Asking python-config for pyembed '--cflags --libs --ldflags --embed' flags
 ['/usr/bin/python3-config', '--cflags', '--libs', '--ldflags', '--embed']
-out: Usage: /usr/bin/python3-config --prefix|--exec-prefix|--includes|--libs|--cflags|--ldflags|--extension-suffix|--help|--abiflags|--configdir
-
-not found
-from /home/nsl-ubu/ns-3-allinone/ns-3.30/bindings/python: The configuration failed
---------------------------------------------------------------------------
-Asking python-config for pyembed '--cflags --libs --ldflags' flags
-['/usr/bin/python3-config', '--cflags', '--libs', '--ldflags']
-out: -I/usr/include/python3.6m -I/usr/include/python3.6m  -Wno-unused-result -Wsign-compare -g -fdebug-prefix-map=/build/python3.6-1chSKv/python3.6-3.6.9=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O3 -Wall
--lpython3.6m -lpthread -ldl  -lutil -lm 
--L/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu -L/usr/lib -lpython3.6m -lpthread -ldl  -lutil -lm  -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
+out: -I/usr/include/python3.8 -I/usr/include/python3.8  -Wno-unused-result -Wsign-compare -g -fdebug-prefix-map=/build/python3.8-9NnMV8/python3.8-3.8.5=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O3 -Wall
+-lpython3.8 -lcrypt -lpthread -ldl  -lutil -lm -lm 
+-L/usr/lib/python3.8/config-3.8-x86_64-linux-gnu -L/usr/lib -lpython3.8 -lcrypt -lpthread -ldl  -lutil -lm -lm 
 
 Unhandled flag '-Wno-unused-result'
 Unhandled flag '-Wsign-compare'
@@ -901,17 +908,17 @@ int main(int argc, char **argv)
 <==
 [1/2] Compiling [32mbuild/.conf_check_f8ef775e3cf1f559b692147c1226d7ba/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-g', '-fdebug-prefix-map=/build/python3.6-1chSKv/python3.6-3.6.9=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.6m', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_f8ef775e3cf1f559b692147c1226d7ba/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-g', '-fdebug-prefix-map=/build/python3.8-9NnMV8/python3.8-3.8.5=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.8', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_f8ef775e3cf1f559b692147c1226d7ba/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_f8ef775e3cf1f559b692147c1226d7ba/testbuild/testprog[0m
 
-['/usr/bin/g++', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_f8ef775e3cf1f559b692147c1226d7ba/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu', '-L/usr/lib', '-lpython3.6m', '-lpthread', '-ldl', '-lutil', '-lm', '-lpython3.6m', '-lpthread', '-ldl', '-lutil', '-lm']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_f8ef775e3cf1f559b692147c1226d7ba/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python3.8/config-3.8-x86_64-linux-gnu', '-L/usr/lib', '-lpython3.8', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm', '-lpython3.8', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm']
 yes
 --------------------------------------------------------------------------
 Asking python-config for pyext '--cflags --libs --ldflags' flags
 ['/usr/bin/python3-config', '--cflags', '--libs', '--ldflags']
-out: -I/usr/include/python3.6m -I/usr/include/python3.6m  -Wno-unused-result -Wsign-compare -g -fdebug-prefix-map=/build/python3.6-1chSKv/python3.6-3.6.9=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O3 -Wall
--lpython3.6m -lpthread -ldl  -lutil -lm 
--L/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu -L/usr/lib -lpython3.6m -lpthread -ldl  -lutil -lm  -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
+out: -I/usr/include/python3.8 -I/usr/include/python3.8  -Wno-unused-result -Wsign-compare -g -fdebug-prefix-map=/build/python3.8-9NnMV8/python3.8-3.8.5=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O3 -Wall
+ -lcrypt -lpthread -ldl  -lutil -lm -lm 
+-L/usr/lib/python3.8/config-3.8-x86_64-linux-gnu -L/usr/lib  -lcrypt -lpthread -ldl  -lutil -lm -lm 
 
 Unhandled flag '-Wno-unused-result'
 Unhandled flag '-Wsign-compare'
@@ -944,10 +951,10 @@ int main(int argc, char **argv)
 <==
 [1/2] Compiling [32mbuild/.conf_check_eaab107a0ad0c09fe99b0e743a890f00/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fPIC', '-g', '-fdebug-prefix-map=/build/python3.6-1chSKv/python3.6-3.6.9=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.6m', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DNDEBUG', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_eaab107a0ad0c09fe99b0e743a890f00/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_eaab107a0ad0c09fe99b0e743a890f00/testbuild/testprog.cpython-36m-x86_64-linux-gnu.so[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fPIC', '-g', '-fdebug-prefix-map=/build/python3.8-9NnMV8/python3.8-3.8.5=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.8', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DNDEBUG', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_eaab107a0ad0c09fe99b0e743a890f00/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_eaab107a0ad0c09fe99b0e743a890f00/testbuild/testprog.cpython-38-x86_64-linux-gnu.so[0m
 
-['/usr/bin/g++', '-shared', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_eaab107a0ad0c09fe99b0e743a890f00/testbuild/testprog.cpython-36m-x86_64-linux-gnu.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu', '-L/usr/lib', '-lpython3.6m', '-lpthread', '-ldl', '-lutil', '-lm', '-lpython3.6m', '-lpthread', '-ldl', '-lutil', '-lm']
+['/usr/bin/g++', '-shared', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_eaab107a0ad0c09fe99b0e743a890f00/testbuild/testprog.cpython-38-x86_64-linux-gnu.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python3.8/config-3.8-x86_64-linux-gnu', '-L/usr/lib', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm', '-lcrypt', '-lpthread', '-ldl', '-lutil', '-lm', '-lm']
 yes
 --------------------------------------------------------------------------
 Checking for compilation flag -fvisibility=hidden support
@@ -956,7 +963,7 @@ int main() { return 0; }
 <==
 [1/1] Compiling [32mbuild/.conf_check_92724e97d2a8131cdbabec48e168cdc4/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fvisibility=hidden', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_92724e97d2a8131cdbabec48e168cdc4/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fvisibility=hidden', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_92724e97d2a8131cdbabec48e168cdc4/testbuild/test.cpp.1.o']
 ok
 --------------------------------------------------------------------------
 Checking for compilation flag -Wno-array-bounds support
@@ -965,7 +972,7 @@ int main() { return 0; }
 <==
 [1/1] Compiling [32mbuild/.conf_check_92724e97d2a8131cdbabec48e168cdc4/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-array-bounds', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_92724e97d2a8131cdbabec48e168cdc4/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-array-bounds', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_92724e97d2a8131cdbabec48e168cdc4/testbuild/test.cpp.1.o']
 ok
 --------------------------------------------------------------------------
 Checking for pybindgen location
@@ -995,7 +1002,7 @@ int main ()
 <==
 [1/1] Compiling [32mbuild/.conf_check_08a49a4b8e55fc7f07fb5fa692be882c/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_08a49a4b8e55fc7f07fb5fa692be882c/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_08a49a4b8e55fc7f07fb5fa692be882c/testbuild/test.cpp.1.o']
 yes
 --------------------------------------------------------------------------
 Checking for types uint64_t and unsigned long equivalence
@@ -1016,22 +1023,22 @@ int main ()
 <==
 [1/1] Compiling [32mbuild/.conf_check_ea09671089e1dae4ca451449dba25145/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_ea09671089e1dae4ca451449dba25145/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_ea09671089e1dae4ca451449dba25145/testbuild/test.cpp.1.o']
 err: ../test.cpp: In function ‘int main()’:
-../test.cpp:7:37: error: conversion from ‘std::vector<long long unsigned int>’ to non-scalar type ‘std::vector<long unsigned int>’ requested
-    std::vector< uint64_t > t = std::vector< unsigned long long > ();
-                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../test.cpp:7:37: error: conversion from ‘vector<long long unsigned int>’ to non-scalar type ‘vector<long unsigned int>’ requested
+    7 |    std::vector< uint64_t > t = std::vector< unsigned long long > ();
+      |                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-from /home/nsl-ubu/ns-3-allinone/ns-3.30/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/nsl-ubu/ns-3-allinone/ns-3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Configure.py", line 333, in run_build
+from /home/ubupeko20/ns-3-allinone/ns3.30/bindings/python: Test does not build: Traceback (most recent call last):
+  File "/home/ubupeko20/ns-3-allinone/ns3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Configure.py", line 333, in run_build
     bld.compile()
-  File "/home/nsl-ubu/ns-3-allinone/ns-3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Build.py", line 176, in compile
+  File "/home/ubupeko20/ns-3-allinone/ns3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Build.py", line 176, in compile
     raise Errors.BuildError(self.producer.error)
 waflib.Errors.BuildError: Build failed
  -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
 
 no
-from /home/nsl-ubu/ns-3-allinone/ns-3.30/bindings/python: The configuration failed
+from /home/ubupeko20/ns-3-allinone/ns3.30/bindings/python: The configuration failed
 --------------------------------------------------------------------------
 Checking for types uint64_t and unsigned long long equivalence
 yes
@@ -1052,10 +1059,10 @@ int main ()
 <==
 [1/2] Compiling [32mbuild/.conf_check_5fe4043d889dab0109c4a956a6a1046f/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_5fe4043d889dab0109c4a956a6a1046f/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_5fe4043d889dab0109c4a956a6a1046f/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_5fe4043d889dab0109c4a956a6a1046f/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_5fe4043d889dab0109c4a956a6a1046f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_5fe4043d889dab0109c4a956a6a1046f/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 complete
 --------------------------------------------------------------------------
 Checking for python module 'pygccxml'
@@ -1065,7 +1072,7 @@ err: Traceback (most recent call last):
 ModuleNotFoundError: No module named 'pygccxml'
 
 not found
-from /home/nsl-ubu/ns-3-allinone/ns-3.30/bindings/python: Could not find the python module 'pygccxml'
+from /home/ubupeko20/ns-3-allinone/ns3.30/bindings/python: Could not find the python module 'pygccxml'
 --------------------------------------------------------------------------
 Checking for click location
 not found
@@ -1076,13 +1083,9 @@ find program=['pkg-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sb
 --------------------------------------------------------------------------
 Checking for 'gtk+-3.0'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'gtk+-3.0']
-err: Package gtk+-3.0 was not found in the pkg-config search path.
-Perhaps you should add the directory containing `gtk+-3.0.pc'
-to the PKG_CONFIG_PATH environment variable
-No package 'gtk+-3.0' found
+out: -pthread -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
 
-not found
-from /home/nsl-ubu/ns-3-allinone/ns-3.30/src/config-store: The configuration failed
+yes
 --------------------------------------------------------------------------
 Checking for 'libxml-2.0'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'libxml-2.0']
@@ -1105,39 +1108,34 @@ checking for uint128_t
 <==
 [1/2] Compiling [32mbuild/.conf_check_facce93b27c0b28e5964dbe835d44fd5/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_facce93b27c0b28e5964dbe835d44fd5/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_facce93b27c0b28e5964dbe835d44fd5/testbuild/test.cpp.1.o']
 err: ../test.cpp: In function ‘int main(int, char**)’:
-../test.cpp:6:7: error: ‘uint128_t’ was not declared in this scope
-  if ((uint128_t *) 0) return 0;
-       ^~~~~~~~~
-../test.cpp:6:7: note: suggested alternative: ‘uint32_t’
-  if ((uint128_t *) 0) return 0;
-       ^~~~~~~~~
-       uint32_t
+../test.cpp:6:7: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint32_t’?
+    6 |  if ((uint128_t *) 0) return 0;
+      |       ^~~~~~~~~
+      |       uint32_t
 ../test.cpp:6:18: error: expected primary-expression before ‘)’ token
-  if ((uint128_t *) 0) return 0;
-                  ^
-../test.cpp:6:20: error: expected ‘)’ before numeric constant
-  if ((uint128_t *) 0) return 0;
-                    ^
-../test.cpp:7:14: error: ‘uint128_t’ was not declared in this scope
-  if (sizeof (uint128_t)) return 0;
-              ^~~~~~~~~
-../test.cpp:7:14: note: suggested alternative: ‘uint32_t’
-  if (sizeof (uint128_t)) return 0;
-              ^~~~~~~~~
-              uint32_t
+    6 |  if ((uint128_t *) 0) return 0;
+      |                  ^
+../test.cpp:6:19: error: expected ‘)’ before numeric constant
+    6 |  if ((uint128_t *) 0) return 0;
+      |     ~             ^~
+      |                   )
+../test.cpp:7:14: error: ‘uint128_t’ was not declared in this scope; did you mean ‘uint32_t’?
+    7 |  if (sizeof (uint128_t)) return 0;
+      |              ^~~~~~~~~
+      |              uint32_t
 
-from /home/nsl-ubu/ns-3-allinone/ns-3.30/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/nsl-ubu/ns-3-allinone/ns-3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Configure.py", line 333, in run_build
+from /home/ubupeko20/ns-3-allinone/ns3.30/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/ubupeko20/ns-3-allinone/ns3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Configure.py", line 333, in run_build
     bld.compile()
-  File "/home/nsl-ubu/ns-3-allinone/ns-3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Build.py", line 176, in compile
+  File "/home/ubupeko20/ns-3-allinone/ns3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Build.py", line 176, in compile
     raise Errors.BuildError(self.producer.error)
 waflib.Errors.BuildError: Build failed
  -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
 
 not found
-from /home/nsl-ubu/ns-3-allinone/ns-3.30/src/core: The configuration failed
+from /home/ubupeko20/ns-3-allinone/ns3.30/src/core: The configuration failed
 --------------------------------------------------------------------------
 checking for __uint128_t
 ==>
@@ -1154,10 +1152,10 @@ checking for __uint128_t
 <==
 [1/2] Compiling [32mbuild/.conf_check_b56575a1cf831cd90b0428197c1674e0/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_b56575a1cf831cd90b0428197c1674e0/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_b56575a1cf831cd90b0428197c1674e0/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_b56575a1cf831cd90b0428197c1674e0/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_b56575a1cf831cd90b0428197c1674e0/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_b56575a1cf831cd90b0428197c1674e0/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking high precision implementation
@@ -1175,10 +1173,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_87dc75f4d5a4d81d3de89ccc66d2f410/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_87dc75f4d5a4d81d3de89ccc66d2f410/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_87dc75f4d5a4d81d3de89ccc66d2f410/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_87dc75f4d5a4d81d3de89ccc66d2f410/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_87dc75f4d5a4d81d3de89ccc66d2f410/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_87dc75f4d5a4d81d3de89ccc66d2f410/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header inttypes.h
@@ -1193,10 +1191,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_71902e4db1e1fb33866f0d1c21c77ee8/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_71902e4db1e1fb33866f0d1c21c77ee8/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_71902e4db1e1fb33866f0d1c21c77ee8/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_71902e4db1e1fb33866f0d1c21c77ee8/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_71902e4db1e1fb33866f0d1c21c77ee8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_71902e4db1e1fb33866f0d1c21c77ee8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1211,22 +1209,22 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_ab3a88ef84bcf481a1b44e59b9acea7f/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_ab3a88ef84bcf481a1b44e59b9acea7f/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_ab3a88ef84bcf481a1b44e59b9acea7f/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:10: fatal error: sys/inttypes.h: そのようなファイルやディレクトリはありません
- #include <sys/inttypes.h>
-          ^~~~~~~~~~~~~~~~
+    1 | #include <sys/inttypes.h>
+      |          ^~~~~~~~~~~~~~~~
 compilation terminated.
 
-from /home/nsl-ubu/ns-3-allinone/ns-3.30/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/nsl-ubu/ns-3-allinone/ns-3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Configure.py", line 333, in run_build
+from /home/ubupeko20/ns-3-allinone/ns3.30/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/ubupeko20/ns-3-allinone/ns3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Configure.py", line 333, in run_build
     bld.compile()
-  File "/home/nsl-ubu/ns-3-allinone/ns-3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Build.py", line 176, in compile
+  File "/home/ubupeko20/ns-3-allinone/ns3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Build.py", line 176, in compile
     raise Errors.BuildError(self.producer.error)
 waflib.Errors.BuildError: Build failed
  -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
 
 not found
-from /home/nsl-ubu/ns-3-allinone/ns-3.30/src/core: The configuration failed
+from /home/ubupeko20/ns-3-allinone/ns3.30/src/core: The configuration failed
 --------------------------------------------------------------------------
 Checking for header sys/types.h
 ==>
@@ -1240,10 +1238,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_a1f5eb99781ed72d6f7c486a9233dce5/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_a1f5eb99781ed72d6f7c486a9233dce5/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_a1f5eb99781ed72d6f7c486a9233dce5/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_a1f5eb99781ed72d6f7c486a9233dce5/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_a1f5eb99781ed72d6f7c486a9233dce5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_a1f5eb99781ed72d6f7c486a9233dce5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header sys/stat.h
@@ -1258,10 +1256,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_df624e4ac3a4507c87a576ef6f3a3e18/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_df624e4ac3a4507c87a576ef6f3a3e18/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_df624e4ac3a4507c87a576ef6f3a3e18/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_df624e4ac3a4507c87a576ef6f3a3e18/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_df624e4ac3a4507c87a576ef6f3a3e18/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_df624e4ac3a4507c87a576ef6f3a3e18/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header dirent.h
@@ -1276,10 +1274,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_b1c5fd3b060471dcecfecbeb771fc0d1/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_b1c5fd3b060471dcecfecbeb771fc0d1/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_b1c5fd3b060471dcecfecbeb771fc0d1/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_b1c5fd3b060471dcecfecbeb771fc0d1/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_b1c5fd3b060471dcecfecbeb771fc0d1/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_b1c5fd3b060471dcecfecbeb771fc0d1/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header stdlib.h
@@ -1294,10 +1292,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_d5daedb867ba66fc80d74a2aecccd048/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_d5daedb867ba66fc80d74a2aecccd048/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_d5daedb867ba66fc80d74a2aecccd048/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_d5daedb867ba66fc80d74a2aecccd048/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_d5daedb867ba66fc80d74a2aecccd048/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_d5daedb867ba66fc80d74a2aecccd048/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header signal.h
@@ -1312,10 +1310,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_6f58fe0695dffc1ac60ac25f8cc70c24/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_6f58fe0695dffc1ac60ac25f8cc70c24/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_6f58fe0695dffc1ac60ac25f8cc70c24/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_6f58fe0695dffc1ac60ac25f8cc70c24/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_6f58fe0695dffc1ac60ac25f8cc70c24/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_6f58fe0695dffc1ac60ac25f8cc70c24/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header pthread.h
@@ -1332,10 +1330,10 @@ int main ()
 <==
 [1/2] Compiling [32mbuild/.conf_check_f7c0fffd93df9fe1a80ff12c0ddf12dd/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_f7c0fffd93df9fe1a80ff12c0ddf12dd/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_f7c0fffd93df9fe1a80ff12c0ddf12dd/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_f7c0fffd93df9fe1a80ff12c0ddf12dd/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_f7c0fffd93df9fe1a80ff12c0ddf12dd/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_f7c0fffd93df9fe1a80ff12c0ddf12dd/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header stdint.h
@@ -1350,10 +1348,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_87dc75f4d5a4d81d3de89ccc66d2f410/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_87dc75f4d5a4d81d3de89ccc66d2f410/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_87dc75f4d5a4d81d3de89ccc66d2f410/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_87dc75f4d5a4d81d3de89ccc66d2f410/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_87dc75f4d5a4d81d3de89ccc66d2f410/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_87dc75f4d5a4d81d3de89ccc66d2f410/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header inttypes.h
@@ -1368,10 +1366,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_71902e4db1e1fb33866f0d1c21c77ee8/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_71902e4db1e1fb33866f0d1c21c77ee8/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_71902e4db1e1fb33866f0d1c21c77ee8/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_71902e4db1e1fb33866f0d1c21c77ee8/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_71902e4db1e1fb33866f0d1c21c77ee8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_71902e4db1e1fb33866f0d1c21c77ee8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header sys/inttypes.h
@@ -1386,22 +1384,22 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_ab3a88ef84bcf481a1b44e59b9acea7f/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_ab3a88ef84bcf481a1b44e59b9acea7f/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_ab3a88ef84bcf481a1b44e59b9acea7f/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:10: fatal error: sys/inttypes.h: そのようなファイルやディレクトリはありません
- #include <sys/inttypes.h>
-          ^~~~~~~~~~~~~~~~
+    1 | #include <sys/inttypes.h>
+      |          ^~~~~~~~~~~~~~~~
 compilation terminated.
 
-from /home/nsl-ubu/ns-3-allinone/ns-3.30/src/core: Test does not build: Traceback (most recent call last):
-  File "/home/nsl-ubu/ns-3-allinone/ns-3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Configure.py", line 333, in run_build
+from /home/ubupeko20/ns-3-allinone/ns3.30/src/core: Test does not build: Traceback (most recent call last):
+  File "/home/ubupeko20/ns-3-allinone/ns3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Configure.py", line 333, in run_build
     bld.compile()
-  File "/home/nsl-ubu/ns-3-allinone/ns-3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Build.py", line 176, in compile
+  File "/home/ubupeko20/ns-3-allinone/ns3.30/.waf3-2.0.18-ff4ae9f5cc05353d3dc3aeff8854ae69/waflib/Build.py", line 176, in compile
     raise Errors.BuildError(self.producer.error)
 waflib.Errors.BuildError: Build failed
  -> task in 'testprog' failed with exit status 1 (run with -v to display more information)
 
 not found
-from /home/nsl-ubu/ns-3-allinone/ns-3.30/src/core: The configuration failed
+from /home/ubupeko20/ns-3-allinone/ns3.30/src/core: The configuration failed
 --------------------------------------------------------------------------
 Checking for library rt
 ==>
@@ -1414,10 +1412,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_ab72690583f2973c46ae66ff926bf40d/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_ab72690583f2973c46ae66ff926bf40d/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_ab72690583f2973c46ae66ff926bf40d/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_ab72690583f2973c46ae66ff926bf40d/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_ab72690583f2973c46ae66ff926bf40d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_ab72690583f2973c46ae66ff926bf40d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
 yes
 --------------------------------------------------------------------------
 Checking for header sys/ioctl.h
@@ -1432,10 +1430,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_a500e4e04895f8dce012d09437dc914c/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_a500e4e04895f8dce012d09437dc914c/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_a500e4e04895f8dce012d09437dc914c/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_a500e4e04895f8dce012d09437dc914c/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_a500e4e04895f8dce012d09437dc914c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_a500e4e04895f8dce012d09437dc914c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header net/if.h
@@ -1450,10 +1448,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_9f4e1a1ff328a1e8411b45269d846fdb/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_9f4e1a1ff328a1e8411b45269d846fdb/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_9f4e1a1ff328a1e8411b45269d846fdb/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_9f4e1a1ff328a1e8411b45269d846fdb/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_9f4e1a1ff328a1e8411b45269d846fdb/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_9f4e1a1ff328a1e8411b45269d846fdb/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header net/ethernet.h
@@ -1468,10 +1466,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_6e41348326de2b334c4f59de3729bd6a/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_6e41348326de2b334c4f59de3729bd6a/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_6e41348326de2b334c4f59de3729bd6a/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_6e41348326de2b334c4f59de3729bd6a/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_6e41348326de2b334c4f59de3729bd6a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_6e41348326de2b334c4f59de3729bd6a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header linux/if_tun.h
@@ -1486,10 +1484,10 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_8e878b6598e0eb4487674343c0115934/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_8e878b6598e0eb4487674343c0115934/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_8e878b6598e0eb4487674343c0115934/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_8e878b6598e0eb4487674343c0115934/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_8e878b6598e0eb4487674343c0115934/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_8e878b6598e0eb4487674343c0115934/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for header netpacket/packet.h
@@ -1504,16 +1502,13 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_fff5469bff6310ddc2b775af42c41fc5/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_fff5469bff6310ddc2b775af42c41fc5/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_fff5469bff6310ddc2b775af42c41fc5/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_fff5469bff6310ddc2b775af42c41fc5/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_fff5469bff6310ddc2b775af42c41fc5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_fff5469bff6310ddc2b775af42c41fc5/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for NSC location
-not found
---------------------------------------------------------------------------
-Checking for OpenFlow location
 not found
 --------------------------------------------------------------------------
 Checking for 'sqlite3'
@@ -1534,17 +1529,17 @@ int main(int argc, char **argv) {
 <==
 [1/2] Compiling [32mbuild/.conf_check_8e878b6598e0eb4487674343c0115934/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_8e878b6598e0eb4487674343c0115934/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_8e878b6598e0eb4487674343c0115934/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_8e878b6598e0eb4487674343c0115934/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_8e878b6598e0eb4487674343c0115934/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_8e878b6598e0eb4487674343c0115934/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
 --------------------------------------------------------------------------
 Checking for python module 'gi'
 ['/usr/bin/python3', '-c', "\nimport gi as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
-out: 3.26.1
+out: 3.36.0
 
-3.26.1
+3.36.0
 --------------------------------------------------------------------------
 Checking for python module 'gi.repository.GObject'
 ['/usr/bin/python3', '-c', "\nimport gi.repository.GObject as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
@@ -1560,15 +1555,18 @@ ok
 --------------------------------------------------------------------------
 Checking for python module 'pygraphviz'
 ['/usr/bin/python3', '-c', "\nimport pygraphviz as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
-out: 1.4rc1
+err: Traceback (most recent call last):
+  File "<string>", line 2, in <module>
+ModuleNotFoundError: No module named 'pygraphviz'
 
-1.4rc1
+not found
+from /home/ubupeko20/ns-3-allinone/ns3.30/src/visualizer: Could not find the python module 'pygraphviz'
 --------------------------------------------------------------------------
 Checking for python module 'gi.repository.Gtk'
 ['/usr/bin/python3', '-c', "\nimport gi.repository.Gtk as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
 out: unknown version
 
-err: -c:2: PyGIWarning: Gtk was imported without specifying a version first. Use gi.require_version('Gtk', '3.0') before import to ensure that the right version gets loaded.
+err: <string>:2: PyGIWarning: Gtk was imported without specifying a version first. Use gi.require_version('Gtk', '3.0') before import to ensure that the right version gets loaded.
 
 ok
 --------------------------------------------------------------------------
@@ -1576,7 +1574,7 @@ Checking for python module 'gi.repository.Gdk'
 ['/usr/bin/python3', '-c', "\nimport gi.repository.Gdk as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
 out: unknown version
 
-err: -c:2: PyGIWarning: Gdk was imported without specifying a version first. Use gi.require_version('Gdk', '3.0') before import to ensure that the right version gets loaded.
+err: <string>:2: PyGIWarning: Gdk was imported without specifying a version first. Use gi.require_version('Gdk', '3.0') before import to ensure that the right version gets loaded.
 
 ok
 --------------------------------------------------------------------------
@@ -1584,26 +1582,28 @@ Checking for python module 'gi.repository.Pango'
 ['/usr/bin/python3', '-c', "\nimport gi.repository.Pango as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
 out: unknown version
 
-err: -c:2: PyGIWarning: Pango was imported without specifying a version first. Use gi.require_version('Pango', '1.0') before import to ensure that the right version gets loaded.
+err: <string>:2: PyGIWarning: Pango was imported without specifying a version first. Use gi.require_version('Pango', '1.0') before import to ensure that the right version gets loaded.
 
 ok
 --------------------------------------------------------------------------
 Checking for python module 'gi.repository.GooCanvas'
 ['/usr/bin/python3', '-c', "\nimport gi.repository.GooCanvas as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
-out: unknown version
+err: Traceback (most recent call last):
+  File "<string>", line 2, in <module>
+  File "/usr/lib/python3/dist-packages/gi/importer.py", line 132, in load_module
+    raise ImportError('cannot import name %s, '
+ImportError: cannot import name GooCanvas, introspection typelib not found
 
-err: -c:2: PyGIWarning: GooCanvas was imported without specifying a version first. Use gi.require_version('GooCanvas', '2.0') before import to ensure that the right version gets loaded.
-
-ok
+not found
+from /home/ubupeko20/ns-3-allinone/ns3.30/src/visualizer: Could not find the python module 'gi.repository.GooCanvas'
 --------------------------------------------------------------------------
 Checking for program 'sudo'
 /usr/bin/sudo
 find program=['sudo'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='SUDO' -> ['/usr/bin/sudo']
 --------------------------------------------------------------------------
 Checking for program 'valgrind'
-not found
-find program=['valgrind'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='VALGRIND' -> None
-from /home/nsl-ubu/ns-3-allinone/ns-3.30: Could not find the program ['valgrind']
+/usr/bin/valgrind
+find program=['valgrind'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='VALGRIND' -> ['/usr/bin/valgrind']
 --------------------------------------------------------------------------
 Checking for 'gsl'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'gsl']
@@ -1614,7 +1614,7 @@ yes
 libgcrypt-config
 not found
 find program=['libgcrypt-config'] paths=['/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='LIBGCRYPT_CONFIG' -> None
-from /home/nsl-ubu/ns-3-allinone/ns-3.30: Could not find the program ['libgcrypt-config']
+from /home/ubupeko20/ns-3-allinone/ns3.30: Could not find the program ['libgcrypt-config']
 --------------------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
@@ -1622,7 +1622,7 @@ int main() { return 0; }
 <==
 [1/1] Compiling [32mbuild/.conf_check_92724e97d2a8131cdbabec48e168cdc4/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_GSL=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_92724e97d2a8131cdbabec48e168cdc4/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_GSL=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_92724e97d2a8131cdbabec48e168cdc4/testbuild/test.cpp.1.o']
 ok
 --------------------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
@@ -1631,7 +1631,7 @@ int main() { return 0; }
 <==
 [1/1] Compiling [32mbuild/.conf_check_9c1e184cb7a8ee8b2d99ea7e4214752d/test.c[0m
 
-['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_GSL=1', '../test.c', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_9c1e184cb7a8ee8b2d99ea7e4214752d/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_GSL=1', '../test.c', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_9c1e184cb7a8ee8b2d99ea7e4214752d/testbuild/test.c.1.o']
 ok
 --------------------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
@@ -1640,7 +1640,7 @@ int main() { return 0; }
 <==
 [1/1] Compiling [32mbuild/.conf_check_92724e97d2a8131cdbabec48e168cdc4/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_GSL=1', '../test.cpp', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_92724e97d2a8131cdbabec48e168cdc4/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-parentheses', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_GSL=1', '../test.cpp', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_92724e97d2a8131cdbabec48e168cdc4/testbuild/test.cpp.1.o']
 ok
 --------------------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
@@ -1649,7 +1649,7 @@ int main() { return 0; }
 <==
 [1/1] Compiling [32mbuild/.conf_check_9c1e184cb7a8ee8b2d99ea7e4214752d/test.c[0m
 
-['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_GSL=1', '../test.c', '-c', '-o/home/nsl-ubu/ns-3-allinone/ns-3.30/build/.conf_check_9c1e184cb7a8ee8b2d99ea7e4214752d/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_SQLITE3=1', '-DHAVE_IF_TUN_H=1', '-DHAVE_GSL=1', '../test.c', '-c', '-o/home/ubupeko20/ns-3-allinone/ns3.30/build/.conf_check_9c1e184cb7a8ee8b2d99ea7e4214752d/testbuild/test.c.1.o']
 ok
 --------------------------------------------------------------------------
 Checking for program 'doxygen'

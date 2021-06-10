@@ -2078,7 +2078,7 @@ PyTypeObject PyNs3FdNetDeviceHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "FdNetDeviceHelper(arg0)\nFdNetDeviceHelper()",                        /* Documentation string */
     (traverseproc)PyNs3FdNetDeviceHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FdNetDeviceHelper__tp_clear,             /* tp_clear */
@@ -2926,7 +2926,7 @@ PyTypeObject PyNs3EmuFdNetDeviceHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "EmuFdNetDeviceHelper(arg0)\nEmuFdNetDeviceHelper()",                        /* Documentation string */
     (traverseproc)PyNs3EmuFdNetDeviceHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3EmuFdNetDeviceHelper__tp_clear,             /* tp_clear */
@@ -3852,7 +3852,7 @@ PyTypeObject PyNs3TapFdNetDeviceHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "TapFdNetDeviceHelper(arg0)\nTapFdNetDeviceHelper()",                        /* Documentation string */
     (traverseproc)PyNs3TapFdNetDeviceHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TapFdNetDeviceHelper__tp_clear,             /* tp_clear */
@@ -4647,7 +4647,7 @@ PyTypeObject PyNs3FdNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "FdNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3FdNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FdNetDevice__tp_clear,             /* tp_clear */

@@ -1,0 +1,19 @@
+patch ファイルのダウンロード
+
+url　https://codereview.appspot.com/201200043
+
+
+例 このファイル　download を開き　右クリック　home/download に保存 →拡張子diffで保存
+
+
+patch -u ./src/obstacle/examples/obstacle-example.cc < ~/Downloads/obstacle-example.diff
+patch -u 作成したいディレクトリとファイル名 < 変換したいファイル名とそのディレクトリ
+
+今回はobstacle-example.diff
+
+ディレクトリはns3で実行 そうすれば./src/obstacle/examples/   .はカーレントディレクトリに
+ 
+
+ obstacle-example.cc というファイルが作成される 
+
+

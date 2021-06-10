@@ -44,8 +44,8 @@ _wrap__core_CommandLineHelper_UserItemParse__lt__bool__gt__(PyObject * PYBINDGEN
 PyObject * _wrap__core_CommandLineHelper_UserItemParse__lt__bool__gt__(PyObject * PYBINDGEN_UNUSED(dummy), PyObject *args, PyObject *kwargs);
 
 static PyMethodDef _core_CommandLineHelper_functions[] = {
-    {(char *) "GetDefault__lt__bool__gt__", (PyCFunction) _wrap__core_CommandLineHelper_GetDefault__lt__bool__gt__, METH_KEYWORDS|METH_VARARGS, "GetDefault__lt__bool__gt__(val)\n\ntype: val: bool const &" },
-    {(char *) "UserItemParse__lt__bool__gt__", (PyCFunction) _wrap__core_CommandLineHelper_UserItemParse__lt__bool__gt__, METH_KEYWORDS|METH_VARARGS, "UserItemParse__lt__bool__gt__(value, val)\n\ntype: value: std::string const\ntype: val: bool &" },
+    {(char *) "GetDefault__lt__bool__gt__", (PyCFunction) _wrap__core_CommandLineHelper_GetDefault__lt__bool__gt__, METH_VARARGS|METH_KEYWORDS, "GetDefault__lt__bool__gt__(val)\n\ntype: val: bool const &" },
+    {(char *) "UserItemParse__lt__bool__gt__", (PyCFunction) _wrap__core_CommandLineHelper_UserItemParse__lt__bool__gt__, METH_VARARGS|METH_KEYWORDS, "UserItemParse__lt__bool__gt__(value, val)\n\ntype: value: std::string const\ntype: val: bool &" },
     {NULL, NULL, 0, NULL}
 };
 #if PY_VERSION_HEX >= 0x03000000
@@ -395,21 +395,21 @@ _wrap__core_Config_UnregisterRootNamespaceObject(PyObject * PYBINDGEN_UNUSED(dum
 PyObject * _wrap__core_Config_UnregisterRootNamespaceObject(PyObject * PYBINDGEN_UNUSED(dummy), PyObject *args, PyObject *kwargs);
 
 static PyMethodDef _core_Config_functions[] = {
-    {(char *) "Connect", (PyCFunction) _wrap__core_Config_Connect, METH_KEYWORDS|METH_VARARGS, "Connect(path, cb)\n\ntype: path: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "ConnectWithoutContext", (PyCFunction) _wrap__core_Config_ConnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "ConnectWithoutContext(path, cb)\n\ntype: path: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "Disconnect", (PyCFunction) _wrap__core_Config_Disconnect, METH_KEYWORDS|METH_VARARGS, "Disconnect(path, cb)\n\ntype: path: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "DisconnectWithoutContext", (PyCFunction) _wrap__core_Config_DisconnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "DisconnectWithoutContext(path, cb)\n\ntype: path: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "GetRootNamespaceObject", (PyCFunction) _wrap__core_Config_GetRootNamespaceObject, METH_KEYWORDS|METH_VARARGS, "GetRootNamespaceObject(i)\n\ntype: i: uint32_t" },
+    {(char *) "Connect", (PyCFunction) _wrap__core_Config_Connect, METH_VARARGS|METH_KEYWORDS, "Connect(path, cb)\n\ntype: path: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "ConnectWithoutContext", (PyCFunction) _wrap__core_Config_ConnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "ConnectWithoutContext(path, cb)\n\ntype: path: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "Disconnect", (PyCFunction) _wrap__core_Config_Disconnect, METH_VARARGS|METH_KEYWORDS, "Disconnect(path, cb)\n\ntype: path: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "DisconnectWithoutContext", (PyCFunction) _wrap__core_Config_DisconnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "DisconnectWithoutContext(path, cb)\n\ntype: path: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "GetRootNamespaceObject", (PyCFunction) _wrap__core_Config_GetRootNamespaceObject, METH_VARARGS|METH_KEYWORDS, "GetRootNamespaceObject(i)\n\ntype: i: uint32_t" },
     {(char *) "GetRootNamespaceObjectN", (PyCFunction) _wrap__core_Config_GetRootNamespaceObjectN, METH_NOARGS, "GetRootNamespaceObjectN()\n\n" },
-    {(char *) "LookupMatches", (PyCFunction) _wrap__core_Config_LookupMatches, METH_KEYWORDS|METH_VARARGS, "LookupMatches(path)\n\ntype: path: std::string" },
-    {(char *) "RegisterRootNamespaceObject", (PyCFunction) _wrap__core_Config_RegisterRootNamespaceObject, METH_KEYWORDS|METH_VARARGS, "RegisterRootNamespaceObject(obj)\n\ntype: obj: ns3::Ptr< ns3::Object >" },
+    {(char *) "LookupMatches", (PyCFunction) _wrap__core_Config_LookupMatches, METH_VARARGS|METH_KEYWORDS, "LookupMatches(path)\n\ntype: path: std::string" },
+    {(char *) "RegisterRootNamespaceObject", (PyCFunction) _wrap__core_Config_RegisterRootNamespaceObject, METH_VARARGS|METH_KEYWORDS, "RegisterRootNamespaceObject(obj)\n\ntype: obj: ns3::Ptr< ns3::Object >" },
     {(char *) "Reset", (PyCFunction) _wrap__core_Config_Reset, METH_NOARGS, "Reset()\n\n" },
-    {(char *) "Set", (PyCFunction) _wrap__core_Config_Set, METH_KEYWORDS|METH_VARARGS, "Set(path, value)\n\ntype: path: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetDefault", (PyCFunction) _wrap__core_Config_SetDefault, METH_KEYWORDS|METH_VARARGS, "SetDefault(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetDefaultFailSafe", (PyCFunction) _wrap__core_Config_SetDefaultFailSafe, METH_KEYWORDS|METH_VARARGS, "SetDefaultFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetGlobal", (PyCFunction) _wrap__core_Config_SetGlobal, METH_KEYWORDS|METH_VARARGS, "SetGlobal(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetGlobalFailSafe", (PyCFunction) _wrap__core_Config_SetGlobalFailSafe, METH_KEYWORDS|METH_VARARGS, "SetGlobalFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "UnregisterRootNamespaceObject", (PyCFunction) _wrap__core_Config_UnregisterRootNamespaceObject, METH_KEYWORDS|METH_VARARGS, "UnregisterRootNamespaceObject(obj)\n\ntype: obj: ns3::Ptr< ns3::Object >" },
+    {(char *) "Set", (PyCFunction) _wrap__core_Config_Set, METH_VARARGS|METH_KEYWORDS, "Set(path, value)\n\ntype: path: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetDefault", (PyCFunction) _wrap__core_Config_SetDefault, METH_VARARGS|METH_KEYWORDS, "SetDefault(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetDefaultFailSafe", (PyCFunction) _wrap__core_Config_SetDefaultFailSafe, METH_VARARGS|METH_KEYWORDS, "SetDefaultFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetGlobal", (PyCFunction) _wrap__core_Config_SetGlobal, METH_VARARGS|METH_KEYWORDS, "SetGlobal(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetGlobalFailSafe", (PyCFunction) _wrap__core_Config_SetGlobalFailSafe, METH_VARARGS|METH_KEYWORDS, "SetGlobalFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "UnregisterRootNamespaceObject", (PyCFunction) _wrap__core_Config_UnregisterRootNamespaceObject, METH_VARARGS|METH_KEYWORDS, "UnregisterRootNamespaceObject(obj)\n\ntype: obj: ns3::Ptr< ns3::Object >" },
     {NULL, NULL, 0, NULL}
 };
 /* --- classes --- */
@@ -712,15 +712,15 @@ _wrap_PyNs3ConfigMatchContainer__copy__(PyNs3ConfigMatchContainer *self)
 }
 
 static PyMethodDef PyNs3ConfigMatchContainer_methods[] = {
-    {(char *) "Connect", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_Connect, METH_KEYWORDS|METH_VARARGS, "Connect(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "ConnectWithoutContext", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_ConnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "ConnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "Disconnect", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_Disconnect, METH_KEYWORDS|METH_VARARGS, "Disconnect(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "DisconnectWithoutContext", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_DisconnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "DisconnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "Get", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_Get, METH_KEYWORDS|METH_VARARGS, "Get(i)\n\ntype: i: std::size_t" },
-    {(char *) "GetMatchedPath", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_GetMatchedPath, METH_KEYWORDS|METH_VARARGS, "GetMatchedPath(i)\n\ntype: i: uint32_t" },
+    {(char *) "Connect", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_Connect, METH_VARARGS|METH_KEYWORDS, "Connect(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "ConnectWithoutContext", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_ConnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "ConnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "Disconnect", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_Disconnect, METH_VARARGS|METH_KEYWORDS, "Disconnect(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "DisconnectWithoutContext", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_DisconnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "DisconnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "Get", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_Get, METH_VARARGS|METH_KEYWORDS, "Get(i)\n\ntype: i: std::size_t" },
+    {(char *) "GetMatchedPath", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_GetMatchedPath, METH_VARARGS|METH_KEYWORDS, "GetMatchedPath(i)\n\ntype: i: uint32_t" },
     {(char *) "GetN", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_GetN, METH_NOARGS, "GetN()\n\n" },
     {(char *) "GetPath", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_GetPath, METH_NOARGS, "GetPath()\n\n" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_Set, METH_KEYWORDS|METH_VARARGS, "Set(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3ConfigMatchContainer_Set, METH_VARARGS|METH_KEYWORDS, "Set(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ConfigMatchContainer__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1222,8 +1222,8 @@ _wrap_PyNs3HashFunctionFnv1a_clear(PyNs3HashFunctionFnv1a *self)
 }
 
 static PyMethodDef PyNs3HashFunctionFnv1a_methods[] = {
-    {(char *) "GetHash32", (PyCFunction) _wrap_PyNs3HashFunctionFnv1a_GetHash32, METH_KEYWORDS|METH_VARARGS, "GetHash32(buffer, size)\n\ntype: buffer: char const *\ntype: size: size_t const" },
-    {(char *) "GetHash64", (PyCFunction) _wrap_PyNs3HashFunctionFnv1a_GetHash64, METH_KEYWORDS|METH_VARARGS, "GetHash64(buffer, size)\n\ntype: buffer: char const *\ntype: size: size_t const" },
+    {(char *) "GetHash32", (PyCFunction) _wrap_PyNs3HashFunctionFnv1a_GetHash32, METH_VARARGS|METH_KEYWORDS, "GetHash32(buffer, size)\n\ntype: buffer: char const *\ntype: size: size_t const" },
+    {(char *) "GetHash64", (PyCFunction) _wrap_PyNs3HashFunctionFnv1a_GetHash64, METH_VARARGS|METH_KEYWORDS, "GetHash64(buffer, size)\n\ntype: buffer: char const *\ntype: size: size_t const" },
     {(char *) "clear", (PyCFunction) _wrap_PyNs3HashFunctionFnv1a_clear, METH_NOARGS, "clear()\n\n" },
     {NULL, NULL, 0, NULL}
 };
@@ -1361,7 +1361,7 @@ _wrap_PyNs3HashFunctionHash32__copy__(PyNs3HashFunctionHash32 *self)
 }
 
 static PyMethodDef PyNs3HashFunctionHash32_methods[] = {
-    {(char *) "GetHash32", (PyCFunction) _wrap_PyNs3HashFunctionHash32_GetHash32, METH_KEYWORDS|METH_VARARGS, "GetHash32(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
+    {(char *) "GetHash32", (PyCFunction) _wrap_PyNs3HashFunctionHash32_GetHash32, METH_VARARGS|METH_KEYWORDS, "GetHash32(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
     {(char *) "clear", (PyCFunction) _wrap_PyNs3HashFunctionHash32_clear, METH_NOARGS, "clear()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3HashFunctionHash32__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -1518,8 +1518,8 @@ _wrap_PyNs3HashFunctionHash64__copy__(PyNs3HashFunctionHash64 *self)
 }
 
 static PyMethodDef PyNs3HashFunctionHash64_methods[] = {
-    {(char *) "GetHash32", (PyCFunction) _wrap_PyNs3HashFunctionHash64_GetHash32, METH_KEYWORDS|METH_VARARGS, "GetHash32(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
-    {(char *) "GetHash64", (PyCFunction) _wrap_PyNs3HashFunctionHash64_GetHash64, METH_KEYWORDS|METH_VARARGS, "GetHash64(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
+    {(char *) "GetHash32", (PyCFunction) _wrap_PyNs3HashFunctionHash64_GetHash32, METH_VARARGS|METH_KEYWORDS, "GetHash32(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
+    {(char *) "GetHash64", (PyCFunction) _wrap_PyNs3HashFunctionHash64_GetHash64, METH_VARARGS|METH_KEYWORDS, "GetHash64(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
     {(char *) "clear", (PyCFunction) _wrap_PyNs3HashFunctionHash64_clear, METH_NOARGS, "clear()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3HashFunctionHash64__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -1726,8 +1726,8 @@ _wrap_PyNs3HashFunctionMurmur3__copy__(PyNs3HashFunctionMurmur3 *self)
 }
 
 static PyMethodDef PyNs3HashFunctionMurmur3_methods[] = {
-    {(char *) "GetHash32", (PyCFunction) _wrap_PyNs3HashFunctionMurmur3_GetHash32, METH_KEYWORDS|METH_VARARGS, "GetHash32(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
-    {(char *) "GetHash64", (PyCFunction) _wrap_PyNs3HashFunctionMurmur3_GetHash64, METH_KEYWORDS|METH_VARARGS, "GetHash64(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
+    {(char *) "GetHash32", (PyCFunction) _wrap_PyNs3HashFunctionMurmur3_GetHash32, METH_VARARGS|METH_KEYWORDS, "GetHash32(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
+    {(char *) "GetHash64", (PyCFunction) _wrap_PyNs3HashFunctionMurmur3_GetHash64, METH_VARARGS|METH_KEYWORDS, "GetHash64(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
     {(char *) "clear", (PyCFunction) _wrap_PyNs3HashFunctionMurmur3_clear, METH_NOARGS, "clear()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3HashFunctionMurmur3__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -1920,8 +1920,8 @@ _wrap_PyNs3HashImplementation_clear(PyNs3HashImplementation *self)
 }
 
 static PyMethodDef PyNs3HashImplementation_methods[] = {
-    {(char *) "GetHash32", (PyCFunction) _wrap_PyNs3HashImplementation_GetHash32, METH_KEYWORDS|METH_VARARGS, "GetHash32(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
-    {(char *) "GetHash64", (PyCFunction) _wrap_PyNs3HashImplementation_GetHash64, METH_KEYWORDS|METH_VARARGS, "GetHash64(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
+    {(char *) "GetHash32", (PyCFunction) _wrap_PyNs3HashImplementation_GetHash32, METH_VARARGS|METH_KEYWORDS, "GetHash32(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
+    {(char *) "GetHash64", (PyCFunction) _wrap_PyNs3HashImplementation_GetHash64, METH_VARARGS|METH_KEYWORDS, "GetHash64(buffer, size)\n\ntype: buffer: char const *\ntype: size: std::size_t const" },
     {(char *) "clear", (PyCFunction) _wrap_PyNs3HashImplementation_clear, METH_NOARGS, "clear()\n\n" },
     {NULL, NULL, 0, NULL}
 };
@@ -2149,12 +2149,12 @@ _wrap__core_SystemPath_Split(PyObject * PYBINDGEN_UNUSED(dummy), PyObject *args,
 PyObject * _wrap__core_SystemPath_Split(PyObject * PYBINDGEN_UNUSED(dummy), PyObject *args, PyObject *kwargs);
 
 static PyMethodDef _core_SystemPath_functions[] = {
-    {(char *) "Append", (PyCFunction) _wrap__core_SystemPath_Append, METH_KEYWORDS|METH_VARARGS, "Append(left, right)\n\ntype: left: std::string\ntype: right: std::string" },
+    {(char *) "Append", (PyCFunction) _wrap__core_SystemPath_Append, METH_VARARGS|METH_KEYWORDS, "Append(left, right)\n\ntype: left: std::string\ntype: right: std::string" },
     {(char *) "FindSelfDirectory", (PyCFunction) _wrap__core_SystemPath_FindSelfDirectory, METH_NOARGS, "FindSelfDirectory()\n\n" },
-    {(char *) "MakeDirectories", (PyCFunction) _wrap__core_SystemPath_MakeDirectories, METH_KEYWORDS|METH_VARARGS, "MakeDirectories(path)\n\ntype: path: std::string" },
+    {(char *) "MakeDirectories", (PyCFunction) _wrap__core_SystemPath_MakeDirectories, METH_VARARGS|METH_KEYWORDS, "MakeDirectories(path)\n\ntype: path: std::string" },
     {(char *) "MakeTemporaryDirectoryName", (PyCFunction) _wrap__core_SystemPath_MakeTemporaryDirectoryName, METH_NOARGS, "MakeTemporaryDirectoryName()\n\n" },
-    {(char *) "ReadFiles", (PyCFunction) _wrap__core_SystemPath_ReadFiles, METH_KEYWORDS|METH_VARARGS, "ReadFiles(path)\n\ntype: path: std::string" },
-    {(char *) "Split", (PyCFunction) _wrap__core_SystemPath_Split, METH_KEYWORDS|METH_VARARGS, "Split(path)\n\ntype: path: std::string" },
+    {(char *) "ReadFiles", (PyCFunction) _wrap__core_SystemPath_ReadFiles, METH_VARARGS|METH_KEYWORDS, "ReadFiles(path)\n\ntype: path: std::string" },
+    {(char *) "Split", (PyCFunction) _wrap__core_SystemPath_Split, METH_VARARGS|METH_KEYWORDS, "Split(path)\n\ntype: path: std::string" },
     {NULL, NULL, 0, NULL}
 };
 /* --- containers --- */
@@ -2602,9 +2602,9 @@ _wrap__core_internal_MakeUintegerChecker(PyObject * PYBINDGEN_UNUSED(dummy), PyO
 PyObject * _wrap__core_internal_MakeUintegerChecker(PyObject * PYBINDGEN_UNUSED(dummy), PyObject *args, PyObject *kwargs);
 
 static PyMethodDef _core_internal_functions[] = {
-    {(char *) "MakeDoubleChecker", (PyCFunction) _wrap__core_internal_MakeDoubleChecker, METH_KEYWORDS|METH_VARARGS, "MakeDoubleChecker(min, max, name)\n\ntype: min: double\ntype: max: double\ntype: name: std::string" },
-    {(char *) "MakeIntegerChecker", (PyCFunction) _wrap__core_internal_MakeIntegerChecker, METH_KEYWORDS|METH_VARARGS, "MakeIntegerChecker(min, max, name)\n\ntype: min: int64_t\ntype: max: int64_t\ntype: name: std::string" },
-    {(char *) "MakeUintegerChecker", (PyCFunction) _wrap__core_internal_MakeUintegerChecker, METH_KEYWORDS|METH_VARARGS, "MakeUintegerChecker(min, max, name)\n\ntype: min: uint64_t\ntype: max: uint64_t\ntype: name: std::string" },
+    {(char *) "MakeDoubleChecker", (PyCFunction) _wrap__core_internal_MakeDoubleChecker, METH_VARARGS|METH_KEYWORDS, "MakeDoubleChecker(min, max, name)\n\ntype: min: double\ntype: max: double\ntype: name: std::string" },
+    {(char *) "MakeIntegerChecker", (PyCFunction) _wrap__core_internal_MakeIntegerChecker, METH_VARARGS|METH_KEYWORDS, "MakeIntegerChecker(min, max, name)\n\ntype: min: int64_t\ntype: max: int64_t\ntype: name: std::string" },
+    {(char *) "MakeUintegerChecker", (PyCFunction) _wrap__core_internal_MakeUintegerChecker, METH_VARARGS|METH_KEYWORDS, "MakeUintegerChecker(min, max, name)\n\ntype: min: uint64_t\ntype: max: uint64_t\ntype: name: std::string" },
     {NULL, NULL, 0, NULL}
 };
 #if PY_VERSION_HEX >= 0x03000000
@@ -5260,48 +5260,48 @@ PyObject * _wrap__core_Years(PyObject *self, PyObject *args, PyObject *kwargs)
 PyObject * _wrap__core_Years(PyObject *self, PyObject *args, PyObject *kwargs);
 
 static PyMethodDef _core_functions[] = {
-    {(char *) "Abs", (PyCFunction) _wrap__core_Abs, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Abs", (PyCFunction) _wrap__core_Abs, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "BreakpointFallback", (PyCFunction) _wrap__core_BreakpointFallback, METH_NOARGS, "BreakpointFallback()\n\n" },
-    {(char *) "CalculateDistance", (PyCFunction) _wrap__core_CalculateDistance, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "CalculateDistance", (PyCFunction) _wrap__core_CalculateDistance, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "Create__lt__ns3__ObjectPtrContainerValue__gt__", (PyCFunction) _wrap__core_Create__lt__ns3__ObjectPtrContainerValue__gt__, METH_NOARGS, "Create__lt__ns3__ObjectPtrContainerValue__gt__()\n\n" },
     {(char *) "Create__lt__ns3__PointerValue__gt__", (PyCFunction) _wrap__core_Create__lt__ns3__PointerValue__gt__, METH_NOARGS, "Create__lt__ns3__PointerValue__gt__()\n\n" },
-    {(char *) "Days", (PyCFunction) _wrap__core_Days, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "DefaultNodePrinter", (PyCFunction) _wrap__core_DefaultNodePrinter, METH_KEYWORDS|METH_VARARGS, "DefaultNodePrinter(os)\n\ntype: os: std::ostream &" },
-    {(char *) "DefaultTimePrinter", (PyCFunction) _wrap__core_DefaultTimePrinter, METH_KEYWORDS|METH_VARARGS, "DefaultTimePrinter(os)\n\ntype: os: std::ostream &" },
-    {(char *) "FemtoSeconds", (PyCFunction) _wrap__core_FemtoSeconds, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetLogComponent", (PyCFunction) _wrap__core_GetLogComponent, METH_KEYWORDS|METH_VARARGS, "GetLogComponent(name)\n\ntype: name: std::string const" },
-    {(char *) "Hash32", (PyCFunction) _wrap__core_Hash32, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "Hash64", (PyCFunction) _wrap__core_Hash64, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "Hours", (PyCFunction) _wrap__core_Hours, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "LogComponentDisable", (PyCFunction) _wrap__core_LogComponentDisable, METH_KEYWORDS|METH_VARARGS, "LogComponentDisable(name, level)\n\ntype: name: char const *\ntype: level: ns3::LogLevel" },
-    {(char *) "LogComponentDisableAll", (PyCFunction) _wrap__core_LogComponentDisableAll, METH_KEYWORDS|METH_VARARGS, "LogComponentDisableAll(level)\n\ntype: level: ns3::LogLevel" },
-    {(char *) "LogComponentEnable", (PyCFunction) _wrap__core_LogComponentEnable, METH_KEYWORDS|METH_VARARGS, "LogComponentEnable(name, level)\n\ntype: name: char const *\ntype: level: ns3::LogLevel" },
-    {(char *) "LogComponentEnableAll", (PyCFunction) _wrap__core_LogComponentEnableAll, METH_KEYWORDS|METH_VARARGS, "LogComponentEnableAll(level)\n\ntype: level: ns3::LogLevel" },
+    {(char *) "Days", (PyCFunction) _wrap__core_Days, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "DefaultNodePrinter", (PyCFunction) _wrap__core_DefaultNodePrinter, METH_VARARGS|METH_KEYWORDS, "DefaultNodePrinter(os)\n\ntype: os: std::ostream &" },
+    {(char *) "DefaultTimePrinter", (PyCFunction) _wrap__core_DefaultTimePrinter, METH_VARARGS|METH_KEYWORDS, "DefaultTimePrinter(os)\n\ntype: os: std::ostream &" },
+    {(char *) "FemtoSeconds", (PyCFunction) _wrap__core_FemtoSeconds, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetLogComponent", (PyCFunction) _wrap__core_GetLogComponent, METH_VARARGS|METH_KEYWORDS, "GetLogComponent(name)\n\ntype: name: std::string const" },
+    {(char *) "Hash32", (PyCFunction) _wrap__core_Hash32, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Hash64", (PyCFunction) _wrap__core_Hash64, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Hours", (PyCFunction) _wrap__core_Hours, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "LogComponentDisable", (PyCFunction) _wrap__core_LogComponentDisable, METH_VARARGS|METH_KEYWORDS, "LogComponentDisable(name, level)\n\ntype: name: char const *\ntype: level: ns3::LogLevel" },
+    {(char *) "LogComponentDisableAll", (PyCFunction) _wrap__core_LogComponentDisableAll, METH_VARARGS|METH_KEYWORDS, "LogComponentDisableAll(level)\n\ntype: level: ns3::LogLevel" },
+    {(char *) "LogComponentEnable", (PyCFunction) _wrap__core_LogComponentEnable, METH_VARARGS|METH_KEYWORDS, "LogComponentEnable(name, level)\n\ntype: name: char const *\ntype: level: ns3::LogLevel" },
+    {(char *) "LogComponentEnableAll", (PyCFunction) _wrap__core_LogComponentEnableAll, METH_VARARGS|METH_KEYWORDS, "LogComponentEnableAll(level)\n\ntype: level: ns3::LogLevel" },
     {(char *) "LogComponentPrintList", (PyCFunction) _wrap__core_LogComponentPrintList, METH_NOARGS, "LogComponentPrintList()\n\n" },
     {(char *) "MakeBooleanChecker", (PyCFunction) _wrap__core_MakeBooleanChecker, METH_NOARGS, "MakeBooleanChecker()\n\n" },
     {(char *) "MakeCallbackChecker", (PyCFunction) _wrap__core_MakeCallbackChecker, METH_NOARGS, "MakeCallbackChecker()\n\n" },
     {(char *) "MakeEmptyAttributeAccessor", (PyCFunction) _wrap__core_MakeEmptyAttributeAccessor, METH_NOARGS, "MakeEmptyAttributeAccessor()\n\n" },
     {(char *) "MakeEmptyAttributeChecker", (PyCFunction) _wrap__core_MakeEmptyAttributeChecker, METH_NOARGS, "MakeEmptyAttributeChecker()\n\n" },
     {(char *) "MakeEmptyTraceSourceAccessor", (PyCFunction) _wrap__core_MakeEmptyTraceSourceAccessor, METH_NOARGS, "MakeEmptyTraceSourceAccessor()\n\n" },
-    {(char *) "MakeEnumChecker", (PyCFunction) _wrap__core_MakeEnumChecker, METH_KEYWORDS|METH_VARARGS, "MakeEnumChecker(v1, n1, v2, n2, v3, n3, v4, n4, v5, n5, v6, n6, v7, n7, v8, n8, v9, n9, v10, n10, v11, n11, v12, n12, v13, n13, v14, n14, v15, n15, v16, n16, v17, n17, v18, n18, v19, n19, v20, n20, v21, n21, v22, n22)\n\ntype: v1: int\ntype: n1: std::string\ntype: v2: int\ntype: n2: std::string\ntype: v3: int\ntype: n3: std::string\ntype: v4: int\ntype: n4: std::string\ntype: v5: int\ntype: n5: std::string\ntype: v6: int\ntype: n6: std::string\ntype: v7: int\ntype: n7: std::string\ntype: v8: int\ntype: n8: std::string\ntype: v9: int\ntype: n9: std::string\ntype: v10: int\ntype: n10: std::string\ntype: v11: int\ntype: n11: std::string\ntype: v12: int\ntype: n12: std::string\ntype: v13: int\ntype: n13: std::string\ntype: v14: int\ntype: n14: std::string\ntype: v15: int\ntype: n15: std::string\ntype: v16: int\ntype: n16: std::string\ntype: v17: int\ntype: n17: std::string\ntype: v18: int\ntype: n18: std::string\ntype: v19: int\ntype: n19: std::string\ntype: v20: int\ntype: n20: std::string\ntype: v21: int\ntype: n21: std::string\ntype: v22: int\ntype: n22: std::string" },
+    {(char *) "MakeEnumChecker", (PyCFunction) _wrap__core_MakeEnumChecker, METH_VARARGS|METH_KEYWORDS, "MakeEnumChecker(v1, n1, v2, n2, v3, n3, v4, n4, v5, n5, v6, n6, v7, n7, v8, n8, v9, n9, v10, n10, v11, n11, v12, n12, v13, n13, v14, n14, v15, n15, v16, n16, v17, n17, v18, n18, v19, n19, v20, n20, v21, n21, v22, n22)\n\ntype: v1: int\ntype: n1: std::string\ntype: v2: int\ntype: n2: std::string\ntype: v3: int\ntype: n3: std::string\ntype: v4: int\ntype: n4: std::string\ntype: v5: int\ntype: n5: std::string\ntype: v6: int\ntype: n6: std::string\ntype: v7: int\ntype: n7: std::string\ntype: v8: int\ntype: n8: std::string\ntype: v9: int\ntype: n9: std::string\ntype: v10: int\ntype: n10: std::string\ntype: v11: int\ntype: n11: std::string\ntype: v12: int\ntype: n12: std::string\ntype: v13: int\ntype: n13: std::string\ntype: v14: int\ntype: n14: std::string\ntype: v15: int\ntype: n15: std::string\ntype: v16: int\ntype: n16: std::string\ntype: v17: int\ntype: n17: std::string\ntype: v18: int\ntype: n18: std::string\ntype: v19: int\ntype: n19: std::string\ntype: v20: int\ntype: n20: std::string\ntype: v21: int\ntype: n21: std::string\ntype: v22: int\ntype: n22: std::string" },
     {(char *) "MakeObjectFactoryChecker", (PyCFunction) _wrap__core_MakeObjectFactoryChecker, METH_NOARGS, "MakeObjectFactoryChecker()\n\n" },
     {(char *) "MakeStringChecker", (PyCFunction) _wrap__core_MakeStringChecker, METH_NOARGS, "MakeStringChecker()\n\n" },
-    {(char *) "MakeTimeChecker", (PyCFunction) _wrap__core_MakeTimeChecker, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "MakeTimeChecker", (PyCFunction) _wrap__core_MakeTimeChecker, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "MakeTypeIdChecker", (PyCFunction) _wrap__core_MakeTypeIdChecker, METH_NOARGS, "MakeTypeIdChecker()\n\n" },
     {(char *) "MakeVector2DChecker", (PyCFunction) _wrap__core_MakeVector2DChecker, METH_NOARGS, "MakeVector2DChecker()\n\n" },
     {(char *) "MakeVector3DChecker", (PyCFunction) _wrap__core_MakeVector3DChecker, METH_NOARGS, "MakeVector3DChecker()\n\n" },
     {(char *) "MakeVectorChecker", (PyCFunction) _wrap__core_MakeVectorChecker, METH_NOARGS, "MakeVectorChecker()\n\n" },
-    {(char *) "Max", (PyCFunction) _wrap__core_Max, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "MicroSeconds", (PyCFunction) _wrap__core_MicroSeconds, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "MilliSeconds", (PyCFunction) _wrap__core_MilliSeconds, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "Min", (PyCFunction) _wrap__core_Min, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "Minutes", (PyCFunction) _wrap__core_Minutes, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "NanoSeconds", (PyCFunction) _wrap__core_NanoSeconds, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Max", (PyCFunction) _wrap__core_Max, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "MicroSeconds", (PyCFunction) _wrap__core_MicroSeconds, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "MilliSeconds", (PyCFunction) _wrap__core_MilliSeconds, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Min", (PyCFunction) _wrap__core_Min, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Minutes", (PyCFunction) _wrap__core_Minutes, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "NanoSeconds", (PyCFunction) _wrap__core_NanoSeconds, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "Now", (PyCFunction) _wrap__core_Now, METH_NOARGS, "Now()\n\n" },
-    {(char *) "PicoSeconds", (PyCFunction) _wrap__core_PicoSeconds, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "Seconds", (PyCFunction) _wrap__core_Seconds, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "TestDoubleIsEqual", (PyCFunction) _wrap__core_TestDoubleIsEqual, METH_KEYWORDS|METH_VARARGS, "TestDoubleIsEqual(a, b, epsilon)\n\ntype: a: double const\ntype: b: double const\ntype: epsilon: double const" },
-    {(char *) "TimeStep", (PyCFunction) _wrap__core_TimeStep, METH_KEYWORDS|METH_VARARGS, "TimeStep(ts)\n\ntype: ts: uint64_t" },
+    {(char *) "PicoSeconds", (PyCFunction) _wrap__core_PicoSeconds, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "Seconds", (PyCFunction) _wrap__core_Seconds, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "TestDoubleIsEqual", (PyCFunction) _wrap__core_TestDoubleIsEqual, METH_VARARGS|METH_KEYWORDS, "TestDoubleIsEqual(a, b, epsilon)\n\ntype: a: double const\ntype: b: double const\ntype: epsilon: double const" },
+    {(char *) "TimeStep", (PyCFunction) _wrap__core_TimeStep, METH_VARARGS|METH_KEYWORDS, "TimeStep(ts)\n\ntype: ts: uint64_t" },
     {(char *) "TypeNameGet__lt__signed_char__gt__", (PyCFunction) _wrap__core_TypeNameGet__lt__signed_char__gt__, METH_NOARGS, "TypeNameGet__lt__signed_char__gt__()\n\n" },
     {(char *) "TypeNameGet__lt__short__gt__", (PyCFunction) _wrap__core_TypeNameGet__lt__short__gt__, METH_NOARGS, "TypeNameGet__lt__short__gt__()\n\n" },
     {(char *) "TypeNameGet__lt__int__gt__", (PyCFunction) _wrap__core_TypeNameGet__lt__int__gt__, METH_NOARGS, "TypeNameGet__lt__int__gt__()\n\n" },
@@ -5312,7 +5312,7 @@ static PyMethodDef _core_functions[] = {
     {(char *) "TypeNameGet__lt__unsigned_long__gt__", (PyCFunction) _wrap__core_TypeNameGet__lt__unsigned_long__gt__, METH_NOARGS, "TypeNameGet__lt__unsigned_long__gt__()\n\n" },
     {(char *) "TypeNameGet__lt__float__gt__", (PyCFunction) _wrap__core_TypeNameGet__lt__float__gt__, METH_NOARGS, "TypeNameGet__lt__float__gt__()\n\n" },
     {(char *) "TypeNameGet__lt__double__gt__", (PyCFunction) _wrap__core_TypeNameGet__lt__double__gt__, METH_NOARGS, "TypeNameGet__lt__double__gt__()\n\n" },
-    {(char *) "Years", (PyCFunction) _wrap__core_Years, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Years", (PyCFunction) _wrap__core_Years, METH_VARARGS|METH_KEYWORDS, NULL },
     {NULL, NULL, 0, NULL}
 };
 /* --- classes --- */
@@ -5465,8 +5465,8 @@ _wrap_PyNs3AttributeConstructionList__copy__(PyNs3AttributeConstructionList *sel
 }
 
 static PyMethodDef PyNs3AttributeConstructionList_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3AttributeConstructionList_Add, METH_KEYWORDS|METH_VARARGS, "Add(name, checker, value)\n\ntype: name: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >\ntype: value: ns3::Ptr< ns3::AttributeValue >" },
-    {(char *) "Find", (PyCFunction) _wrap_PyNs3AttributeConstructionList_Find, METH_KEYWORDS|METH_VARARGS, "Find(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3AttributeConstructionList_Add, METH_VARARGS|METH_KEYWORDS, "Add(name, checker, value)\n\ntype: name: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >\ntype: value: ns3::Ptr< ns3::AttributeValue >" },
+    {(char *) "Find", (PyCFunction) _wrap_PyNs3AttributeConstructionList_Find, METH_VARARGS|METH_KEYWORDS, "Find(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3AttributeConstructionList__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -6356,13 +6356,13 @@ _wrap_PyNs3CommandLine__copy__(PyNs3CommandLine *self)
 }
 
 static PyMethodDef PyNs3CommandLine_methods[] = {
-    {(char *) "Parse", (PyCFunction) _wrap_PyNs3CommandLine_Parse, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "AddValue", (PyCFunction) _wrap_PyNs3CommandLine_AddValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetExtraNonOption", (PyCFunction) _wrap_PyNs3CommandLine_GetExtraNonOption, METH_KEYWORDS|METH_VARARGS, "GetExtraNonOption(i)\n\ntype: i: std::size_t" },
+    {(char *) "Parse", (PyCFunction) _wrap_PyNs3CommandLine_Parse, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "AddValue", (PyCFunction) _wrap_PyNs3CommandLine_AddValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetExtraNonOption", (PyCFunction) _wrap_PyNs3CommandLine_GetExtraNonOption, METH_VARARGS|METH_KEYWORDS, "GetExtraNonOption(i)\n\ntype: i: std::size_t" },
     {(char *) "GetNExtraNonOptions", (PyCFunction) _wrap_PyNs3CommandLine_GetNExtraNonOptions, METH_NOARGS, "GetNExtraNonOptions()\n\n" },
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3CommandLine_GetName, METH_NOARGS, "GetName()\n\n" },
-    {(char *) "PrintHelp", (PyCFunction) _wrap_PyNs3CommandLine_PrintHelp, METH_KEYWORDS|METH_VARARGS, "PrintHelp(os)\n\ntype: os: std::ostream &" },
-    {(char *) "Usage", (PyCFunction) _wrap_PyNs3CommandLine_Usage, METH_KEYWORDS|METH_VARARGS, "Usage(usage)\n\ntype: usage: std::string const" },
+    {(char *) "PrintHelp", (PyCFunction) _wrap_PyNs3CommandLine_PrintHelp, METH_VARARGS|METH_KEYWORDS, "PrintHelp(os)\n\ntype: os: std::ostream &" },
+    {(char *) "Usage", (PyCFunction) _wrap_PyNs3CommandLine_Usage, METH_VARARGS|METH_KEYWORDS, "Usage(usage)\n\ntype: usage: std::string const" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3CommandLine__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -6437,7 +6437,7 @@ PyTypeObject PyNs3CommandLine_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "CommandLine(cmd)\nCommandLine()",                        /* Documentation string */
     (traverseproc)PyNs3CommandLine__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CommandLine__tp_clear,             /* tp_clear */
@@ -7979,7 +7979,7 @@ _wrap_PyNs3EventGarbageCollector__copy__(PyNs3EventGarbageCollector *self)
 }
 
 static PyMethodDef PyNs3EventGarbageCollector_methods[] = {
-    {(char *) "Track", (PyCFunction) _wrap_PyNs3EventGarbageCollector_Track, METH_KEYWORDS|METH_VARARGS, "Track(event)\n\ntype: event: ns3::EventId" },
+    {(char *) "Track", (PyCFunction) _wrap_PyNs3EventGarbageCollector_Track, METH_VARARGS|METH_KEYWORDS, "Track(event)\n\ntype: event: ns3::EventId" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3EventGarbageCollector__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -8610,16 +8610,16 @@ _wrap_PyNs3GlobalValue__copy__(PyNs3GlobalValue *self)
 }
 
 static PyMethodDef PyNs3GlobalValue_methods[] = {
-    {(char *) "Bind", (PyCFunction) _wrap_PyNs3GlobalValue_Bind, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "Bind(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "BindFailSafe", (PyCFunction) _wrap_PyNs3GlobalValue_BindFailSafe, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "BindFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Bind", (PyCFunction) _wrap_PyNs3GlobalValue_Bind, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "Bind(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "BindFailSafe", (PyCFunction) _wrap_PyNs3GlobalValue_BindFailSafe, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "BindFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
     {(char *) "GetChecker", (PyCFunction) _wrap_PyNs3GlobalValue_GetChecker, METH_NOARGS, "GetChecker()\n\n" },
     {(char *) "GetHelp", (PyCFunction) _wrap_PyNs3GlobalValue_GetHelp, METH_NOARGS, "GetHelp()\n\n" },
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3GlobalValue_GetName, METH_NOARGS, "GetName()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3GlobalValue_GetValue, METH_KEYWORDS|METH_VARARGS, "GetValue(value)\n\ntype: value: ns3::AttributeValue &" },
-    {(char *) "GetValueByName", (PyCFunction) _wrap_PyNs3GlobalValue_GetValueByName, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "GetValueByName(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
-    {(char *) "GetValueByNameFailSafe", (PyCFunction) _wrap_PyNs3GlobalValue_GetValueByNameFailSafe, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "GetValueByNameFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3GlobalValue_GetValue, METH_VARARGS|METH_KEYWORDS, "GetValue(value)\n\ntype: value: ns3::AttributeValue &" },
+    {(char *) "GetValueByName", (PyCFunction) _wrap_PyNs3GlobalValue_GetValueByName, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "GetValueByName(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
+    {(char *) "GetValueByNameFailSafe", (PyCFunction) _wrap_PyNs3GlobalValue_GetValueByNameFailSafe, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "GetValueByNameFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
     {(char *) "ResetInitialValue", (PyCFunction) _wrap_PyNs3GlobalValue_ResetInitialValue, METH_NOARGS, "ResetInitialValue()\n\n" },
-    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3GlobalValue_SetValue, METH_KEYWORDS|METH_VARARGS, "SetValue(value)\n\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetValue", (PyCFunction) _wrap_PyNs3GlobalValue_SetValue, METH_VARARGS|METH_KEYWORDS, "SetValue(value)\n\ntype: value: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3GlobalValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -8967,8 +8967,8 @@ _wrap_PyNs3Hasher__copy__(PyNs3Hasher *self)
 }
 
 static PyMethodDef PyNs3Hasher_methods[] = {
-    {(char *) "GetHash32", (PyCFunction) _wrap_PyNs3Hasher_GetHash32, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetHash64", (PyCFunction) _wrap_PyNs3Hasher_GetHash64, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetHash32", (PyCFunction) _wrap_PyNs3Hasher_GetHash32, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetHash64", (PyCFunction) _wrap_PyNs3Hasher_GetHash64, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "clear", (PyCFunction) _wrap_PyNs3Hasher_clear, METH_NOARGS, "clear()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Hasher__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -10356,14 +10356,14 @@ _wrap_PyNs3LogComponent__copy__(PyNs3LogComponent *self)
 }
 
 static PyMethodDef PyNs3LogComponent_methods[] = {
-    {(char *) "Disable", (PyCFunction) _wrap_PyNs3LogComponent_Disable, METH_KEYWORDS|METH_VARARGS, "Disable(level)\n\ntype: level: ns3::LogLevel" },
-    {(char *) "Enable", (PyCFunction) _wrap_PyNs3LogComponent_Enable, METH_KEYWORDS|METH_VARARGS, "Enable(level)\n\ntype: level: ns3::LogLevel" },
+    {(char *) "Disable", (PyCFunction) _wrap_PyNs3LogComponent_Disable, METH_VARARGS|METH_KEYWORDS, "Disable(level)\n\ntype: level: ns3::LogLevel" },
+    {(char *) "Enable", (PyCFunction) _wrap_PyNs3LogComponent_Enable, METH_VARARGS|METH_KEYWORDS, "Enable(level)\n\ntype: level: ns3::LogLevel" },
     {(char *) "File", (PyCFunction) _wrap_PyNs3LogComponent_File, METH_NOARGS, "File()\n\n" },
-    {(char *) "GetLevelLabel", (PyCFunction) _wrap_PyNs3LogComponent_GetLevelLabel, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "GetLevelLabel(level)\n\ntype: level: ns3::LogLevel" },
-    {(char *) "IsEnabled", (PyCFunction) _wrap_PyNs3LogComponent_IsEnabled, METH_KEYWORDS|METH_VARARGS, "IsEnabled(level)\n\ntype: level: ns3::LogLevel" },
+    {(char *) "GetLevelLabel", (PyCFunction) _wrap_PyNs3LogComponent_GetLevelLabel, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "GetLevelLabel(level)\n\ntype: level: ns3::LogLevel" },
+    {(char *) "IsEnabled", (PyCFunction) _wrap_PyNs3LogComponent_IsEnabled, METH_VARARGS|METH_KEYWORDS, "IsEnabled(level)\n\ntype: level: ns3::LogLevel" },
     {(char *) "IsNoneEnabled", (PyCFunction) _wrap_PyNs3LogComponent_IsNoneEnabled, METH_NOARGS, "IsNoneEnabled()\n\n" },
     {(char *) "Name", (PyCFunction) _wrap_PyNs3LogComponent_Name, METH_NOARGS, "Name()\n\n" },
-    {(char *) "SetMask", (PyCFunction) _wrap_PyNs3LogComponent_SetMask, METH_KEYWORDS|METH_VARARGS, "SetMask(level)\n\ntype: level: ns3::LogLevel" },
+    {(char *) "SetMask", (PyCFunction) _wrap_PyNs3LogComponent_SetMask, METH_VARARGS|METH_KEYWORDS, "SetMask(level)\n\ntype: level: ns3::LogLevel" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3LogComponent__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -10802,11 +10802,11 @@ _wrap_PyNs3Names__copy__(PyNs3Names *self)
 }
 
 static PyMethodDef PyNs3Names_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3Names_Add, METH_KEYWORDS|METH_VARARGS|METH_STATIC, NULL },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3Names_Add, METH_VARARGS|METH_KEYWORDS|METH_STATIC, NULL },
     {(char *) "Clear", (PyCFunction) _wrap_PyNs3Names_Clear, METH_NOARGS|METH_STATIC, "Clear()\n\n" },
-    {(char *) "FindName", (PyCFunction) _wrap_PyNs3Names_FindName, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "FindName(object)\n\ntype: object: ns3::Ptr< ns3::Object >" },
-    {(char *) "FindPath", (PyCFunction) _wrap_PyNs3Names_FindPath, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "FindPath(object)\n\ntype: object: ns3::Ptr< ns3::Object >" },
-    {(char *) "Rename", (PyCFunction) _wrap_PyNs3Names_Rename, METH_KEYWORDS|METH_VARARGS|METH_STATIC, NULL },
+    {(char *) "FindName", (PyCFunction) _wrap_PyNs3Names_FindName, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "FindName(object)\n\ntype: object: ns3::Ptr< ns3::Object >" },
+    {(char *) "FindPath", (PyCFunction) _wrap_PyNs3Names_FindPath, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "FindPath(object)\n\ntype: object: ns3::Ptr< ns3::Object >" },
+    {(char *) "Rename", (PyCFunction) _wrap_PyNs3Names_Rename, METH_VARARGS|METH_KEYWORDS|METH_STATIC, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Names__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -11360,17 +11360,17 @@ _wrap_PyNs3ObjectBase_TraceDisconnectWithoutContext(PyNs3ObjectBase *self, PyObj
 }
 
 static PyMethodDef PyNs3ObjectBase_methods[] = {
-    {(char *) "GetAttribute", (PyCFunction) _wrap_PyNs3ObjectBase_GetAttribute, METH_KEYWORDS|METH_VARARGS, "GetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
-    {(char *) "GetAttributeFailSafe", (PyCFunction) _wrap_PyNs3ObjectBase_GetAttributeFailSafe, METH_KEYWORDS|METH_VARARGS, "GetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
+    {(char *) "GetAttribute", (PyCFunction) _wrap_PyNs3ObjectBase_GetAttribute, METH_VARARGS|METH_KEYWORDS, "GetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
+    {(char *) "GetAttributeFailSafe", (PyCFunction) _wrap_PyNs3ObjectBase_GetAttributeFailSafe, METH_VARARGS|METH_KEYWORDS, "GetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue &" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3ObjectBase_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ObjectBase_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3ObjectBase_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetAttributeFailSafe", (PyCFunction) _wrap_PyNs3ObjectBase_SetAttributeFailSafe, METH_KEYWORDS|METH_VARARGS, "SetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "TraceConnect", (PyCFunction) _wrap_PyNs3ObjectBase_TraceConnect, METH_KEYWORDS|METH_VARARGS, "TraceConnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "TraceConnectWithoutContext", (PyCFunction) _wrap_PyNs3ObjectBase_TraceConnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "TraceConnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "TraceDisconnect", (PyCFunction) _wrap_PyNs3ObjectBase_TraceDisconnect, METH_KEYWORDS|METH_VARARGS, "TraceDisconnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "TraceDisconnectWithoutContext", (PyCFunction) _wrap_PyNs3ObjectBase_TraceDisconnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "TraceDisconnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "ConstructSelf", (PyCFunction) PyNs3ObjectBase__PythonHelper::_wrap_ConstructSelf, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3ObjectBase_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetAttributeFailSafe", (PyCFunction) _wrap_PyNs3ObjectBase_SetAttributeFailSafe, METH_VARARGS|METH_KEYWORDS, "SetAttributeFailSafe(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "TraceConnect", (PyCFunction) _wrap_PyNs3ObjectBase_TraceConnect, METH_VARARGS|METH_KEYWORDS, "TraceConnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "TraceConnectWithoutContext", (PyCFunction) _wrap_PyNs3ObjectBase_TraceConnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "TraceConnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "TraceDisconnect", (PyCFunction) _wrap_PyNs3ObjectBase_TraceDisconnect, METH_VARARGS|METH_KEYWORDS, "TraceDisconnect(name, context, cb)\n\ntype: name: std::string\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "TraceDisconnectWithoutContext", (PyCFunction) _wrap_PyNs3ObjectBase_TraceDisconnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "TraceDisconnectWithoutContext(name, cb)\n\ntype: name: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "ConstructSelf", (PyCFunction) PyNs3ObjectBase__PythonHelper::_wrap_ConstructSelf, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ObjectBase__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
 };
@@ -11437,7 +11437,7 @@ PyTypeObject PyNs3ObjectBase_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ObjectBase(arg0)\nObjectBase()",                        /* Documentation string */
     (traverseproc)PyNs3ObjectBase__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ObjectBase__tp_clear,             /* tp_clear */
@@ -11930,8 +11930,8 @@ static PyMethodDef PyNs3ObjectFactory_methods[] = {
     {(char *) "Create", (PyCFunction) _wrap_PyNs3ObjectFactory_Create, METH_NOARGS, "Create()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ObjectFactory_GetTypeId, METH_NOARGS, "GetTypeId()\n\n" },
     {(char *) "IsTypeIdSet", (PyCFunction) _wrap_PyNs3ObjectFactory_IsTypeIdSet, METH_NOARGS, "IsTypeIdSet()\n\n" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3ObjectFactory_Set, METH_KEYWORDS|METH_VARARGS, "Set(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetTypeId", (PyCFunction) _wrap_PyNs3ObjectFactory_SetTypeId, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3ObjectFactory_Set, METH_VARARGS|METH_KEYWORDS, "Set(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetTypeId", (PyCFunction) _wrap_PyNs3ObjectFactory_SetTypeId, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ObjectFactory__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12277,7 +12277,7 @@ _wrap_PyNs3RandomVariableStreamHelper__copy__(PyNs3RandomVariableStreamHelper *s
 }
 
 static PyMethodDef PyNs3RandomVariableStreamHelper_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3RandomVariableStreamHelper_AssignStreams, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "AssignStreams(path, stream)\n\ntype: path: std::string\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3RandomVariableStreamHelper_AssignStreams, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "AssignStreams(path, stream)\n\ntype: path: std::string\ntype: stream: int64_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RandomVariableStreamHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12508,8 +12508,8 @@ static PyMethodDef PyNs3RngSeedManager_methods[] = {
     {(char *) "GetNextStreamIndex", (PyCFunction) _wrap_PyNs3RngSeedManager_GetNextStreamIndex, METH_NOARGS|METH_STATIC, "GetNextStreamIndex()\n\n" },
     {(char *) "GetRun", (PyCFunction) _wrap_PyNs3RngSeedManager_GetRun, METH_NOARGS|METH_STATIC, "GetRun()\n\n" },
     {(char *) "GetSeed", (PyCFunction) _wrap_PyNs3RngSeedManager_GetSeed, METH_NOARGS|METH_STATIC, "GetSeed()\n\n" },
-    {(char *) "SetRun", (PyCFunction) _wrap_PyNs3RngSeedManager_SetRun, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetRun(run)\n\ntype: run: uint64_t" },
-    {(char *) "SetSeed", (PyCFunction) _wrap_PyNs3RngSeedManager_SetSeed, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetSeed(seed)\n\ntype: seed: uint32_t" },
+    {(char *) "SetRun", (PyCFunction) _wrap_PyNs3RngSeedManager_SetRun, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetRun(run)\n\ntype: run: uint64_t" },
+    {(char *) "SetSeed", (PyCFunction) _wrap_PyNs3RngSeedManager_SetSeed, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetSeed(seed)\n\ntype: seed: uint32_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RngSeedManager__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12855,10 +12855,10 @@ _wrap_PyNs3ShowProgress__copy__(PyNs3ShowProgress *self)
 }
 
 static PyMethodDef PyNs3ShowProgress_methods[] = {
-    {(char *) "SetInterval", (PyCFunction) _wrap_PyNs3ShowProgress_SetInterval, METH_KEYWORDS|METH_VARARGS, "SetInterval(interval)\n\ntype: interval: ns3::Time const" },
-    {(char *) "SetStream", (PyCFunction) _wrap_PyNs3ShowProgress_SetStream, METH_KEYWORDS|METH_VARARGS, "SetStream(os)\n\ntype: os: std::ostream &" },
+    {(char *) "SetInterval", (PyCFunction) _wrap_PyNs3ShowProgress_SetInterval, METH_VARARGS|METH_KEYWORDS, "SetInterval(interval)\n\ntype: interval: ns3::Time const" },
+    {(char *) "SetStream", (PyCFunction) _wrap_PyNs3ShowProgress_SetStream, METH_VARARGS|METH_KEYWORDS, "SetStream(os)\n\ntype: os: std::ostream &" },
     {(char *) "Start", (PyCFunction) _wrap_PyNs3ShowProgress_Start, METH_NOARGS, "Start()\n\n" },
-    {(char *) "SetVerbose", (PyCFunction) _wrap_PyNs3ShowProgress_SetVerbose, METH_KEYWORDS|METH_VARARGS, "SetVerbose(verbose)\n\ntype: verbose: bool" },
+    {(char *) "SetVerbose", (PyCFunction) _wrap_PyNs3ShowProgress_SetVerbose, METH_VARARGS|METH_KEYWORDS, "SetVerbose(verbose)\n\ntype: verbose: bool" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ShowProgress__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -13010,7 +13010,7 @@ PyTypeObject PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter_Type 
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter(o)\nSimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter()",                        /* Documentation string */
     (traverseproc)PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SimpleRefCount__Ns3Object_Ns3ObjectBase_Ns3ObjectDeleter__tp_clear,             /* tp_clear */
@@ -13483,26 +13483,26 @@ _wrap_PyNs3Simulator__copy__(PyNs3Simulator *self)
 }
 
 static PyMethodDef PyNs3Simulator_methods[] = {
-    {(char *) "Schedule", (PyCFunction) _wrap_PyNs3Simulator_Schedule, METH_KEYWORDS|METH_VARARGS|METH_STATIC, NULL },
-    {(char *) "ScheduleNow", (PyCFunction) _wrap_PyNs3Simulator_ScheduleNow, METH_KEYWORDS|METH_VARARGS|METH_STATIC, NULL },
-    {(char *) "ScheduleWithContext", (PyCFunction) _wrap_PyNs3Simulator_ScheduleWithContext, METH_KEYWORDS|METH_VARARGS|METH_STATIC, NULL },
-    {(char *) "ScheduleDestroy", (PyCFunction) _wrap_PyNs3Simulator_ScheduleDestroy, METH_KEYWORDS|METH_VARARGS|METH_STATIC, NULL },
-    {(char *) "Run", (PyCFunction) _wrap_PyNs3Simulator_Run, METH_KEYWORDS|METH_VARARGS|METH_STATIC, NULL },
-    {(char *) "Cancel", (PyCFunction) _wrap_PyNs3Simulator_Cancel, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "Cancel(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "Schedule", (PyCFunction) _wrap_PyNs3Simulator_Schedule, METH_VARARGS|METH_STATIC|METH_KEYWORDS, NULL },
+    {(char *) "ScheduleNow", (PyCFunction) _wrap_PyNs3Simulator_ScheduleNow, METH_VARARGS|METH_STATIC|METH_KEYWORDS, NULL },
+    {(char *) "ScheduleWithContext", (PyCFunction) _wrap_PyNs3Simulator_ScheduleWithContext, METH_VARARGS|METH_STATIC|METH_KEYWORDS, NULL },
+    {(char *) "ScheduleDestroy", (PyCFunction) _wrap_PyNs3Simulator_ScheduleDestroy, METH_VARARGS|METH_STATIC|METH_KEYWORDS, NULL },
+    {(char *) "Run", (PyCFunction) _wrap_PyNs3Simulator_Run, METH_VARARGS|METH_STATIC|METH_KEYWORDS, NULL },
+    {(char *) "Cancel", (PyCFunction) _wrap_PyNs3Simulator_Cancel, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "Cancel(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "Destroy", (PyCFunction) _wrap_PyNs3Simulator_Destroy, METH_NOARGS|METH_STATIC, "Destroy()\n\n" },
     {(char *) "GetContext", (PyCFunction) _wrap_PyNs3Simulator_GetContext, METH_NOARGS|METH_STATIC, "GetContext()\n\n" },
-    {(char *) "GetDelayLeft", (PyCFunction) _wrap_PyNs3Simulator_GetDelayLeft, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "GetDelayLeft(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "GetDelayLeft", (PyCFunction) _wrap_PyNs3Simulator_GetDelayLeft, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "GetDelayLeft(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "GetEventCount", (PyCFunction) _wrap_PyNs3Simulator_GetEventCount, METH_NOARGS|METH_STATIC, "GetEventCount()\n\n" },
     {(char *) "GetImplementation", (PyCFunction) _wrap_PyNs3Simulator_GetImplementation, METH_NOARGS|METH_STATIC, "GetImplementation()\n\n" },
     {(char *) "GetMaximumSimulationTime", (PyCFunction) _wrap_PyNs3Simulator_GetMaximumSimulationTime, METH_NOARGS|METH_STATIC, "GetMaximumSimulationTime()\n\n" },
     {(char *) "GetSystemId", (PyCFunction) _wrap_PyNs3Simulator_GetSystemId, METH_NOARGS|METH_STATIC, "GetSystemId()\n\n" },
-    {(char *) "IsExpired", (PyCFunction) _wrap_PyNs3Simulator_IsExpired, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "IsExpired(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "IsExpired", (PyCFunction) _wrap_PyNs3Simulator_IsExpired, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "IsExpired(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "IsFinished", (PyCFunction) _wrap_PyNs3Simulator_IsFinished, METH_NOARGS|METH_STATIC, "IsFinished()\n\n" },
     {(char *) "Now", (PyCFunction) _wrap_PyNs3Simulator_Now, METH_NOARGS|METH_STATIC, "Now()\n\n" },
-    {(char *) "Remove", (PyCFunction) _wrap_PyNs3Simulator_Remove, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "Remove(id)\n\ntype: id: ns3::EventId const &" },
-    {(char *) "SetImplementation", (PyCFunction) _wrap_PyNs3Simulator_SetImplementation, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetImplementation(impl)\n\ntype: impl: ns3::Ptr< ns3::SimulatorImpl >" },
-    {(char *) "SetScheduler", (PyCFunction) _wrap_PyNs3Simulator_SetScheduler, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetScheduler(schedulerFactory)\n\ntype: schedulerFactory: ns3::ObjectFactory" },
-    {(char *) "Stop", (PyCFunction) _wrap_PyNs3Simulator_Stop, METH_KEYWORDS|METH_VARARGS|METH_STATIC, NULL },
+    {(char *) "Remove", (PyCFunction) _wrap_PyNs3Simulator_Remove, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "Remove(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "SetImplementation", (PyCFunction) _wrap_PyNs3Simulator_SetImplementation, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetImplementation(impl)\n\ntype: impl: ns3::Ptr< ns3::SimulatorImpl >" },
+    {(char *) "SetScheduler", (PyCFunction) _wrap_PyNs3Simulator_SetScheduler, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetScheduler(schedulerFactory)\n\ntype: schedulerFactory: ns3::ObjectFactory" },
+    {(char *) "Stop", (PyCFunction) _wrap_PyNs3Simulator_Stop, METH_VARARGS|METH_KEYWORDS|METH_STATIC, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Simulator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -13834,9 +13834,9 @@ _wrap_PyNs3SystemCondition__copy__(PyNs3SystemCondition *self)
 static PyMethodDef PyNs3SystemCondition_methods[] = {
     {(char *) "Broadcast", (PyCFunction) _wrap_PyNs3SystemCondition_Broadcast, METH_NOARGS, "Broadcast()\n\n" },
     {(char *) "GetCondition", (PyCFunction) _wrap_PyNs3SystemCondition_GetCondition, METH_NOARGS, "GetCondition()\n\n" },
-    {(char *) "SetCondition", (PyCFunction) _wrap_PyNs3SystemCondition_SetCondition, METH_KEYWORDS|METH_VARARGS, "SetCondition(condition)\n\ntype: condition: bool" },
+    {(char *) "SetCondition", (PyCFunction) _wrap_PyNs3SystemCondition_SetCondition, METH_VARARGS|METH_KEYWORDS, "SetCondition(condition)\n\ntype: condition: bool" },
     {(char *) "Signal", (PyCFunction) _wrap_PyNs3SystemCondition_Signal, METH_NOARGS, "Signal()\n\n" },
-    {(char *) "TimedWait", (PyCFunction) _wrap_PyNs3SystemCondition_TimedWait, METH_KEYWORDS|METH_VARARGS, "TimedWait(ns)\n\ntype: ns: uint64_t" },
+    {(char *) "TimedWait", (PyCFunction) _wrap_PyNs3SystemCondition_TimedWait, METH_VARARGS|METH_KEYWORDS, "TimedWait(ns)\n\ntype: ns: uint64_t" },
     {(char *) "Wait", (PyCFunction) _wrap_PyNs3SystemCondition_Wait, METH_NOARGS, "Wait()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3SystemCondition__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -14821,8 +14821,8 @@ static PyMethodDef PyNs3Timer_methods[] = {
     {(char *) "IsSuspended", (PyCFunction) _wrap_PyNs3Timer_IsSuspended, METH_NOARGS, "IsSuspended()\n\n" },
     {(char *) "Remove", (PyCFunction) _wrap_PyNs3Timer_Remove, METH_NOARGS, "Remove()\n\n" },
     {(char *) "Resume", (PyCFunction) _wrap_PyNs3Timer_Resume, METH_NOARGS, "Resume()\n\n" },
-    {(char *) "Schedule", (PyCFunction) _wrap_PyNs3Timer_Schedule, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SetDelay", (PyCFunction) _wrap_PyNs3Timer_SetDelay, METH_KEYWORDS|METH_VARARGS, "SetDelay(delay)\n\ntype: delay: ns3::Time const &" },
+    {(char *) "Schedule", (PyCFunction) _wrap_PyNs3Timer_Schedule, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "SetDelay", (PyCFunction) _wrap_PyNs3Timer_SetDelay, METH_VARARGS|METH_KEYWORDS, "SetDelay(delay)\n\ntype: delay: ns3::Time const &" },
     {(char *) "Suspend", (PyCFunction) _wrap_PyNs3Timer_Suspend, METH_NOARGS, "Suspend()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Timer__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -15114,7 +15114,7 @@ _wrap_PyNs3TimerImpl_Schedule(PyNs3TimerImpl *self, PyObject *args, PyObject *kw
 
 static PyMethodDef PyNs3TimerImpl_methods[] = {
     {(char *) "Invoke", (PyCFunction) _wrap_PyNs3TimerImpl_Invoke, METH_NOARGS, "Invoke()\n\n" },
-    {(char *) "Schedule", (PyCFunction) _wrap_PyNs3TimerImpl_Schedule, METH_KEYWORDS|METH_VARARGS, "Schedule(delay)\n\ntype: delay: ns3::Time const &" },
+    {(char *) "Schedule", (PyCFunction) _wrap_PyNs3TimerImpl_Schedule, METH_VARARGS|METH_KEYWORDS, "Schedule(delay)\n\ntype: delay: ns3::Time const &" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -15180,7 +15180,7 @@ PyTypeObject PyNs3TimerImpl_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "TimerImpl(arg0)\nTimerImpl()",                        /* Documentation string */
     (traverseproc)PyNs3TimerImpl__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TimerImpl__tp_clear,             /* tp_clear */
@@ -16040,36 +16040,36 @@ _wrap_PyNs3TypeId__copy__(PyNs3TypeId *self)
 }
 
 static PyMethodDef PyNs3TypeId_methods[] = {
-    {(char *) "LookupByNameFailSafe", (PyCFunction) _wrap_PyNs3TypeId_LookupByNameFailSafe, METH_KEYWORDS|METH_VARARGS|METH_STATIC, NULL },
-    {(char *) "AddAttribute", (PyCFunction) _wrap_PyNs3TypeId_AddAttribute, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "AddTraceSource", (PyCFunction) _wrap_PyNs3TypeId_AddTraceSource, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetAttribute", (PyCFunction) _wrap_PyNs3TypeId_GetAttribute, METH_KEYWORDS|METH_VARARGS, "GetAttribute(i)\n\ntype: i: std::size_t" },
-    {(char *) "GetAttributeFullName", (PyCFunction) _wrap_PyNs3TypeId_GetAttributeFullName, METH_KEYWORDS|METH_VARARGS, "GetAttributeFullName(i)\n\ntype: i: std::size_t" },
+    {(char *) "LookupByNameFailSafe", (PyCFunction) _wrap_PyNs3TypeId_LookupByNameFailSafe, METH_VARARGS|METH_STATIC|METH_KEYWORDS, NULL },
+    {(char *) "AddAttribute", (PyCFunction) _wrap_PyNs3TypeId_AddAttribute, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "AddTraceSource", (PyCFunction) _wrap_PyNs3TypeId_AddTraceSource, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetAttribute", (PyCFunction) _wrap_PyNs3TypeId_GetAttribute, METH_VARARGS|METH_KEYWORDS, "GetAttribute(i)\n\ntype: i: std::size_t" },
+    {(char *) "GetAttributeFullName", (PyCFunction) _wrap_PyNs3TypeId_GetAttributeFullName, METH_VARARGS|METH_KEYWORDS, "GetAttributeFullName(i)\n\ntype: i: std::size_t" },
     {(char *) "GetAttributeN", (PyCFunction) _wrap_PyNs3TypeId_GetAttributeN, METH_NOARGS, "GetAttributeN()\n\n" },
     {(char *) "GetGroupName", (PyCFunction) _wrap_PyNs3TypeId_GetGroupName, METH_NOARGS, "GetGroupName()\n\n" },
     {(char *) "GetHash", (PyCFunction) _wrap_PyNs3TypeId_GetHash, METH_NOARGS, "GetHash()\n\n" },
     {(char *) "GetName", (PyCFunction) _wrap_PyNs3TypeId_GetName, METH_NOARGS, "GetName()\n\n" },
     {(char *) "GetParent", (PyCFunction) _wrap_PyNs3TypeId_GetParent, METH_NOARGS, "GetParent()\n\n" },
-    {(char *) "GetRegistered", (PyCFunction) _wrap_PyNs3TypeId_GetRegistered, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "GetRegistered(i)\n\ntype: i: uint16_t" },
+    {(char *) "GetRegistered", (PyCFunction) _wrap_PyNs3TypeId_GetRegistered, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "GetRegistered(i)\n\ntype: i: uint16_t" },
     {(char *) "GetRegisteredN", (PyCFunction) _wrap_PyNs3TypeId_GetRegisteredN, METH_NOARGS|METH_STATIC, "GetRegisteredN()\n\n" },
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3TypeId_GetSize, METH_NOARGS, "GetSize()\n\n" },
-    {(char *) "GetTraceSource", (PyCFunction) _wrap_PyNs3TypeId_GetTraceSource, METH_KEYWORDS|METH_VARARGS, "GetTraceSource(i)\n\ntype: i: std::size_t" },
+    {(char *) "GetTraceSource", (PyCFunction) _wrap_PyNs3TypeId_GetTraceSource, METH_VARARGS|METH_KEYWORDS, "GetTraceSource(i)\n\ntype: i: std::size_t" },
     {(char *) "GetTraceSourceN", (PyCFunction) _wrap_PyNs3TypeId_GetTraceSourceN, METH_NOARGS, "GetTraceSourceN()\n\n" },
     {(char *) "GetUid", (PyCFunction) _wrap_PyNs3TypeId_GetUid, METH_NOARGS, "GetUid()\n\n" },
     {(char *) "HasConstructor", (PyCFunction) _wrap_PyNs3TypeId_HasConstructor, METH_NOARGS, "HasConstructor()\n\n" },
     {(char *) "HasParent", (PyCFunction) _wrap_PyNs3TypeId_HasParent, METH_NOARGS, "HasParent()\n\n" },
     {(char *) "HideFromDocumentation", (PyCFunction) _wrap_PyNs3TypeId_HideFromDocumentation, METH_NOARGS, "HideFromDocumentation()\n\n" },
-    {(char *) "IsChildOf", (PyCFunction) _wrap_PyNs3TypeId_IsChildOf, METH_KEYWORDS|METH_VARARGS, "IsChildOf(other)\n\ntype: other: ns3::TypeId" },
-    {(char *) "LookupAttributeByName", (PyCFunction) _wrap_PyNs3TypeId_LookupAttributeByName, METH_KEYWORDS|METH_VARARGS, "LookupAttributeByName(name, info)\n\ntype: name: std::string\ntype: info: ns3::TypeId::AttributeInformation *" },
-    {(char *) "LookupByHash", (PyCFunction) _wrap_PyNs3TypeId_LookupByHash, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "LookupByHash(hash)\n\ntype: hash: uint32_t" },
-    {(char *) "LookupByName", (PyCFunction) _wrap_PyNs3TypeId_LookupByName, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "LookupByName(name)\n\ntype: name: std::string" },
-    {(char *) "LookupTraceSourceByName", (PyCFunction) _wrap_PyNs3TypeId_LookupTraceSourceByName, METH_KEYWORDS|METH_VARARGS, "LookupTraceSourceByName(name)\n\ntype: name: std::string" },
+    {(char *) "IsChildOf", (PyCFunction) _wrap_PyNs3TypeId_IsChildOf, METH_VARARGS|METH_KEYWORDS, "IsChildOf(other)\n\ntype: other: ns3::TypeId" },
+    {(char *) "LookupAttributeByName", (PyCFunction) _wrap_PyNs3TypeId_LookupAttributeByName, METH_VARARGS|METH_KEYWORDS, "LookupAttributeByName(name, info)\n\ntype: name: std::string\ntype: info: ns3::TypeId::AttributeInformation *" },
+    {(char *) "LookupByHash", (PyCFunction) _wrap_PyNs3TypeId_LookupByHash, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "LookupByHash(hash)\n\ntype: hash: uint32_t" },
+    {(char *) "LookupByName", (PyCFunction) _wrap_PyNs3TypeId_LookupByName, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "LookupByName(name)\n\ntype: name: std::string" },
+    {(char *) "LookupTraceSourceByName", (PyCFunction) _wrap_PyNs3TypeId_LookupTraceSourceByName, METH_VARARGS|METH_KEYWORDS, "LookupTraceSourceByName(name)\n\ntype: name: std::string" },
     {(char *) "MustHideFromDocumentation", (PyCFunction) _wrap_PyNs3TypeId_MustHideFromDocumentation, METH_NOARGS, "MustHideFromDocumentation()\n\n" },
-    {(char *) "SetAttributeInitialValue", (PyCFunction) _wrap_PyNs3TypeId_SetAttributeInitialValue, METH_KEYWORDS|METH_VARARGS, "SetAttributeInitialValue(i, initialValue)\n\ntype: i: std::size_t\ntype: initialValue: ns3::Ptr< ns3::AttributeValue const >" },
-    {(char *) "SetGroupName", (PyCFunction) _wrap_PyNs3TypeId_SetGroupName, METH_KEYWORDS|METH_VARARGS, "SetGroupName(groupName)\n\ntype: groupName: std::string" },
-    {(char *) "SetParent", (PyCFunction) _wrap_PyNs3TypeId_SetParent, METH_KEYWORDS|METH_VARARGS, "SetParent(tid)\n\ntype: tid: ns3::TypeId" },
-    {(char *) "SetSize", (PyCFunction) _wrap_PyNs3TypeId_SetSize, METH_KEYWORDS|METH_VARARGS, "SetSize(size)\n\ntype: size: std::size_t" },
-    {(char *) "SetUid", (PyCFunction) _wrap_PyNs3TypeId_SetUid, METH_KEYWORDS|METH_VARARGS, "SetUid(uid)\n\ntype: uid: uint16_t" },
+    {(char *) "SetAttributeInitialValue", (PyCFunction) _wrap_PyNs3TypeId_SetAttributeInitialValue, METH_VARARGS|METH_KEYWORDS, "SetAttributeInitialValue(i, initialValue)\n\ntype: i: std::size_t\ntype: initialValue: ns3::Ptr< ns3::AttributeValue const >" },
+    {(char *) "SetGroupName", (PyCFunction) _wrap_PyNs3TypeId_SetGroupName, METH_VARARGS|METH_KEYWORDS, "SetGroupName(groupName)\n\ntype: groupName: std::string" },
+    {(char *) "SetParent", (PyCFunction) _wrap_PyNs3TypeId_SetParent, METH_VARARGS|METH_KEYWORDS, "SetParent(tid)\n\ntype: tid: ns3::TypeId" },
+    {(char *) "SetSize", (PyCFunction) _wrap_PyNs3TypeId_SetSize, METH_VARARGS|METH_KEYWORDS, "SetSize(size)\n\ntype: size: std::size_t" },
+    {(char *) "SetUid", (PyCFunction) _wrap_PyNs3TypeId_SetUid, METH_VARARGS|METH_KEYWORDS, "SetUid(uid)\n\ntype: uid: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TypeId__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -17495,7 +17495,7 @@ PyTypeObject PyNs3Vector2D_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_CHECKTYPES,                      /* tp_flags */
     "Vector2D(_x, _y)\nVector2D(arg0)\nVector2D()",                        /* Documentation string */
     (traverseproc)NULL,     /* tp_traverse */
     (inquiry)NULL,             /* tp_clear */
@@ -17976,7 +17976,7 @@ PyTypeObject PyNs3Vector3D_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_CHECKTYPES,                      /* tp_flags */
     "Vector3D(_x, _y, _z)\nVector3D(arg0)\nVector3D()",                        /* Documentation string */
     (traverseproc)NULL,     /* tp_traverse */
     (inquiry)NULL,             /* tp_clear */
@@ -18104,7 +18104,7 @@ _wrap_PyNs3Watchdog__copy__(PyNs3Watchdog *self)
 }
 
 static PyMethodDef PyNs3Watchdog_methods[] = {
-    {(char *) "Ping", (PyCFunction) _wrap_PyNs3Watchdog_Ping, METH_KEYWORDS|METH_VARARGS, "Ping(delay)\n\ntype: delay: ns3::Time" },
+    {(char *) "Ping", (PyCFunction) _wrap_PyNs3Watchdog_Ping, METH_VARARGS|METH_KEYWORDS, "Ping(delay)\n\ntype: delay: ns3::Time" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Watchdog__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -18842,8 +18842,8 @@ static PyMethodDef PyNs3Int64x64_t_methods[] = {
     {(char *) "GetDouble", (PyCFunction) _wrap_PyNs3Int64x64_t_GetDouble, METH_NOARGS, "GetDouble()\n\n" },
     {(char *) "GetHigh", (PyCFunction) _wrap_PyNs3Int64x64_t_GetHigh, METH_NOARGS, "GetHigh()\n\n" },
     {(char *) "GetLow", (PyCFunction) _wrap_PyNs3Int64x64_t_GetLow, METH_NOARGS, "GetLow()\n\n" },
-    {(char *) "Invert", (PyCFunction) _wrap_PyNs3Int64x64_t_Invert, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "Invert(v)\n\ntype: v: uint64_t const" },
-    {(char *) "MulByInvert", (PyCFunction) _wrap_PyNs3Int64x64_t_MulByInvert, METH_KEYWORDS|METH_VARARGS, "MulByInvert(o)\n\ntype: o: ns3::int64x64_t const &" },
+    {(char *) "Invert", (PyCFunction) _wrap_PyNs3Int64x64_t_Invert, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "Invert(v)\n\ntype: v: uint64_t const" },
+    {(char *) "MulByInvert", (PyCFunction) _wrap_PyNs3Int64x64_t_MulByInvert, METH_VARARGS|METH_KEYWORDS, "MulByInvert(o)\n\ntype: o: ns3::int64x64_t const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Int64x64_t__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -19258,7 +19258,7 @@ PyTypeObject PyNs3Int64x64_t_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_CHECKTYPES,                      /* tp_flags */
     "int64x64_t(hi, lo)\nint64x64_t(value)\nint64x64_t(v)\nint64x64_t(v)\nint64x64_t(v)\nint64x64_t(v)\nint64x64_t(v)\nint64x64_t(v)\nint64x64_t(o)\nint64x64_t()",                        /* Documentation string */
     (traverseproc)NULL,     /* tp_traverse */
     (inquiry)NULL,             /* tp_clear */
@@ -19360,9 +19360,9 @@ _wrap_PyNs3DesMetrics_TraceWithContext(PyNs3DesMetrics *self, PyObject *args, Py
 }
 
 static PyMethodDef PyNs3DesMetrics_methods[] = {
-    {(char *) "Initialize", (PyCFunction) _wrap_PyNs3DesMetrics_Initialize, METH_KEYWORDS|METH_VARARGS, "Initialize(args, outDir)\n\ntype: args: std::vector< std::string >\ntype: outDir: std::string" },
-    {(char *) "Trace", (PyCFunction) _wrap_PyNs3DesMetrics_Trace, METH_KEYWORDS|METH_VARARGS, "Trace(now, delay)\n\ntype: now: ns3::Time const &\ntype: delay: ns3::Time const &" },
-    {(char *) "TraceWithContext", (PyCFunction) _wrap_PyNs3DesMetrics_TraceWithContext, METH_KEYWORDS|METH_VARARGS, "TraceWithContext(context, now, delay)\n\ntype: context: uint32_t\ntype: now: ns3::Time const &\ntype: delay: ns3::Time const &" },
+    {(char *) "Initialize", (PyCFunction) _wrap_PyNs3DesMetrics_Initialize, METH_VARARGS|METH_KEYWORDS, "Initialize(args, outDir)\n\ntype: args: std::vector< std::string >\ntype: outDir: std::string" },
+    {(char *) "Trace", (PyCFunction) _wrap_PyNs3DesMetrics_Trace, METH_VARARGS|METH_KEYWORDS, "Trace(now, delay)\n\ntype: now: ns3::Time const &\ntype: delay: ns3::Time const &" },
+    {(char *) "TraceWithContext", (PyCFunction) _wrap_PyNs3DesMetrics_TraceWithContext, METH_VARARGS|METH_KEYWORDS, "TraceWithContext(context, now, delay)\n\ntype: context: uint32_t\ntype: now: ns3::Time const &\ntype: delay: ns3::Time const &" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -19972,11 +19972,11 @@ _wrap_PyNs3Object_IsInitialized(PyNs3Object *self)
 }
 
 static PyMethodDef PyNs3Object_methods[] = {
-    {(char *) "AggregateObject", (PyCFunction) _wrap_PyNs3Object_AggregateObject, METH_KEYWORDS|METH_VARARGS, "AggregateObject(other)\n\ntype: other: ns3::Ptr< ns3::Object >" },
+    {(char *) "AggregateObject", (PyCFunction) _wrap_PyNs3Object_AggregateObject, METH_VARARGS|METH_KEYWORDS, "AggregateObject(other)\n\ntype: other: ns3::Ptr< ns3::Object >" },
     {(char *) "Dispose", (PyCFunction) _wrap_PyNs3Object_Dispose, METH_NOARGS, "Dispose()\n\n" },
     {(char *) "GetAggregateIterator", (PyCFunction) _wrap_PyNs3Object_GetAggregateIterator, METH_NOARGS, "GetAggregateIterator()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3Object_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
-    {(char *) "GetObject", (PyCFunction) _wrap_PyNs3Object_GetObject, METH_KEYWORDS|METH_VARARGS, "GetObject(tid)\n\ntype: tid: ns3::TypeId" },
+    {(char *) "GetObject", (PyCFunction) _wrap_PyNs3Object_GetObject, METH_VARARGS|METH_KEYWORDS, "GetObject(tid)\n\ntype: tid: ns3::TypeId" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Object_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Initialize", (PyCFunction) _wrap_PyNs3Object_Initialize, METH_NOARGS, "Initialize()\n\n" },
     {(char *) "IsInitialized", (PyCFunction) _wrap_PyNs3Object_IsInitialized, METH_NOARGS, "IsInitialized()\n\n" },
@@ -20049,7 +20049,7 @@ PyTypeObject PyNs3Object_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Object(o)\nObject()",                        /* Documentation string */
     (traverseproc)PyNs3Object__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Object__tp_clear,             /* tp_clear */
@@ -20823,9 +20823,9 @@ _wrap_PyNs3RandomVariableStream_GetInteger(PyNs3RandomVariableStream *self)
 
 static PyMethodDef PyNs3RandomVariableStream_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RandomVariableStream_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetStream", (PyCFunction) _wrap_PyNs3RandomVariableStream_SetStream, METH_KEYWORDS|METH_VARARGS, "SetStream(stream)\n\ntype: stream: int64_t" },
+    {(char *) "SetStream", (PyCFunction) _wrap_PyNs3RandomVariableStream_SetStream, METH_VARARGS|METH_KEYWORDS, "SetStream(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetStream", (PyCFunction) _wrap_PyNs3RandomVariableStream_GetStream, METH_NOARGS, "GetStream()\n\n" },
-    {(char *) "SetAntithetic", (PyCFunction) _wrap_PyNs3RandomVariableStream_SetAntithetic, METH_KEYWORDS|METH_VARARGS, "SetAntithetic(isAntithetic)\n\ntype: isAntithetic: bool" },
+    {(char *) "SetAntithetic", (PyCFunction) _wrap_PyNs3RandomVariableStream_SetAntithetic, METH_VARARGS|METH_KEYWORDS, "SetAntithetic(isAntithetic)\n\ntype: isAntithetic: bool" },
     {(char *) "IsAntithetic", (PyCFunction) _wrap_PyNs3RandomVariableStream_IsAntithetic, METH_NOARGS, "IsAntithetic()\n\n" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3RandomVariableStream_GetValue, METH_NOARGS, "GetValue()\n\n" },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3RandomVariableStream_GetInteger, METH_NOARGS, "GetInteger()\n\n" },
@@ -20898,7 +20898,7 @@ PyTypeObject PyNs3RandomVariableStream_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RandomVariableStream()",                        /* Documentation string */
     (traverseproc)PyNs3RandomVariableStream__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomVariableStream__tp_clear,             /* tp_clear */
@@ -21650,10 +21650,10 @@ _wrap_PyNs3Scheduler_RemoveNext(PyNs3Scheduler *self)
 
 static PyMethodDef PyNs3Scheduler_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Scheduler_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Insert", (PyCFunction) _wrap_PyNs3Scheduler_Insert, METH_KEYWORDS|METH_VARARGS, "Insert(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
+    {(char *) "Insert", (PyCFunction) _wrap_PyNs3Scheduler_Insert, METH_VARARGS|METH_KEYWORDS, "Insert(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "IsEmpty", (PyCFunction) _wrap_PyNs3Scheduler_IsEmpty, METH_NOARGS, "IsEmpty()\n\n" },
     {(char *) "PeekNext", (PyCFunction) _wrap_PyNs3Scheduler_PeekNext, METH_NOARGS, "PeekNext()\n\n" },
-    {(char *) "Remove", (PyCFunction) _wrap_PyNs3Scheduler_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
+    {(char *) "Remove", (PyCFunction) _wrap_PyNs3Scheduler_Remove, METH_VARARGS|METH_KEYWORDS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "RemoveNext", (PyCFunction) _wrap_PyNs3Scheduler_RemoveNext, METH_NOARGS, "RemoveNext()\n\n" },
     {(char *) "DoDispose", (PyCFunction) PyNs3Scheduler__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Scheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
@@ -21724,7 +21724,7 @@ PyTypeObject PyNs3Scheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Scheduler(arg0)\nScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3Scheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Scheduler__tp_clear,             /* tp_clear */
@@ -22881,7 +22881,7 @@ PyTypeObject PyNs3SequentialRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SequentialRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3SequentialRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SequentialRandomVariable__tp_clear,             /* tp_clear */
@@ -24799,21 +24799,21 @@ PyObject * _wrap_PyNs3SimulatorImpl_Stop(PyNs3SimulatorImpl *self, PyObject *arg
 }
 
 static PyMethodDef PyNs3SimulatorImpl_methods[] = {
-    {(char *) "Cancel", (PyCFunction) _wrap_PyNs3SimulatorImpl_Cancel, METH_KEYWORDS|METH_VARARGS, "Cancel(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "Cancel", (PyCFunction) _wrap_PyNs3SimulatorImpl_Cancel, METH_VARARGS|METH_KEYWORDS, "Cancel(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "Destroy", (PyCFunction) _wrap_PyNs3SimulatorImpl_Destroy, METH_NOARGS, "Destroy()\n\n" },
     {(char *) "GetContext", (PyCFunction) _wrap_PyNs3SimulatorImpl_GetContext, METH_NOARGS, "GetContext()\n\n" },
-    {(char *) "GetDelayLeft", (PyCFunction) _wrap_PyNs3SimulatorImpl_GetDelayLeft, METH_KEYWORDS|METH_VARARGS, "GetDelayLeft(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "GetDelayLeft", (PyCFunction) _wrap_PyNs3SimulatorImpl_GetDelayLeft, METH_VARARGS|METH_KEYWORDS, "GetDelayLeft(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "GetEventCount", (PyCFunction) _wrap_PyNs3SimulatorImpl_GetEventCount, METH_NOARGS, "GetEventCount()\n\n" },
     {(char *) "GetMaximumSimulationTime", (PyCFunction) _wrap_PyNs3SimulatorImpl_GetMaximumSimulationTime, METH_NOARGS, "GetMaximumSimulationTime()\n\n" },
     {(char *) "GetSystemId", (PyCFunction) _wrap_PyNs3SimulatorImpl_GetSystemId, METH_NOARGS, "GetSystemId()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SimulatorImpl_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "IsExpired", (PyCFunction) _wrap_PyNs3SimulatorImpl_IsExpired, METH_KEYWORDS|METH_VARARGS, "IsExpired(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "IsExpired", (PyCFunction) _wrap_PyNs3SimulatorImpl_IsExpired, METH_VARARGS|METH_KEYWORDS, "IsExpired(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "IsFinished", (PyCFunction) _wrap_PyNs3SimulatorImpl_IsFinished, METH_NOARGS, "IsFinished()\n\n" },
     {(char *) "Now", (PyCFunction) _wrap_PyNs3SimulatorImpl_Now, METH_NOARGS, "Now()\n\n" },
-    {(char *) "Remove", (PyCFunction) _wrap_PyNs3SimulatorImpl_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "Remove", (PyCFunction) _wrap_PyNs3SimulatorImpl_Remove, METH_VARARGS|METH_KEYWORDS, "Remove(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "Run", (PyCFunction) _wrap_PyNs3SimulatorImpl_Run, METH_NOARGS, "Run()\n\n" },
-    {(char *) "SetScheduler", (PyCFunction) _wrap_PyNs3SimulatorImpl_SetScheduler, METH_KEYWORDS|METH_VARARGS, "SetScheduler(schedulerFactory)\n\ntype: schedulerFactory: ns3::ObjectFactory" },
-    {(char *) "Stop", (PyCFunction) _wrap_PyNs3SimulatorImpl_Stop, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetScheduler", (PyCFunction) _wrap_PyNs3SimulatorImpl_SetScheduler, METH_VARARGS|METH_KEYWORDS, "SetScheduler(schedulerFactory)\n\ntype: schedulerFactory: ns3::ObjectFactory" },
+    {(char *) "Stop", (PyCFunction) _wrap_PyNs3SimulatorImpl_Stop, METH_VARARGS|METH_KEYWORDS, NULL },
     {NULL, NULL, 0, NULL}
 };
 
@@ -24876,7 +24876,7 @@ PyTypeObject PyNs3SimulatorImpl_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SimulatorImpl(arg0)\nSimulatorImpl()",                        /* Documentation string */
     (traverseproc)PyNs3SimulatorImpl__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SimulatorImpl__tp_clear,             /* tp_clear */
@@ -25901,14 +25901,14 @@ static PyMethodDef PyNs3Synchronizer_methods[] = {
     {(char *) "EventEnd", (PyCFunction) _wrap_PyNs3Synchronizer_EventEnd, METH_NOARGS, "EventEnd()\n\n" },
     {(char *) "EventStart", (PyCFunction) _wrap_PyNs3Synchronizer_EventStart, METH_NOARGS, "EventStart()\n\n" },
     {(char *) "GetCurrentRealtime", (PyCFunction) _wrap_PyNs3Synchronizer_GetCurrentRealtime, METH_NOARGS, "GetCurrentRealtime()\n\n" },
-    {(char *) "GetDrift", (PyCFunction) _wrap_PyNs3Synchronizer_GetDrift, METH_KEYWORDS|METH_VARARGS, "GetDrift(ts)\n\ntype: ts: uint64_t" },
+    {(char *) "GetDrift", (PyCFunction) _wrap_PyNs3Synchronizer_GetDrift, METH_VARARGS|METH_KEYWORDS, "GetDrift(ts)\n\ntype: ts: uint64_t" },
     {(char *) "GetOrigin", (PyCFunction) _wrap_PyNs3Synchronizer_GetOrigin, METH_NOARGS, "GetOrigin()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Synchronizer_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "Realtime", (PyCFunction) _wrap_PyNs3Synchronizer_Realtime, METH_NOARGS, "Realtime()\n\n" },
-    {(char *) "SetCondition", (PyCFunction) _wrap_PyNs3Synchronizer_SetCondition, METH_KEYWORDS|METH_VARARGS, "SetCondition(arg0)\n\ntype: arg0: bool" },
-    {(char *) "SetOrigin", (PyCFunction) _wrap_PyNs3Synchronizer_SetOrigin, METH_KEYWORDS|METH_VARARGS, "SetOrigin(ts)\n\ntype: ts: uint64_t" },
+    {(char *) "SetCondition", (PyCFunction) _wrap_PyNs3Synchronizer_SetCondition, METH_VARARGS|METH_KEYWORDS, "SetCondition(arg0)\n\ntype: arg0: bool" },
+    {(char *) "SetOrigin", (PyCFunction) _wrap_PyNs3Synchronizer_SetOrigin, METH_VARARGS|METH_KEYWORDS, "SetOrigin(ts)\n\ntype: ts: uint64_t" },
     {(char *) "Signal", (PyCFunction) _wrap_PyNs3Synchronizer_Signal, METH_NOARGS, "Signal()\n\n" },
-    {(char *) "Synchronize", (PyCFunction) _wrap_PyNs3Synchronizer_Synchronize, METH_KEYWORDS|METH_VARARGS, "Synchronize(tsCurrent, tsDelay)\n\ntype: tsCurrent: uint64_t\ntype: tsDelay: uint64_t" },
+    {(char *) "Synchronize", (PyCFunction) _wrap_PyNs3Synchronizer_Synchronize, METH_VARARGS|METH_KEYWORDS, "Synchronize(tsCurrent, tsDelay)\n\ntype: tsCurrent: uint64_t\ntype: tsDelay: uint64_t" },
     {(char *) "DoDispose", (PyCFunction) PyNs3Synchronizer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Synchronizer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Synchronizer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -25978,7 +25978,7 @@ PyTypeObject PyNs3Synchronizer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Synchronizer(arg0)\nSynchronizer()",                        /* Documentation string */
     (traverseproc)PyNs3Synchronizer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Synchronizer__tp_clear,             /* tp_clear */
@@ -27129,11 +27129,11 @@ _wrap_PyNs3Time__copy__(PyNs3Time *self)
 }
 
 static PyMethodDef PyNs3Time_methods[] = {
-    {(char *) "As", (PyCFunction) _wrap_PyNs3Time_As, METH_KEYWORDS|METH_VARARGS, "As(unit)\n\ntype: unit: ns3::Time::Unit" },
-    {(char *) "Compare", (PyCFunction) _wrap_PyNs3Time_Compare, METH_KEYWORDS|METH_VARARGS, "Compare(o)\n\ntype: o: ns3::Time const &" },
-    {(char *) "From", (PyCFunction) _wrap_PyNs3Time_From, METH_KEYWORDS|METH_VARARGS|METH_STATIC, NULL },
-    {(char *) "FromDouble", (PyCFunction) _wrap_PyNs3Time_FromDouble, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "FromDouble(value, unit)\n\ntype: value: double\ntype: unit: ns3::Time::Unit" },
-    {(char *) "FromInteger", (PyCFunction) _wrap_PyNs3Time_FromInteger, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "FromInteger(value, unit)\n\ntype: value: uint64_t\ntype: unit: ns3::Time::Unit" },
+    {(char *) "As", (PyCFunction) _wrap_PyNs3Time_As, METH_VARARGS|METH_KEYWORDS, "As(unit)\n\ntype: unit: ns3::Time::Unit" },
+    {(char *) "Compare", (PyCFunction) _wrap_PyNs3Time_Compare, METH_VARARGS|METH_KEYWORDS, "Compare(o)\n\ntype: o: ns3::Time const &" },
+    {(char *) "From", (PyCFunction) _wrap_PyNs3Time_From, METH_VARARGS|METH_KEYWORDS|METH_STATIC, NULL },
+    {(char *) "FromDouble", (PyCFunction) _wrap_PyNs3Time_FromDouble, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "FromDouble(value, unit)\n\ntype: value: double\ntype: unit: ns3::Time::Unit" },
+    {(char *) "FromInteger", (PyCFunction) _wrap_PyNs3Time_FromInteger, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "FromInteger(value, unit)\n\ntype: value: uint64_t\ntype: unit: ns3::Time::Unit" },
     {(char *) "GetDays", (PyCFunction) _wrap_PyNs3Time_GetDays, METH_NOARGS, "GetDays()\n\n" },
     {(char *) "GetDouble", (PyCFunction) _wrap_PyNs3Time_GetDouble, METH_NOARGS, "GetDouble()\n\n" },
     {(char *) "GetFemtoSeconds", (PyCFunction) _wrap_PyNs3Time_GetFemtoSeconds, METH_NOARGS, "GetFemtoSeconds()\n\n" },
@@ -27155,11 +27155,11 @@ static PyMethodDef PyNs3Time_methods[] = {
     {(char *) "IsZero", (PyCFunction) _wrap_PyNs3Time_IsZero, METH_NOARGS, "IsZero()\n\n" },
     {(char *) "Max", (PyCFunction) _wrap_PyNs3Time_Max, METH_NOARGS|METH_STATIC, "Max()\n\n" },
     {(char *) "Min", (PyCFunction) _wrap_PyNs3Time_Min, METH_NOARGS|METH_STATIC, "Min()\n\n" },
-    {(char *) "SetResolution", (PyCFunction) _wrap_PyNs3Time_SetResolution, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SetResolution(resolution)\n\ntype: resolution: ns3::Time::Unit" },
+    {(char *) "SetResolution", (PyCFunction) _wrap_PyNs3Time_SetResolution, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SetResolution(resolution)\n\ntype: resolution: ns3::Time::Unit" },
     {(char *) "StaticInit", (PyCFunction) _wrap_PyNs3Time_StaticInit, METH_NOARGS|METH_STATIC, "StaticInit()\n\n" },
-    {(char *) "To", (PyCFunction) _wrap_PyNs3Time_To, METH_KEYWORDS|METH_VARARGS, "To(unit)\n\ntype: unit: ns3::Time::Unit" },
-    {(char *) "ToDouble", (PyCFunction) _wrap_PyNs3Time_ToDouble, METH_KEYWORDS|METH_VARARGS, "ToDouble(unit)\n\ntype: unit: ns3::Time::Unit" },
-    {(char *) "ToInteger", (PyCFunction) _wrap_PyNs3Time_ToInteger, METH_KEYWORDS|METH_VARARGS, "ToInteger(unit)\n\ntype: unit: ns3::Time::Unit" },
+    {(char *) "To", (PyCFunction) _wrap_PyNs3Time_To, METH_VARARGS|METH_KEYWORDS, "To(unit)\n\ntype: unit: ns3::Time::Unit" },
+    {(char *) "ToDouble", (PyCFunction) _wrap_PyNs3Time_ToDouble, METH_VARARGS|METH_KEYWORDS, "ToDouble(unit)\n\ntype: unit: ns3::Time::Unit" },
+    {(char *) "ToInteger", (PyCFunction) _wrap_PyNs3Time_ToInteger, METH_VARARGS|METH_KEYWORDS, "ToInteger(unit)\n\ntype: unit: ns3::Time::Unit" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Time__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -27502,7 +27502,7 @@ PyTypeObject PyNs3Time_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_CHECKTYPES,                      /* tp_flags */
     "Time(o)\nTime(v)\nTime(v)\nTime(v)\nTime(v)\nTime(v)\nTime(v)\nTime(v)\nTime(v)\nTime(s)\nTime()",                        /* Documentation string */
     (traverseproc)NULL,     /* tp_traverse */
     (inquiry)NULL,             /* tp_clear */
@@ -27626,10 +27626,10 @@ _wrap_PyNs3TraceSourceAccessor_DisconnectWithoutContext(PyNs3TraceSourceAccessor
 }
 
 static PyMethodDef PyNs3TraceSourceAccessor_methods[] = {
-    {(char *) "Connect", (PyCFunction) _wrap_PyNs3TraceSourceAccessor_Connect, METH_KEYWORDS|METH_VARARGS, "Connect(obj, context, cb)\n\ntype: obj: ns3::ObjectBase *\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "ConnectWithoutContext", (PyCFunction) _wrap_PyNs3TraceSourceAccessor_ConnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "ConnectWithoutContext(obj, cb)\n\ntype: obj: ns3::ObjectBase *\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "Disconnect", (PyCFunction) _wrap_PyNs3TraceSourceAccessor_Disconnect, METH_KEYWORDS|METH_VARARGS, "Disconnect(obj, context, cb)\n\ntype: obj: ns3::ObjectBase *\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
-    {(char *) "DisconnectWithoutContext", (PyCFunction) _wrap_PyNs3TraceSourceAccessor_DisconnectWithoutContext, METH_KEYWORDS|METH_VARARGS, "DisconnectWithoutContext(obj, cb)\n\ntype: obj: ns3::ObjectBase *\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "Connect", (PyCFunction) _wrap_PyNs3TraceSourceAccessor_Connect, METH_VARARGS|METH_KEYWORDS, "Connect(obj, context, cb)\n\ntype: obj: ns3::ObjectBase *\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "ConnectWithoutContext", (PyCFunction) _wrap_PyNs3TraceSourceAccessor_ConnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "ConnectWithoutContext(obj, cb)\n\ntype: obj: ns3::ObjectBase *\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "Disconnect", (PyCFunction) _wrap_PyNs3TraceSourceAccessor_Disconnect, METH_VARARGS|METH_KEYWORDS, "Disconnect(obj, context, cb)\n\ntype: obj: ns3::ObjectBase *\ntype: context: std::string\ntype: cb: ns3::CallbackBase const &" },
+    {(char *) "DisconnectWithoutContext", (PyCFunction) _wrap_PyNs3TraceSourceAccessor_DisconnectWithoutContext, METH_VARARGS|METH_KEYWORDS, "DisconnectWithoutContext(obj, cb)\n\ntype: obj: ns3::ObjectBase *\ntype: cb: ns3::CallbackBase const &" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -28316,8 +28316,8 @@ static PyMethodDef PyNs3TriangularRandomVariable_methods[] = {
     {(char *) "GetMean", (PyCFunction) _wrap_PyNs3TriangularRandomVariable_GetMean, METH_NOARGS, "GetMean()\n\n" },
     {(char *) "GetMin", (PyCFunction) _wrap_PyNs3TriangularRandomVariable_GetMin, METH_NOARGS, "GetMin()\n\n" },
     {(char *) "GetMax", (PyCFunction) _wrap_PyNs3TriangularRandomVariable_GetMax, METH_NOARGS, "GetMax()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3TriangularRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3TriangularRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3TriangularRandomVariable_GetValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3TriangularRandomVariable_GetInteger, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3TriangularRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3TriangularRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TriangularRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -28387,7 +28387,7 @@ PyTypeObject PyNs3TriangularRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "TriangularRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3TriangularRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TriangularRandomVariable__tp_clear,             /* tp_clear */
@@ -29013,8 +29013,8 @@ static PyMethodDef PyNs3UniformRandomVariable_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3UniformRandomVariable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetMin", (PyCFunction) _wrap_PyNs3UniformRandomVariable_GetMin, METH_NOARGS, "GetMin()\n\n" },
     {(char *) "GetMax", (PyCFunction) _wrap_PyNs3UniformRandomVariable_GetMax, METH_NOARGS, "GetMax()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3UniformRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3UniformRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3UniformRandomVariable_GetValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3UniformRandomVariable_GetInteger, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3UniformRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3UniformRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3UniformRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -29084,7 +29084,7 @@ PyTypeObject PyNs3UniformRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UniformRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3UniformRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UniformRandomVariable__tp_clear,             /* tp_clear */
@@ -30304,17 +30304,17 @@ static PyMethodDef PyNs3WallClockSynchronizer_methods[] = {
     {(char *) "DoEventEnd", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoEventEnd, METH_NOARGS, NULL },
     {(char *) "DoEventStart", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoEventStart, METH_NOARGS, NULL },
     {(char *) "DoGetCurrentRealtime", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoGetCurrentRealtime, METH_NOARGS, NULL },
-    {(char *) "DoGetDrift", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoGetDrift, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DoGetDrift", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoGetDrift, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoRealtime", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoRealtime, METH_NOARGS, NULL },
-    {(char *) "DoSetCondition", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSetCondition, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "DoSetOrigin", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSetOrigin, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DoSetCondition", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSetCondition, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "DoSetOrigin", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSetOrigin, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoSignal", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSignal, METH_NOARGS, NULL },
-    {(char *) "DoSynchronize", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSynchronize, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "DriftCorrect", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DriftCorrect, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DoSynchronize", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoSynchronize, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "DriftCorrect", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DriftCorrect, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "GetNormalizedRealtime", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_GetNormalizedRealtime, METH_NOARGS, NULL },
     {(char *) "GetRealtime", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_GetRealtime, METH_NOARGS, NULL },
-    {(char *) "SleepWait", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_SleepWait, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SpinWait", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_SpinWait, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SleepWait", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_SleepWait, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "SpinWait", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_SpinWait, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WallClockSynchronizer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -30385,7 +30385,7 @@ PyTypeObject PyNs3WallClockSynchronizer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "WallClockSynchronizer(arg0)\nWallClockSynchronizer()",                        /* Documentation string */
     (traverseproc)PyNs3WallClockSynchronizer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WallClockSynchronizer__tp_clear,             /* tp_clear */
@@ -31026,8 +31026,8 @@ static PyMethodDef PyNs3WeibullRandomVariable_methods[] = {
     {(char *) "GetScale", (PyCFunction) _wrap_PyNs3WeibullRandomVariable_GetScale, METH_NOARGS, "GetScale()\n\n" },
     {(char *) "GetShape", (PyCFunction) _wrap_PyNs3WeibullRandomVariable_GetShape, METH_NOARGS, "GetShape()\n\n" },
     {(char *) "GetBound", (PyCFunction) _wrap_PyNs3WeibullRandomVariable_GetBound, METH_NOARGS, "GetBound()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3WeibullRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3WeibullRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3WeibullRandomVariable_GetValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3WeibullRandomVariable_GetInteger, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3WeibullRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3WeibullRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3WeibullRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -31097,7 +31097,7 @@ PyTypeObject PyNs3WeibullRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "WeibullRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3WeibullRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WeibullRandomVariable__tp_clear,             /* tp_clear */
@@ -31708,8 +31708,8 @@ PyObject * _wrap_PyNs3ZetaRandomVariable_GetInteger(PyNs3ZetaRandomVariable *sel
 static PyMethodDef PyNs3ZetaRandomVariable_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ZetaRandomVariable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetAlpha", (PyCFunction) _wrap_PyNs3ZetaRandomVariable_GetAlpha, METH_NOARGS, "GetAlpha()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ZetaRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ZetaRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ZetaRandomVariable_GetValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ZetaRandomVariable_GetInteger, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ZetaRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ZetaRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ZetaRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -31779,7 +31779,7 @@ PyTypeObject PyNs3ZetaRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ZetaRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3ZetaRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ZetaRandomVariable__tp_clear,             /* tp_clear */
@@ -32405,8 +32405,8 @@ static PyMethodDef PyNs3ZipfRandomVariable_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ZipfRandomVariable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetN", (PyCFunction) _wrap_PyNs3ZipfRandomVariable_GetN, METH_NOARGS, "GetN()\n\n" },
     {(char *) "GetAlpha", (PyCFunction) _wrap_PyNs3ZipfRandomVariable_GetAlpha, METH_NOARGS, "GetAlpha()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ZipfRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ZipfRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ZipfRandomVariable_GetValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ZipfRandomVariable_GetInteger, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ZipfRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ZipfRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ZipfRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -32476,7 +32476,7 @@ PyTypeObject PyNs3ZipfRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ZipfRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3ZipfRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ZipfRandomVariable__tp_clear,             /* tp_clear */
@@ -32580,10 +32580,10 @@ _wrap_PyNs3AttributeAccessor_Set(PyNs3AttributeAccessor *self, PyObject *args, P
 }
 
 static PyMethodDef PyNs3AttributeAccessor_methods[] = {
-    {(char *) "Get", (PyCFunction) _wrap_PyNs3AttributeAccessor_Get, METH_KEYWORDS|METH_VARARGS, "Get(object, attribute)\n\ntype: object: ns3::ObjectBase const *\ntype: attribute: ns3::AttributeValue &" },
+    {(char *) "Get", (PyCFunction) _wrap_PyNs3AttributeAccessor_Get, METH_VARARGS|METH_KEYWORDS, "Get(object, attribute)\n\ntype: object: ns3::ObjectBase const *\ntype: attribute: ns3::AttributeValue &" },
     {(char *) "HasGetter", (PyCFunction) _wrap_PyNs3AttributeAccessor_HasGetter, METH_NOARGS, "HasGetter()\n\n" },
     {(char *) "HasSetter", (PyCFunction) _wrap_PyNs3AttributeAccessor_HasSetter, METH_NOARGS, "HasSetter()\n\n" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3AttributeAccessor_Set, METH_KEYWORDS|METH_VARARGS, "Set(object, value)\n\ntype: object: ns3::ObjectBase *\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3AttributeAccessor_Set, METH_VARARGS|METH_KEYWORDS, "Set(object, value)\n\ntype: object: ns3::ObjectBase *\ntype: value: ns3::AttributeValue const &" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -32817,10 +32817,10 @@ _wrap_PyNs3AttributeChecker_HasUnderlyingTypeInformation(PyNs3AttributeChecker *
 }
 
 static PyMethodDef PyNs3AttributeChecker_methods[] = {
-    {(char *) "Check", (PyCFunction) _wrap_PyNs3AttributeChecker_Check, METH_KEYWORDS|METH_VARARGS, "Check(value)\n\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "Copy", (PyCFunction) _wrap_PyNs3AttributeChecker_Copy, METH_KEYWORDS|METH_VARARGS, "Copy(source, destination)\n\ntype: source: ns3::AttributeValue const &\ntype: destination: ns3::AttributeValue &" },
+    {(char *) "Check", (PyCFunction) _wrap_PyNs3AttributeChecker_Check, METH_VARARGS|METH_KEYWORDS, "Check(value)\n\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Copy", (PyCFunction) _wrap_PyNs3AttributeChecker_Copy, METH_VARARGS|METH_KEYWORDS, "Copy(source, destination)\n\ntype: source: ns3::AttributeValue const &\ntype: destination: ns3::AttributeValue &" },
     {(char *) "Create", (PyCFunction) _wrap_PyNs3AttributeChecker_Create, METH_NOARGS, "Create()\n\n" },
-    {(char *) "CreateValidValue", (PyCFunction) _wrap_PyNs3AttributeChecker_CreateValidValue, METH_KEYWORDS|METH_VARARGS, "CreateValidValue(value)\n\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "CreateValidValue", (PyCFunction) _wrap_PyNs3AttributeChecker_CreateValidValue, METH_VARARGS|METH_KEYWORDS, "CreateValidValue(value)\n\ntype: value: ns3::AttributeValue const &" },
     {(char *) "GetUnderlyingTypeInformation", (PyCFunction) _wrap_PyNs3AttributeChecker_GetUnderlyingTypeInformation, METH_NOARGS, "GetUnderlyingTypeInformation()\n\n" },
     {(char *) "GetValueTypeName", (PyCFunction) _wrap_PyNs3AttributeChecker_GetValueTypeName, METH_NOARGS, "GetValueTypeName()\n\n" },
     {(char *) "HasUnderlyingTypeInformation", (PyCFunction) _wrap_PyNs3AttributeChecker_HasUnderlyingTypeInformation, METH_NOARGS, "HasUnderlyingTypeInformation()\n\n" },
@@ -32986,8 +32986,8 @@ _wrap_PyNs3AttributeValue_SerializeToString(PyNs3AttributeValue *self, PyObject 
 
 static PyMethodDef PyNs3AttributeValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3AttributeValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3AttributeValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3AttributeValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3AttributeValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3AttributeValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -33367,10 +33367,10 @@ _wrap_PyNs3BooleanValue__copy__(PyNs3BooleanValue *self)
 
 static PyMethodDef PyNs3BooleanValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3BooleanValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3BooleanValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3BooleanValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3BooleanValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3BooleanValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3BooleanValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: bool" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3BooleanValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3BooleanValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: bool" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BooleanValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -34198,10 +34198,10 @@ _wrap_PyNs3CalendarScheduler__copy__(PyNs3CalendarScheduler *self)
 
 static PyMethodDef PyNs3CalendarScheduler_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3CalendarScheduler_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Insert", (PyCFunction) _wrap_PyNs3CalendarScheduler_Insert, METH_KEYWORDS|METH_VARARGS, "Insert(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
+    {(char *) "Insert", (PyCFunction) _wrap_PyNs3CalendarScheduler_Insert, METH_VARARGS|METH_KEYWORDS, "Insert(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "IsEmpty", (PyCFunction) _wrap_PyNs3CalendarScheduler_IsEmpty, METH_NOARGS, "IsEmpty()\n\n" },
     {(char *) "PeekNext", (PyCFunction) _wrap_PyNs3CalendarScheduler_PeekNext, METH_NOARGS, "PeekNext()\n\n" },
-    {(char *) "Remove", (PyCFunction) _wrap_PyNs3CalendarScheduler_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
+    {(char *) "Remove", (PyCFunction) _wrap_PyNs3CalendarScheduler_Remove, METH_VARARGS|METH_KEYWORDS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "RemoveNext", (PyCFunction) _wrap_PyNs3CalendarScheduler_RemoveNext, METH_NOARGS, "RemoveNext()\n\n" },
     {(char *) "DoDispose", (PyCFunction) PyNs3CalendarScheduler__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3CalendarScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
@@ -34273,7 +34273,7 @@ PyTypeObject PyNs3CalendarScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "CalendarScheduler(arg0)\nCalendarScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3CalendarScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CalendarScheduler__tp_clear,             /* tp_clear */
@@ -34430,7 +34430,7 @@ _wrap_PyNs3CallbackImplBase_IsEqual(PyNs3CallbackImplBase *self, PyObject *args,
 
 static PyMethodDef PyNs3CallbackImplBase_methods[] = {
     {(char *) "GetTypeid", (PyCFunction) _wrap_PyNs3CallbackImplBase_GetTypeid, METH_NOARGS, "GetTypeid()\n\n" },
-    {(char *) "IsEqual", (PyCFunction) _wrap_PyNs3CallbackImplBase_IsEqual, METH_KEYWORDS|METH_VARARGS, "IsEqual(other)\n\ntype: other: ns3::Ptr< ns3::CallbackImplBase const >" },
+    {(char *) "IsEqual", (PyCFunction) _wrap_PyNs3CallbackImplBase_IsEqual, METH_VARARGS|METH_KEYWORDS, "IsEqual(other)\n\ntype: other: ns3::Ptr< ns3::CallbackImplBase const >" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -34709,9 +34709,9 @@ _wrap_PyNs3CallbackValue__copy__(PyNs3CallbackValue *self)
 
 static PyMethodDef PyNs3CallbackValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3CallbackValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3CallbackValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3CallbackValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3CallbackValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(base)\n\ntype: base: ns3::CallbackBase" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3CallbackValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3CallbackValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3CallbackValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(base)\n\ntype: base: ns3::CallbackBase" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3CallbackValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -35369,8 +35369,8 @@ PyObject * _wrap_PyNs3ConstantRandomVariable_GetInteger(PyNs3ConstantRandomVaria
 static PyMethodDef PyNs3ConstantRandomVariable_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ConstantRandomVariable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetConstant", (PyCFunction) _wrap_PyNs3ConstantRandomVariable_GetConstant, METH_NOARGS, "GetConstant()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ConstantRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ConstantRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ConstantRandomVariable_GetValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ConstantRandomVariable_GetInteger, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ConstantRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ConstantRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ConstantRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -35440,7 +35440,7 @@ PyTypeObject PyNs3ConstantRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ConstantRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3ConstantRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConstantRandomVariable__tp_clear,             /* tp_clear */
@@ -35835,21 +35835,21 @@ _wrap_PyNs3DefaultSimulatorImpl__copy__(PyNs3DefaultSimulatorImpl *self)
 }
 
 static PyMethodDef PyNs3DefaultSimulatorImpl_methods[] = {
-    {(char *) "Cancel", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_Cancel, METH_KEYWORDS|METH_VARARGS, "Cancel(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "Cancel", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_Cancel, METH_VARARGS|METH_KEYWORDS, "Cancel(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "Destroy", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_Destroy, METH_NOARGS, "Destroy()\n\n" },
     {(char *) "GetContext", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_GetContext, METH_NOARGS, "GetContext()\n\n" },
-    {(char *) "GetDelayLeft", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_GetDelayLeft, METH_KEYWORDS|METH_VARARGS, "GetDelayLeft(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "GetDelayLeft", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_GetDelayLeft, METH_VARARGS|METH_KEYWORDS, "GetDelayLeft(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "GetEventCount", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_GetEventCount, METH_NOARGS, "GetEventCount()\n\n" },
     {(char *) "GetMaximumSimulationTime", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_GetMaximumSimulationTime, METH_NOARGS, "GetMaximumSimulationTime()\n\n" },
     {(char *) "GetSystemId", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_GetSystemId, METH_NOARGS, "GetSystemId()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "IsExpired", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_IsExpired, METH_KEYWORDS|METH_VARARGS, "IsExpired(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "IsExpired", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_IsExpired, METH_VARARGS|METH_KEYWORDS, "IsExpired(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "IsFinished", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_IsFinished, METH_NOARGS, "IsFinished()\n\n" },
     {(char *) "Now", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_Now, METH_NOARGS, "Now()\n\n" },
-    {(char *) "Remove", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "Remove", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_Remove, METH_VARARGS|METH_KEYWORDS, "Remove(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "Run", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_Run, METH_NOARGS, "Run()\n\n" },
-    {(char *) "SetScheduler", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_SetScheduler, METH_KEYWORDS|METH_VARARGS, "SetScheduler(schedulerFactory)\n\ntype: schedulerFactory: ns3::ObjectFactory" },
-    {(char *) "Stop", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_Stop, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetScheduler", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_SetScheduler, METH_VARARGS|METH_KEYWORDS, "SetScheduler(schedulerFactory)\n\ntype: schedulerFactory: ns3::ObjectFactory" },
+    {(char *) "Stop", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl_Stop, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DefaultSimulatorImpl__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -35913,7 +35913,7 @@ PyTypeObject PyNs3DefaultSimulatorImpl_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DefaultSimulatorImpl(arg0)\nDefaultSimulatorImpl()",                        /* Documentation string */
     (traverseproc)PyNs3DefaultSimulatorImpl__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DefaultSimulatorImpl__tp_clear,             /* tp_clear */
@@ -36415,7 +36415,7 @@ _wrap_PyNs3DeterministicRandomVariable_GetInteger(PyNs3DeterministicRandomVariab
 
 static PyMethodDef PyNs3DeterministicRandomVariable_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3DeterministicRandomVariable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetValueArray", (PyCFunction) _wrap_PyNs3DeterministicRandomVariable_SetValueArray, METH_KEYWORDS|METH_VARARGS, "SetValueArray(values, length)\n\ntype: values: double *\ntype: length: std::size_t" },
+    {(char *) "SetValueArray", (PyCFunction) _wrap_PyNs3DeterministicRandomVariable_SetValueArray, METH_VARARGS|METH_KEYWORDS, "SetValueArray(values, length)\n\ntype: values: double *\ntype: length: std::size_t" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3DeterministicRandomVariable_GetValue, METH_NOARGS, "GetValue()\n\n" },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3DeterministicRandomVariable_GetInteger, METH_NOARGS, "GetInteger()\n\n" },
     {(char *) "DoDispose", (PyCFunction) PyNs3DeterministicRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
@@ -36487,7 +36487,7 @@ PyTypeObject PyNs3DeterministicRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "DeterministicRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3DeterministicRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DeterministicRandomVariable__tp_clear,             /* tp_clear */
@@ -36732,10 +36732,10 @@ _wrap_PyNs3DoubleValue__copy__(PyNs3DoubleValue *self)
 
 static PyMethodDef PyNs3DoubleValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3DoubleValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3DoubleValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3DoubleValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3DoubleValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3DoubleValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3DoubleValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: double const &" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3DoubleValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3DoubleValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: double const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3DoubleValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -37382,7 +37382,7 @@ _wrap_PyNs3EmpiricalRandomVariable_GetValue(PyNs3EmpiricalRandomVariable *self)
 }
 
 static PyMethodDef PyNs3EmpiricalRandomVariable_methods[] = {
-    {(char *) "CDF", (PyCFunction) _wrap_PyNs3EmpiricalRandomVariable_CDF, METH_KEYWORDS|METH_VARARGS, "CDF(v, c)\n\ntype: v: double\ntype: c: double" },
+    {(char *) "CDF", (PyCFunction) _wrap_PyNs3EmpiricalRandomVariable_CDF, METH_VARARGS|METH_KEYWORDS, "CDF(v, c)\n\ntype: v: double\ntype: c: double" },
     {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3EmpiricalRandomVariable_GetInteger, METH_NOARGS, "GetInteger()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3EmpiricalRandomVariable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetValue", (PyCFunction) _wrap_PyNs3EmpiricalRandomVariable_GetValue, METH_NOARGS, "GetValue()\n\n" },
@@ -37455,7 +37455,7 @@ PyTypeObject PyNs3EmpiricalRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "EmpiricalRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3EmpiricalRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3EmpiricalRandomVariable__tp_clear,             /* tp_clear */
@@ -37610,7 +37610,7 @@ _wrap_PyNs3EmptyAttributeAccessor__copy__(PyNs3EmptyAttributeAccessor *self)
 }
 
 static PyMethodDef PyNs3EmptyAttributeAccessor_methods[] = {
-    {(char *) "Get", (PyCFunction) _wrap_PyNs3EmptyAttributeAccessor_Get, METH_KEYWORDS|METH_VARARGS, "Get(object, attribute)\n\ntype: object: ns3::ObjectBase const *\ntype: attribute: ns3::AttributeValue &" },
+    {(char *) "Get", (PyCFunction) _wrap_PyNs3EmptyAttributeAccessor_Get, METH_VARARGS|METH_KEYWORDS, "Get(object, attribute)\n\ntype: object: ns3::ObjectBase const *\ntype: attribute: ns3::AttributeValue &" },
     {(char *) "HasGetter", (PyCFunction) _wrap_PyNs3EmptyAttributeAccessor_HasGetter, METH_NOARGS, "HasGetter()\n\n" },
     {(char *) "HasSetter", (PyCFunction) _wrap_PyNs3EmptyAttributeAccessor_HasSetter, METH_NOARGS, "HasSetter()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3EmptyAttributeAccessor__copy__, METH_NOARGS, NULL},
@@ -37877,8 +37877,8 @@ _wrap_PyNs3EmptyAttributeChecker__copy__(PyNs3EmptyAttributeChecker *self)
 }
 
 static PyMethodDef PyNs3EmptyAttributeChecker_methods[] = {
-    {(char *) "Check", (PyCFunction) _wrap_PyNs3EmptyAttributeChecker_Check, METH_KEYWORDS|METH_VARARGS, "Check(value)\n\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "Copy", (PyCFunction) _wrap_PyNs3EmptyAttributeChecker_Copy, METH_KEYWORDS|METH_VARARGS, "Copy(source, destination)\n\ntype: source: ns3::AttributeValue const &\ntype: destination: ns3::AttributeValue &" },
+    {(char *) "Check", (PyCFunction) _wrap_PyNs3EmptyAttributeChecker_Check, METH_VARARGS|METH_KEYWORDS, "Check(value)\n\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Copy", (PyCFunction) _wrap_PyNs3EmptyAttributeChecker_Copy, METH_VARARGS|METH_KEYWORDS, "Copy(source, destination)\n\ntype: source: ns3::AttributeValue const &\ntype: destination: ns3::AttributeValue &" },
     {(char *) "Create", (PyCFunction) _wrap_PyNs3EmptyAttributeChecker_Create, METH_NOARGS, "Create()\n\n" },
     {(char *) "GetUnderlyingTypeInformation", (PyCFunction) _wrap_PyNs3EmptyAttributeChecker_GetUnderlyingTypeInformation, METH_NOARGS, "GetUnderlyingTypeInformation()\n\n" },
     {(char *) "GetValueTypeName", (PyCFunction) _wrap_PyNs3EmptyAttributeChecker_GetValueTypeName, METH_NOARGS, "GetValueTypeName()\n\n" },
@@ -38342,10 +38342,10 @@ _wrap_PyNs3EnumChecker__copy__(PyNs3EnumChecker *self)
 }
 
 static PyMethodDef PyNs3EnumChecker_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3EnumChecker_Add, METH_KEYWORDS|METH_VARARGS, "Add(value, name)\n\ntype: value: int\ntype: name: std::string" },
-    {(char *) "AddDefault", (PyCFunction) _wrap_PyNs3EnumChecker_AddDefault, METH_KEYWORDS|METH_VARARGS, "AddDefault(value, name)\n\ntype: value: int\ntype: name: std::string" },
-    {(char *) "Check", (PyCFunction) _wrap_PyNs3EnumChecker_Check, METH_KEYWORDS|METH_VARARGS, "Check(value)\n\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "Copy", (PyCFunction) _wrap_PyNs3EnumChecker_Copy, METH_KEYWORDS|METH_VARARGS, "Copy(src, dst)\n\ntype: src: ns3::AttributeValue const &\ntype: dst: ns3::AttributeValue &" },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3EnumChecker_Add, METH_VARARGS|METH_KEYWORDS, "Add(value, name)\n\ntype: value: int\ntype: name: std::string" },
+    {(char *) "AddDefault", (PyCFunction) _wrap_PyNs3EnumChecker_AddDefault, METH_VARARGS|METH_KEYWORDS, "AddDefault(value, name)\n\ntype: value: int\ntype: name: std::string" },
+    {(char *) "Check", (PyCFunction) _wrap_PyNs3EnumChecker_Check, METH_VARARGS|METH_KEYWORDS, "Check(value)\n\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "Copy", (PyCFunction) _wrap_PyNs3EnumChecker_Copy, METH_VARARGS|METH_KEYWORDS, "Copy(src, dst)\n\ntype: src: ns3::AttributeValue const &\ntype: dst: ns3::AttributeValue &" },
     {(char *) "Create", (PyCFunction) _wrap_PyNs3EnumChecker_Create, METH_NOARGS, "Create()\n\n" },
     {(char *) "GetUnderlyingTypeInformation", (PyCFunction) _wrap_PyNs3EnumChecker_GetUnderlyingTypeInformation, METH_NOARGS, "GetUnderlyingTypeInformation()\n\n" },
     {(char *) "GetValueTypeName", (PyCFunction) _wrap_PyNs3EnumChecker_GetValueTypeName, METH_NOARGS, "GetValueTypeName()\n\n" },
@@ -38641,10 +38641,10 @@ _wrap_PyNs3EnumValue__copy__(PyNs3EnumValue *self)
 
 static PyMethodDef PyNs3EnumValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3EnumValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3EnumValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3EnumValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3EnumValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3EnumValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3EnumValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: int" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3EnumValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3EnumValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: int" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3EnumValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -39317,8 +39317,8 @@ static PyMethodDef PyNs3ErlangRandomVariable_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ErlangRandomVariable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetK", (PyCFunction) _wrap_PyNs3ErlangRandomVariable_GetK, METH_NOARGS, "GetK()\n\n" },
     {(char *) "GetLambda", (PyCFunction) _wrap_PyNs3ErlangRandomVariable_GetLambda, METH_NOARGS, "GetLambda()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ErlangRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ErlangRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ErlangRandomVariable_GetValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ErlangRandomVariable_GetInteger, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ErlangRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ErlangRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ErlangRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -39388,7 +39388,7 @@ PyTypeObject PyNs3ErlangRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ErlangRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3ErlangRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ErlangRandomVariable__tp_clear,             /* tp_clear */
@@ -40138,8 +40138,8 @@ static PyMethodDef PyNs3ExponentialRandomVariable_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ExponentialRandomVariable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetMean", (PyCFunction) _wrap_PyNs3ExponentialRandomVariable_GetMean, METH_NOARGS, "GetMean()\n\n" },
     {(char *) "GetBound", (PyCFunction) _wrap_PyNs3ExponentialRandomVariable_GetBound, METH_NOARGS, "GetBound()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ExponentialRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ExponentialRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ExponentialRandomVariable_GetValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ExponentialRandomVariable_GetInteger, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ExponentialRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ExponentialRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ExponentialRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -40209,7 +40209,7 @@ PyTypeObject PyNs3ExponentialRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ExponentialRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3ExponentialRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ExponentialRandomVariable__tp_clear,             /* tp_clear */
@@ -40934,8 +40934,8 @@ static PyMethodDef PyNs3GammaRandomVariable_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3GammaRandomVariable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetAlpha", (PyCFunction) _wrap_PyNs3GammaRandomVariable_GetAlpha, METH_NOARGS, "GetAlpha()\n\n" },
     {(char *) "GetBeta", (PyCFunction) _wrap_PyNs3GammaRandomVariable_GetBeta, METH_NOARGS, "GetBeta()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3GammaRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3GammaRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3GammaRandomVariable_GetValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3GammaRandomVariable_GetInteger, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3GammaRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3GammaRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3GammaRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -41005,7 +41005,7 @@ PyTypeObject PyNs3GammaRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "GammaRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3GammaRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GammaRandomVariable__tp_clear,             /* tp_clear */
@@ -41775,10 +41775,10 @@ _wrap_PyNs3HeapScheduler__copy__(PyNs3HeapScheduler *self)
 
 static PyMethodDef PyNs3HeapScheduler_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3HeapScheduler_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Insert", (PyCFunction) _wrap_PyNs3HeapScheduler_Insert, METH_KEYWORDS|METH_VARARGS, "Insert(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
+    {(char *) "Insert", (PyCFunction) _wrap_PyNs3HeapScheduler_Insert, METH_VARARGS|METH_KEYWORDS, "Insert(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "IsEmpty", (PyCFunction) _wrap_PyNs3HeapScheduler_IsEmpty, METH_NOARGS, "IsEmpty()\n\n" },
     {(char *) "PeekNext", (PyCFunction) _wrap_PyNs3HeapScheduler_PeekNext, METH_NOARGS, "PeekNext()\n\n" },
-    {(char *) "Remove", (PyCFunction) _wrap_PyNs3HeapScheduler_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
+    {(char *) "Remove", (PyCFunction) _wrap_PyNs3HeapScheduler_Remove, METH_VARARGS|METH_KEYWORDS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "RemoveNext", (PyCFunction) _wrap_PyNs3HeapScheduler_RemoveNext, METH_NOARGS, "RemoveNext()\n\n" },
     {(char *) "DoDispose", (PyCFunction) PyNs3HeapScheduler__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3HeapScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
@@ -41850,7 +41850,7 @@ PyTypeObject PyNs3HeapScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "HeapScheduler(arg0)\nHeapScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3HeapScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3HeapScheduler__tp_clear,             /* tp_clear */
@@ -42095,10 +42095,10 @@ _wrap_PyNs3IntegerValue__copy__(PyNs3IntegerValue *self)
 
 static PyMethodDef PyNs3IntegerValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3IntegerValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3IntegerValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3IntegerValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3IntegerValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3IntegerValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3IntegerValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: int64_t const &" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3IntegerValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3IntegerValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: int64_t const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3IntegerValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -42915,10 +42915,10 @@ _wrap_PyNs3ListScheduler__copy__(PyNs3ListScheduler *self)
 
 static PyMethodDef PyNs3ListScheduler_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ListScheduler_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Insert", (PyCFunction) _wrap_PyNs3ListScheduler_Insert, METH_KEYWORDS|METH_VARARGS, "Insert(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
+    {(char *) "Insert", (PyCFunction) _wrap_PyNs3ListScheduler_Insert, METH_VARARGS|METH_KEYWORDS, "Insert(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "IsEmpty", (PyCFunction) _wrap_PyNs3ListScheduler_IsEmpty, METH_NOARGS, "IsEmpty()\n\n" },
     {(char *) "PeekNext", (PyCFunction) _wrap_PyNs3ListScheduler_PeekNext, METH_NOARGS, "PeekNext()\n\n" },
-    {(char *) "Remove", (PyCFunction) _wrap_PyNs3ListScheduler_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
+    {(char *) "Remove", (PyCFunction) _wrap_PyNs3ListScheduler_Remove, METH_VARARGS|METH_KEYWORDS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "RemoveNext", (PyCFunction) _wrap_PyNs3ListScheduler_RemoveNext, METH_NOARGS, "RemoveNext()\n\n" },
     {(char *) "DoDispose", (PyCFunction) PyNs3ListScheduler__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ListScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
@@ -42990,7 +42990,7 @@ PyTypeObject PyNs3ListScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ListScheduler(arg0)\nListScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3ListScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ListScheduler__tp_clear,             /* tp_clear */
@@ -43616,8 +43616,8 @@ static PyMethodDef PyNs3LogNormalRandomVariable_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3LogNormalRandomVariable_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetMu", (PyCFunction) _wrap_PyNs3LogNormalRandomVariable_GetMu, METH_NOARGS, "GetMu()\n\n" },
     {(char *) "GetSigma", (PyCFunction) _wrap_PyNs3LogNormalRandomVariable_GetSigma, METH_NOARGS, "GetSigma()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3LogNormalRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3LogNormalRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3LogNormalRandomVariable_GetValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3LogNormalRandomVariable_GetInteger, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3LogNormalRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3LogNormalRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3LogNormalRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -43687,7 +43687,7 @@ PyTypeObject PyNs3LogNormalRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "LogNormalRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3LogNormalRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3LogNormalRandomVariable__tp_clear,             /* tp_clear */
@@ -44457,10 +44457,10 @@ _wrap_PyNs3MapScheduler__copy__(PyNs3MapScheduler *self)
 
 static PyMethodDef PyNs3MapScheduler_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MapScheduler_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Insert", (PyCFunction) _wrap_PyNs3MapScheduler_Insert, METH_KEYWORDS|METH_VARARGS, "Insert(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
+    {(char *) "Insert", (PyCFunction) _wrap_PyNs3MapScheduler_Insert, METH_VARARGS|METH_KEYWORDS, "Insert(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "IsEmpty", (PyCFunction) _wrap_PyNs3MapScheduler_IsEmpty, METH_NOARGS, "IsEmpty()\n\n" },
     {(char *) "PeekNext", (PyCFunction) _wrap_PyNs3MapScheduler_PeekNext, METH_NOARGS, "PeekNext()\n\n" },
-    {(char *) "Remove", (PyCFunction) _wrap_PyNs3MapScheduler_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
+    {(char *) "Remove", (PyCFunction) _wrap_PyNs3MapScheduler_Remove, METH_VARARGS|METH_KEYWORDS, "Remove(ev)\n\ntype: ev: ns3::Scheduler::Event const &" },
     {(char *) "RemoveNext", (PyCFunction) _wrap_PyNs3MapScheduler_RemoveNext, METH_NOARGS, "RemoveNext()\n\n" },
     {(char *) "DoDispose", (PyCFunction) PyNs3MapScheduler__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3MapScheduler__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
@@ -44532,7 +44532,7 @@ PyTypeObject PyNs3MapScheduler_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MapScheduler(arg0)\nMapScheduler()",                        /* Documentation string */
     (traverseproc)PyNs3MapScheduler__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MapScheduler__tp_clear,             /* tp_clear */
@@ -45240,8 +45240,8 @@ static PyMethodDef PyNs3NormalRandomVariable_methods[] = {
     {(char *) "GetMean", (PyCFunction) _wrap_PyNs3NormalRandomVariable_GetMean, METH_NOARGS, "GetMean()\n\n" },
     {(char *) "GetVariance", (PyCFunction) _wrap_PyNs3NormalRandomVariable_GetVariance, METH_NOARGS, "GetVariance()\n\n" },
     {(char *) "GetBound", (PyCFunction) _wrap_PyNs3NormalRandomVariable_GetBound, METH_NOARGS, "GetBound()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3NormalRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3NormalRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3NormalRandomVariable_GetValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3NormalRandomVariable_GetInteger, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3NormalRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3NormalRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3NormalRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -45311,7 +45311,7 @@ PyTypeObject PyNs3NormalRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "NormalRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3NormalRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3NormalRandomVariable__tp_clear,             /* tp_clear */
@@ -45645,10 +45645,10 @@ _wrap_PyNs3ObjectFactoryValue__copy__(PyNs3ObjectFactoryValue *self)
 
 static PyMethodDef PyNs3ObjectFactoryValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3ObjectFactoryValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3ObjectFactoryValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3ObjectFactoryValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3ObjectFactoryValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3ObjectFactoryValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3ObjectFactoryValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: ns3::ObjectFactory const &" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3ObjectFactoryValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3ObjectFactoryValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: ns3::ObjectFactory const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ObjectFactoryValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -45779,7 +45779,7 @@ _wrap_PyNs3ObjectPtrContainerAccessor_HasSetter(PyNs3ObjectPtrContainerAccessor 
 }
 
 static PyMethodDef PyNs3ObjectPtrContainerAccessor_methods[] = {
-    {(char *) "Get", (PyCFunction) _wrap_PyNs3ObjectPtrContainerAccessor_Get, METH_KEYWORDS|METH_VARARGS, "Get(object, value)\n\ntype: object: ns3::ObjectBase const *\ntype: value: ns3::AttributeValue &" },
+    {(char *) "Get", (PyCFunction) _wrap_PyNs3ObjectPtrContainerAccessor_Get, METH_VARARGS|METH_KEYWORDS, "Get(object, value)\n\ntype: object: ns3::ObjectBase const *\ntype: value: ns3::AttributeValue &" },
     {(char *) "HasGetter", (PyCFunction) _wrap_PyNs3ObjectPtrContainerAccessor_HasGetter, METH_NOARGS, "HasGetter()\n\n" },
     {(char *) "HasSetter", (PyCFunction) _wrap_PyNs3ObjectPtrContainerAccessor_HasSetter, METH_NOARGS, "HasSetter()\n\n" },
     {NULL, NULL, 0, NULL}
@@ -46179,10 +46179,10 @@ _wrap_PyNs3ObjectPtrContainerValue__copy__(PyNs3ObjectPtrContainerValue *self)
 
 static PyMethodDef PyNs3ObjectPtrContainerValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3ObjectPtrContainerValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3ObjectPtrContainerValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Get", (PyCFunction) _wrap_PyNs3ObjectPtrContainerValue_Get, METH_KEYWORDS|METH_VARARGS, "Get(i)\n\ntype: i: std::size_t" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3ObjectPtrContainerValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Get", (PyCFunction) _wrap_PyNs3ObjectPtrContainerValue_Get, METH_VARARGS|METH_KEYWORDS, "Get(i)\n\ntype: i: std::size_t" },
     {(char *) "GetN", (PyCFunction) _wrap_PyNs3ObjectPtrContainerValue_GetN, METH_NOARGS, "GetN()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3ObjectPtrContainerValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3ObjectPtrContainerValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ObjectPtrContainerValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -46886,8 +46886,8 @@ static PyMethodDef PyNs3ParetoRandomVariable_methods[] = {
     {(char *) "GetScale", (PyCFunction) _wrap_PyNs3ParetoRandomVariable_GetScale, METH_NOARGS, "GetScale()\n\n" },
     {(char *) "GetShape", (PyCFunction) _wrap_PyNs3ParetoRandomVariable_GetShape, METH_NOARGS, "GetShape()\n\n" },
     {(char *) "GetBound", (PyCFunction) _wrap_PyNs3ParetoRandomVariable_GetBound, METH_NOARGS, "GetBound()\n\n" },
-    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ParetoRandomVariable_GetValue, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ParetoRandomVariable_GetInteger, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetValue", (PyCFunction) _wrap_PyNs3ParetoRandomVariable_GetValue, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetInteger", (PyCFunction) _wrap_PyNs3ParetoRandomVariable_GetInteger, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3ParetoRandomVariable__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3ParetoRandomVariable__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3ParetoRandomVariable__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -46957,7 +46957,7 @@ PyTypeObject PyNs3ParetoRandomVariable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ParetoRandomVariable()",                        /* Documentation string */
     (traverseproc)PyNs3ParetoRandomVariable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ParetoRandomVariable__tp_clear,             /* tp_clear */
@@ -47341,10 +47341,10 @@ _wrap_PyNs3PointerValue__copy__(PyNs3PointerValue *self)
 
 static PyMethodDef PyNs3PointerValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3PointerValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3PointerValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3PointerValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "GetObject", (PyCFunction) _wrap_PyNs3PointerValue_GetObject, METH_NOARGS, "GetObject()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3PointerValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "SetObject", (PyCFunction) _wrap_PyNs3PointerValue_SetObject, METH_KEYWORDS|METH_VARARGS, "SetObject(object)\n\ntype: object: ns3::Ptr< ns3::Object >" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3PointerValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "SetObject", (PyCFunction) _wrap_PyNs3PointerValue_SetObject, METH_VARARGS|METH_KEYWORDS, "SetObject(object)\n\ntype: object: ns3::Ptr< ns3::Object >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PointerValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -47864,26 +47864,26 @@ _wrap_PyNs3RealtimeSimulatorImpl__copy__(PyNs3RealtimeSimulatorImpl *self)
 }
 
 static PyMethodDef PyNs3RealtimeSimulatorImpl_methods[] = {
-    {(char *) "Cancel", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_Cancel, METH_KEYWORDS|METH_VARARGS, "Cancel(ev)\n\ntype: ev: ns3::EventId const &" },
+    {(char *) "Cancel", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_Cancel, METH_VARARGS|METH_KEYWORDS, "Cancel(ev)\n\ntype: ev: ns3::EventId const &" },
     {(char *) "Destroy", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_Destroy, METH_NOARGS, "Destroy()\n\n" },
     {(char *) "GetContext", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_GetContext, METH_NOARGS, "GetContext()\n\n" },
-    {(char *) "GetDelayLeft", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_GetDelayLeft, METH_KEYWORDS|METH_VARARGS, "GetDelayLeft(id)\n\ntype: id: ns3::EventId const &" },
+    {(char *) "GetDelayLeft", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_GetDelayLeft, METH_VARARGS|METH_KEYWORDS, "GetDelayLeft(id)\n\ntype: id: ns3::EventId const &" },
     {(char *) "GetEventCount", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_GetEventCount, METH_NOARGS, "GetEventCount()\n\n" },
     {(char *) "GetHardLimit", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_GetHardLimit, METH_NOARGS, "GetHardLimit()\n\n" },
     {(char *) "GetMaximumSimulationTime", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_GetMaximumSimulationTime, METH_NOARGS, "GetMaximumSimulationTime()\n\n" },
     {(char *) "GetSynchronizationMode", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_GetSynchronizationMode, METH_NOARGS, "GetSynchronizationMode()\n\n" },
     {(char *) "GetSystemId", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_GetSystemId, METH_NOARGS, "GetSystemId()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "IsExpired", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_IsExpired, METH_KEYWORDS|METH_VARARGS, "IsExpired(ev)\n\ntype: ev: ns3::EventId const &" },
+    {(char *) "IsExpired", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_IsExpired, METH_VARARGS|METH_KEYWORDS, "IsExpired(ev)\n\ntype: ev: ns3::EventId const &" },
     {(char *) "IsFinished", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_IsFinished, METH_NOARGS, "IsFinished()\n\n" },
     {(char *) "Now", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_Now, METH_NOARGS, "Now()\n\n" },
     {(char *) "RealtimeNow", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_RealtimeNow, METH_NOARGS, "RealtimeNow()\n\n" },
-    {(char *) "Remove", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_Remove, METH_KEYWORDS|METH_VARARGS, "Remove(ev)\n\ntype: ev: ns3::EventId const &" },
+    {(char *) "Remove", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_Remove, METH_VARARGS|METH_KEYWORDS, "Remove(ev)\n\ntype: ev: ns3::EventId const &" },
     {(char *) "Run", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_Run, METH_NOARGS, "Run()\n\n" },
-    {(char *) "SetHardLimit", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_SetHardLimit, METH_KEYWORDS|METH_VARARGS, "SetHardLimit(limit)\n\ntype: limit: ns3::Time" },
-    {(char *) "SetScheduler", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_SetScheduler, METH_KEYWORDS|METH_VARARGS, "SetScheduler(schedulerFactory)\n\ntype: schedulerFactory: ns3::ObjectFactory" },
-    {(char *) "SetSynchronizationMode", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_SetSynchronizationMode, METH_KEYWORDS|METH_VARARGS, "SetSynchronizationMode(mode)\n\ntype: mode: ns3::RealtimeSimulatorImpl::SynchronizationMode" },
-    {(char *) "Stop", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_Stop, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetHardLimit", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_SetHardLimit, METH_VARARGS|METH_KEYWORDS, "SetHardLimit(limit)\n\ntype: limit: ns3::Time" },
+    {(char *) "SetScheduler", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_SetScheduler, METH_VARARGS|METH_KEYWORDS, "SetScheduler(schedulerFactory)\n\ntype: schedulerFactory: ns3::ObjectFactory" },
+    {(char *) "SetSynchronizationMode", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_SetSynchronizationMode, METH_VARARGS|METH_KEYWORDS, "SetSynchronizationMode(mode)\n\ntype: mode: ns3::RealtimeSimulatorImpl::SynchronizationMode" },
+    {(char *) "Stop", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl_Stop, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3RealtimeSimulatorImpl__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -47947,7 +47947,7 @@ PyTypeObject PyNs3RealtimeSimulatorImpl_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RealtimeSimulatorImpl(arg0)\nRealtimeSimulatorImpl()",                        /* Documentation string */
     (traverseproc)PyNs3RealtimeSimulatorImpl__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RealtimeSimulatorImpl__tp_clear,             /* tp_clear */
@@ -48440,10 +48440,10 @@ _wrap_PyNs3StringValue__copy__(PyNs3StringValue *self)
 
 static PyMethodDef PyNs3StringValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3StringValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3StringValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3StringValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3StringValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3StringValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3StringValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: std::string const &" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3StringValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3StringValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: std::string const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3StringValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -48739,10 +48739,10 @@ _wrap_PyNs3TimeValue__copy__(PyNs3TimeValue *self)
 
 static PyMethodDef PyNs3TimeValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3TimeValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3TimeValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3TimeValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3TimeValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3TimeValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3TimeValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: ns3::Time const &" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3TimeValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3TimeValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: ns3::Time const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TimeValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -49123,10 +49123,10 @@ _wrap_PyNs3TypeIdValue__copy__(PyNs3TypeIdValue *self)
 
 static PyMethodDef PyNs3TypeIdValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3TypeIdValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3TypeIdValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3TypeIdValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3TypeIdValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3TypeIdValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3TypeIdValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: ns3::TypeId const &" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3TypeIdValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3TypeIdValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: ns3::TypeId const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TypeIdValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -49418,10 +49418,10 @@ _wrap_PyNs3UintegerValue__copy__(PyNs3UintegerValue *self)
 
 static PyMethodDef PyNs3UintegerValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3UintegerValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3UintegerValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3UintegerValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3UintegerValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3UintegerValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3UintegerValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: uint64_t const &" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3UintegerValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3UintegerValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: uint64_t const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3UintegerValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -49802,10 +49802,10 @@ _wrap_PyNs3Vector2DValue__copy__(PyNs3Vector2DValue *self)
 
 static PyMethodDef PyNs3Vector2DValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3Vector2DValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3Vector2DValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3Vector2DValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3Vector2DValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3Vector2DValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3Vector2DValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: ns3::Vector2D const &" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3Vector2DValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3Vector2DValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: ns3::Vector2D const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Vector2DValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -50186,10 +50186,10 @@ _wrap_PyNs3Vector3DValue__copy__(PyNs3Vector3DValue *self)
 
 static PyMethodDef PyNs3Vector3DValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3Vector3DValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3Vector3DValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3Vector3DValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "Get", (PyCFunction) _wrap_PyNs3Vector3DValue_Get, METH_NOARGS, "Get()\n\n" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3Vector3DValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "Set", (PyCFunction) _wrap_PyNs3Vector3DValue_Set, METH_KEYWORDS|METH_VARARGS, "Set(value)\n\ntype: value: ns3::Vector3D const &" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3Vector3DValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "Set", (PyCFunction) _wrap_PyNs3Vector3DValue_Set, METH_VARARGS|METH_KEYWORDS, "Set(value)\n\ntype: value: ns3::Vector3D const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Vector3DValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };

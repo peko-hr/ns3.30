@@ -1,0 +1,157 @@
+SUMO MEMO
+
+SUMO　GUI
+sumo-gui 
+＊ファイルの呼び出し方
+オーペンシミュレーション→家マークを押すとホームのディレクトリに行ける→ホームにSumoというファイルが生成される
+
+*ns3 import//////////////////////////////////////////////////////////////////////////////////////////////////
+ステップ１　Sumoの構成ファイルの作成
+ステップ２　Mobility.tclの作成
+ステップ３  nodenum, duration logfile を定義して、ns2-mobility-trace.ccを実行する
+ステップ４  ネットアニムコードを含めて実行する
+
+
+
+ステップ１
+home/sumo/tools 
+python osmWebWizard.py //Wizardmapを起動
+ホームにSumoというファイルが自動で生成される
+その中にosm.routeなどのxmlファイルが生成される
+そのファイルの塊をsumo/toolsにコピーしておく
+
+
+ステップ２　mobility.tclファイルの作り方
+ディレクトリは home/Sumo/*****
+今回*****のところはgrid_side
+sumo -c osm.sumocfg --fcd-output trace.xml
+
+sumo -c longautobahn.sumocfg --fcd-output trace4.xml 
+ 
+
+これを行いlsコマンドを実行すると
+build.bat    osm.passenger.trips.xml  osm.sumocfg       run.bat
+osm.net.xml  osm.poly.xml             osm.view.xml      trace.xml←が生成されている
+osm.netccfg  osm.polycfg              osm_bbox.osm.xml
+
+ディレクトリを/usr/share/sumo/tools$に移動してlsコマンドを実行するとtraceExporter.pyがある
+このディレクトリで python traceExporter.py
+ここでNomoduleという警告が出てしまった←良いか悪いかわからない
+python traceExporter.py --help
+
+python traceExporter.py -i hokkaido/trace.xml --ns2mobility-output=hokkaido/mobility.tcl
+★動画の25分6秒
+上記のコマンドを実行するとhokkaido というディレクトリにエラーが出た----------------------------------------------------
+webwizardなどが使えるファイルをhomeにコピーしてみる
+longa
+python traceExporter.py -i ディレクトリ/trace.xml --ns2mobility-output=mobility.tcl
+
+python traceExporter.py -i longautobahn/trace.xml --ns2mobility-output=500_4s_20.tcl
+
+
+
+
+
+python traceExporter.py -i longautobahn/trace3.xml --ns2mobility-output=3s_10.tcl
+
+
+
+
+このやり方ならどこに生成されるかわからないがmobility.tcl ファイルがどこかに生成される
+警告は出たまま
+-----------------------------------------------------------------------------------------------------------
+この後mobility.tclファイルを開き、ノードの数を調べる（プログラムの最後が、ノードの最終とは限らない）
+ノードの最後のIDを覚えておく←重要
+mobility.tcl ファイルをhomeに持ってくる
+
+ステップ３
+cd ns-3.29
+./waf --run "scratch/ns2-mobility-trace --traceFile=/home/shuto/mobility.tcl --nodeNum=1462 --duration=40.0 --logFile=ns2-mob.log"
+mobility.tcl は自分が作ったモビリティファイルなので、どんな名前でも良い
+
+ステップ４
+include "ns3/netanim-module.h"
+ネットアニム機能を追加　simulator::stop(seconds(duration))の下
+AnimationInterface anim("ファイル名.xml");を追加する
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+sumo mobility をNSに持ってきたときの注意点
+MOBILITY　を変える　例<~mobility> mobility = getposition<~mobility>
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+モビリティの作成方法
+python randomTrips.py -n net.net.xml -o flows.xml -b 0 -e 20 --flows 150
+net.net.xmlという道路上の車両の台数をflows x台数にする 車両台数を変更
+
+-b 開始時間　-e 終了時間  eは触らないほうがいい　終了時間近くに車がフェードアウトする
+
+ルートファイル生成
+duarouter -n net.net.xml -t flows.xml -o routes2.xml
+
+tはトリップファイル
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Polyconver
+建物などをインポートしてSUMO-GUIを使用して視覚化できる表現に変換するもの
+
+
+
+
+export SUMO_HOME=/usr/share/sumo(pathを通す)
+
+
+
+
+
+
+**********************2021 3/20 モビリティ再作成 ********************************
+
+1.sumo netedit で道路を作成する
+
+例
+netgenerate --grid --output-file=grid.net.xml --tls.guess --tls.guess.threshold 30  --grid.length 300 --grid.number 8 
+
+sum
+2.車両の生成 randomTrip.py
+python randomTrips.py -n own_make/grid.net.xml -o own_make/grid_trip.xml -b 0  -p 0.01 
+ -n 道路のファイル -o アウトプットファイル -b 開始時期 -e　終了時刻 -p 車両生成間隔
+
+3 車両のルートを生成
+　duarouter -n own_make/grid.net.xml -t own_make/original_trip.xml -o own_make/original_route.xml -e 100
+ -n 道路ファイル -t tripファイル（2の手順で書きだしたファイル）-o 書き出しファイル
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

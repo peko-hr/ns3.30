@@ -1,0 +1,61 @@
+sumo 
+高速道路　作成　neteditメモ
+〇Vtype
+
+〇randomTrips.py 
+-n でネットワークを指定　
+例<SUMO_HOME>/tools/python randomTrips.py -n input_net.net.xml -e 50
+
+-o 結果のファイルを指定できる
+
+○tripasattribute
+例
+~/sumo/tools/autobahn$ python randomTrips.py -n autobahn.net.xml  --trip-attributes="depart=\"random\" departSpeed=\"max\" departPos=\"longEdge\""
+新たなパラメータをプログラムソースに追加できる
+
+
+python randomTrips.py -n longautobahn.net.xml -p 2 -e 500  --trip-attributes="departSpeed=\"max\""
+
+○vtype
+speedFactor デフォルト1.0  1.2などに設定すると制限速度の1.2倍の速度で走る
+
+
+＊SUMO　GUIの利用
+SUMOGUIでトリップファイルなどを更新したときにsumocfgファイルからアプリケーションを開くを線テクしてSUMOGUIで実行する
+
+
+違反車両
+<vType id="speed_car" vClass="passenger" speedFactor="1.2" color="0,1,1"/>
+    <trip id="100" depart="10.00" from="first" to="finish" departSpeed="max" type="speed_car"/>
+    <trip id="101" depart="20.00" from="first" to="finish" departSpeed="max" type="speed_car"/>
+    <trip id="102" depart="30.00" from="first" to="finish" departSpeed="max" type="speed_car"/>
+    <trip id="103" depart="40.00" from="first" to="finish" departSpeed="max" type="speed_car"/>
+    <trip id="104" depart="50.00" from="first" to="finish" departSpeed="max" type="speed_car"/>
+    <trip id="105" depart="60.00" from="first" to="finish" departSpeed="max" type="speed_car"/>
+    <trip id="106" depart="70.00" from="first" to="finish" departSpeed="max" type="speed_car"/>
+    <trip id="107" depart="80.00" from="first" to="finish" departSpeed="max" type="speed_car"/>
+    <trip id="108" depart="90.00" from="first" to="finish" departSpeed="max" type="speed_car"/>
+    <trip id="109" depart="100.00" from="first" to="finish" departSpeed="max" type="speed_car"/>
+
+○　ネットジェネレイト
+$ netgenerate --grid --output-file=grid.net.xml --tls.guess --tls.guess.threshold 30
+
+netgenerate --grid --output-file=grid.net.xml --tls.guess --tls.guess.threshold 30  --grid.length 300 --grid.number 8 
+
+
+
+■--output-file=　アウトプットファイル　例grid.net.xml
+■--tls.guess --tls.guess.threshold 30　　　３０キロ以上の制限速度の道路に対して信号を設置するしきい値オプション　--tls.guessオプションだけ付けても信号は生成されません．
+なので，--tls.guess.thresholdで信号を生成する道路の制限速度の閾値を設定しなおす必要がある
+
+○ polyconvert
+polyconvert --visum grid.net.xml -o converted.poi.xml
+
+grid.net.xml = import net file    nanndemoyoi
+-o output file
+
+
+
+
+
+

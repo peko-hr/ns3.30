@@ -1,0 +1,175 @@
+5/30
+ObstacleShadowingPropagationLossModel::GetLossメソッドに
+ロスを表す変数らしきものをreturn していたL_obsという変数
+０位外の変数の値を返している
+
+ ./waf --run "vanet-routing-compare --buildings=1  --protocol=5 --lossModel=4 --scenario=3"
+
+５・３０日の　ワンドライブに載せているファイルの状態だと上記の実行例でbuildings の０と１を切り替えることで減衰を確認できた
+
+
+６．７
+ノードの台数が限られる問題
+
+IPv6を使うと少し増えるのではないか?
+
+6.8 --------------------------------------------------------------------------------------------
+./waf --run "vanet-routing-compare --buildings=1  --protocol=5 --lossModel=3 --scenario=3"
+と
+./waf --run "vanet-routing-compare --buildings=0  --protocol=5 --lossModel=3 --scenario=3"
+
+m_traceFile = "sumo/BerlinTest/Berlin_Test_mobility.tcl"; //モビリティ入力ファイル
+
+protocol = lsgo
+
+
+
+std::string bldgFile =
+          "./src/wave/examples/BerlinTest/osm.poly.xml"; //謎にWaveのディレクトリなら動く
+
+上記の環境で電波減衰を確認
+-------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------
+vanet-routing-compare.cc での確認　７月１８日
+
+./waf --run "vanet-routing-compare --buildings=0  --protocol=5 --lossModel=3 --scenario=3"
+
+./waf --run "vanet-routing-compare --buildings=1  --protocol=5 --lossModel=3 --scenario=3"
+で減衰を再確認
+
+コピペして新しいシナリオを作る
+------------------------------------------------------------------------------------------
+Lsgo-SimulationScenario での確認
+使用したmobilityはLSGO_Grid
+./waf --run "Lsgo-SimulationScenario  --buildings=0  --protocol=6 --lossModel=4 --scenario=3"
+
+ ./waf --run "Lsgo-SimulationScenario  --buildings=1  --protocol=6 --lossModel=4 --scenario=3"
+7/31 obstacle ありなしでパケット到達率に変化を確認
+
+
+
+sudo ./waf --run "Lsgo-SimulationScenario  --buildings=1  --protocol=6 --lossModel=4 --scenario=3"
+
+sudo ./waf --run "Lsgo-SimulationScenario  --buildings=0  --protocol=6 --lossModel=4 --scenario=3"
+
+
+
+シミュレーションで変更すべきところ
+■std::string bldgFile =
+          "./src/wave/examples　〜　建物のファイル
+
+■m_traceFile = "sumo/BerlinTest/Berlin_Test_mobility.tcl"; //モビリティ入力ファイル
+■ m_scenario == 3の m_nNodes m_TotalSimTime 
+
+
+buildings タイプによるロス値の平均（肉眼）
+○building.yes 18から20
+○building.commercial １８から２０
+○shop.department_store 0
+○amenity.theatre 0
+○building.office １８から２０
+○tourism.hotel 0 
+○building.apartments １８から２０
+
+
+
+
+10/31実行コマンド cd ~/shuto/workspace30/ns-3-allinone/ns-3.30
+lsgo
+sudo ./waf --run "Lsgo-SimulationScenario --buildings=1  --protocol=6 --lossModel=4 --scenario=3"
+
+shutoushu
+sudo ./waf --run "Lsgo-SimulationScenario --buildings=1  --protocol=7 --lossModel=4 --scenario=3"
+
+2021 1/19 
+obstacle-shadowing-propagation-loss-model
+GetLossという関数のreturnしている L_obs 値がシャドウイングの減衰の値っぽい
+
+2021 1/21
+obstacle-shadowing-propagation-loss-model
+のGetLossメソッドにおけるロスの値（L_obs)を増加させるとパケット取得回数が減っていることをsample-routing-protocolにて確認 
+逆にロスの値を減少させるとパケット取得回数が僅かに向上していることも確認
+
+
+2021 2/11
+topology.cc にて
+CGALライブラリを使用して壁の貫通数と貫通距離を算出
+losの値は壁の貫通数と貫通距離に基づく
+obstacle.h 170行目にて------------------------
+  double m_beta;  // per-wall attenuation parameter  自分の研究では貫通回数はほぼ２回
+  double m_gamma; // per-meter attenuation parameter  距離あたりの減衰 　この値をcheck
+
+obstacle.cc より36行目あたり
+m_gamma,m_betaの値を変更
+減衰を確認
+
+topology.cc 307行目付近
+貫通距離の算出部を発見
+それを数倍して減衰値が変わるかを実験
+
+
+neteditでnewbuildings.xmlを作成　以前より　建物をびっしり
+
+
+lossの値が大きい方が確かに減衰率は上がっているが、やはり一定数を超えたロスの値にしてもパケットが結構届いている
+
+→その後retVal変数自体を2倍にしてreturnをするという実験を行うとほぼすべてのパケットが届かなくなった
+そこで実験：lossの値が0ではないものだけをx倍する実験を行う
+
+変化なし、、
+車両２台飲みのモビリティを作りひたすらhello packetの取得数を実験する
+
+
+2021-3-2
+shadowingモデルで建物を認識しないバグが発生
+建物を分割して配置するコードを作成し max_buildings.xmlファイルを作成
+これで認識される確率が高まったがされない場合も少しある
+
+m_beta 9.5
+m_gamma 0.8
+データ取り直し
+
+
+//////////////////2021 4 9
+
+wave packetなるものが飛んでいることを確認
+これを飛ばさないために、bsm-application.cc
+にて241〜291をコメントアウトする
+
+
+
+
+2021/4/17日現在
+shadowing 
+m_beta (13.5),
+m_gamma (1.4)
+maxhop 20
+interarea = 15の正方形
+ネクストホップノード5個固定
+sourcenode num 10
+送信開始時間 10second
+AngleGamma 0.4 // ガンマ変換
+nodenum 300 400 500にて精度向上を記録　この時点のソースコードをonedrive にアップロードする
+
+src/sigoを作成し位置予測アルゴリズムを実装する
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

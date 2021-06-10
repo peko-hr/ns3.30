@@ -1,0 +1,14 @@
+ファイルのコピーの作り方
+例shuto といファイルのなかにあるソース上にshuto という言葉があれば
+ディレクトリをそのshutoというファイルに移動して
+sudo grep -lr -e "shuto" .| xargs sed -i "s/shuto/senko/g"
+を実行すればshutoファイルの中にあるソースコードのshutoという文字がsenkoに変わる
+sudo grep -lr -e "oldname" .| xargs sed -i "s/oldname/newname/g"
+
+理由不明2回め
+
+sudo grep -lr -e "senko" .| xargs sed -i "s/Shuto/Senko/g"
+で実行する
+
+
+
