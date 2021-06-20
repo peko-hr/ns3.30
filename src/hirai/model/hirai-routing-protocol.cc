@@ -67,6 +67,7 @@ int numVehicle = 0; //グローバル変数
 int broadcastCount = 0;
 int recvDistinationCount = 0;
 int Grobal_StartTime = 20;
+int Grobal_SourceNodeNum = 10;
 int Grobal_Seed = 10000;
 
 RoutingProtocol::RoutingProtocol ()
@@ -222,26 +223,19 @@ void
 RoutingProtocol::DoInitialize (void)
 {
   int32_t id = m_ipv4->GetObject<Node> ()->GetId ();
-  int32_t time = Simulator::Now ().GetMicroSeconds ();
+  //int32_t time = Simulator::Now ().GetMicroSeconds ();
   m_trans[id] = 1;
 
   numVehicle++;
   if (id == 1)
     {
       Simulator::Schedule (Seconds (Grobal_StartTime - 2), &RoutingProtocol::SourceAndDestination, this);
-      Simulator::Schedule (Seconds (20.0), &RoutingProtocol::SendHiraiBroadcast, this, id, 9, 100, 600, 0);
+      //Simulator::Schedule (Seconds (20.0), &RoutingProtocol::SendHiraiBroadcast, this, id, 9, 100, 600, 0);
       //SendHiraiBroadcast(id, 9,100,600, 0);
-      sourcecount[id]=1;
-      source_time[id]=time;
+      //sourcecount[id]=1;
+      //source_time[id]=time;
     }
 
-      if (id == 2)
-    {
-      // Simulator::Schedule (Seconds (1.0), &RoutingProtocol::SendHiraiBroadcast, this);
-      SendHiraiBroadcast(id, 9,100,600, 0);
-      sourcecount[id]=1;
-      source_time[id]=time;
-    }
 
   //**結果出力******************************************//
   for (int i = 1; i < 301; i++)
@@ -250,13 +244,20 @@ RoutingProtocol::DoInitialize (void)
         Simulator::Schedule (Seconds (i), &RoutingProtocol::SimulationResult,
                              this); //結果出力関数
     }
+
+  for (int i = 0; i < Grobal_SourceNodeNum; i++)
+  {
+    //std::cout << "a + " << i << "\n";
+    Simulator::Schedule (Seconds (Grobal_StartTime + i), &RoutingProtocol::PreparationForSend, this);
+  }
+  
 }
 
 void
 RoutingProtocol::SourceAndDestination ()
 {
   std::cout << "\nsource function\n";
-  for (int i = 0; i < 1000; i++) ///node数　設定する
+  for (int i = 0; i < numVehicle; i++) ///node数　設定する
     {
       if (m_my_posx[i] >= SourceLowX && m_my_posx[i] <= SourceHighX && m_my_posy[i] >= SourceLowY &&
           m_my_posy[i] <= SourceHighY)
@@ -274,7 +275,50 @@ RoutingProtocol::SourceAndDestination ()
     {
       std::cout << "shuffle source id" << source_list[i] << "\n";
     }
+
+
+}// source list random 10kotoru
+
+void
+RoutingProtocol::PreparationForSend ()
+{
+  int32_t id = m_ipv4->GetObject<Node> ()->GetId ();
+  int time = Simulator::Now ().GetSeconds ();
+
+  if (time >= Grobal_StartTime)
+    {
+      //std::cout<<"time" << time - Grobal_StartTime << "\n";
+      //std::cout<<"id" << id << "\n";
+      //std::cout<<"source_list" << source_list[time - Grobal_StartTime] << "\n";
+      if (id == source_list[time - Grobal_StartTime])
+        {
+          int index_time =
+              time -
+              Grobal_StartTime; //example time16 simstarttime15のときm_source_id = 1 すなわち２つめのsourceid
+
+          Ptr<MobilityModel> mobility = m_ipv4->GetObject<Node> ()->GetObject<MobilityModel> ();
+          Vector mypos = mobility->GetPosition ();
+          //int MicroSeconds = Simulator::Now ().GetMicroSeconds ();
+          //m_start_time[des_list[index_time]] = MicroSeconds + 300000; //秒数をずらし多分足す
+          //std::cout << "m_start_time" << m_start_time[des_list[index_time]] << "\n";
+          double shift_time = 0.3; //送信時間を0.3秒ずらす
+
+          // SendLsgoBroadcast (0, des_list[index_time], m_my_posx[des_list[index_time]], m_my_posy[des_list[index_time]], 1);
+          Simulator::Schedule (Seconds (shift_time), &RoutingProtocol::SendHiraiBroadcast, this, source_list[index_time],
+                               9, 100, 600, 1);
+          sourcecount[id] = 1;
+          std::cout<< "\n\n\nid" << source_list[index_time] << " broadcast" << "\n";
+          //std::cout<< "\n\n\nid" << source_list[1] << " broadcast" << "\n";
+          //std::cout<< "\n\n\nid" << source_list[2] << " broadcast" << "\n";
+          //std::cout<< "\n\n\nid" << source_list[3] << " broadcast" << "\n";
+          std::cout << "source node point x=" << mypos.x << "y=" << mypos.y
+                  //  << "des node point x=" << m_my_posx[des_list[index_time]]
+                  //  << "y=" << m_my_posy[des_list[index_time]] 
+                  << "\n";
+        }
+    }
 }
+
 
 void
 RoutingProtocol::SendToHirai (Ptr<Socket> socket, Ptr<Packet> packet, Ipv4Address destination,
@@ -296,7 +340,7 @@ RoutingProtocol::SendHiraiBroadcast (int32_t pri_value, int32_t des_id, int32_t 
   for (std::map<Ptr<Socket>, Ipv4InterfaceAddress>::const_iterator j = m_socketAddresses.begin ();
        j != m_socketAddresses.end (); ++j)
     {
-      int32_t id = m_ipv4->GetObject<Node> ()->GetId ();
+      //int32_t id = m_ipv4->GetObject<Node> ()->GetId ();
       Ptr<MobilityModel> mobility = m_ipv4->GetObject<Node> ()->GetObject<MobilityModel> ();
       Vector mypos = mobility->GetPosition ();
 
@@ -312,7 +356,7 @@ RoutingProtocol::SendHiraiBroadcast (int32_t pri_value, int32_t des_id, int32_t 
       // SendHeader sendHeader (des_id, des_x, des_y, hopcount, pri_id[1], pri_id[2], pri_id[3],
       //                        pri_id[4], pri_id[5]);
 
-      SendHeader sendHeader (des_id, des_x, des_y, hopcount, mypos.x, mypos.y, id,
+      SendHeader sendHeader (des_id, des_x, des_y, hopcount, mypos.x, mypos.y, pri_value,
                             0, 0);
 
       packet->AddHeader (sendHeader);
@@ -395,15 +439,16 @@ RoutingProtocol::RecvHirai (Ptr<Socket> socket)
         int32_t hopcount = sendheader.GetHopcount ();
         int32_t packet_x = sendheader.GetId1 (); //送信元のx座標
         int32_t packet_y = sendheader.GetId2 (); //送信元のy座標
+        int32_t source_id = sendheader.GetId3 (); 
 
 
         if (des_id == id) //宛先が自分だったら
           {
-            if(destinationcount[1]!=1){//後で直す
-            destinationcount[1]=1;
+            if(destinationcount[source_id]!=1){//後で直す
+            destinationcount[source_id]=1;
             std::cout << "time" << Simulator::Now ().GetMicroSeconds () << "  id" << id
-                      << "受信しましたよ　成功しました-------------\n\n";
-            des_time[1] = time;//あとで直す
+                      << " 受信しました " << "source_id" << source_id << " jusin 成功しました-------------\n\n";
+            des_time[source_id] = time;//あとで直す
             }
             break;
           }
@@ -415,8 +460,8 @@ RoutingProtocol::RecvHirai (Ptr<Socket> socket)
             {
               // SendHiraiBroadcast (int32_t pri_value, int32_t des_id, int32_t des_x,
               //                            int32_t des_y, int32_t hopcount) 
-              std::cout<<"id"<<id<<"は自分のほうが近いので再ブロードキャストを行います\n";
-              SendHiraiBroadcast(id, des_id, des_x, des_y, hopcount);
+              //std::cout<<"id"<<id<<"は自分のほうが近いので再ブロードキャストを行います\n";
+              SendHiraiBroadcast(source_id, des_id, des_x, des_y, hopcount);
             }
           }
         break;

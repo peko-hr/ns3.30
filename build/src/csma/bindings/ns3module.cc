@@ -2929,7 +2929,7 @@ PyTypeObject PyNs3CsmaHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "CsmaHelper(arg0)\nCsmaHelper()",                        /* Documentation string */
     (traverseproc)PyNs3CsmaHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CsmaHelper__tp_clear,             /* tp_clear */
@@ -3902,7 +3902,7 @@ PyTypeObject PyNs3CsmaChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "CsmaChannel()",                        /* Documentation string */
     (traverseproc)PyNs3CsmaChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CsmaChannel__tp_clear,             /* tp_clear */
@@ -6307,7 +6307,7 @@ PyTypeObject PyNs3CsmaNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "CsmaNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3CsmaNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CsmaNetDevice__tp_clear,             /* tp_clear */

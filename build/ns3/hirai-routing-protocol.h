@@ -137,6 +137,7 @@ private:
   void SendToHello (Ptr<Socket> socket, Ptr<Packet> packet,
                     Ipv4Address destination); //Hello packet の送信
   void  SourceAndDestination(void);
+  void PreparationForSend (void); //シミュレーションソースIDとDestinationIDを指定する関数
   void SendToHirai (Ptr<Socket> socket, Ptr<Packet> packet, Ipv4Address destination,
                         int32_t hopcount, int32_t des_id); //Hirai broadcast の送信
   void SaveXpoint (int32_t map_id, int32_t map_xpoint); //近隣ノードのHello packetの情報を
