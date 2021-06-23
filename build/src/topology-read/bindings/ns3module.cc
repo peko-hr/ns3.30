@@ -625,8 +625,8 @@ _wrap_PyNs3TopologyReaderHelper__copy__(PyNs3TopologyReaderHelper *self)
 
 static PyMethodDef PyNs3TopologyReaderHelper_methods[] = {
     {(char *) "GetTopologyReader", (PyCFunction) _wrap_PyNs3TopologyReaderHelper_GetTopologyReader, METH_NOARGS, "GetTopologyReader()\n\n" },
-    {(char *) "SetFileName", (PyCFunction) _wrap_PyNs3TopologyReaderHelper_SetFileName, METH_KEYWORDS|METH_VARARGS, "SetFileName(fileName)\n\ntype: fileName: std::string const" },
-    {(char *) "SetFileType", (PyCFunction) _wrap_PyNs3TopologyReaderHelper_SetFileType, METH_KEYWORDS|METH_VARARGS, "SetFileType(fileType)\n\ntype: fileType: std::string const" },
+    {(char *) "SetFileName", (PyCFunction) _wrap_PyNs3TopologyReaderHelper_SetFileName, METH_VARARGS|METH_KEYWORDS, "SetFileName(fileName)\n\ntype: fileName: std::string const" },
+    {(char *) "SetFileType", (PyCFunction) _wrap_PyNs3TopologyReaderHelper_SetFileType, METH_VARARGS|METH_KEYWORDS, "SetFileType(fileType)\n\ntype: fileType: std::string const" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TopologyReaderHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -802,12 +802,12 @@ _wrap_PyNs3TopologyReader_SetFileName(PyNs3TopologyReader *self, PyObject *args,
 }
 
 static PyMethodDef PyNs3TopologyReader_methods[] = {
-    {(char *) "AddLink", (PyCFunction) _wrap_PyNs3TopologyReader_AddLink, METH_KEYWORDS|METH_VARARGS, "AddLink(link)\n\ntype: link: ns3::TopologyReader::Link" },
+    {(char *) "AddLink", (PyCFunction) _wrap_PyNs3TopologyReader_AddLink, METH_VARARGS|METH_KEYWORDS, "AddLink(link)\n\ntype: link: ns3::TopologyReader::Link" },
     {(char *) "GetFileName", (PyCFunction) _wrap_PyNs3TopologyReader_GetFileName, METH_NOARGS, "GetFileName()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3TopologyReader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "LinksEmpty", (PyCFunction) _wrap_PyNs3TopologyReader_LinksEmpty, METH_NOARGS, "LinksEmpty()\n\n" },
     {(char *) "LinksSize", (PyCFunction) _wrap_PyNs3TopologyReader_LinksSize, METH_NOARGS, "LinksSize()\n\n" },
-    {(char *) "SetFileName", (PyCFunction) _wrap_PyNs3TopologyReader_SetFileName, METH_KEYWORDS|METH_VARARGS, "SetFileName(fileName)\n\ntype: fileName: std::string const &" },
+    {(char *) "SetFileName", (PyCFunction) _wrap_PyNs3TopologyReader_SetFileName, METH_VARARGS|METH_KEYWORDS, "SetFileName(fileName)\n\ntype: fileName: std::string const &" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -870,7 +870,7 @@ PyTypeObject PyNs3TopologyReader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "TopologyReader()",                        /* Documentation string */
     (traverseproc)PyNs3TopologyReader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TopologyReader__tp_clear,             /* tp_clear */
@@ -1177,13 +1177,13 @@ _wrap_PyNs3TopologyReaderLink__copy__(PyNs3TopologyReaderLink *self)
 }
 
 static PyMethodDef PyNs3TopologyReaderLink_methods[] = {
-    {(char *) "GetAttribute", (PyCFunction) _wrap_PyNs3TopologyReaderLink_GetAttribute, METH_KEYWORDS|METH_VARARGS, "GetAttribute(name)\n\ntype: name: std::string const &" },
-    {(char *) "GetAttributeFailSafe", (PyCFunction) _wrap_PyNs3TopologyReaderLink_GetAttributeFailSafe, METH_KEYWORDS|METH_VARARGS, "GetAttributeFailSafe(name, value)\n\ntype: name: std::string const &\ntype: value: std::string &" },
+    {(char *) "GetAttribute", (PyCFunction) _wrap_PyNs3TopologyReaderLink_GetAttribute, METH_VARARGS|METH_KEYWORDS, "GetAttribute(name)\n\ntype: name: std::string const &" },
+    {(char *) "GetAttributeFailSafe", (PyCFunction) _wrap_PyNs3TopologyReaderLink_GetAttributeFailSafe, METH_VARARGS|METH_KEYWORDS, "GetAttributeFailSafe(name, value)\n\ntype: name: std::string const &\ntype: value: std::string &" },
     {(char *) "GetFromNode", (PyCFunction) _wrap_PyNs3TopologyReaderLink_GetFromNode, METH_NOARGS, "GetFromNode()\n\n" },
     {(char *) "GetFromNodeName", (PyCFunction) _wrap_PyNs3TopologyReaderLink_GetFromNodeName, METH_NOARGS, "GetFromNodeName()\n\n" },
     {(char *) "GetToNode", (PyCFunction) _wrap_PyNs3TopologyReaderLink_GetToNode, METH_NOARGS, "GetToNode()\n\n" },
     {(char *) "GetToNodeName", (PyCFunction) _wrap_PyNs3TopologyReaderLink_GetToNodeName, METH_NOARGS, "GetToNodeName()\n\n" },
-    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3TopologyReaderLink_SetAttribute, METH_KEYWORDS|METH_VARARGS, "SetAttribute(name, value)\n\ntype: name: std::string const &\ntype: value: std::string const &" },
+    {(char *) "SetAttribute", (PyCFunction) _wrap_PyNs3TopologyReaderLink_SetAttribute, METH_VARARGS|METH_KEYWORDS, "SetAttribute(name, value)\n\ntype: name: std::string const &\ntype: value: std::string const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TopologyReaderLink__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1357,7 +1357,7 @@ PyTypeObject PyNs3InetTopologyReader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "InetTopologyReader()",                        /* Documentation string */
     (traverseproc)PyNs3InetTopologyReader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3InetTopologyReader__tp_clear,             /* tp_clear */
@@ -1484,7 +1484,7 @@ PyTypeObject PyNs3OrbisTopologyReader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "OrbisTopologyReader()",                        /* Documentation string */
     (traverseproc)PyNs3OrbisTopologyReader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OrbisTopologyReader__tp_clear,             /* tp_clear */
@@ -1611,7 +1611,7 @@ PyTypeObject PyNs3RocketfuelTopologyReader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "RocketfuelTopologyReader()",                        /* Documentation string */
     (traverseproc)PyNs3RocketfuelTopologyReader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RocketfuelTopologyReader__tp_clear,             /* tp_clear */

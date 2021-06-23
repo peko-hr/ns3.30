@@ -51,6 +51,7 @@
 #include <sstream>
 #include <vector>
 #include <random>
+#include <sys/stat.h>
 
 #include "ns3/mobility-module.h"
 
@@ -308,7 +309,7 @@ RoutingProtocol::PreparationForSend ()
           Simulator::Schedule (Seconds (shift_time), &RoutingProtocol::SendHiraiBroadcast, this, source_list[index_time],
                                9, 100, 600, 1);
           sourcecount[id] = 1;
-          std::cout<< "\n\n\nid" << source_list[index_time] << " broadcast" << "\n";
+          std::cout<< "\n\nid" << source_list[index_time] << " broadcast" << "\n";
           //std::cout<< "\n\n\nid" << source_list[1] << " broadcast" << "\n";
           //std::cout<< "\n\n\nid" << source_list[2] << " broadcast" << "\n";
           //std::cout<< "\n\n\nid" << source_list[3] << " broadcast" << "\n";
@@ -427,6 +428,7 @@ RoutingProtocol::RecvHirai (Ptr<Socket> socket)
         SaveYpoint (recv_hello_id, recv_hello_posy);
         //SaveRecvTime (recv_hello_id, recv_hello_time);
         // SaveRelation (recv_hello_id, recv_hello_posx, recv_hello_posy);
+
         break; //breakがないとエラー起きる
       }
       case HIRAITYPE_SEND: {
@@ -448,10 +450,23 @@ RoutingProtocol::RecvHirai (Ptr<Socket> socket)
             if(destinationcount[source_id]!=1){//後で直す
             destinationcount[source_id]=1;
             std::cout << "time" << Simulator::Now ().GetMicroSeconds () << "  id" << id
-                      << " 受信しました " << "source_id" << source_id << " jusin 成功しました-------------\n\n";
+                      << " 受信しました " << "source_id" << source_id << " 受信成功しました-------------\n\n";
             des_time[source_id] = time;//あとで直す
             }
-            break;
+
+          // p_recv_x.push_back (mypos.x);
+          // p_recv_y.push_back (mypos.y);
+          // p_recv_time.push_back (Simulator::Now ().GetMicroSeconds ());
+          // p_hopcount.push_back (hopcount);
+          // p_recv_id.push_back (id);
+          // //p_source_id.push_back (send_id);
+          // p_destination_id.push_back (des_id);
+          // p_destination_x.push_back (des_x);
+          // p_destination_y.push_back (des_y);
+          // p_pri_1.push_back (pri_id[0]);
+          // p_pri_2.push_back (pri_id[1]);
+          // p_pri_3.push_back (pri_id[2]);
+          break;
           }
           else{
             sourceDistance = getDistance (packet_x,  packet_y,  des_x, des_y); //送信車両と宛先ノードとの距離
@@ -543,21 +558,68 @@ RoutingProtocol::SimulationResult (void) //
   int desCount = 0;
 
   std::cout<<"time" << Simulator::Now().GetSeconds ()<< "\n";
+  int totaldelay;
 
-  if(Simulator::Now().GetSeconds () == 300)
+  if(Simulator::Now().GetSeconds () == 199)
   {
     for (auto itr = sourcecount.begin (); itr != sourcecount.end (); itr++)
             {
               desCount++;
               std::cout <<"source id keytest" << itr->first << "\n";
             }
+     for (auto itr = des_time.begin (); itr != des_time.end (); itr++)
+            {
+              std::cout <<"destime keytest" << itr->first << "\n";
+              totaldelay = source_time[itr->first] - des_time[itr->first];
+            }      
   
   std::cout<<"recv count" << destinationcount.size()  << "\n";
   std::cout<<"PDR" << double(destinationcount.size()) / double(sourcecount.size())  << "\n";
-  std::cout<<"Delay" << des_time[1] - source_time[1] << "\n";
+  std::cout<<"Delay" << double(totaldelay) / double (des_time.size()) << "\n";
   std::cout<< "broadcast count" << broadcastCount << "\n";
   std::cout<<"Overhead"<< double(broadcastCount) / double(destinationcount.size()) <<"\n";
   std::cout << "broadcast数は" << broadcastCount << "\n";
+
+  std::string filename;
+  //std::string send_filename;
+
+  std::string grid_dir = "data/grid_side";
+  std::cout<<"grid_side packet csv \n";
+    filename = grid_dir + "/grid_side/grid_side_" + std::to_string (Grobal_Seed) + "nodenum_" +
+                       std::to_string (numVehicle) + ".csv";
+    //send_filename = shadow_dir + "/send_lsgo/lsgo-seed_" + std::to_string (Grobal_Seed) + "nodenum_" +
+    //                        std::to_string (numVehicle) + ".csv";
+        
+    const char *dir = grid_dir.c_str();
+    struct stat statBuf;
+
+    if (stat(dir, &statBuf) != 0) //directoryがなかったら
+    {
+      std::cout<<"ディレクトリが存在しないので作成します\n";
+      mkdir(dir, S_IRWXU);
+    }
+    
+      std::ofstream result (filename);
+      result << "PDR"
+             << ","
+             << "delay"
+             << ","
+             << "Overhead" << std::endl;
+
+      result << double(destinationcount.size()) / double(sourcecount.size())
+             << ","
+             << double(totaldelay) / double (des_time.size()) 
+             << ","
+             << double(broadcastCount) / double(destinationcount.size())  << std::endl;
+      
+      // for (int i = 0; i < packetCount; i++)
+      //   {
+      //     packetTrajectory << p_recv_x[i] << ", "<< p_recv_y[i] << ", " << p_recv_time[i]
+      //                      << ", " << p_hopcount[i] << ", " << p_recv_id[i] << ", "
+      //                      << p_destination_id[i] << ", "
+      //                      << p_destination_x[i] << ", " << p_destination_y[i] << ", " << p_pri_1[i]
+      //                      << ", " << p_pri_2[i] << ", " << p_pri_3[i] << std::endl;
+      //   }
   }
 }
   
