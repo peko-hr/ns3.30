@@ -11825,7 +11825,7 @@ PyTypeObject PyNs3SpectrumValue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_CHECKTYPES,                      /* tp_flags */
+    Py_TPFLAGS_CHECKTYPES|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SpectrumValue(arg0)\nSpectrumValue(sm)\nSpectrumValue()",                        /* Documentation string */
     (traverseproc)NULL,     /* tp_traverse */
     (inquiry)NULL,             /* tp_clear */
