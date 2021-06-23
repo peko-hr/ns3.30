@@ -230,6 +230,7 @@ RoutingProtocol::DoInitialize (void)
   if (id == 1)
     {
       Simulator::Schedule (Seconds (Grobal_StartTime - 2), &RoutingProtocol::SourceAndDestination, this);
+      std::cout << "a + " << "\n";
       //Simulator::Schedule (Seconds (20.0), &RoutingProtocol::SendHiraiBroadcast, this, id, 9, 100, 600, 0);
       //SendHiraiBroadcast(id, 9,100,600, 0);
       //sourcecount[id]=1;
