@@ -93,6 +93,7 @@ public:
   static std::map<int, int> source_time;//sourceの開始時間
   static std::map<int, int> des_time;//desの受信時間
   static std::vector<int> source_list; //指定エリアにいるsource node 候補 insertされるのはノードID
+  static std::vector<int> des_list; //指定エリアにいるdestination node 候補 insertされるのはノードID
 
   /// constructor
   RoutingProtocol ();

@@ -231,7 +231,7 @@ RoutingProtocol::DoInitialize (void)
   if (id == 1)
     {
       Simulator::Schedule (Seconds (Grobal_StartTime - 2), &RoutingProtocol::SourceAndDestination, this);
-      std::cout << "a + " << "\n";
+      //std::cout << "a + " << "\n";
       //Simulator::Schedule (Seconds (20.0), &RoutingProtocol::SendHiraiBroadcast, this, id, 9, 100, 600, 0);
       //SendHiraiBroadcast(id, 9,100,600, 0);
       //sourcecount[id]=1;
@@ -265,18 +265,21 @@ RoutingProtocol::SourceAndDestination ()
           m_my_posy[i] <= SourceHighY)
         {
           source_list.push_back (i);
-          // std::cout<<"source list id" << i << "position x"<<m_my_posx[i]<<"y"<<m_my_posy[i]<<"\n";
+          des_list.push_back (i);
+          //std::cout<<"source list id" << i << " position x"<<m_my_posx[i]<<" y"<<m_my_posy[i]<<"\n";
         }
     }
 
   std::mt19937 get_rand_mt (Grobal_Seed);
 
   std::shuffle (source_list.begin (), source_list.end (), get_rand_mt);
+  std::shuffle (des_list.begin (), des_list.end (), get_rand_mt);
 
-  for (int i = 0; i < 1000; i++)
+  for (int i = 0; i < 10; i++)
     {
       std::cout << "shuffle source id" << source_list[i] << "\n";
     }
+  std::cout << "\nshuffle destination id" << des_list[0] << "\n\n";
 
 
 }// source list random 10kotoru
@@ -307,13 +310,13 @@ RoutingProtocol::PreparationForSend ()
 
           // SendLsgoBroadcast (0, des_list[index_time], m_my_posx[des_list[index_time]], m_my_posy[des_list[index_time]], 1);
           Simulator::Schedule (Seconds (shift_time), &RoutingProtocol::SendHiraiBroadcast, this, source_list[index_time],
-                               9, 100, 600, 1);
+                               des_list[0], m_my_posx[0], m_my_posy[0], 1);
           sourcecount[id] = 1;
           std::cout<< "\n\nid" << source_list[index_time] << " broadcast" << "\n";
           //std::cout<< "\n\n\nid" << source_list[1] << " broadcast" << "\n";
           //std::cout<< "\n\n\nid" << source_list[2] << " broadcast" << "\n";
           //std::cout<< "\n\n\nid" << source_list[3] << " broadcast" << "\n";
-          std::cout << "source node point x=" << mypos.x << "y=" << mypos.y
+          std::cout << "source node point x=" << mypos.x << " y=" << mypos.y
                   //  << "des node point x=" << m_my_posx[des_list[index_time]]
                   //  << "y=" << m_my_posy[des_list[index_time]] 
                   << "\n";
@@ -560,7 +563,7 @@ RoutingProtocol::SimulationResult (void) //
   std::cout<<"time" << Simulator::Now().GetSeconds ()<< "\n";
   int totaldelay;
 
-  if(Simulator::Now().GetSeconds () == 199)
+  if(Simulator::Now().GetSeconds () == 300)
   {
     for (auto itr = sourcecount.begin (); itr != sourcecount.end (); itr++)
             {
@@ -585,7 +588,7 @@ RoutingProtocol::SimulationResult (void) //
 
   std::string grid_dir = "data/grid_side";
   std::cout<<"grid_side packet csv \n";
-    filename = grid_dir + "/grid_side/grid_side_" + std::to_string (Grobal_Seed) + "nodenum_" +
+    filename = grid_dir + "/grid_side_" + std::to_string (Grobal_Seed) + "nodenum_" +
                        std::to_string (numVehicle) + ".csv";
     //send_filename = shadow_dir + "/send_lsgo/lsgo-seed_" + std::to_string (Grobal_Seed) + "nodenum_" +
     //                        std::to_string (numVehicle) + ".csv";
@@ -640,6 +643,7 @@ std::map<int, int> RoutingProtocol::sourcecount;
 std::map<int, int> RoutingProtocol::source_time;
 std::map<int, int> RoutingProtocol::des_time;
 std::vector<int> RoutingProtocol::source_list;
+std::vector<int> RoutingProtocol::des_list;
 
 } // namespace hirai
 } // namespace ns3

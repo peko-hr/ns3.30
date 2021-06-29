@@ -151,7 +151,7 @@ main (int argc, char *argv[])
   YansWifiChannelHelper wifiChannelHelper;
   wifiChannelHelper.SetPropagationDelay ("ns3::ConstantSpeedPropagationDelayModel");
   wifiChannelHelper.AddPropagationLoss ("ns3::RangePropagationLossModel", "MaxRange",
-                                        DoubleValue (200));
+                                        DoubleValue (400));
   Ptr<YansWifiChannel> pchan = wifiChannelHelper.Create ();
   wifiPhyHelper.SetChannel (pchan);
 

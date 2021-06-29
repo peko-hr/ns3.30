@@ -56,7 +56,7 @@
 #include <iomanip>
 
 #define DIS_TIME 300.0
-#define SIM_STOP 200.0
+#define SIM_STOP 301.0
 #define TH_INTERVAL 0.1
 //#define NumNodes 10
 
@@ -572,7 +572,7 @@ main (int argc, char *argv[])
   Simulator::Stop (Seconds (SIM_STOP));
   AnimationInterface anim (animFile);
 
-  for (int i = 0; i < 14; i++)
+  for (int i = 0; i < 15; i++)
     {
       anim.UpdateNodeSize (i, 10, 1);
     }
