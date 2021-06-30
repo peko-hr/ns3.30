@@ -774,7 +774,7 @@ _wrap_PyNs3Ipv4NixVectorHelper__copy__(PyNs3Ipv4NixVectorHelper *self)
 }
 
 static PyMethodDef PyNs3Ipv4NixVectorHelper_methods[] = {
-    {(char *) "Create", (PyCFunction) _wrap_PyNs3Ipv4NixVectorHelper_Create, METH_KEYWORDS|METH_VARARGS, "Create(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "Create", (PyCFunction) _wrap_PyNs3Ipv4NixVectorHelper_Create, METH_VARARGS|METH_KEYWORDS, "Create(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Ipv4NixVectorHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -838,7 +838,7 @@ PyTypeObject PyNs3Ipv4NixVectorHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Ipv4NixVectorHelper(arg0)\nIpv4NixVectorHelper()",                        /* Documentation string */
     (traverseproc)PyNs3Ipv4NixVectorHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Ipv4NixVectorHelper__tp_clear,             /* tp_clear */
@@ -1004,7 +1004,7 @@ _wrap_PyNs3Ipv4NixVectorRouting__copy__(PyNs3Ipv4NixVectorRouting *self)
 static PyMethodDef PyNs3Ipv4NixVectorRouting_methods[] = {
     {(char *) "FlushGlobalNixRoutingCache", (PyCFunction) _wrap_PyNs3Ipv4NixVectorRouting_FlushGlobalNixRoutingCache, METH_NOARGS, "FlushGlobalNixRoutingCache()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Ipv4NixVectorRouting_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3Ipv4NixVectorRouting_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3Ipv4NixVectorRouting_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3Ipv4NixVectorRouting__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1068,7 +1068,7 @@ PyTypeObject PyNs3Ipv4NixVectorRouting_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "Ipv4NixVectorRouting(arg0)\nIpv4NixVectorRouting()",                        /* Documentation string */
     (traverseproc)PyNs3Ipv4NixVectorRouting__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Ipv4NixVectorRouting__tp_clear,             /* tp_clear */

@@ -597,7 +597,7 @@ static PyMethodDef PyNs3FileConfig_methods[] = {
     {(char *) "Attributes", (PyCFunction) _wrap_PyNs3FileConfig_Attributes, METH_NOARGS, "Attributes()\n\n" },
     {(char *) "Default", (PyCFunction) _wrap_PyNs3FileConfig_Default, METH_NOARGS, "Default()\n\n" },
     {(char *) "Global", (PyCFunction) _wrap_PyNs3FileConfig_Global, METH_NOARGS, "Global()\n\n" },
-    {(char *) "SetFilename", (PyCFunction) _wrap_PyNs3FileConfig_SetFilename, METH_KEYWORDS|METH_VARARGS, "SetFilename(filename)\n\ntype: filename: std::string" },
+    {(char *) "SetFilename", (PyCFunction) _wrap_PyNs3FileConfig_SetFilename, METH_VARARGS|METH_KEYWORDS, "SetFilename(filename)\n\ntype: filename: std::string" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -1036,7 +1036,7 @@ static PyMethodDef PyNs3NoneFileConfig_methods[] = {
     {(char *) "Attributes", (PyCFunction) _wrap_PyNs3NoneFileConfig_Attributes, METH_NOARGS, "Attributes()\n\n" },
     {(char *) "Default", (PyCFunction) _wrap_PyNs3NoneFileConfig_Default, METH_NOARGS, "Default()\n\n" },
     {(char *) "Global", (PyCFunction) _wrap_PyNs3NoneFileConfig_Global, METH_NOARGS, "Global()\n\n" },
-    {(char *) "SetFilename", (PyCFunction) _wrap_PyNs3NoneFileConfig_SetFilename, METH_KEYWORDS|METH_VARARGS, "SetFilename(filename)\n\ntype: filename: std::string" },
+    {(char *) "SetFilename", (PyCFunction) _wrap_PyNs3NoneFileConfig_SetFilename, METH_VARARGS|METH_KEYWORDS, "SetFilename(filename)\n\ntype: filename: std::string" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3NoneFileConfig__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -1452,9 +1452,9 @@ static PyMethodDef PyNs3ConfigStore_methods[] = {
     {(char *) "ConfigureDefaults", (PyCFunction) _wrap_PyNs3ConfigStore_ConfigureDefaults, METH_NOARGS, "ConfigureDefaults()\n\n" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3ConfigStore_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3ConfigStore_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetFileFormat", (PyCFunction) _wrap_PyNs3ConfigStore_SetFileFormat, METH_KEYWORDS|METH_VARARGS, "SetFileFormat(format)\n\ntype: format: ns3::ConfigStore::FileFormat" },
-    {(char *) "SetFilename", (PyCFunction) _wrap_PyNs3ConfigStore_SetFilename, METH_KEYWORDS|METH_VARARGS, "SetFilename(filename)\n\ntype: filename: std::string" },
-    {(char *) "SetMode", (PyCFunction) _wrap_PyNs3ConfigStore_SetMode, METH_KEYWORDS|METH_VARARGS, "SetMode(mode)\n\ntype: mode: ns3::ConfigStore::Mode" },
+    {(char *) "SetFileFormat", (PyCFunction) _wrap_PyNs3ConfigStore_SetFileFormat, METH_VARARGS|METH_KEYWORDS, "SetFileFormat(format)\n\ntype: format: ns3::ConfigStore::FileFormat" },
+    {(char *) "SetFilename", (PyCFunction) _wrap_PyNs3ConfigStore_SetFilename, METH_VARARGS|METH_KEYWORDS, "SetFilename(filename)\n\ntype: filename: std::string" },
+    {(char *) "SetMode", (PyCFunction) _wrap_PyNs3ConfigStore_SetMode, METH_VARARGS|METH_KEYWORDS, "SetMode(mode)\n\ntype: mode: ns3::ConfigStore::Mode" },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3ConfigStore__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3ConfigStore__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}

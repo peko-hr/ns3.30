@@ -3144,7 +3144,7 @@ PyTypeObject PyNs3UanPhyListener_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPhyListener(arg0)\nUanPhyListener()",                        /* Documentation string */
     (traverseproc)PyNs3UanPhyListener__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPhyListener__tp_clear,             /* tp_clear */
@@ -4257,7 +4257,7 @@ PyTypeObject PyNs3AcousticModemEnergyModelHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AcousticModemEnergyModelHelper(arg0)\nAcousticModemEnergyModelHelper()",                        /* Documentation string */
     (traverseproc)PyNs3AcousticModemEnergyModelHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AcousticModemEnergyModelHelper__tp_clear,             /* tp_clear */
@@ -4706,7 +4706,7 @@ PyTypeObject PyNs3UanHeaderCommon_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanHeaderCommon(src, dest, type, protocolNumber)\nUanHeaderCommon(arg0)\nUanHeaderCommon()",                        /* Documentation string */
     (traverseproc)PyNs3UanHeaderCommon__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanHeaderCommon__tp_clear,             /* tp_clear */
@@ -5050,7 +5050,7 @@ PyTypeObject PyNs3UanHeaderRcAck_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanHeaderRcAck(arg0)\nUanHeaderRcAck()",                        /* Documentation string */
     (traverseproc)PyNs3UanHeaderRcAck__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanHeaderRcAck__tp_clear,             /* tp_clear */
@@ -5535,7 +5535,7 @@ PyTypeObject PyNs3UanHeaderRcCts_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanHeaderRcCts(frameNo, retryNo, rtsTs, delay, addr)\nUanHeaderRcCts(arg0)\nUanHeaderRcCts()",                        /* Documentation string */
     (traverseproc)PyNs3UanHeaderRcCts__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanHeaderRcCts__tp_clear,             /* tp_clear */
@@ -5984,7 +5984,7 @@ PyTypeObject PyNs3UanHeaderRcCtsGlobal_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanHeaderRcCtsGlobal(wt, ts, rate, retryRate)\nUanHeaderRcCtsGlobal(arg0)\nUanHeaderRcCtsGlobal()",                        /* Documentation string */
     (traverseproc)PyNs3UanHeaderRcCtsGlobal__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanHeaderRcCtsGlobal__tp_clear,             /* tp_clear */
@@ -6351,7 +6351,7 @@ PyTypeObject PyNs3UanHeaderRcData_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanHeaderRcData(frameNum, propDelay)\nUanHeaderRcData(arg0)\nUanHeaderRcData()",                        /* Documentation string */
     (traverseproc)PyNs3UanHeaderRcData__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanHeaderRcData__tp_clear,             /* tp_clear */
@@ -6856,7 +6856,7 @@ PyTypeObject PyNs3UanHeaderRcRts_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanHeaderRcRts(frameNo, retryNo, noFrames, length, ts)\nUanHeaderRcRts(arg0)\nUanHeaderRcRts()",                        /* Documentation string */
     (traverseproc)PyNs3UanHeaderRcRts__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanHeaderRcRts__tp_clear,             /* tp_clear */
@@ -7175,7 +7175,7 @@ PyTypeObject PyNs3UanMac_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanMac(arg0)\nUanMac()",                        /* Documentation string */
     (traverseproc)PyNs3UanMac__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanMac__tp_clear,             /* tp_clear */
@@ -8189,7 +8189,7 @@ PyTypeObject PyNs3UanMacAloha_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanMacAloha(arg0)\nUanMacAloha()",                        /* Documentation string */
     (traverseproc)PyNs3UanMacAloha__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanMacAloha__tp_clear,             /* tp_clear */
@@ -10133,7 +10133,7 @@ PyTypeObject PyNs3UanMacCw_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanMacCw(arg0)\nUanMacCw()",                        /* Documentation string */
     (traverseproc)PyNs3UanMacCw__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanMacCw__tp_clear,             /* tp_clear */
@@ -11147,7 +11147,7 @@ PyTypeObject PyNs3UanMacRc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanMacRc(arg0)\nUanMacRc()",                        /* Documentation string */
     (traverseproc)PyNs3UanMacRc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanMacRc__tp_clear,             /* tp_clear */
@@ -12161,7 +12161,7 @@ PyTypeObject PyNs3UanMacRcGw_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanMacRcGw(arg0)\nUanMacRcGw()",                        /* Documentation string */
     (traverseproc)PyNs3UanMacRcGw__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanMacRcGw__tp_clear,             /* tp_clear */
@@ -12784,7 +12784,7 @@ PyTypeObject PyNs3UanNoiseModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanNoiseModel(arg0)\nUanNoiseModel()",                        /* Documentation string */
     (traverseproc)PyNs3UanNoiseModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanNoiseModel__tp_clear,             /* tp_clear */
@@ -13392,7 +13392,7 @@ PyTypeObject PyNs3UanNoiseModelDefault_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanNoiseModelDefault(arg0)\nUanNoiseModelDefault()",                        /* Documentation string */
     (traverseproc)PyNs3UanNoiseModelDefault__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanNoiseModelDefault__tp_clear,             /* tp_clear */
@@ -14306,7 +14306,7 @@ PyTypeObject PyNs3UanPhy_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPhy(arg0)\nUanPhy()",                        /* Documentation string */
     (traverseproc)PyNs3UanPhy__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPhy__tp_clear,             /* tp_clear */
@@ -15015,7 +15015,7 @@ PyTypeObject PyNs3UanPhyCalcSinr_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPhyCalcSinr(arg0)\nUanPhyCalcSinr()",                        /* Documentation string */
     (traverseproc)PyNs3UanPhyCalcSinr__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPhyCalcSinr__tp_clear,             /* tp_clear */
@@ -15687,7 +15687,7 @@ PyTypeObject PyNs3UanPhyCalcSinrDefault_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPhyCalcSinrDefault(arg0)\nUanPhyCalcSinrDefault()",                        /* Documentation string */
     (traverseproc)PyNs3UanPhyCalcSinrDefault__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPhyCalcSinrDefault__tp_clear,             /* tp_clear */
@@ -16359,7 +16359,7 @@ PyTypeObject PyNs3UanPhyCalcSinrDual_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPhyCalcSinrDual(arg0)\nUanPhyCalcSinrDual()",                        /* Documentation string */
     (traverseproc)PyNs3UanPhyCalcSinrDual__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPhyCalcSinrDual__tp_clear,             /* tp_clear */
@@ -17031,7 +17031,7 @@ PyTypeObject PyNs3UanPhyCalcSinrFhFsk_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPhyCalcSinrFhFsk(arg0)\nUanPhyCalcSinrFhFsk()",                        /* Documentation string */
     (traverseproc)PyNs3UanPhyCalcSinrFhFsk__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPhyCalcSinrFhFsk__tp_clear,             /* tp_clear */
@@ -18513,7 +18513,7 @@ PyTypeObject PyNs3UanPhyDual_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPhyDual(arg0)\nUanPhyDual()",                        /* Documentation string */
     (traverseproc)PyNs3UanPhyDual__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPhyDual__tp_clear,             /* tp_clear */
@@ -19402,7 +19402,7 @@ PyTypeObject PyNs3UanPhyGen_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPhyGen(arg0)\nUanPhyGen()",                        /* Documentation string */
     (traverseproc)PyNs3UanPhyGen__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPhyGen__tp_clear,             /* tp_clear */
@@ -20058,7 +20058,7 @@ PyTypeObject PyNs3UanPhyPer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPhyPer(arg0)\nUanPhyPer()",                        /* Documentation string */
     (traverseproc)PyNs3UanPhyPer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPhyPer__tp_clear,             /* tp_clear */
@@ -20713,7 +20713,7 @@ PyTypeObject PyNs3UanPhyPerCommonModes_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPhyPerCommonModes(arg0)\nUanPhyPerCommonModes()",                        /* Documentation string */
     (traverseproc)PyNs3UanPhyPerCommonModes__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPhyPerCommonModes__tp_clear,             /* tp_clear */
@@ -21368,7 +21368,7 @@ PyTypeObject PyNs3UanPhyPerGenDefault_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPhyPerGenDefault(arg0)\nUanPhyPerGenDefault()",                        /* Documentation string */
     (traverseproc)PyNs3UanPhyPerGenDefault__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPhyPerGenDefault__tp_clear,             /* tp_clear */
@@ -22023,7 +22023,7 @@ PyTypeObject PyNs3UanPhyPerUmodem_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPhyPerUmodem(arg0)\nUanPhyPerUmodem()",                        /* Documentation string */
     (traverseproc)PyNs3UanPhyPerUmodem__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPhyPerUmodem__tp_clear,             /* tp_clear */
@@ -22991,7 +22991,7 @@ PyTypeObject PyNs3UanPropModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPropModel(arg0)\nUanPropModel()",                        /* Documentation string */
     (traverseproc)PyNs3UanPropModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPropModel__tp_clear,             /* tp_clear */
@@ -23946,7 +23946,7 @@ PyTypeObject PyNs3UanPropModelIdeal_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPropModelIdeal(arg0)\nUanPropModelIdeal()",                        /* Documentation string */
     (traverseproc)PyNs3UanPropModelIdeal__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPropModelIdeal__tp_clear,             /* tp_clear */
@@ -24901,7 +24901,7 @@ PyTypeObject PyNs3UanPropModelThorp_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanPropModelThorp(arg0)\nUanPropModelThorp()",                        /* Documentation string */
     (traverseproc)PyNs3UanPropModelThorp__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanPropModelThorp__tp_clear,             /* tp_clear */
@@ -25288,7 +25288,7 @@ PyTypeObject PyNs3UanTransducer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanTransducer(arg0)\nUanTransducer()",                        /* Documentation string */
     (traverseproc)PyNs3UanTransducer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanTransducer__tp_clear,             /* tp_clear */
@@ -26775,7 +26775,7 @@ PyTypeObject PyNs3UanTransducerHd_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanTransducerHd(arg0)\nUanTransducerHd()",                        /* Documentation string */
     (traverseproc)PyNs3UanTransducerHd__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanTransducerHd__tp_clear,             /* tp_clear */
@@ -27687,7 +27687,7 @@ PyTypeObject PyNs3UanChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanChannel(arg0)\nUanChannel()",                        /* Documentation string */
     (traverseproc)PyNs3UanChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanChannel__tp_clear,             /* tp_clear */
@@ -29094,7 +29094,7 @@ PyTypeObject PyNs3UanNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "UanNetDevice(arg0)\nUanNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3UanNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UanNetDevice__tp_clear,             /* tp_clear */
@@ -30418,7 +30418,7 @@ PyTypeObject PyNs3AcousticModemEnergyModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "AcousticModemEnergyModel(arg0)\nAcousticModemEnergyModel()",                        /* Documentation string */
     (traverseproc)PyNs3AcousticModemEnergyModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AcousticModemEnergyModel__tp_clear,             /* tp_clear */

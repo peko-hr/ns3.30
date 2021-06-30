@@ -1981,14 +1981,14 @@ _wrap_PyNs3PointToPointHelper__copy__(PyNs3PointToPointHelper *self)
 }
 
 static PyMethodDef PyNs3PointToPointHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3PointToPointHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "SetChannelAttribute", (PyCFunction) _wrap_PyNs3PointToPointHelper_SetChannelAttribute, METH_KEYWORDS|METH_VARARGS, "SetChannelAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetDeviceAttribute", (PyCFunction) _wrap_PyNs3PointToPointHelper_SetDeviceAttribute, METH_KEYWORDS|METH_VARARGS, "SetDeviceAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
-    {(char *) "SetQueue", (PyCFunction) _wrap_PyNs3PointToPointHelper_SetQueue, METH_KEYWORDS|METH_VARARGS, "SetQueue(type, n1, v1, n2, v2, n3, v3, n4, v4)\n\ntype: type: std::string\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &" },
-    {(char *) "EnablePcap", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnablePcap, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "EnablePcapAll", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnablePcapAll, METH_KEYWORDS|METH_VARARGS, "EnablePcapAll(prefix, promiscuous)\n\ntype: prefix: std::string\ntype: promiscuous: bool" },
-    {(char *) "EnableAscii", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnableAscii, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnableAsciiAll, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3PointToPointHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "SetChannelAttribute", (PyCFunction) _wrap_PyNs3PointToPointHelper_SetChannelAttribute, METH_VARARGS|METH_KEYWORDS, "SetChannelAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetDeviceAttribute", (PyCFunction) _wrap_PyNs3PointToPointHelper_SetDeviceAttribute, METH_VARARGS|METH_KEYWORDS, "SetDeviceAttribute(name, value)\n\ntype: name: std::string\ntype: value: ns3::AttributeValue const &" },
+    {(char *) "SetQueue", (PyCFunction) _wrap_PyNs3PointToPointHelper_SetQueue, METH_VARARGS|METH_KEYWORDS, "SetQueue(type, n1, v1, n2, v2, n3, v3, n4, v4)\n\ntype: type: std::string\ntype: n1: std::string\ntype: v1: ns3::AttributeValue const &\ntype: n2: std::string\ntype: v2: ns3::AttributeValue const &\ntype: n3: std::string\ntype: v3: ns3::AttributeValue const &\ntype: n4: std::string\ntype: v4: ns3::AttributeValue const &" },
+    {(char *) "EnablePcap", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnablePcap, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "EnablePcapAll", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnablePcapAll, METH_VARARGS|METH_KEYWORDS, "EnablePcapAll(prefix, promiscuous)\n\ntype: prefix: std::string\ntype: promiscuous: bool" },
+    {(char *) "EnableAscii", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnableAscii, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "EnableAsciiAll", (PyCFunction) _wrap_PyNs3PointToPointHelper_EnableAsciiAll, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PointToPointHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2055,7 +2055,7 @@ PyTypeObject PyNs3PointToPointHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PointToPointHelper(arg0)\nPointToPointHelper()",                        /* Documentation string */
     (traverseproc)PyNs3PointToPointHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PointToPointHelper__tp_clear,             /* tp_clear */
@@ -2278,13 +2278,13 @@ _wrap_PyNs3PppHeader__copy__(PyNs3PppHeader *self)
 }
 
 static PyMethodDef PyNs3PppHeader_methods[] = {
-    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3PppHeader_Deserialize, METH_KEYWORDS|METH_VARARGS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "Deserialize", (PyCFunction) _wrap_PyNs3PppHeader_Deserialize, METH_VARARGS|METH_KEYWORDS, "Deserialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3PppHeader_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
     {(char *) "GetProtocol", (PyCFunction) _wrap_PyNs3PppHeader_GetProtocol, METH_NOARGS, "GetProtocol()\n\n" },
     {(char *) "GetSerializedSize", (PyCFunction) _wrap_PyNs3PppHeader_GetSerializedSize, METH_NOARGS, "GetSerializedSize()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PppHeader_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3PppHeader_Serialize, METH_KEYWORDS|METH_VARARGS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
-    {(char *) "SetProtocol", (PyCFunction) _wrap_PyNs3PppHeader_SetProtocol, METH_KEYWORDS|METH_VARARGS, "SetProtocol(protocol)\n\ntype: protocol: uint16_t" },
+    {(char *) "Serialize", (PyCFunction) _wrap_PyNs3PppHeader_Serialize, METH_VARARGS|METH_KEYWORDS, "Serialize(start)\n\ntype: start: ns3::Buffer::Iterator" },
+    {(char *) "SetProtocol", (PyCFunction) _wrap_PyNs3PppHeader_SetProtocol, METH_VARARGS|METH_KEYWORDS, "SetProtocol(protocol)\n\ntype: protocol: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PppHeader__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2348,7 +2348,7 @@ PyTypeObject PyNs3PppHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PppHeader(arg0)\nPppHeader()",                        /* Documentation string */
     (traverseproc)PyNs3PppHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PppHeader__tp_clear,             /* tp_clear */
@@ -3293,15 +3293,15 @@ _wrap_PyNs3PointToPointChannel__copy__(PyNs3PointToPointChannel *self)
 }
 
 static PyMethodDef PyNs3PointToPointChannel_methods[] = {
-    {(char *) "Attach", (PyCFunction) _wrap_PyNs3PointToPointChannel_Attach, METH_KEYWORDS|METH_VARARGS, "Attach(device)\n\ntype: device: ns3::Ptr< ns3::PointToPointNetDevice >" },
-    {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3PointToPointChannel_GetDevice, METH_KEYWORDS|METH_VARARGS, "GetDevice(i)\n\ntype: i: std::size_t" },
+    {(char *) "Attach", (PyCFunction) _wrap_PyNs3PointToPointChannel_Attach, METH_VARARGS|METH_KEYWORDS, "Attach(device)\n\ntype: device: ns3::Ptr< ns3::PointToPointNetDevice >" },
+    {(char *) "GetDevice", (PyCFunction) _wrap_PyNs3PointToPointChannel_GetDevice, METH_VARARGS|METH_KEYWORDS, "GetDevice(i)\n\ntype: i: std::size_t" },
     {(char *) "GetNDevices", (PyCFunction) _wrap_PyNs3PointToPointChannel_GetNDevices, METH_NOARGS, "GetNDevices()\n\n" },
-    {(char *) "GetPointToPointDevice", (PyCFunction) _wrap_PyNs3PointToPointChannel_GetPointToPointDevice, METH_KEYWORDS|METH_VARARGS, "GetPointToPointDevice(i)\n\ntype: i: std::size_t" },
+    {(char *) "GetPointToPointDevice", (PyCFunction) _wrap_PyNs3PointToPointChannel_GetPointToPointDevice, METH_VARARGS|METH_KEYWORDS, "GetPointToPointDevice(i)\n\ntype: i: std::size_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PointToPointChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "TransmitStart", (PyCFunction) _wrap_PyNs3PointToPointChannel_TransmitStart, METH_KEYWORDS|METH_VARARGS, "TransmitStart(p, src, txTime)\n\ntype: p: ns3::Ptr< ns3::Packet const >\ntype: src: ns3::Ptr< ns3::PointToPointNetDevice >\ntype: txTime: ns3::Time" },
+    {(char *) "TransmitStart", (PyCFunction) _wrap_PyNs3PointToPointChannel_TransmitStart, METH_VARARGS|METH_KEYWORDS, "TransmitStart(p, src, txTime)\n\ntype: p: ns3::Ptr< ns3::Packet const >\ntype: src: ns3::Ptr< ns3::PointToPointNetDevice >\ntype: txTime: ns3::Time" },
     {(char *) "GetDelay", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_GetDelay, METH_NOARGS, NULL },
-    {(char *) "GetDestination", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_GetDestination, METH_KEYWORDS|METH_VARARGS, NULL },
-    {(char *) "GetSource", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_GetSource, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetDestination", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_GetDestination, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "GetSource", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_GetSource, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "IsInitialized", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_IsInitialized, METH_NOARGS, NULL },
     {(char *) "DoDispose", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3PointToPointChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
@@ -3373,7 +3373,7 @@ PyTypeObject PyNs3PointToPointChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PointToPointChannel(arg0)\nPointToPointChannel()",                        /* Documentation string */
     (traverseproc)PyNs3PointToPointChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PointToPointChannel__tp_clear,             /* tp_clear */
@@ -5534,35 +5534,35 @@ _wrap_PyNs3PointToPointNetDevice_SupportsSendFrom(PyNs3PointToPointNetDevice *se
 
 static PyMethodDef PyNs3PointToPointNetDevice_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetDataRate", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetDataRate, METH_KEYWORDS|METH_VARARGS, "SetDataRate(bps)\n\ntype: bps: ns3::DataRate" },
-    {(char *) "SetInterframeGap", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetInterframeGap, METH_KEYWORDS|METH_VARARGS, "SetInterframeGap(t)\n\ntype: t: ns3::Time" },
-    {(char *) "Attach", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_Attach, METH_KEYWORDS|METH_VARARGS, "Attach(ch)\n\ntype: ch: ns3::Ptr< ns3::PointToPointChannel >" },
-    {(char *) "SetReceiveErrorModel", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetReceiveErrorModel, METH_KEYWORDS|METH_VARARGS, "SetReceiveErrorModel(em)\n\ntype: em: ns3::Ptr< ns3::ErrorModel >" },
-    {(char *) "Receive", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_Receive, METH_KEYWORDS|METH_VARARGS, "Receive(p)\n\ntype: p: ns3::Ptr< ns3::Packet >" },
-    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetIfIndex, METH_KEYWORDS|METH_VARARGS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
+    {(char *) "SetDataRate", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetDataRate, METH_VARARGS|METH_KEYWORDS, "SetDataRate(bps)\n\ntype: bps: ns3::DataRate" },
+    {(char *) "SetInterframeGap", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetInterframeGap, METH_VARARGS|METH_KEYWORDS, "SetInterframeGap(t)\n\ntype: t: ns3::Time" },
+    {(char *) "Attach", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_Attach, METH_VARARGS|METH_KEYWORDS, "Attach(ch)\n\ntype: ch: ns3::Ptr< ns3::PointToPointChannel >" },
+    {(char *) "SetReceiveErrorModel", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetReceiveErrorModel, METH_VARARGS|METH_KEYWORDS, "SetReceiveErrorModel(em)\n\ntype: em: ns3::Ptr< ns3::ErrorModel >" },
+    {(char *) "Receive", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_Receive, METH_VARARGS|METH_KEYWORDS, "Receive(p)\n\ntype: p: ns3::Ptr< ns3::Packet >" },
+    {(char *) "SetIfIndex", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetIfIndex, METH_VARARGS|METH_KEYWORDS, "SetIfIndex(index)\n\ntype: index: uint32_t const" },
     {(char *) "GetIfIndex", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_GetIfIndex, METH_NOARGS, "GetIfIndex()\n\n" },
     {(char *) "GetChannel", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_GetChannel, METH_NOARGS, "GetChannel()\n\n" },
-    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetAddress, METH_KEYWORDS|METH_VARARGS, "SetAddress(address)\n\ntype: address: ns3::Address" },
+    {(char *) "SetAddress", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetAddress, METH_VARARGS|METH_KEYWORDS, "SetAddress(address)\n\ntype: address: ns3::Address" },
     {(char *) "GetAddress", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_GetAddress, METH_NOARGS, "GetAddress()\n\n" },
-    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetMtu, METH_KEYWORDS|METH_VARARGS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
+    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetMtu, METH_VARARGS|METH_KEYWORDS, "SetMtu(mtu)\n\ntype: mtu: uint16_t const" },
     {(char *) "GetMtu", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_GetMtu, METH_NOARGS, "GetMtu()\n\n" },
     {(char *) "IsLinkUp", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_IsLinkUp, METH_NOARGS, "IsLinkUp()\n\n" },
-    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_AddLinkChangeCallback, METH_KEYWORDS|METH_VARARGS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "AddLinkChangeCallback", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_AddLinkChangeCallback, METH_VARARGS|METH_KEYWORDS, "AddLinkChangeCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "IsBroadcast", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_IsBroadcast, METH_NOARGS, "IsBroadcast()\n\n" },
     {(char *) "GetBroadcast", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_GetBroadcast, METH_NOARGS, "GetBroadcast()\n\n" },
     {(char *) "IsMulticast", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_IsMulticast, METH_NOARGS, "IsMulticast()\n\n" },
-    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_GetMulticast, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "GetMulticast", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_GetMulticast, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "IsPointToPoint", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_IsPointToPoint, METH_NOARGS, "IsPointToPoint()\n\n" },
     {(char *) "IsBridge", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_IsBridge, METH_NOARGS, "IsBridge()\n\n" },
-    {(char *) "Send", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_Send, METH_KEYWORDS|METH_VARARGS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
-    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SendFrom, METH_KEYWORDS|METH_VARARGS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "Send", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_Send, METH_VARARGS|METH_KEYWORDS, "Send(packet, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
+    {(char *) "SendFrom", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SendFrom, METH_VARARGS|METH_KEYWORDS, "SendFrom(packet, source, dest, protocolNumber)\n\ntype: packet: ns3::Ptr< ns3::Packet >\ntype: source: ns3::Address const &\ntype: dest: ns3::Address const &\ntype: protocolNumber: uint16_t" },
     {(char *) "GetNode", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_GetNode, METH_NOARGS, "GetNode()\n\n" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
     {(char *) "NeedsArp", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_NeedsArp, METH_NOARGS, "NeedsArp()\n\n" },
-    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
-    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetPromiscReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "SetPromiscReceiveCallback", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SetPromiscReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetPromiscReceiveCallback(cb)\n\ntype: cb: ns3::Callback< bool, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "SupportsSendFrom", (PyCFunction) _wrap_PyNs3PointToPointNetDevice_SupportsSendFrom, METH_NOARGS, "SupportsSendFrom()\n\n" },
-    {(char *) "DoMpiReceive", (PyCFunction) PyNs3PointToPointNetDevice__PythonHelper::_wrap_DoMpiReceive, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DoMpiReceive", (PyCFunction) PyNs3PointToPointNetDevice__PythonHelper::_wrap_DoMpiReceive, METH_VARARGS|METH_KEYWORDS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3PointToPointNetDevice__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PointToPointNetDevice__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3PointToPointNetDevice__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
@@ -5631,7 +5631,7 @@ PyTypeObject PyNs3PointToPointNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PointToPointNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3PointToPointNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PointToPointNetDevice__tp_clear,             /* tp_clear */
@@ -6300,7 +6300,7 @@ _wrap_PyNs3PointToPointRemoteChannel__copy__(PyNs3PointToPointRemoteChannel *sel
 
 static PyMethodDef PyNs3PointToPointRemoteChannel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PointToPointRemoteChannel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "TransmitStart", (PyCFunction) _wrap_PyNs3PointToPointRemoteChannel_TransmitStart, METH_KEYWORDS|METH_VARARGS, "TransmitStart(p, src, txTime)\n\ntype: p: ns3::Ptr< ns3::Packet const >\ntype: src: ns3::Ptr< ns3::PointToPointNetDevice >\ntype: txTime: ns3::Time" },
+    {(char *) "TransmitStart", (PyCFunction) _wrap_PyNs3PointToPointRemoteChannel_TransmitStart, METH_VARARGS|METH_KEYWORDS, "TransmitStart(p, src, txTime)\n\ntype: p: ns3::Ptr< ns3::Packet const >\ntype: src: ns3::Ptr< ns3::PointToPointNetDevice >\ntype: txTime: ns3::Time" },
     {(char *) "DoDispose", (PyCFunction) PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PointToPointRemoteChannel__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -6371,7 +6371,7 @@ PyTypeObject PyNs3PointToPointRemoteChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PointToPointRemoteChannel(arg0)\nPointToPointRemoteChannel()",                        /* Documentation string */
     (traverseproc)PyNs3PointToPointRemoteChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PointToPointRemoteChannel__tp_clear,             /* tp_clear */

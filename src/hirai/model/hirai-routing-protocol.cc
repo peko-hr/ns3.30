@@ -242,9 +242,12 @@ RoutingProtocol::DoInitialize (void)
   //**結果出力******************************************//
   for (int i = 1; i < 301; i++)
     {
-      if (id == 0)
+      if (id == 0){
         Simulator::Schedule (Seconds (i), &RoutingProtocol::SimulationResult,
                              this); //結果出力関数
+                             }
+      Simulator::Schedule (Seconds (i), &RoutingProtocol::SetMyPos,this);
+    
     }
 
   for (int i = 0; i < Grobal_SourceNodeNum; i++)
@@ -261,20 +264,22 @@ RoutingProtocol::SourceAndDestination ()
   std::cout << "\nsource function\n";
   for (int i = 0; i < numVehicle; i++) ///node数　設定する
     {
-      if (m_my_posx[i] >= SourceLowX && m_my_posx[i] <= SourceHighX && m_my_posy[i] >= SourceLowY &&
-          m_my_posy[i] <= SourceHighY)
-        {
+      // if (m_my_posx[i] >= SourceLowX && m_my_posx[i] <= SourceHighX && m_my_posy[i] >= SourceLowY &&
+      //     m_my_posy[i] <= SourceHighY)
+      //   {
           source_list.push_back (i);
           des_list.push_back (i);
           //std::cout<<"source list id" << i << " position x"<<m_my_posx[i]<<" y"<<m_my_posy[i]<<"\n";
-        }
+        // }
     }
 
   std::mt19937 get_rand_mt (Grobal_Seed);
 
-  std::shuffle (source_list.begin (), source_list.end (), get_rand_mt);
-  std::shuffle (des_list.begin (), des_list.end (), get_rand_mt);
 
+  std::shuffle (des_list.begin (), des_list.end (), get_rand_mt);
+  std::shuffle (source_list.begin (), source_list.end (), get_rand_mt);
+
+  
   for (int i = 0; i < 10; i++)
     {
       std::cout << "shuffle source id" << source_list[i] << "\n";
@@ -310,7 +315,7 @@ RoutingProtocol::PreparationForSend ()
 
           // SendLsgoBroadcast (0, des_list[index_time], m_my_posx[des_list[index_time]], m_my_posy[des_list[index_time]], 1);
           Simulator::Schedule (Seconds (shift_time), &RoutingProtocol::SendHiraiBroadcast, this, source_list[index_time],
-                               des_list[0], m_my_posx[0], m_my_posy[0], 1);
+                               des_list[0], m_my_posx[des_list[0]], m_my_posy[des_list[0]], 1);
           sourcecount[id] = 1;
           std::cout<< "\n\nid" << source_list[index_time] << " broadcast" << "\n";
           //std::cout<< "\n\n\nid" << source_list[1] << " broadcast" << "\n";
@@ -453,7 +458,7 @@ RoutingProtocol::RecvHirai (Ptr<Socket> socket)
             if(destinationcount[source_id]!=1){//後で直す
             destinationcount[source_id]=1;
             std::cout << "time" << Simulator::Now ().GetMicroSeconds () << "  id" << id
-                      << " 受信しました " << "source_id" << source_id << " 受信成功しました-------------\n\n";
+                      << " 受信しました " << "source_id" << source_id << "　source_x"<<packet_x<<"　source_y"<<packet_y<<" 受信成功しました-------------\n\n";
             des_time[source_id] = time;//あとで直す
             }
 
@@ -480,6 +485,7 @@ RoutingProtocol::RecvHirai (Ptr<Socket> socket)
               // SendHiraiBroadcast (int32_t pri_value, int32_t des_id, int32_t des_x,
               //                            int32_t des_y, int32_t hopcount) 
               //std::cout<<"id"<<id<<"は自分のほうが近いので再ブロードキャストを行います\n";
+              //std::cout<<"destination id"<<des_id<<" des_x"<<des_x<<" des_y"<<des_y<<"\n";
               SendHiraiBroadcast(source_id, des_id, des_x, des_y, hopcount);
             }
           }
@@ -573,7 +579,7 @@ RoutingProtocol::SimulationResult (void) //
      for (auto itr = des_time.begin (); itr != des_time.end (); itr++)
             {
               std::cout <<"destime keytest" << itr->first << "\n";
-              totaldelay = source_time[itr->first] - des_time[itr->first];
+              totaldelay =  des_time[itr->first] - source_time[itr->first];
             }      
   
   std::cout<<"recv count" << destinationcount.size()  << "\n";

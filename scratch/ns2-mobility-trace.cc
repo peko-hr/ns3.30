@@ -60,6 +60,7 @@
 #include "ns3/config-store-module.h"
 #include "ns3/wifi-module.h"
 #include "ns3/internet-module.h"
+#include "../src/hirai/model/hirai-routing-protocol.h"
 //#include "ns3/senko-module.h"
 #include "ns3/hirai-module.h"
 #include "ns3/netanim-module.h"
@@ -75,6 +76,7 @@ CourseChange (std::ostream *os, std::string foo, Ptr<const MobilityModel> mobili
 {
   Vector pos = mobility->GetPosition (); // Get position
   Vector vel = mobility->GetVelocity (); // Get velocity
+  
   // Prints position and velocities
   *os << Simulator::Now () << " POS: x=" << pos.x << ", y=" << pos.y << ", z=" << pos.z
       << "; VEL:" << vel.x << ", y=" << vel.y << ", z=" << vel.z << std::endl;
@@ -88,8 +90,12 @@ main (int argc, char *argv[])
   std::string logFile;
   std::string animFile = "sumoMobility.xml"; //netanim
 
+  //int test_num=0;
+
   int nodeNum;
   double duration;
+
+  //int Grobal_Seed = 10000;
 
   // Enable logging from the ns2 helper
   //LogComponentEnable ("Ns2MobilityHelper",LOG_LEVEL_DEBUG);
@@ -100,7 +106,10 @@ main (int argc, char *argv[])
   cmd.AddValue ("nodeNum", "Number of nodes", nodeNum);
   cmd.AddValue ("duration", "Duration of Simulation", duration);
   cmd.AddValue ("logFile", "Log file", logFile);
+  //cmd.AddValue ("seed", "Number of seed", Grobal_Seed);
   cmd.Parse (argc, argv);
+
+  //Grobal_Seed = test_num;
 
   // Check command line arguments
   if (traceFile.empty () || nodeNum <= 0 || duration <= 0 || logFile.empty ())

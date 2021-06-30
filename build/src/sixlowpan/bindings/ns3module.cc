@@ -1247,7 +1247,7 @@ PyTypeObject PyNs3SixLowPanFrag1_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SixLowPanFrag1(arg0)\nSixLowPanFrag1()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanFrag1__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanFrag1__tp_clear,             /* tp_clear */
@@ -1621,7 +1621,7 @@ PyTypeObject PyNs3SixLowPanFragN_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SixLowPanFragN(arg0)\nSixLowPanFragN()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanFragN__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanFragN__tp_clear,             /* tp_clear */
@@ -2154,7 +2154,7 @@ PyTypeObject PyNs3SixLowPanHc1_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SixLowPanHc1(arg0)\nSixLowPanHc1()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanHc1__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanHc1__tp_clear,             /* tp_clear */
@@ -3061,7 +3061,7 @@ PyTypeObject PyNs3SixLowPanIphc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SixLowPanIphc(dispatch)\nSixLowPanIphc(arg0)\nSixLowPanIphc()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanIphc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanIphc__tp_clear,             /* tp_clear */
@@ -3330,7 +3330,7 @@ PyTypeObject PyNs3SixLowPanIpv6_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SixLowPanIpv6(arg0)\nSixLowPanIpv6()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanIpv6__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanIpv6__tp_clear,             /* tp_clear */
@@ -3711,7 +3711,7 @@ PyTypeObject PyNs3SixLowPanNhcExtension_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SixLowPanNhcExtension(arg0)\nSixLowPanNhcExtension()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanNhcExtension__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanNhcExtension__tp_clear,             /* tp_clear */
@@ -4162,7 +4162,7 @@ PyTypeObject PyNs3SixLowPanUdpNhcExtension_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SixLowPanUdpNhcExtension(arg0)\nSixLowPanUdpNhcExtension()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanUdpNhcExtension__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanUdpNhcExtension__tp_clear,             /* tp_clear */
@@ -4819,7 +4819,7 @@ PyTypeObject PyNs3SixLowPanNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SixLowPanNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3SixLowPanNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SixLowPanNetDevice__tp_clear,             /* tp_clear */
