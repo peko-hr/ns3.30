@@ -1213,7 +1213,7 @@ PyTypeObject PyNs3AntennaModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "AntennaModel(arg0)\nAntennaModel()",                        /* Documentation string */
     (traverseproc)PyNs3AntennaModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3AntennaModel__tp_clear,             /* tp_clear */
@@ -1860,7 +1860,7 @@ PyTypeObject PyNs3CosineAntennaModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "CosineAntennaModel(arg0)\nCosineAntennaModel()",                        /* Documentation string */
     (traverseproc)PyNs3CosineAntennaModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CosineAntennaModel__tp_clear,             /* tp_clear */
@@ -2445,7 +2445,7 @@ PyTypeObject PyNs3IsotropicAntennaModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "IsotropicAntennaModel(arg0)\nIsotropicAntennaModel()",                        /* Documentation string */
     (traverseproc)PyNs3IsotropicAntennaModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3IsotropicAntennaModel__tp_clear,             /* tp_clear */
@@ -3092,7 +3092,7 @@ PyTypeObject PyNs3ParabolicAntennaModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ParabolicAntennaModel(arg0)\nParabolicAntennaModel()",                        /* Documentation string */
     (traverseproc)PyNs3ParabolicAntennaModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ParabolicAntennaModel__tp_clear,             /* tp_clear */

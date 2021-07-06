@@ -997,9 +997,9 @@ _wrap_PyNs3BuildingContainer__copy__(PyNs3BuildingContainer *self)
 }
 
 static PyMethodDef PyNs3BuildingContainer_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3BuildingContainer_Add, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "Create", (PyCFunction) _wrap_PyNs3BuildingContainer_Create, METH_VARARGS|METH_KEYWORDS, "Create(n)\n\ntype: n: uint32_t" },
-    {(char *) "Get", (PyCFunction) _wrap_PyNs3BuildingContainer_Get, METH_VARARGS|METH_KEYWORDS, "Get(i)\n\ntype: i: uint32_t" },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3BuildingContainer_Add, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Create", (PyCFunction) _wrap_PyNs3BuildingContainer_Create, METH_KEYWORDS|METH_VARARGS, "Create(n)\n\ntype: n: uint32_t" },
+    {(char *) "Get", (PyCFunction) _wrap_PyNs3BuildingContainer_Get, METH_KEYWORDS|METH_VARARGS, "Get(i)\n\ntype: i: uint32_t" },
     {(char *) "GetGlobal", (PyCFunction) _wrap_PyNs3BuildingContainer_GetGlobal, METH_NOARGS|METH_STATIC, "GetGlobal()\n\n" },
     {(char *) "GetN", (PyCFunction) _wrap_PyNs3BuildingContainer_GetN, METH_NOARGS, "GetN()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BuildingContainer__copy__, METH_NOARGS, NULL},
@@ -1240,8 +1240,8 @@ _wrap_PyNs3BuildingList__copy__(PyNs3BuildingList *self)
 }
 
 static PyMethodDef PyNs3BuildingList_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3BuildingList_Add, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "Add(building)\n\ntype: building: ns3::Ptr< ns3::Building >" },
-    {(char *) "GetBuilding", (PyCFunction) _wrap_PyNs3BuildingList_GetBuilding, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "GetBuilding(n)\n\ntype: n: uint32_t" },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3BuildingList_Add, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "Add(building)\n\ntype: building: ns3::Ptr< ns3::Building >" },
+    {(char *) "GetBuilding", (PyCFunction) _wrap_PyNs3BuildingList_GetBuilding, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "GetBuilding(n)\n\ntype: n: uint32_t" },
     {(char *) "GetNBuildings", (PyCFunction) _wrap_PyNs3BuildingList_GetNBuildings, METH_NOARGS|METH_STATIC, "GetNBuildings()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BuildingList__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -1484,7 +1484,7 @@ _wrap_PyNs3BuildingsHelper__copy__(PyNs3BuildingsHelper *self)
 }
 
 static PyMethodDef PyNs3BuildingsHelper_methods[] = {
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3BuildingsHelper_Install, METH_VARARGS|METH_KEYWORDS|METH_STATIC, NULL },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3BuildingsHelper_Install, METH_KEYWORDS|METH_VARARGS|METH_STATIC, NULL },
     {(char *) "MakeMobilityModelConsistent", (PyCFunction) _wrap_PyNs3BuildingsHelper_MakeMobilityModelConsistent, METH_NOARGS|METH_STATIC, "MakeMobilityModelConsistent()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3BuildingsHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -2104,7 +2104,7 @@ _wrap_PyNs3RandomBuildingPositionAllocator__copy__(PyNs3RandomBuildingPositionAl
 }
 
 static PyMethodDef PyNs3RandomBuildingPositionAllocator_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3RandomBuildingPositionAllocator_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3RandomBuildingPositionAllocator_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetNext", (PyCFunction) _wrap_PyNs3RandomBuildingPositionAllocator_GetNext, METH_NOARGS, "GetNext()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RandomBuildingPositionAllocator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "DoDispose", (PyCFunction) PyNs3RandomBuildingPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
@@ -2177,7 +2177,7 @@ PyTypeObject PyNs3RandomBuildingPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "RandomBuildingPositionAllocator(arg0)\nRandomBuildingPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3RandomBuildingPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomBuildingPositionAllocator__tp_clear,             /* tp_clear */
@@ -2749,7 +2749,7 @@ _wrap_PyNs3RandomRoomPositionAllocator__copy__(PyNs3RandomRoomPositionAllocator 
 }
 
 static PyMethodDef PyNs3RandomRoomPositionAllocator_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3RandomRoomPositionAllocator_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3RandomRoomPositionAllocator_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetNext", (PyCFunction) _wrap_PyNs3RandomRoomPositionAllocator_GetNext, METH_NOARGS, "GetNext()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RandomRoomPositionAllocator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "DoDispose", (PyCFunction) PyNs3RandomRoomPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
@@ -2822,7 +2822,7 @@ PyTypeObject PyNs3RandomRoomPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "RandomRoomPositionAllocator(arg0)\nRandomRoomPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3RandomRoomPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomRoomPositionAllocator__tp_clear,             /* tp_clear */
@@ -3434,7 +3434,7 @@ _wrap_PyNs3SameRoomPositionAllocator__copy__(PyNs3SameRoomPositionAllocator *sel
 }
 
 static PyMethodDef PyNs3SameRoomPositionAllocator_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3SameRoomPositionAllocator_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(arg0)\n\ntype: arg0: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3SameRoomPositionAllocator_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(arg0)\n\ntype: arg0: int64_t" },
     {(char *) "GetNext", (PyCFunction) _wrap_PyNs3SameRoomPositionAllocator_GetNext, METH_NOARGS, "GetNext()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3SameRoomPositionAllocator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "DoDispose", (PyCFunction) PyNs3SameRoomPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
@@ -3507,7 +3507,7 @@ PyTypeObject PyNs3SameRoomPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "SameRoomPositionAllocator(arg0)\nSameRoomPositionAllocator(c)\nSameRoomPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3SameRoomPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SameRoomPositionAllocator__tp_clear,             /* tp_clear */
@@ -4267,21 +4267,21 @@ static PyMethodDef PyNs3Building_methods[] = {
     {(char *) "GetBoundaries", (PyCFunction) _wrap_PyNs3Building_GetBoundaries, METH_NOARGS, "GetBoundaries()\n\n" },
     {(char *) "GetBuildingType", (PyCFunction) _wrap_PyNs3Building_GetBuildingType, METH_NOARGS, "GetBuildingType()\n\n" },
     {(char *) "GetExtWallsType", (PyCFunction) _wrap_PyNs3Building_GetExtWallsType, METH_NOARGS, "GetExtWallsType()\n\n" },
-    {(char *) "GetFloor", (PyCFunction) _wrap_PyNs3Building_GetFloor, METH_VARARGS|METH_KEYWORDS, "GetFloor(position)\n\ntype: position: ns3::Vector3D" },
+    {(char *) "GetFloor", (PyCFunction) _wrap_PyNs3Building_GetFloor, METH_KEYWORDS|METH_VARARGS, "GetFloor(position)\n\ntype: position: ns3::Vector3D" },
     {(char *) "GetId", (PyCFunction) _wrap_PyNs3Building_GetId, METH_NOARGS, "GetId()\n\n" },
     {(char *) "GetNFloors", (PyCFunction) _wrap_PyNs3Building_GetNFloors, METH_NOARGS, "GetNFloors()\n\n" },
     {(char *) "GetNRoomsX", (PyCFunction) _wrap_PyNs3Building_GetNRoomsX, METH_NOARGS, "GetNRoomsX()\n\n" },
     {(char *) "GetNRoomsY", (PyCFunction) _wrap_PyNs3Building_GetNRoomsY, METH_NOARGS, "GetNRoomsY()\n\n" },
-    {(char *) "GetRoomX", (PyCFunction) _wrap_PyNs3Building_GetRoomX, METH_VARARGS|METH_KEYWORDS, "GetRoomX(position)\n\ntype: position: ns3::Vector3D" },
-    {(char *) "GetRoomY", (PyCFunction) _wrap_PyNs3Building_GetRoomY, METH_VARARGS|METH_KEYWORDS, "GetRoomY(position)\n\ntype: position: ns3::Vector3D" },
+    {(char *) "GetRoomX", (PyCFunction) _wrap_PyNs3Building_GetRoomX, METH_KEYWORDS|METH_VARARGS, "GetRoomX(position)\n\ntype: position: ns3::Vector3D" },
+    {(char *) "GetRoomY", (PyCFunction) _wrap_PyNs3Building_GetRoomY, METH_KEYWORDS|METH_VARARGS, "GetRoomY(position)\n\ntype: position: ns3::Vector3D" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3Building_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "IsInside", (PyCFunction) _wrap_PyNs3Building_IsInside, METH_VARARGS|METH_KEYWORDS, "IsInside(position)\n\ntype: position: ns3::Vector3D" },
-    {(char *) "SetBoundaries", (PyCFunction) _wrap_PyNs3Building_SetBoundaries, METH_VARARGS|METH_KEYWORDS, "SetBoundaries(box)\n\ntype: box: ns3::Box" },
-    {(char *) "SetBuildingType", (PyCFunction) _wrap_PyNs3Building_SetBuildingType, METH_VARARGS|METH_KEYWORDS, "SetBuildingType(t)\n\ntype: t: ns3::Building::BuildingType_t" },
-    {(char *) "SetExtWallsType", (PyCFunction) _wrap_PyNs3Building_SetExtWallsType, METH_VARARGS|METH_KEYWORDS, "SetExtWallsType(t)\n\ntype: t: ns3::Building::ExtWallsType_t" },
-    {(char *) "SetNFloors", (PyCFunction) _wrap_PyNs3Building_SetNFloors, METH_VARARGS|METH_KEYWORDS, "SetNFloors(nfloors)\n\ntype: nfloors: uint16_t" },
-    {(char *) "SetNRoomsX", (PyCFunction) _wrap_PyNs3Building_SetNRoomsX, METH_VARARGS|METH_KEYWORDS, "SetNRoomsX(nroomx)\n\ntype: nroomx: uint16_t" },
-    {(char *) "SetNRoomsY", (PyCFunction) _wrap_PyNs3Building_SetNRoomsY, METH_VARARGS|METH_KEYWORDS, "SetNRoomsY(nroomy)\n\ntype: nroomy: uint16_t" },
+    {(char *) "IsInside", (PyCFunction) _wrap_PyNs3Building_IsInside, METH_KEYWORDS|METH_VARARGS, "IsInside(position)\n\ntype: position: ns3::Vector3D" },
+    {(char *) "SetBoundaries", (PyCFunction) _wrap_PyNs3Building_SetBoundaries, METH_KEYWORDS|METH_VARARGS, "SetBoundaries(box)\n\ntype: box: ns3::Box" },
+    {(char *) "SetBuildingType", (PyCFunction) _wrap_PyNs3Building_SetBuildingType, METH_KEYWORDS|METH_VARARGS, "SetBuildingType(t)\n\ntype: t: ns3::Building::BuildingType_t" },
+    {(char *) "SetExtWallsType", (PyCFunction) _wrap_PyNs3Building_SetExtWallsType, METH_KEYWORDS|METH_VARARGS, "SetExtWallsType(t)\n\ntype: t: ns3::Building::ExtWallsType_t" },
+    {(char *) "SetNFloors", (PyCFunction) _wrap_PyNs3Building_SetNFloors, METH_KEYWORDS|METH_VARARGS, "SetNFloors(nfloors)\n\ntype: nfloors: uint16_t" },
+    {(char *) "SetNRoomsX", (PyCFunction) _wrap_PyNs3Building_SetNRoomsX, METH_KEYWORDS|METH_VARARGS, "SetNRoomsX(nroomx)\n\ntype: nroomx: uint16_t" },
+    {(char *) "SetNRoomsY", (PyCFunction) _wrap_PyNs3Building_SetNRoomsY, METH_KEYWORDS|METH_VARARGS, "SetNRoomsY(nroomy)\n\ntype: nroomy: uint16_t" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3Building__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3Building__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3Building__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
@@ -4351,7 +4351,7 @@ PyTypeObject PyNs3Building_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "Building(xMin, xMax, yMin, yMax, zMin, zMax)\nBuilding(arg0)\nBuilding()",                        /* Documentation string */
     (traverseproc)PyNs3Building__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3Building__tp_clear,             /* tp_clear */
@@ -4470,7 +4470,7 @@ PyTypeObject PyNs3BuildingsPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "BuildingsPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3BuildingsPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3BuildingsPropagationLossModel__tp_clear,             /* tp_clear */
@@ -5048,7 +5048,7 @@ _wrap_PyNs3FixedRoomPositionAllocator__copy__(PyNs3FixedRoomPositionAllocator *s
 }
 
 static PyMethodDef PyNs3FixedRoomPositionAllocator_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3FixedRoomPositionAllocator_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(arg0)\n\ntype: arg0: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3FixedRoomPositionAllocator_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(arg0)\n\ntype: arg0: int64_t" },
     {(char *) "GetNext", (PyCFunction) _wrap_PyNs3FixedRoomPositionAllocator_GetNext, METH_NOARGS, "GetNext()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FixedRoomPositionAllocator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "DoDispose", (PyCFunction) PyNs3FixedRoomPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
@@ -5121,7 +5121,7 @@ PyTypeObject PyNs3FixedRoomPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "FixedRoomPositionAllocator(x, y, z, b)\nFixedRoomPositionAllocator(arg0)",                        /* Documentation string */
     (traverseproc)PyNs3FixedRoomPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FixedRoomPositionAllocator__tp_clear,             /* tp_clear */
@@ -5294,9 +5294,9 @@ _wrap_PyNs3GridBuildingAllocator__copy__(PyNs3GridBuildingAllocator *self)
 }
 
 static PyMethodDef PyNs3GridBuildingAllocator_methods[] = {
-    {(char *) "Create", (PyCFunction) _wrap_PyNs3GridBuildingAllocator_Create, METH_VARARGS|METH_KEYWORDS, "Create(n)\n\ntype: n: uint32_t" },
+    {(char *) "Create", (PyCFunction) _wrap_PyNs3GridBuildingAllocator_Create, METH_KEYWORDS|METH_VARARGS, "Create(n)\n\ntype: n: uint32_t" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3GridBuildingAllocator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetBuildingAttribute", (PyCFunction) _wrap_PyNs3GridBuildingAllocator_SetBuildingAttribute, METH_VARARGS|METH_KEYWORDS, "SetBuildingAttribute(n, v)\n\ntype: n: std::string\ntype: v: ns3::AttributeValue const &" },
+    {(char *) "SetBuildingAttribute", (PyCFunction) _wrap_PyNs3GridBuildingAllocator_SetBuildingAttribute, METH_KEYWORDS|METH_VARARGS, "SetBuildingAttribute(n, v)\n\ntype: n: std::string\ntype: v: ns3::AttributeValue const &" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3GridBuildingAllocator__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5360,7 +5360,7 @@ PyTypeObject PyNs3GridBuildingAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "GridBuildingAllocator(arg0)\nGridBuildingAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3GridBuildingAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GridBuildingAllocator__tp_clear,             /* tp_clear */
@@ -5493,10 +5493,10 @@ _wrap_PyNs3HybridBuildingsPropagationLossModel_SetRooftopHeight(PyNs3HybridBuild
 
 static PyMethodDef PyNs3HybridBuildingsPropagationLossModel_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3HybridBuildingsPropagationLossModel_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetEnvironment", (PyCFunction) _wrap_PyNs3HybridBuildingsPropagationLossModel_SetEnvironment, METH_VARARGS|METH_KEYWORDS, "SetEnvironment(env)\n\ntype: env: ns3::EnvironmentType" },
-    {(char *) "SetCitySize", (PyCFunction) _wrap_PyNs3HybridBuildingsPropagationLossModel_SetCitySize, METH_VARARGS|METH_KEYWORDS, "SetCitySize(size)\n\ntype: size: ns3::CitySize" },
-    {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3HybridBuildingsPropagationLossModel_SetFrequency, METH_VARARGS|METH_KEYWORDS, "SetFrequency(freq)\n\ntype: freq: double" },
-    {(char *) "SetRooftopHeight", (PyCFunction) _wrap_PyNs3HybridBuildingsPropagationLossModel_SetRooftopHeight, METH_VARARGS|METH_KEYWORDS, "SetRooftopHeight(rooftopHeight)\n\ntype: rooftopHeight: double" },
+    {(char *) "SetEnvironment", (PyCFunction) _wrap_PyNs3HybridBuildingsPropagationLossModel_SetEnvironment, METH_KEYWORDS|METH_VARARGS, "SetEnvironment(env)\n\ntype: env: ns3::EnvironmentType" },
+    {(char *) "SetCitySize", (PyCFunction) _wrap_PyNs3HybridBuildingsPropagationLossModel_SetCitySize, METH_KEYWORDS|METH_VARARGS, "SetCitySize(size)\n\ntype: size: ns3::CitySize" },
+    {(char *) "SetFrequency", (PyCFunction) _wrap_PyNs3HybridBuildingsPropagationLossModel_SetFrequency, METH_KEYWORDS|METH_VARARGS, "SetFrequency(freq)\n\ntype: freq: double" },
+    {(char *) "SetRooftopHeight", (PyCFunction) _wrap_PyNs3HybridBuildingsPropagationLossModel_SetRooftopHeight, METH_KEYWORDS|METH_VARARGS, "SetRooftopHeight(rooftopHeight)\n\ntype: rooftopHeight: double" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -5559,7 +5559,7 @@ PyTypeObject PyNs3HybridBuildingsPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "HybridBuildingsPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3HybridBuildingsPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3HybridBuildingsPropagationLossModel__tp_clear,             /* tp_clear */
@@ -5686,7 +5686,7 @@ PyTypeObject PyNs3ItuR1238PropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "ItuR1238PropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3ItuR1238PropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ItuR1238PropagationLossModel__tp_clear,             /* tp_clear */
@@ -6112,7 +6112,7 @@ static PyMethodDef PyNs3MobilityBuildingInfo_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MobilityBuildingInfo_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "IsIndoor", (PyCFunction) _wrap_PyNs3MobilityBuildingInfo_IsIndoor, METH_NOARGS, "IsIndoor()\n\n" },
     {(char *) "IsOutdoor", (PyCFunction) _wrap_PyNs3MobilityBuildingInfo_IsOutdoor, METH_NOARGS, "IsOutdoor()\n\n" },
-    {(char *) "SetIndoor", (PyCFunction) _wrap_PyNs3MobilityBuildingInfo_SetIndoor, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "SetIndoor", (PyCFunction) _wrap_PyNs3MobilityBuildingInfo_SetIndoor, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "SetOutdoor", (PyCFunction) _wrap_PyNs3MobilityBuildingInfo_SetOutdoor, METH_NOARGS, "SetOutdoor()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MobilityBuildingInfo__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -6177,7 +6177,7 @@ PyTypeObject PyNs3MobilityBuildingInfo_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "MobilityBuildingInfo(building)\nMobilityBuildingInfo(arg0)\nMobilityBuildingInfo()",                        /* Documentation string */
     (traverseproc)PyNs3MobilityBuildingInfo__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MobilityBuildingInfo__tp_clear,             /* tp_clear */
@@ -6304,7 +6304,7 @@ PyTypeObject PyNs3OhBuildingsPropagationLossModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "OhBuildingsPropagationLossModel()",                        /* Documentation string */
     (traverseproc)PyNs3OhBuildingsPropagationLossModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OhBuildingsPropagationLossModel__tp_clear,             /* tp_clear */
@@ -6933,12 +6933,12 @@ _wrap_PyNs3OutdoorPositionAllocator__copy__(PyNs3OutdoorPositionAllocator *self)
 }
 
 static PyMethodDef PyNs3OutdoorPositionAllocator_methods[] = {
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "GetNext", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_GetNext, METH_NOARGS, "GetNext()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetX", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_SetX, METH_VARARGS|METH_KEYWORDS, "SetX(x)\n\ntype: x: ns3::Ptr< ns3::RandomVariableStream >" },
-    {(char *) "SetY", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_SetY, METH_VARARGS|METH_KEYWORDS, "SetY(y)\n\ntype: y: ns3::Ptr< ns3::RandomVariableStream >" },
-    {(char *) "SetZ", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_SetZ, METH_VARARGS|METH_KEYWORDS, "SetZ(z)\n\ntype: z: ns3::Ptr< ns3::RandomVariableStream >" },
+    {(char *) "SetX", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_SetX, METH_KEYWORDS|METH_VARARGS, "SetX(x)\n\ntype: x: ns3::Ptr< ns3::RandomVariableStream >" },
+    {(char *) "SetY", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_SetY, METH_KEYWORDS|METH_VARARGS, "SetY(y)\n\ntype: y: ns3::Ptr< ns3::RandomVariableStream >" },
+    {(char *) "SetZ", (PyCFunction) _wrap_PyNs3OutdoorPositionAllocator_SetZ, METH_KEYWORDS|METH_VARARGS, "SetZ(z)\n\ntype: z: ns3::Ptr< ns3::RandomVariableStream >" },
     {(char *) "DoDispose", (PyCFunction) PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3OutdoorPositionAllocator__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -7009,7 +7009,7 @@ PyTypeObject PyNs3OutdoorPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "OutdoorPositionAllocator(arg0)\nOutdoorPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3OutdoorPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3OutdoorPositionAllocator__tp_clear,             /* tp_clear */
