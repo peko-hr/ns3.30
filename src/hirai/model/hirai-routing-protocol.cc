@@ -69,7 +69,7 @@ int broadcastCount = 0;
 int recvDistinationCount = 0;
 int Grobal_StartTime = 20;
 int Grobal_SourceNodeNum = 10;
-int Grobal_Seed = 10004;
+int Grobal_Seed = 10007;
 
 RoutingProtocol::RoutingProtocol ()
 {

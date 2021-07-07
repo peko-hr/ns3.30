@@ -1616,7 +1616,7 @@ PyTypeObject PyNs3DsrDsrFsHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrFsHeader(arg0)\nDsrFsHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrFsHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrFsHeader__tp_clear,             /* tp_clear */
@@ -1908,7 +1908,7 @@ PyTypeObject PyNs3DsrDsrGraReply_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrGraReply(arg0)\nDsrGraReply()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrGraReply__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrGraReply__tp_clear,             /* tp_clear */
@@ -3393,7 +3393,7 @@ PyTypeObject PyNs3DsrDsrNetworkQueue_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrNetworkQueue(maxLen, maxDelay)\nDsrNetworkQueue(arg0)\nDsrNetworkQueue()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrNetworkQueue__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrNetworkQueue__tp_clear,             /* tp_clear */
@@ -4610,7 +4610,7 @@ PyTypeObject PyNs3DsrDsrOptionHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionHeader(arg0)\nDsrOptionHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionHeader__tp_clear,             /* tp_clear */
@@ -5094,7 +5094,7 @@ PyTypeObject PyNs3DsrDsrOptionPad1Header_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionPad1Header(arg0)\nDsrOptionPad1Header()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionPad1Header__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionPad1Header__tp_clear,             /* tp_clear */
@@ -5353,7 +5353,7 @@ PyTypeObject PyNs3DsrDsrOptionPadnHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionPadnHeader(arg0)\nDsrOptionPadnHeader(pad)",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionPadnHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionPadnHeader__tp_clear,             /* tp_clear */
@@ -5768,7 +5768,7 @@ PyTypeObject PyNs3DsrDsrOptionRerrHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionRerrHeader(arg0)\nDsrOptionRerrHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRerrHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRerrHeader__tp_clear,             /* tp_clear */
@@ -6218,7 +6218,7 @@ PyTypeObject PyNs3DsrDsrOptionRerrUnreachHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionRerrUnreachHeader(arg0)\nDsrOptionRerrUnreachHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRerrUnreachHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRerrUnreachHeader__tp_clear,             /* tp_clear */
@@ -6633,7 +6633,7 @@ PyTypeObject PyNs3DsrDsrOptionRerrUnsupportHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionRerrUnsupportHeader(arg0)\nDsrOptionRerrUnsupportHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRerrUnsupportHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRerrUnsupportHeader__tp_clear,             /* tp_clear */
@@ -7035,7 +7035,7 @@ PyTypeObject PyNs3DsrDsrOptionRrepHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionRrepHeader(arg0)\nDsrOptionRrepHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRrepHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRrepHeader__tp_clear,             /* tp_clear */
@@ -7516,7 +7516,7 @@ PyTypeObject PyNs3DsrDsrOptionRreqHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionRreqHeader(arg0)\nDsrOptionRreqHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRreqHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRreqHeader__tp_clear,             /* tp_clear */
@@ -7990,7 +7990,7 @@ PyTypeObject PyNs3DsrDsrOptionSRHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionSRHeader(arg0)\nDsrOptionSRHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionSRHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionSRHeader__tp_clear,             /* tp_clear */
@@ -9175,7 +9175,7 @@ PyTypeObject PyNs3DsrDsrOptions_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptions(arg0)\nDsrOptions()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptions__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptions__tp_clear,             /* tp_clear */
@@ -10107,7 +10107,7 @@ PyTypeObject PyNs3DsrDsrPassiveBuffer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrPassiveBuffer(arg0)\nDsrPassiveBuffer()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrPassiveBuffer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrPassiveBuffer__tp_clear,             /* tp_clear */
@@ -11654,7 +11654,7 @@ PyTypeObject PyNs3DsrDsrRouteCache_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrRouteCache(arg0)\nDsrRouteCache()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrRouteCache__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrRouteCache__tp_clear,             /* tp_clear */
@@ -14402,7 +14402,7 @@ PyTypeObject PyNs3DsrDsrRouting_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrRouting(arg0)\nDsrRouting()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrRouting__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrRouting__tp_clear,             /* tp_clear */
@@ -15037,7 +15037,7 @@ PyTypeObject PyNs3DsrDsrRoutingHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrRoutingHeader(arg0)\nDsrRoutingHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrRoutingHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrRoutingHeader__tp_clear,             /* tp_clear */
@@ -15525,7 +15525,7 @@ PyTypeObject PyNs3DsrDsrRreqTable_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrRreqTable(arg0)\nDsrRreqTable()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrRreqTable__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrRreqTable__tp_clear,             /* tp_clear */
@@ -18893,7 +18893,7 @@ PyTypeObject PyNs3DsrDsrOptionAck_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionAck(arg0)\nDsrOptionAck()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionAck__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionAck__tp_clear,             /* tp_clear */
@@ -19273,7 +19273,7 @@ PyTypeObject PyNs3DsrDsrOptionAckHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionAckHeader(arg0)\nDsrOptionAckHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionAckHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionAckHeader__tp_clear,             /* tp_clear */
@@ -20160,7 +20160,7 @@ PyTypeObject PyNs3DsrDsrOptionAckReq_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionAckReq(arg0)\nDsrOptionAckReq()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionAckReq__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionAckReq__tp_clear,             /* tp_clear */
@@ -20470,7 +20470,7 @@ PyTypeObject PyNs3DsrDsrOptionAckReqHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionAckReqHeader(arg0)\nDsrOptionAckReqHeader()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionAckReqHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionAckReqHeader__tp_clear,             /* tp_clear */
@@ -21339,7 +21339,7 @@ PyTypeObject PyNs3DsrDsrOptionPad1_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionPad1(arg0)\nDsrOptionPad1()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionPad1__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionPad1__tp_clear,             /* tp_clear */
@@ -22208,7 +22208,7 @@ PyTypeObject PyNs3DsrDsrOptionPadn_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionPadn(arg0)\nDsrOptionPadn()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionPadn__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionPadn__tp_clear,             /* tp_clear */
@@ -23123,7 +23123,7 @@ PyTypeObject PyNs3DsrDsrOptionRerr_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionRerr(arg0)\nDsrOptionRerr()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRerr__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRerr__tp_clear,             /* tp_clear */
@@ -24010,7 +24010,7 @@ PyTypeObject PyNs3DsrDsrOptionRrep_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionRrep(arg0)\nDsrOptionRrep()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRrep__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRrep__tp_clear,             /* tp_clear */
@@ -24897,7 +24897,7 @@ PyTypeObject PyNs3DsrDsrOptionRreq_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionRreq(arg0)\nDsrOptionRreq()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionRreq__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionRreq__tp_clear,             /* tp_clear */
@@ -25784,7 +25784,7 @@ PyTypeObject PyNs3DsrDsrOptionSR_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "DsrOptionSR(arg0)\nDsrOptionSR()",                        /* Documentation string */
     (traverseproc)PyNs3DsrDsrOptionSR__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3DsrDsrOptionSR__tp_clear,             /* tp_clear */

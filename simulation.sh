@@ -23,7 +23,7 @@ do
   fi
     if [ $protocol -eq 1 ]; then
       ./waf build
-      ./waf --run "Lsgo-SimulationScenario --buildings=1  --protocol=8 --lossModel=4 --scenario=3 --nodes=$node_num --seed=$Seed"
+      ./waf --run "scratch/ns2-mobility-trace --traceFile=/home/peko_ubu/ped2000pas1000.tcl --nodeNum=3000 --duration=301.0 --logFile=ns2-mob.log"
     else
       ./waf build
       ./waf --run "Lsgo-SimulationScenario --buildings=1  --protocol=6 --lossModel=4 --scenario=3 --nodes=$node_num --seed=$Seed"

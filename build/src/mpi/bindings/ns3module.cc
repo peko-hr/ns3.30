@@ -670,7 +670,7 @@ static PyMethodDef PyNs3MpiInterface_methods[] = {
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3MpiInterface_GetSize, METH_NOARGS|METH_STATIC, "GetSize()\n\n" },
     {(char *) "GetSystemId", (PyCFunction) _wrap_PyNs3MpiInterface_GetSystemId, METH_NOARGS|METH_STATIC, "GetSystemId()\n\n" },
     {(char *) "IsEnabled", (PyCFunction) _wrap_PyNs3MpiInterface_IsEnabled, METH_NOARGS|METH_STATIC, "IsEnabled()\n\n" },
-    {(char *) "SendPacket", (PyCFunction) _wrap_PyNs3MpiInterface_SendPacket, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "SendPacket(p, rxTime, node, dev)\n\ntype: p: ns3::Ptr< ns3::Packet >\ntype: rxTime: ns3::Time const &\ntype: node: uint32_t\ntype: dev: uint32_t" },
+    {(char *) "SendPacket", (PyCFunction) _wrap_PyNs3MpiInterface_SendPacket, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "SendPacket(p, rxTime, node, dev)\n\ntype: p: ns3::Ptr< ns3::Packet >\ntype: rxTime: ns3::Time const &\ntype: node: uint32_t\ntype: dev: uint32_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3MpiInterface__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -845,7 +845,7 @@ static PyMethodDef PyNs3ParallelCommunicationInterface_methods[] = {
     {(char *) "GetSize", (PyCFunction) _wrap_PyNs3ParallelCommunicationInterface_GetSize, METH_NOARGS, "GetSize()\n\n" },
     {(char *) "GetSystemId", (PyCFunction) _wrap_PyNs3ParallelCommunicationInterface_GetSystemId, METH_NOARGS, "GetSystemId()\n\n" },
     {(char *) "IsEnabled", (PyCFunction) _wrap_PyNs3ParallelCommunicationInterface_IsEnabled, METH_NOARGS, "IsEnabled()\n\n" },
-    {(char *) "SendPacket", (PyCFunction) _wrap_PyNs3ParallelCommunicationInterface_SendPacket, METH_KEYWORDS|METH_VARARGS, "SendPacket(p, rxTime, node, dev)\n\ntype: p: ns3::Ptr< ns3::Packet >\ntype: rxTime: ns3::Time const &\ntype: node: uint32_t\ntype: dev: uint32_t" },
+    {(char *) "SendPacket", (PyCFunction) _wrap_PyNs3ParallelCommunicationInterface_SendPacket, METH_VARARGS|METH_KEYWORDS, "SendPacket(p, rxTime, node, dev)\n\ntype: p: ns3::Ptr< ns3::Packet >\ntype: rxTime: ns3::Time const &\ntype: node: uint32_t\ntype: dev: uint32_t" },
     {NULL, NULL, 0, NULL}
 };
 
@@ -1378,8 +1378,8 @@ _wrap_PyNs3MpiReceiver__copy__(PyNs3MpiReceiver *self)
 
 static PyMethodDef PyNs3MpiReceiver_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3MpiReceiver_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Receive", (PyCFunction) _wrap_PyNs3MpiReceiver_Receive, METH_KEYWORDS|METH_VARARGS, "Receive(p)\n\ntype: p: ns3::Ptr< ns3::Packet >" },
-    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3MpiReceiver_SetReceiveCallback, METH_KEYWORDS|METH_VARARGS, "SetReceiveCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
+    {(char *) "Receive", (PyCFunction) _wrap_PyNs3MpiReceiver_Receive, METH_VARARGS|METH_KEYWORDS, "Receive(p)\n\ntype: p: ns3::Ptr< ns3::Packet >" },
+    {(char *) "SetReceiveCallback", (PyCFunction) _wrap_PyNs3MpiReceiver_SetReceiveCallback, METH_VARARGS|METH_KEYWORDS, "SetReceiveCallback(callback)\n\ntype: callback: ns3::Callback< void, ns3::Ptr< ns3::Packet >, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty, ns3::empty >" },
     {(char *) "DoInitialize", (PyCFunction) PyNs3MpiReceiver__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3MpiReceiver__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3MpiReceiver__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
