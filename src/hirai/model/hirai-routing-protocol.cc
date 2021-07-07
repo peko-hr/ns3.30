@@ -487,6 +487,7 @@ RoutingProtocol::RecvHirai (Ptr<Socket> socket)
               //std::cout<<"id"<<id<<"は自分のほうが近いので再ブロードキャストを行います\n";
               //std::cout<<"destination id"<<des_id<<" des_x"<<des_x<<" des_y"<<des_y<<"\n";
               SendHiraiBroadcast(source_id, des_id, des_x, des_y, hopcount);
+              std::cout << "sourceDistance " << sourceDistance << "\n" << "myDistance" << myDistance << "\n\n";
             }
           }
         break;

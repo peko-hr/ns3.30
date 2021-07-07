@@ -2055,7 +2055,7 @@ PyTypeObject PyNs3PointToPointHelper_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "PointToPointHelper(arg0)\nPointToPointHelper()",                        /* Documentation string */
     (traverseproc)PyNs3PointToPointHelper__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PointToPointHelper__tp_clear,             /* tp_clear */
@@ -2348,7 +2348,7 @@ PyTypeObject PyNs3PppHeader_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "PppHeader(arg0)\nPppHeader()",                        /* Documentation string */
     (traverseproc)PyNs3PppHeader__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PppHeader__tp_clear,             /* tp_clear */
@@ -3373,7 +3373,7 @@ PyTypeObject PyNs3PointToPointChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "PointToPointChannel(arg0)\nPointToPointChannel()",                        /* Documentation string */
     (traverseproc)PyNs3PointToPointChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PointToPointChannel__tp_clear,             /* tp_clear */
@@ -5631,7 +5631,7 @@ PyTypeObject PyNs3PointToPointNetDevice_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "PointToPointNetDevice()",                        /* Documentation string */
     (traverseproc)PyNs3PointToPointNetDevice__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PointToPointNetDevice__tp_clear,             /* tp_clear */
@@ -6371,7 +6371,7 @@ PyTypeObject PyNs3PointToPointRemoteChannel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
     "PointToPointRemoteChannel(arg0)\nPointToPointRemoteChannel()",                        /* Documentation string */
     (traverseproc)PyNs3PointToPointRemoteChannel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PointToPointRemoteChannel__tp_clear,             /* tp_clear */

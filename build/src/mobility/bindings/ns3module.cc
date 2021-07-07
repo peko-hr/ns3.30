@@ -3840,7 +3840,7 @@ PyTypeObject PyNs3PositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "PositionAllocator(arg0)\nPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3PositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PositionAllocator__tp_clear,             /* tp_clear */
@@ -4545,7 +4545,7 @@ PyTypeObject PyNs3RandomBoxPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RandomBoxPositionAllocator(arg0)\nRandomBoxPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3RandomBoxPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomBoxPositionAllocator__tp_clear,             /* tp_clear */
@@ -5284,7 +5284,7 @@ PyTypeObject PyNs3RandomDiscPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RandomDiscPositionAllocator(arg0)\nRandomDiscPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3RandomDiscPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomDiscPositionAllocator__tp_clear,             /* tp_clear */
@@ -5987,7 +5987,7 @@ PyTypeObject PyNs3RandomRectanglePositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RandomRectanglePositionAllocator(arg0)\nRandomRectanglePositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3RandomRectanglePositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomRectanglePositionAllocator__tp_clear,             /* tp_clear */
@@ -6704,7 +6704,7 @@ PyTypeObject PyNs3UniformDiscPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "UniformDiscPositionAllocator(arg0)\nUniformDiscPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3UniformDiscPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3UniformDiscPositionAllocator__tp_clear,             /* tp_clear */
@@ -7937,7 +7937,7 @@ PyTypeObject PyNs3GridPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "GridPositionAllocator(arg0)\nGridPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3GridPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GridPositionAllocator__tp_clear,             /* tp_clear */
@@ -8613,7 +8613,7 @@ PyTypeObject PyNs3ListPositionAllocator_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ListPositionAllocator(arg0)\nListPositionAllocator()",                        /* Documentation string */
     (traverseproc)PyNs3ListPositionAllocator__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ListPositionAllocator__tp_clear,             /* tp_clear */
@@ -9432,7 +9432,7 @@ PyTypeObject PyNs3MobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "MobilityModel(arg0)\nMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3MobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MobilityModel__tp_clear,             /* tp_clear */
@@ -10109,7 +10109,7 @@ PyTypeObject PyNs3RandomDirection2dMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RandomDirection2dMobilityModel(arg0)\nRandomDirection2dMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3RandomDirection2dMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomDirection2dMobilityModel__tp_clear,             /* tp_clear */
@@ -10786,7 +10786,7 @@ PyTypeObject PyNs3RandomWalk2dMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RandomWalk2dMobilityModel(arg0)\nRandomWalk2dMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3RandomWalk2dMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomWalk2dMobilityModel__tp_clear,             /* tp_clear */
@@ -11499,7 +11499,7 @@ PyTypeObject PyNs3RandomWaypointMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "RandomWaypointMobilityModel(arg0)\nRandomWaypointMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3RandomWaypointMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RandomWaypointMobilityModel__tp_clear,             /* tp_clear */
@@ -12596,7 +12596,7 @@ PyTypeObject PyNs3SteadyStateRandomWaypointMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "SteadyStateRandomWaypointMobilityModel(arg0)\nSteadyStateRandomWaypointMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3SteadyStateRandomWaypointMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3SteadyStateRandomWaypointMobilityModel__tp_clear,             /* tp_clear */
@@ -13481,7 +13481,7 @@ PyTypeObject PyNs3WaypointMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "WaypointMobilityModel(arg0)\nWaypointMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3WaypointMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3WaypointMobilityModel__tp_clear,             /* tp_clear */
@@ -14512,7 +14512,7 @@ PyTypeObject PyNs3ConstantAccelerationMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ConstantAccelerationMobilityModel(arg0)\nConstantAccelerationMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3ConstantAccelerationMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConstantAccelerationMobilityModel__tp_clear,             /* tp_clear */
@@ -15225,7 +15225,7 @@ PyTypeObject PyNs3ConstantPositionMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ConstantPositionMobilityModel(arg0)\nConstantPositionMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3ConstantPositionMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConstantPositionMobilityModel__tp_clear,             /* tp_clear */
@@ -15956,7 +15956,7 @@ PyTypeObject PyNs3ConstantVelocityMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "ConstantVelocityMobilityModel(arg0)\nConstantVelocityMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3ConstantVelocityMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3ConstantVelocityMobilityModel__tp_clear,             /* tp_clear */
@@ -16651,7 +16651,7 @@ PyTypeObject PyNs3GaussMarkovMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "GaussMarkovMobilityModel(arg0)\nGaussMarkovMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3GaussMarkovMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3GaussMarkovMobilityModel__tp_clear,             /* tp_clear */
@@ -17496,7 +17496,7 @@ PyTypeObject PyNs3HierarchicalMobilityModel_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
+    Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_HAVE_GC,                      /* tp_flags */
     "HierarchicalMobilityModel(arg0)\nHierarchicalMobilityModel()",                        /* Documentation string */
     (traverseproc)PyNs3HierarchicalMobilityModel__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3HierarchicalMobilityModel__tp_clear,             /* tp_clear */

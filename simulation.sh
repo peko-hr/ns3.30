@@ -1,18 +1,14 @@
 #!/bin/bash
 #simulation start seed
-echo -n INPUT_PROTOCOL_1=SIGO_0=LSGO
-read protocol
-echo $protocol
 echo -n NODE_NUM
 read node_num
 echo -n $node_num
-echo -n START_SEED
-read input_s_seed
-echo $input_s_seed
 Seed=10000
 #simulation finish seed
+echo -n SEED
+read input_s_seed
 Seed=$input_s_seed
-Finish_Seed=10050
+Finish_Seed=10010
 while true
 do
   echo 'simulation run seed'
@@ -21,11 +17,8 @@ do
   if [ $Seed -eq $Finish_Seed ]; then
     exit 0
   fi
-    if [ $protocol -eq 1 ]; then
       ./waf build
-      ./waf --run "scratch/ns2-mobility-trace --traceFile=/home/peko_ubu/ped2000pas1000.tcl --nodeNum=3000 --duration=301.0 --logFile=ns2-mob.log"
-    else
-      ./waf build
-      ./waf --run "Lsgo-SimulationScenario --buildings=1  --protocol=6 --lossModel=4 --scenario=3 --nodes=$node_num --seed=$Seed"
-    fi
+      ./waf --run "scratch/ns2-mobility-trace --traceFile=/home/nsl-ubu/ped2000pas1000.tcl --nodeNum=$node_num --seed=$Seed --duration=301.0 --logFile=ns2-mob.log" 
+
+  
 done

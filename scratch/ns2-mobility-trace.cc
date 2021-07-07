@@ -61,6 +61,7 @@
 #include "ns3/wifi-module.h"
 #include "ns3/internet-module.h"
 #include "../src/hirai/model/hirai-routing-protocol.h"
+//#include "../src/hirai/model/hirai-routing-protocol.cc"
 //#include "ns3/senko-module.h"
 #include "ns3/hirai-module.h"
 #include "ns3/netanim-module.h"
@@ -95,7 +96,7 @@ main (int argc, char *argv[])
   int nodeNum;
   double duration;
 
-  //int Grobal_Seed = 10000;
+  int Grobal_Seed;
 
   // Enable logging from the ns2 helper
   //LogComponentEnable ("Ns2MobilityHelper",LOG_LEVEL_DEBUG);
@@ -106,13 +107,13 @@ main (int argc, char *argv[])
   cmd.AddValue ("nodeNum", "Number of nodes", nodeNum);
   cmd.AddValue ("duration", "Duration of Simulation", duration);
   cmd.AddValue ("logFile", "Log file", logFile);
-  //cmd.AddValue ("seed", "Number of seed", Grobal_Seed);
+  cmd.AddValue ("seed", "Number of seed", Grobal_Seed);
   cmd.Parse (argc, argv);
 
   //Grobal_Seed = test_num;
 
   // Check command line arguments
-  if (traceFile.empty () || nodeNum <= 0 || duration <= 0 || logFile.empty ())
+  if (traceFile.empty () || nodeNum <= 0 || duration <= 0 || logFile.empty () )
     {
 
       std::cout << "Usage of " << argv[0]
