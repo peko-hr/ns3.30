@@ -32,7 +32,7 @@
 
 //#define maxHop 15
 #define SimTime 40 //シミュレーション時間 second
-#define WindowSize 10000000 //HIRAIのウィンドウサイズ microsecond   = 10second
+#define WindowSize 10000000 //LIVELYのウィンドウサイズ microsecond   = 10second
 #define HelloInterval 1 //Hello packet のインターバル
 #define WaitT 4000 //待ち時間の差 micro単位
 #define ProcessTime 0 //擬似的処理時間
@@ -137,10 +137,10 @@ private:
   void SimulationResult (void); //シミュレーション結果を出力する
   void SendToHello (Ptr<Socket> socket, Ptr<Packet> packet,
                     Ipv4Address destination); //Hello packet の送信
-  void SourceAndDestination(void);
+  void  SourceAndDestination(void);
   void PreparationForSend (void); //シミュレーションソースIDとDestinationIDを指定する関数
   void SendToLively (Ptr<Socket> socket, Ptr<Packet> packet, Ipv4Address destination,
-                        int32_t hopcount, int32_t des_id); //Hirai broadcast の送信
+                        int32_t hopcount, int32_t des_id); //Lively broadcast の送信
   void SaveXpoint (int32_t map_id, int32_t map_xpoint); //近隣ノードのHello packetの情報を
   void SaveYpoint (int32_t map_id, int32_t map_ypoint); //mapに保存する
   void SaveRecvTime (int32_t map_id, int32_t map_recvtime); //

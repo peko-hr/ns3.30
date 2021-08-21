@@ -562,7 +562,7 @@ RoutingHelper::SetupRoutingProtocol (NodeContainer &c)
   SigoHelper sigo;
   JbrHelper jbr;
   NearestHelper nearest;
-  //LivelyHelper lively;
+  LivelyHelper lively;
   DsrMainHelper dsrMain;
   Ipv4ListRoutingHelper list;
   InternetStackHelper internet;
@@ -648,15 +648,15 @@ RoutingHelper::SetupRoutingProtocol (NodeContainer &c)
                    "protocol done"
                 << "\n\n";
       break;
-    // case 10://Lively Tower 
-    //   list.Add (lively, 100);
-    //   m_protocolName = "Lively Tower";
-    //   std::cout << "obstacle debug ---------------------------------------------------------lively "
-    //                "protocol done"
-    //             << "\n\n";
-    //   break;
+    case 10://Lively Tower 
+      list.Add (lively, 100);
+      m_protocolName = "Lively Tower";
+      std::cout << "obstacle debug ---------------------------------------------------------lively "
+                   "protocol done"
+                << "\n\n";
+      break;
       // case 11://Hybrid Tower 
-      // list.Add (jbr, 100);
+      // list.Add (hybrid, 100);
       // m_protocolName = "Hybrid Tower";
       // std::cout << "obstacle debug ---------------------------------------------------------hybrid "
       //              "protocol done"

@@ -1,0 +1,32 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('lively', ['internet', 'wifi'])
+    module.includes = '.'
+    module.source = [
+        'model/lively-packet.cc',
+        'model/lively-routing-protocol.cc',
+        'helper/lively-helper.cc',
+        ]
+
+    #lively_test = bld.create_ns3_module_test_library('lively')
+   # lively_test.source = [
+      #  'test/lively-id-cache-test-suite.cc',
+       # 'test/lively-test-suite.cc',
+       # 'test/lively-regression.cc',
+       # 'test/bug-772.cc',
+       # 'test/loopback.cc',
+       # ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'lively'
+    headers.source = [
+        'model/lively-packet.h',
+        'model/lively-routing-protocol.h',
+        'helper/lively-helper.h',
+        ]
+
+    #if bld.env['ENABLE_EXAMPLES']:
+     #   bld.recurse('examples')
+
+   # bld.ns3_python_bindings()

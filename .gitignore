@@ -3,3 +3,4 @@ build/.wafpickle-linux-50727408-20
 src/wave/examples/LSGO_Grid/trace.xml
 src/hirai/ped2000pas1000.tcl
 src/nearest/ped2000pas1000.tcl
+src/lively/ped2000pas1000.tcl

@@ -36,8 +36,8 @@ namespace lively {
 * \brief MessageType enumeration
 */
 enum MessageType {
-  LIVELYTYPE_SEND = 1, //!< LIVELYTYPE_SEND
-  LIVELYTYPE_HELLO = 2, //!< LIVELYTYPE_HELLO
+  LIVELYTYPE_SEND = 1, //LIVELY SEND
+  LIVELYTYPE_HELLO = 2 //LIVELY HELLO
 };
 
 /**
@@ -103,7 +103,7 @@ std::ostream &operator<< (std::ostream &os, TypeHeader const &h);
 //*******************************start Hello LIVELY***********************************************/
 /**
 * \ingroup lively
-* \brief livelyheader
+* \brief helloheader
   \verbatim
   0                   1                   2                   3
   0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
@@ -175,11 +175,11 @@ private:
   int32_t m_posy; // y座標
 };
 
-//*******************************end Hello Lively***********************************************/
+//*******************************end Hello LIVELY***********************************************/
 
-//*******************************start send HIRAI*********************************************/
+//*******************************start send LIVELY*********************************************/
 /**
-* \ingroup hirai
+* \ingroup lively
 * \brief sendheader
   \verbatim
   0                   1                   2                   3
@@ -347,7 +347,7 @@ private:
 
 std::ostream &operator<< (std::ostream &os, SendHeader const &);
 
-/********************************finish send HIRAI*******************************************/
+/********************************finish send LIVELY*******************************************/
 
 } // namespace lively
 } // namespace ns3
