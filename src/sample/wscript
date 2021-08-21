@@ -1,0 +1,32 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('sample', ['internet', 'wifi'])
+    module.includes = '.'
+    module.source = [
+        'model/sample-packet.cc',
+        'model/sample-routing-protocol.cc',
+        'helper/sample-helper.cc',
+        ]
+
+    #sample_test = bld.create_ns3_module_test_library('sample')
+   # sample_test.source = [
+      #  'test/sample-id-cache-test-suite.cc',
+       # 'test/sample-test-suite.cc',
+       # 'test/sample-regression.cc',
+       # 'test/bug-772.cc',
+       # 'test/loopback.cc',
+       # ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'sample'
+    headers.source = [
+        'model/sample-packet.h',
+        'model/sample-routing-protocol.h',
+        'helper/sample-helper.h',
+        ]
+
+    #if bld.env['ENABLE_EXAMPLES']:
+     #   bld.recurse('examples')
+
+   # bld.ns3_python_bindings()

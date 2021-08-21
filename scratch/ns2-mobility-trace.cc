@@ -64,6 +64,8 @@
 //#include "../src/hirai/model/hirai-routing-protocol.cc"
 //#include "ns3/senko-module.h"
 #include "ns3/hirai-module.h"
+#include "ns3/nearest-module.h"
+//#include "ns3/lively-module.h"
 #include "ns3/netanim-module.h"
 //#include "ns3/sample-module.h"
 
@@ -82,6 +84,8 @@ CourseChange (std::ostream *os, std::string foo, Ptr<const MobilityModel> mobili
   *os << Simulator::Now () << " POS: x=" << pos.x << ", y=" << pos.y << ", z=" << pos.z
       << "; VEL:" << vel.x << ", y=" << vel.y << ", z=" << vel.z << std::endl;
 }
+
+
 
 // Example to use ns2 traces file in ns3
 int
@@ -161,7 +165,7 @@ main (int argc, char *argv[])
   YansWifiChannelHelper wifiChannelHelper;
   wifiChannelHelper.SetPropagationDelay ("ns3::ConstantSpeedPropagationDelayModel");
   wifiChannelHelper.AddPropagationLoss ("ns3::RangePropagationLossModel", "MaxRange",
-                                        DoubleValue (400));
+                                        DoubleValue (600));
   Ptr<YansWifiChannel> pchan = wifiChannelHelper.Create ();
   wifiPhyHelper.SetChannel (pchan);
 

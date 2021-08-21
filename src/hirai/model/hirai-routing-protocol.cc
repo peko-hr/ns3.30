@@ -20,6 +20,11 @@
  * 
  * 
  * チェック項目　ノード数　シミュレーション時間　ブロードキャスト開始時間　ファイル読み取りのファイル名
+ * 
+ ./waf --run "scratch/ns2-mobility-trace --traceFile=/home/peko_ubu/ped2000pas1000.tcl --nodeNum=3000 --duration=301.0 --logFile=ns2-mob.log"
+ ./waf --run "Lsgo-SimulationScenario --buildings=0 --protocol=2 --lossModel=4 --scenario=3 "
+ building=0 影響なし lossmodel=4 logdistance model
+
  *
  */
 #define NS_LOG_APPEND_CONTEXT                                                \
@@ -69,7 +74,7 @@ int broadcastCount = 0;
 int recvDistinationCount = 0;
 int Grobal_StartTime = 20;
 int Grobal_SourceNodeNum = 10;
-int Grobal_Seed = 10007;
+int Grobal_Seed = 10008;
 
 RoutingProtocol::RoutingProtocol ()
 {
@@ -298,7 +303,7 @@ RoutingProtocol::PreparationForSend ()
   if (time >= Grobal_StartTime)
     {
       //std::cout<<"time" << time - Grobal_StartTime << "\n";
-      //std::cout<<"id" << id << "\n";
+      //std::cout<<"id" << id << "\n"; se
       //std::cout<<"source_list" << source_list[time - Grobal_StartTime] << "\n";
       if (id == source_list[time - Grobal_StartTime])
         {
@@ -452,13 +457,17 @@ RoutingProtocol::RecvHirai (Ptr<Socket> socket)
         int32_t packet_y = sendheader.GetId2 (); //送信元のy座標
         int32_t source_id = sendheader.GetId3 (); 
 
+        sourceDistance = getDistance (packet_x,  packet_y,  des_x, des_y); //送信車両と宛先ノードとの距離
+        myDistance = getDistance (mypos.x,  mypos.y,  des_x,  des_y); //自分と宛先ノードとの距離
+        
 
-        if (des_id == id) //宛先が自分だったら
+        if (des_id == id || myDistance < 1000) //宛先が自分だったら
           {
             if(destinationcount[source_id]!=1){//後で直す
             destinationcount[source_id]=1;
-            std::cout << "time" << Simulator::Now ().GetMicroSeconds () << "  id" << id
-                      << " 受信しました " << "source_id" << source_id << "　source_x"<<packet_x<<"　source_y"<<packet_y<<" 受信成功しました-------------\n\n";
+            std::cout << "time" << Simulator::Now ().GetMicroSeconds () << "  id" << id << "のDisまでの距離は" << myDistance 
+                      << " で受信しました " << "source_id" << source_id << "　source_x"<<packet_x<<"　source_y"<<packet_y<<" 受信成功しました-------------\n\n";
+            //std::cout << "id" << id << " myDistance" << myDistance << "\n";
             des_time[source_id] = time;//あとで直す
             }
 
@@ -477,8 +486,7 @@ RoutingProtocol::RecvHirai (Ptr<Socket> socket)
           break;
           }
           else{
-            sourceDistance = getDistance (packet_x,  packet_y,  des_x, des_y); //送信車両と宛先ノードとの距離
-            myDistance = getDistance (mypos.x,  mypos.y,  des_x,  des_y); //自分と宛先ノードとの距離
+            
 
             if(sourceDistance > myDistance)
             {
@@ -487,7 +495,7 @@ RoutingProtocol::RecvHirai (Ptr<Socket> socket)
               //std::cout<<"id"<<id<<"は自分のほうが近いので再ブロードキャストを行います\n";
               //std::cout<<"destination id"<<des_id<<" des_x"<<des_x<<" des_y"<<des_y<<"\n";
               SendHiraiBroadcast(source_id, des_id, des_x, des_y, hopcount);
-              std::cout << "sourceDistance " << sourceDistance << "\n" << "myDistance" << myDistance << "\n\n";
+              //std::cout << "sourceDistance " << sourceDistance << "\n" << "myDistance" << myDistance << "\n\n";
             }
           }
         break;
@@ -593,7 +601,7 @@ RoutingProtocol::SimulationResult (void) //
   std::string filename;
   //std::string send_filename;
 
-  std::string grid_dir = "data/grid_side";
+  std::string grid_dir = "data/grid_side_Range600";
   std::cout<<"grid_side packet csv \n";
     filename = grid_dir + "/grid_side_" + std::to_string (Grobal_Seed) + "nodenum_" +
                        std::to_string (numVehicle) + ".csv";

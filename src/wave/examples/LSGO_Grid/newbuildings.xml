@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2021年02月11日 21時30分20秒 by Eclipse SUMO netedit Version 1.6.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="/home/shutoushu/shuto/sumo/tools/LSGO_Grid/grid_1500/grid.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/home/shutoushu/shuto/sumo/tools/LSGO_Grid/grid_1500/grid.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <netedit>
+        <additional-files value="/home/shutoushu/shuto/sumo/tools/LSGO_Grid/grid_1500/testingbuilding.add.xml"/>
+    </netedit>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <poly id="poly_0" type="building.commercial" color="red" fill="1" layer="-1.00" shape="3.900000,2095.700000 4.300000,1804.320000 295.280000,1804.320000 295.670000,2094.520000 4.300000,2095.310000"/>
+    <poly id="poly_1" type="building.commercial" color="red" fill="1" layer="-1.00" shape="303.940000,2094.520000 305.120000,1803.930000 595.320000,1804.720000 594.140000,2096.100000 304.730000,2094.910000"/>
+    <poly id="poly_10" type="building.commercial" color="red" fill="1" layer="-1.00" shape="904.380000,1794.910000 904.380000,1503.930000 1195.760000,1504.710000 1195.360000,1795.700000 903.990000,1794.910000"/>
+    <poly id="poly_11" type="building.commercial" color="red" fill="1" layer="-1.00" shape="603.950000,1795.310000 604.730000,1503.930000 895.720000,1504.320000 895.720000,1796.090000 604.340000,1794.910000"/>
+    <poly id="poly_12" type="building.commercial" color="red" fill="1" layer="-1.00" shape="304.420000,1795.280000 304.420000,1503.900000 595.800000,1504.290000 595.410000,1795.670000 303.640000,1795.280000"/>
+    <poly id="poly_13" type="building.commercial" color="red" fill="1" layer="-1.00" shape="4.380000,1795.670000 4.380000,1504.290000 295.760000,1504.290000 294.970000,1795.670000 4.380000,1795.670000"/>
+    <poly id="poly_14" type="building.commercial" color="red" fill="1" layer="-1.00" shape="4.120000,1494.980000 4.120000,1204.680000 295.860000,1204.320000 295.860000,1496.060000 4.120000,1494.980000"/>
+    <poly id="poly_15" type="building.commercial" color="red" fill="1" layer="-1.00" shape="303.730000,1495.700000 304.450000,1203.960000 595.830000,1204.680000 595.470000,1495.700000 304.450000,1495.340000"/>
+    <poly id="poly_16" type="building.commercial" color="red" fill="1" layer="-1.00" shape="604.420000,1495.700000 604.780000,1203.960000 895.800000,1204.320000 895.800000,1495.700000 605.130000,1495.340000"/>
+    <poly id="poly_17" type="building.commercial" color="red" fill="1" layer="-1.00" shape="903.840000,1495.250000 904.270000,1204.190000 1195.330000,1203.760000 1195.330000,1495.250000 904.270000,1494.390000"/>
+    <poly id="poly_18" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1204.430000,1495.250000 1495.490000,1494.820000 1495.930000,1204.620000 1204.000000,1204.190000 1204.430000,1494.390000"/>
+    <poly id="poly_19" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1504.590000,1495.250000 1795.650000,1496.120000 1795.220000,1204.190000 1504.590000,1204.620000 1504.160000,1494.820000"/>
+    <poly id="poly_2" type="building.commercial" color="red" fill="1" layer="-1.00" shape="604.380000,2095.310000 604.380000,1804.320000 896.150000,1804.720000 894.970000,2096.490000 603.980000,2095.310000"/>
+    <poly id="poly_20" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1804.750000,1494.820000 2095.380000,1495.250000 2095.380000,1204.620000 1804.750000,1204.620000 1803.450000,1495.250000"/>
+    <poly id="poly_21" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1804.240000,1195.370000 2095.230000,1195.370000 2095.230000,904.000000 1804.240000,904.390000 1804.640000,1194.980000"/>
+    <poly id="poly_22" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1504.990000,1195.770000 1795.580000,1194.980000 1795.970000,904.390000 1504.200000,904.000000 1505.380000,1195.770000"/>
+    <poly id="poly_23" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1204.550000,1195.370000 1204.550000,904.390000 1495.930000,904.780000 1495.140000,1195.370000 1204.550000,1194.980000"/>
+    <poly id="poly_24" type="building.commercial" color="red" fill="1" layer="-1.00" shape="904.120000,1194.590000 1195.100000,1194.980000 1195.500000,904.000000 904.510000,904.390000 903.730000,1194.590000"/>
+    <poly id="poly_25" type="building.commercial" color="red" fill="1" layer="-1.00" shape="895.460000,1194.980000 604.870000,1195.370000 604.870000,904.390000 895.460000,904.780000 895.060000,1194.980000"/>
+    <poly id="poly_26" type="building.commercial" color="red" fill="1" layer="-1.00" shape="304.040000,1194.980000 595.020000,1195.370000 595.810000,904.390000 304.040000,904.000000 304.430000,1194.190000"/>
+    <poly id="poly_27" type="building.commercial" color="red" fill="1" layer="-1.00" shape="4.790000,1195.370000 295.770000,1194.980000 295.380000,904.390000 4.390000,904.780000 4.000000,1195.370000"/>
+    <poly id="poly_28" type="building.commercial" color="red" fill="1" layer="-1.00" shape="4.210000,895.360000 295.190000,894.960000 295.190000,603.980000 4.210000,604.770000 4.600000,894.570000"/>
+    <poly id="poly_29" type="building.commercial" color="red" fill="1" layer="-1.00" shape="304.640000,895.360000 304.640000,603.980000 595.630000,604.770000 595.230000,894.960000 305.030000,895.360000"/>
+    <poly id="poly_3" type="building.commercial" color="red" fill="1" layer="-1.00" shape="904.420000,2094.910000 904.420000,1803.930000 1195.800000,1804.320000 1195.800000,2096.100000 904.020000,2094.910000"/>
+    <poly id="poly_30" type="building.commercial" color="red" fill="1" layer="-1.00" shape="605.080000,894.960000 896.060000,895.360000 895.670000,604.770000 604.290000,604.770000 604.680000,894.180000"/>
+    <poly id="poly_31" type="building.commercial" color="red" fill="1" layer="-1.00" shape="904.720000,895.360000 1195.310000,894.960000 1195.310000,604.770000 904.720000,604.770000 903.930000,894.960000"/>
+    <poly id="poly_32" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1204.760000,895.360000 1496.140000,895.360000 1495.750000,604.770000 1204.760000,604.770000 1204.370000,894.570000"/>
+    <poly id="poly_33" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1504.410000,894.570000 1795.390000,894.960000 1795.390000,603.980000 1504.410000,604.370000 1504.800000,894.570000"/>
+    <poly id="poly_34" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1804.450000,894.960000 2095.830000,894.960000 2095.430000,604.770000 1804.060000,604.370000 1804.840000,894.180000"/>
+    <poly id="poly_35" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1804.060000,594.920000 1804.450000,304.330000 2095.830000,304.730000 2095.830000,595.320000 1803.660000,596.500000"/>
+    <poly id="poly_36" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1504.800000,594.920000 1795.790000,594.530000 1795.790000,304.330000 1503.620000,305.120000 1505.200000,594.530000"/>
+    <poly id="poly_37" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1203.970000,595.710000 1205.160000,304.330000 1494.960000,304.330000 1494.570000,595.320000 1204.370000,594.920000"/>
+    <poly id="poly_38" type="building.commercial" color="red" fill="1" layer="-1.00" shape="904.330000,594.530000 1194.920000,594.920000 1195.310000,304.730000 904.720000,304.730000 903.930000,594.530000"/>
+    <poly id="poly_39" type="building.commercial" color="red" fill="1" layer="-1.00" shape="604.290000,595.320000 895.270000,594.920000 894.880000,304.330000 603.890000,304.730000 603.890000,594.920000"/>
+    <poly id="poly_4" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1204.060000,2095.700000 1204.060000,1804.720000 1495.840000,1804.320000 1495.050000,2095.700000 1204.460000,2094.910000"/>
+    <poly id="poly_40" type="building.commercial" color="red" fill="1" layer="-1.00" shape="304.640000,594.920000 595.230000,594.920000 595.230000,304.730000 304.640000,304.730000 304.250000,594.530000"/>
+    <poly id="poly_41" type="building.commercial" color="red" fill="1" layer="-1.00" shape="4.990000,595.320000 4.600000,304.730000 295.190000,304.730000 295.190000,594.920000 4.990000,594.530000"/>
+    <poly id="poly_42" type="building.commercial" color="red" fill="1" layer="-1.00" shape="4.530000,295.140000 295.910000,294.750000 295.520000,4.940000 4.140000,4.550000 4.140000,294.350000"/>
+    <poly id="poly_43" type="building.commercial" color="red" fill="1" layer="-1.00" shape="304.970000,294.750000 595.950000,295.140000 595.160000,4.550000 304.570000,5.340000 304.570000,294.350000"/>
+    <poly id="poly_44" type="building.commercial" color="red" fill="1" layer="-1.00" shape="604.610000,294.750000 895.600000,295.140000 895.600000,4.550000 604.610000,4.550000 604.610000,294.750000"/>
+    <poly id="poly_45" type="building.commercial" color="red" fill="1" layer="-1.00" shape="904.650000,295.140000 1195.240000,295.140000 1195.240000,4.550000 904.260000,4.940000 904.650000,295.530000"/>
+    <poly id="poly_46" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1204.300000,294.750000 1496.070000,294.750000 1495.680000,4.160000 1204.300000,4.550000 1204.690000,293.960000"/>
+    <poly id="poly_47" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1504.730000,295.140000 1795.320000,295.140000 1795.720000,4.940000 1504.340000,4.550000 1504.730000,293.960000"/>
+    <poly id="poly_48" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1804.380000,294.750000 2095.760000,294.350000 2095.370000,4.160000 1804.380000,5.340000 1805.170000,293.960000"/>
+    <poly id="poly_5" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1504.500000,2095.700000 1504.100000,1803.930000 1795.880000,1804.320000 1795.480000,2095.310000 1504.100000,2095.700000"/>
+    <poly id="poly_6" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1803.970000,2095.450000 1804.320000,1804.070000 2096.060000,1804.070000 2096.060000,2095.810000 1803.970000,2095.450000"/>
+    <poly id="poly_7" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1804.110000,1795.310000 1804.110000,1503.930000 2095.490000,1504.710000 2095.090000,1795.310000 1803.710000,1794.520000"/>
+    <poly id="poly_8" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1504.070000,1795.310000 1504.070000,1503.930000 1795.440000,1504.320000 1795.440000,1795.310000 1503.670000,1794.910000"/>
+    <poly id="poly_9" type="building.commercial" color="red" fill="1" layer="-1.00" shape="1203.630000,1795.700000 1204.810000,1503.530000 1495.800000,1504.710000 1495.800000,1795.310000 1204.420000,1795.310000"/>
+</additional>

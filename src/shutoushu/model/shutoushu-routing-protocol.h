@@ -14,8 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ * 
+ * 
+ * 実行コマンド
+ * ~/shuto/workspace30/ns-3-allinone/ns-3.30
+ * 提案プロトコル
+ * sudo ./waf --run "Lsgo-SimulationScenario --buildings=1  --protocol=7 --lossModel=4 --scenario=3"
+ * LSGO
+ * sudo ./waf --run "Lsgo-SimulationScenario --buildings=1  --protocol=6 --lossModel=4 --scenario=3"
+ * 
+ * シナリオコード
+ * 車両数に注意
+ * NodeNum
+ * 
  *
- * Author: Alberto Gallegos <ramonet@fc.ritsumei.ac.jp>
+ * Author: Shuto Takahashi <is0361er@ed.ritsumei.ac.jp>
  *         Ritsumeikan University, Shiga, Japan
  */
 #ifndef SHUTOUSHUROUTINGPROTOCOL_H
@@ -30,25 +43,38 @@
 #include "ns3/ipv4-l3-protocol.h"
 #include <map>
 
-#define maxHop 15
+#define maxHop 20
 #define SimTime 40 //シミュレーション時間 second
 #define WindowSize 10000000 //SHUTOUSHUのウィンドウサイズ microsecond   = 10second
 #define HelloInterval 1 //Hello packet のインターバル
 #define WaitT 4000 //待ち時間の差 micro単位
-#define ProcessTime 0 //擬似的処理時間
-#define StopTransTime 100 // 10秒以上静止していた場合通信の許可を剥奪する
-#define NumInter 64
-#define InterPoint 0.07 //交差点ノードの与えるポイントの重み付け
-#define SimStartMicro 1000000 //broadcast 開始時刻micro秒
-#define SimStartTime 10 //broadcast 開始時刻　秒
-#define InterArea 8 //交差点エリア 正方形メートル　
-#define Seed 33333 // ※毎回変える
-#define NodeNum 200 // ※毎回変える
+#define InterPoint 1.0 //交差点ノードの与えるポイントの重み付け
+// #define SimStartTime 10 //broadcast 開始時刻　秒
+// #define Seed 10000 // ※毎回変える
 #define TransProbability 1.2 //予想伝送確率の閾値
-#define testId 107 // testで動きを表示させるID
+#define AngleGamma 0.4 // ガンマ変換　
+#define RpGamma 1.0
+// #define SourceNodeNum 10
 
-#define sourceId 1 //送信車両ID
-#define sourceTime 1000000 //1second
+#define SourceLowX -50
+#define SourceHighX 300
+#define SourceLowY -50
+#define SourceHighY 300
+
+#define DesLowX 550
+#define DesHighX 850
+#define DesLowY 550
+#define DesHighY 850
+
+//各protocol共通のグローバル変数　
+extern int Buildings; //grobal shadowing ありなし shadowing 1 noshadowing 0
+extern int Grobal_Seed; //grobal seed値
+extern int Grobal_StartTime; //grobal data packet  送信開始タイム
+extern int Grobal_SourceNodeNum; //grobal data packet 送信ノード数
+extern int Grobal_m_beta; //grobal shadowing parameter 
+extern int Grobal_m_gamma;
+extern double Grobal_InterPoint; //grobal 交差点ノードのポイント重み付け
+
 
 namespace ns3 {
 namespace shutoushu {
@@ -63,7 +89,7 @@ class RoutingProtocol : public Ipv4RoutingProtocol
 public:
   /**
    * \brief Get the type ID.
-   * \return the object TypeId
+   * \return the object 
    */
   static TypeId GetTypeId (void);
   static const uint32_t SHUTOUSHU_PORT;
@@ -74,13 +100,52 @@ public:
   static std::map<int, int> m_finish_time; //key destination_id value 受信時間
   static std::map<int, double> m_my_posx; // key node id value position x
   static std::map<int, double> m_my_posy; // key node id value position y
-  static std::map<int, int> m_trans; //key node id 初期値０　＝　通信不可　VALUE＝１　通信可
-  static std::map<int, int> m_stop_count; //key node id value 止まっている時間の蓄積
-  static std::map<int, int> m_node_start_time; //key id value nodeの発車時刻（秒）
-  static std::map<int, int> m_node_finish_time; //key id value nodeの到着時刻（秒）
-  static std::map<int, int> m_source_id; //key 1~10 value sourceid
-  static std::map<int, int> m_des_id; //key 1~10 value sourceid
-  static std::map<int, int> destinationcount;//
+  static std::vector<int> source_list; //指定エリアにいるsource node 候補 insertされるのはノードID
+  static std::vector<int> des_list;
+
+  //パケット軌跡出力用の変数 recv
+  static std::vector<int> p_source_x;
+  static std::vector<int> p_source_y;
+  static std::vector<int> p_recv_x;
+  static std::vector<int> p_recv_y;
+  static std::vector<int> p_recv_time;
+  static std::vector<int> p_recv_priority;
+  static std::vector<int> p_hopcount;
+  static std::vector<int> p_recv_id;
+  static std::vector<int> p_source_id;
+  static std::vector<int> p_destination_id;
+  static std::vector<int> p_destination_x;
+  static std::vector<int> p_destination_y;
+  static std::vector<int> p_pri_1;
+  static std::vector<int> p_pri_2;
+  static std::vector<int> p_pri_3;
+  static std::vector<int> p_pri_4;
+  static std::vector<int> p_pri_5;
+
+  //logfile send
+  static std::vector<int> s_source_id;
+  static std::vector<int> s_source_x;
+  static std::vector<int> s_source_y;
+  static std::vector<int> s_time;
+  static std::vector<int> s_hop;
+  static std::vector<int> s_pri_1_id;
+  static std::vector<int> s_pri_2_id;
+  static std::vector<int> s_pri_3_id;
+  static std::vector<int> s_pri_4_id;
+  static std::vector<int> s_pri_5_id;
+  static std::vector<double> s_pri_1_r;
+  static std::vector<double> s_pri_2_r;
+  static std::vector<double> s_pri_3_r;
+  static std::vector<double> s_pri_4_r;
+  static std::vector<double> s_pri_5_r;
+  static std::vector<int> s_des_id;
+  static std::vector<int>
+      s_inter_1_id; //優先度１が交差点に属するかどうか 1 or 0 　　　　１なら交差点にいると判断した
+  static std::vector<int> s_inter_2_id;
+  static std::vector<int> s_inter_3_id;
+  static std::vector<int> s_inter_4_id;
+  static std::vector<int> s_inter_5_id;
+  static std::vector<int> s_send_log; //sendされたら1 キャンセルされたら0
 
   /// constructor
   RoutingProtocol ();
@@ -140,11 +205,16 @@ private:
 
   void SetMyPos (void); //自分の位置情報を１秒ずつ保存
   void ReadFile (void); //mobility fileの読み取り
+  void WriteFile (void); //packet traceのためのファイル書き込み
   void Trans (int node_id); //通信許可を与える関数
   void NoTrans (int node_id); //通信不許可を与える関数
-  void Send (int des_id); //シミュレーションソースIDとDestinationIDを指定する関数
+  void Send (void); //シミュレーションソースIDとDestinationIDを指定する関数
   int distinctionRoad (int x_point,
                        int y_ypoint); //ｘ座標とy座標から道路番号を割り出す関数　return 道路番号
+  void RoadCenterPoint (); //roadの中心座標を格納するだけの関数
+  int NearRoadId (int32_t des_x, int32_t des_y); //目的地に最も近い道路IDを返す関数
+  double CalculateRp (int nearRoadId); //近い道路IDを受取その道路のRpを返す
+  void SourceAndDestination (void); //source,destinationの指定エリアに存在する
 
   //**map**//
   std::map<int, int> m_xpoint; //近隣車両の位置情報を取得するmap  key=nodeid value=xposition
@@ -153,6 +223,7 @@ private:
       m_recvtime; //hello messageを取得した時間を保存するマップ　key = NodeId value=recvtime
   std::map<int, int>
       m_relation; //近隣ノードとの関係性 key = nodeid value=  同一道路1 or　異なる道路 2
+  std::map<int, int> m_send_check; //key = destination_id value = send_logファイルのindex
 
   ///以下のマップは使ったら消去する
   std::map<int, int> m_recvcount; //windows size以下のMAPの取得回数

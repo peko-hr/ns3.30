@@ -1,0 +1,32 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('nearest', ['internet', 'wifi'])
+    module.includes = '.'
+    module.source = [
+        'model/nearest-packet.cc',
+        'model/nearest-routing-protocol.cc',
+        'helper/nearest-helper.cc',
+        ]
+
+    #nearest_test = bld.create_ns3_module_test_library('nearest')
+   # nearest_test.source = [
+      #  'test/nearest-id-cache-test-suite.cc',
+       # 'test/nearest-test-suite.cc',
+       # 'test/nearest-regression.cc',
+       # 'test/bug-772.cc',
+       # 'test/loopback.cc',
+       # ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'nearest'
+    headers.source = [
+        'model/nearest-packet.h',
+        'model/nearest-routing-protocol.h',
+        'helper/nearest-helper.h',
+        ]
+
+    #if bld.env['ENABLE_EXAMPLES']:
+     #   bld.recurse('examples')
+
+   # bld.ns3_python_bindings()

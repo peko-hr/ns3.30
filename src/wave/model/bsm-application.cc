@@ -238,57 +238,57 @@ BsmApplication::GenerateWaveTraffic (Ptr<Socket> socket, uint32_t pktSize,
       Ptr<MobilityModel> txPosition = txNode->GetObject<MobilityModel> ();
       NS_ASSERT (txPosition != 0);
 
-      int senderMoving = m_nodesMoving->at (txNodeId);
-      if (senderMoving != 0)
-        {
-          // send it!
-          socket->Send (Create<Packet> (pktSize));
-          // count it
-          m_waveBsmStats->IncTxPktCount ();
-          m_waveBsmStats->IncTxByteCount (pktSize);
-          int wavePktsSent = m_waveBsmStats->GetTxPktCount ();
-          if ((m_waveBsmStats->GetLogging () != 0) && ((wavePktsSent % 1000) == 0))
-            {
-              NS_LOG_UNCOND ("Sending WAVE pkt # " << wavePktsSent );
-            }
+      // int senderMoving = m_nodesMoving->at (txNodeId);
+      // if (senderMoving != 0)
+      //   {
+      //     // send it!
+      //     socket->Send (Create<Packet> (pktSize));
+      //     // count it
+      //     m_waveBsmStats->IncTxPktCount ();
+      //     m_waveBsmStats->IncTxByteCount (pktSize);
+      //     int wavePktsSent = m_waveBsmStats->GetTxPktCount ();
+      //     if ((m_waveBsmStats->GetLogging () != 0) && ((wavePktsSent % 1000) == 0))
+      //       {
+      //         NS_LOG_UNCOND ("Sending WAVE pkt # " << wavePktsSent );
+      //       }
 
-          // find other nodes within range that would be
-          // expected to receive this broadbast
-          int nRxNodes = m_adhocTxInterfaces->GetN ();
-          for (int i = 0; i < nRxNodes; i++)
-            {
-              Ptr<Node> rxNode = GetNode (i);
-              int rxNodeId = rxNode->GetId ();
+      //     // find other nodes within range that would be
+      //     // expected to receive this broadbast
+      //     int nRxNodes = m_adhocTxInterfaces->GetN ();
+      //     for (int i = 0; i < nRxNodes; i++)
+      //       {
+      //         Ptr<Node> rxNode = GetNode (i);
+      //         int rxNodeId = rxNode->GetId ();
 
-              if (rxNodeId != txNodeId)
-                {
-                  Ptr<MobilityModel> rxPosition = rxNode->GetObject<MobilityModel> ();
-                  NS_ASSERT (rxPosition != 0);
-                  // confirm that the receiving node
-                  // has also started moving in the scenario
-                  // if it has not started moving, then
-                  // it is not a candidate to receive a packet
-                  int receiverMoving = m_nodesMoving->at (rxNodeId);
-                  if (receiverMoving == 1)
-                    {
-                      double distSq = MobilityHelper::GetDistanceSquaredBetween (txNode, rxNode);
-                      if (distSq > 0.0)
-                        {
-                          // dest node within range?
-                          int rangeCount = m_txSafetyRangesSq.size ();
-                          for (int index = 1; index <= rangeCount; index++)
-                            {
-                              if (distSq <= m_txSafetyRangesSq[index - 1])
-                                {
-                                  // we should expect dest node to receive broadcast pkt
-                                  m_waveBsmStats->IncExpectedRxPktCount (index);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+      //         if (rxNodeId != txNodeId)
+      //           {
+      //             Ptr<MobilityModel> rxPosition = rxNode->GetObject<MobilityModel> ();
+      //             NS_ASSERT (rxPosition != 0);
+      //             // confirm that the receiving node
+      //             // has also started moving in the scenario
+      //             // if it has not started moving, then
+      //             // it is not a candidate to receive a packet
+      //             int receiverMoving = m_nodesMoving->at (rxNodeId);
+      //             if (receiverMoving == 1)
+      //               {
+      //                 double distSq = MobilityHelper::GetDistanceSquaredBetween (txNode, rxNode);
+      //                 if (distSq > 0.0)
+      //                   {
+      //                     // dest node within range?
+      //                     int rangeCount = m_txSafetyRangesSq.size ();
+      //                     for (int index = 1; index <= rangeCount; index++)
+      //                       {
+      //                         if (distSq <= m_txSafetyRangesSq[index - 1])
+      //                           {
+      //                             // we should expect dest node to receive broadcast pkt
+      //                             m_waveBsmStats->IncExpectedRxPktCount (index);
+      //                           }
+      //                       }
+      //                   }
+      //               }
+      //           }
+      //       }
+      //   }
 
       // every BSM must be scheduled with a tx time delay
       // of +/- (5) ms.  See comments in StartApplication().
@@ -318,6 +318,9 @@ void BsmApplication::ReceiveWavePacket (Ptr<Socket> socket)
 {
   NS_LOG_FUNCTION (this);
 
+  // int32_t id = m_ipv4->GetObject<Node> ()->GetId ();
+  // std::cout << " wave receive    time  " << Simulator::Now ().GetMicroSeconds () << "\n";
+
   Ptr<Packet> packet;
   Address senderAddr;
   while ((packet = socket->RecvFrom (senderAddr)))
@@ -334,6 +337,7 @@ void BsmApplication::ReceiveWavePacket (Ptr<Socket> socket)
                 {
                   Ptr<Node> txNode = GetNode (i);
                   HandleReceivedBsmPacket (txNode, rxNode);
+                  // std::cout <<"wave test i" << i << "\n";
                 }
             }
         }

@@ -30,7 +30,7 @@
 #include "ns3/ipv4-l3-protocol.h"
 #include <map>
 
-#define maxHop 15
+//#define maxHop 15
 #define SimTime 40 //シミュレーション時間 second
 #define WindowSize 10000000 //HIRAIのウィンドウサイズ microsecond   = 10second
 #define HelloInterval 1 //Hello packet のインターバル
@@ -38,7 +38,7 @@
 #define ProcessTime 0 //擬似的処理時間
 #define StopTransTime 100 // 10秒以上静止していた場合通信の許可を剥奪する
 #define NumInter 64
-#define InterPoint 0.07 //交差点ノードの与えるポイントの重み付け
+//#define InterPoint 0.07 //交差点ノードの与えるポイントの重み付け
 #define SimStartMicro 1000000 //broadcast 開始時刻micro秒
 #define SimStartTime 10 //broadcast 開始時刻　秒
 #define InterArea 8 //交差点エリア 正方形メートル　

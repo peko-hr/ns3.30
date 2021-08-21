@@ -210,7 +210,8 @@ private:
 class SendHeader : public Header
 {
 public:
-  SendHeader (int32_t des_id = 0, int32_t posx = 0, int32_t posy = 0, int32_t hopcount = 0,
+  SendHeader (int32_t des_id = 0, int32_t posx = 0, int32_t posy = 0, int32_t send_id = 0,
+              int32_t send_posx = 0, int32_t send_posy = 0, int32_t hopcount = 0,
               int32_t pri1_id = 0, int32_t pri2_id = 0, int32_t pri3_id = 0, int32_t pri4_id = 0,
               int32_t pri5_id = 0);
 
@@ -253,6 +254,39 @@ public:
   GetPosY () //座標の値を返す
   {
     return m_posy;
+  }
+  void
+  SetSendId (uint32_t id) //IDをセットする
+  {
+    m_send_id = id;
+  }
+
+  int32_t
+  GetSendId () const //IDを返す
+  {
+    return m_send_id;
+  }
+  void
+  SetSendPosX (int32_t p) //座標をセットする
+  { //座標をセットする
+    m_send_posx = p;
+  }
+
+  int32_t
+  GetSendPosX () //座標の値を返す
+  {
+    return m_send_posx;
+  }
+  void
+  SetSendPosY (int32_t p) //座標をセットする
+  { //座標をセットする
+    m_send_posy = p;
+  }
+
+  int32_t
+  GetSendPosY () //座標の値を返す
+  {
+    return m_send_posy;
   }
 
   void
@@ -336,8 +370,11 @@ public:
 
 private:
   int32_t m_des_id; //目的ノードID
-  int32_t m_posx; //座標
+  int32_t m_posx; //目的地座標
   int32_t m_posy;
+  int32_t m_send_id; //送信ノードのID
+  int32_t m_send_posx; // 送信ノードの座標
+  int32_t m_send_posy; // 送信ノードの座標
   int32_t m_hopcount; //ホップカウント
   int32_t m_pri1_id; //優先度１
   int32_t m_pri2_id; //優先度２

@@ -119,6 +119,7 @@
 #include "ns3/integer.h"
 #include "ns3/wave-bsm-helper.h"
 #include "ns3/wave-helper.h"
+#include "ns3/topology.h"        ///obstacle
 #include "ns3/yans-wifi-helper.h"
 
 using namespace ns3;
@@ -399,7 +400,7 @@ public:
   virtual ~RoutingHelper ();
 
   /**
-   * \brief Installs routing functionality on nodes and their
+   * \brief Installs routing funcationality on nodes and their
    * devices and interfaces.
    * \param c node container
    * \param d net device container
@@ -1260,6 +1261,7 @@ private:
 
   uint32_t m_lossModel; ///< loss model
   uint32_t m_fading; ///< fading
+  uint32_t m_loadBuildings;    ///obstacle
   std::string m_lossModelName; ///< loss model name
 
   std::string m_phyMode; ///< phy mode
@@ -1325,6 +1327,7 @@ VanetRoutingExperiment::VanetRoutingExperiment ()
     // Two-Ray ground
     m_lossModel (3),
     m_fading (0),
+    m_loadBuildings (0),
     m_lossModelName (""),
     m_phyMode ("OfdmRate6MbpsBW10MHz"),
     // 1=802.11p
@@ -2028,6 +2031,7 @@ VanetRoutingExperiment::CommandSetup (int argc, char **argv)
   cmd.AddValue ("protocol", "1=OLSR;2=AODV;3=DSDV;4=DSR", m_protocol);
   cmd.AddValue ("lossModel", "1=Friis;2=ItuR1411Los;3=TwoRayGround;4=LogDistance", m_lossModel);
   cmd.AddValue ("fading", "0=None;1=Nakagami;(buildings=1 overrides)", m_fading);
+  cmd.AddValue ("buildings", "Load building (obstacles)", m_loadBuildings);
   cmd.AddValue ("phyMode", "Wifi Phy mode", m_phyMode);
   cmd.AddValue ("80211Mode", "1=802.11p; 2=802.11b; 3=WAVE-PHY", m_80211mode);
   cmd.AddValue ("traceFile", "Ns2 movement trace file", m_traceFile);
@@ -2228,8 +2232,13 @@ VanetRoutingExperiment::SetupAdhocDevices ()
       wifiChannel.AddPropagationLoss (m_lossModelName, "Frequency", DoubleValue (freq));
     }
 
-  // Propagation loss models are additive.
-  if (m_fading != 0)
+  // Propagation loss models are additive.  If Obstacle modeling is included,
+  // then we add obstacle-shadowing
+  if (m_loadBuildings != 0)
+    {
+      wifiChannel.AddPropagationLoss ("ns3::ObstacleShadowingPropagationLossModel");
+    }
+  else if (m_fading != 0)
     {
       // if no obstacle model, then use Nakagami fading if requested
       wifiChannel.AddPropagationLoss ("ns3::NakagamiPropagationLossModel");
@@ -2397,6 +2406,44 @@ VanetRoutingExperiment::SetupScenario ()
       m_nodePause = 0;
       m_CSVfileName = "low_vanet-routing-compare.csv";
       m_CSVfileName = "low_vanet-routing-compare2.csv";
+    }
+  else if (m_scenario == 3)
+    {
+      // Realistic vehicular trace in Downtown Raleigh, NC USA
+      // 50 vehicles,
+      // with buildings, for Obstacle Shadowing Model
+      m_traceFile = "src/wave/examples/Raleigh_Downtown50.ns2";
+      m_logFile = "Raleigh_Downtown50.log";
+      m_mobility = 1;
+      m_nNodes = 50;
+      m_TotalSimTime = 199;
+      m_nodeSpeed = 0;
+      m_nodePause = 0;
+      m_CSVfileName = "Raleigh_Downtown50_vanet-routing-compare.csv";
+      m_CSVfileName = "Raleigh_Downtown50_vanet-routing-compare2.csv";
+      // WAVE BSM only, no routing data
+      m_protocol = 0;
+      m_lossModel = 3; // two-ray ground
+      if (m_txSafetyRange3 == 150.0)
+        {
+          // txdistances
+          m_txSafetyRange1 = 50.0;
+          m_txSafetyRange2 = 100.0;
+          m_txSafetyRange3 = 200.0;
+          m_txSafetyRange4 = 300.0;
+          m_txSafetyRange5 = 400.0;
+          m_txSafetyRange6 = 500.0;
+          m_txSafetyRange7 = 600.0;
+          m_txSafetyRange8 = 800.0;
+          m_txSafetyRange9 = 1000.0;
+          m_txSafetyRange10 = 1500.0;
+        }
+      if (m_loadBuildings != 0)
+        {
+          std::string bldgFile = "./src/wave/examples/Raleigh_Downtown.buildings.xml";
+          NS_LOG_UNCOND ("Loading buildings file " << bldgFile);
+          Topology::LoadBuildings(bldgFile);
+        }
     }
 }
 

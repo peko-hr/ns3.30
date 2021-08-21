@@ -1,0 +1,32 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    module = bld.create_ns3_module('sigo', ['internet', 'wifi'])
+    module.includes = '.'
+    module.source = [
+        'model/sigo-packet.cc',
+        'model/sigo-routing-protocol.cc',
+        'helper/sigo-helper.cc',
+        ]
+
+    #sigo_test = bld.create_ns3_module_test_library('sigo')
+   # sigo_test.source = [
+      #  'test/sigo-id-cache-test-suite.cc',
+       # 'test/sigo-test-suite.cc',
+       # 'test/sigo-regression.cc',
+       # 'test/bug-772.cc',
+       # 'test/loopback.cc',
+       # ]
+
+    headers = bld(features='ns3header')
+    headers.module = 'sigo'
+    headers.source = [
+        'model/sigo-packet.h',
+        'model/sigo-routing-protocol.h',
+        'helper/sigo-helper.h',
+        ]
+
+    #if bld.env['ENABLE_EXAMPLES']:
+     #   bld.recurse('examples')
+
+   # bld.ns3_python_bindings()

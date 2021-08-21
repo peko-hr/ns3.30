@@ -201,12 +201,16 @@ operator<< (std::ostream &os, HelloHeader const &h)
 
 //***********************start SHUTOUSHU Send*************************************//
 
-SendHeader::SendHeader (int32_t des_id, int32_t posx, int32_t posy, int32_t hopcount,
-                        int32_t pri1_id, int32_t pri2_id, int32_t pri3_id, int32_t pri4_id,
+SendHeader::SendHeader (int32_t des_id, int32_t posx, int32_t posy, int32_t send_id,
+                        int32_t send_posx, int32_t send_posy, int32_t hopcount, int32_t pri1_id,
+                        int32_t pri2_id, int32_t pri3_id, int32_t pri4_id,
                         int32_t pri5_id)
     : m_des_id (des_id), //目的ノードID
-      m_posx (posx), //座標
+      m_posx (posx), //目的地座標
       m_posy (posy),
+      m_send_id (send_id),
+      m_send_posx (send_posx),
+      m_send_posy (send_posy),
       m_hopcount (hopcount),
       m_pri1_id (pri1_id), //優先度１
       m_pri2_id (pri2_id), //優先度２
@@ -236,7 +240,7 @@ SendHeader::GetInstanceTypeId () const
 uint32_t
 SendHeader::GetSerializedSize () const
 {
-  return 36;
+  return 48;
 }
 
 void
@@ -245,6 +249,9 @@ SendHeader::Serialize (Buffer::Iterator i) const //シリアル化
   i.WriteHtonU32 (m_des_id);
   i.WriteHtonU32 (m_posx);
   i.WriteHtonU32 (m_posy);
+  i.WriteHtonU32 (m_send_id);
+  i.WriteHtonU32 (m_send_posx);
+  i.WriteHtonU32 (m_send_posy);
   i.WriteHtonU32 (m_hopcount);
   i.WriteHtonU32 (m_pri1_id);
   i.WriteHtonU32 (m_pri2_id);
@@ -261,6 +268,9 @@ SendHeader::Deserialize (Buffer::Iterator start) //逆シリアル化
   m_des_id = i.ReadNtohU32 ();
   m_posx = i.ReadNtohU32 ();
   m_posy = i.ReadNtohU32 ();
+  m_send_id = i.ReadNtohU32 ();
+  m_send_posx = i.ReadNtohU32 ();
+  m_send_posy = i.ReadNtohU32 ();
   m_hopcount = i.ReadNtohU32 ();
   m_pri1_id = i.ReadNtohU32 ();
   m_pri2_id = i.ReadNtohU32 ();

@@ -1031,8 +1031,8 @@ _wrap_PyNs3QueueDiscContainer__copy__(PyNs3QueueDiscContainer *self)
 }
 
 static PyMethodDef PyNs3QueueDiscContainer_methods[] = {
-    {(char *) "Add", (PyCFunction) _wrap_PyNs3QueueDiscContainer_Add, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "Get", (PyCFunction) _wrap_PyNs3QueueDiscContainer_Get, METH_VARARGS|METH_KEYWORDS, "Get(i)\n\ntype: i: std::size_t" },
+    {(char *) "Add", (PyCFunction) _wrap_PyNs3QueueDiscContainer_Add, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Get", (PyCFunction) _wrap_PyNs3QueueDiscContainer_Get, METH_KEYWORDS|METH_VARARGS, "Get(i)\n\ntype: i: std::size_t" },
     {(char *) "GetN", (PyCFunction) _wrap_PyNs3QueueDiscContainer_GetN, METH_NOARGS, "GetN()\n\n" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3QueueDiscContainer__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
@@ -1319,11 +1319,11 @@ _wrap_PyNs3QueueDiscFactory__copy__(PyNs3QueueDiscFactory *self)
 }
 
 static PyMethodDef PyNs3QueueDiscFactory_methods[] = {
-    {(char *) "AddInternalQueue", (PyCFunction) _wrap_PyNs3QueueDiscFactory_AddInternalQueue, METH_VARARGS|METH_KEYWORDS, "AddInternalQueue(factory)\n\ntype: factory: ns3::ObjectFactory" },
-    {(char *) "AddPacketFilter", (PyCFunction) _wrap_PyNs3QueueDiscFactory_AddPacketFilter, METH_VARARGS|METH_KEYWORDS, "AddPacketFilter(factory)\n\ntype: factory: ns3::ObjectFactory" },
-    {(char *) "AddQueueDiscClass", (PyCFunction) _wrap_PyNs3QueueDiscFactory_AddQueueDiscClass, METH_VARARGS|METH_KEYWORDS, "AddQueueDiscClass(factory)\n\ntype: factory: ns3::ObjectFactory" },
-    {(char *) "CreateQueueDisc", (PyCFunction) _wrap_PyNs3QueueDiscFactory_CreateQueueDisc, METH_VARARGS|METH_KEYWORDS, "CreateQueueDisc(queueDiscs)\n\ntype: queueDiscs: std::vector< ns3::Ptr< ns3::QueueDisc > > const &" },
-    {(char *) "SetChildQueueDisc", (PyCFunction) _wrap_PyNs3QueueDiscFactory_SetChildQueueDisc, METH_VARARGS|METH_KEYWORDS, "SetChildQueueDisc(classId, handle)\n\ntype: classId: uint16_t\ntype: handle: uint16_t" },
+    {(char *) "AddInternalQueue", (PyCFunction) _wrap_PyNs3QueueDiscFactory_AddInternalQueue, METH_KEYWORDS|METH_VARARGS, "AddInternalQueue(factory)\n\ntype: factory: ns3::ObjectFactory" },
+    {(char *) "AddPacketFilter", (PyCFunction) _wrap_PyNs3QueueDiscFactory_AddPacketFilter, METH_KEYWORDS|METH_VARARGS, "AddPacketFilter(factory)\n\ntype: factory: ns3::ObjectFactory" },
+    {(char *) "AddQueueDiscClass", (PyCFunction) _wrap_PyNs3QueueDiscFactory_AddQueueDiscClass, METH_KEYWORDS|METH_VARARGS, "AddQueueDiscClass(factory)\n\ntype: factory: ns3::ObjectFactory" },
+    {(char *) "CreateQueueDisc", (PyCFunction) _wrap_PyNs3QueueDiscFactory_CreateQueueDisc, METH_KEYWORDS|METH_VARARGS, "CreateQueueDisc(queueDiscs)\n\ntype: queueDiscs: std::vector< ns3::Ptr< ns3::QueueDisc > > const &" },
+    {(char *) "SetChildQueueDisc", (PyCFunction) _wrap_PyNs3QueueDiscFactory_SetChildQueueDisc, METH_KEYWORDS|METH_VARARGS, "SetChildQueueDisc(classId, handle)\n\ntype: classId: uint16_t\ntype: handle: uint16_t" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3QueueDiscFactory__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2135,16 +2135,16 @@ _wrap_PyNs3TrafficControlHelper__copy__(PyNs3TrafficControlHelper *self)
 }
 
 static PyMethodDef PyNs3TrafficControlHelper_methods[] = {
-    {(char *) "AddChildQueueDisc", (PyCFunction) _wrap_PyNs3TrafficControlHelper_AddChildQueueDisc, METH_VARARGS|METH_KEYWORDS, "AddChildQueueDisc(handle, classId, type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08, n09, v09, n10, v10, n11, v11, n12, v12, n13, v13, n14, v14, n15, v15)\n\ntype: handle: uint16_t\ntype: classId: uint16_t\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &\ntype: n09: std::string\ntype: v09: ns3::AttributeValue const &\ntype: n10: std::string\ntype: v10: ns3::AttributeValue const &\ntype: n11: std::string\ntype: v11: ns3::AttributeValue const &\ntype: n12: std::string\ntype: v12: ns3::AttributeValue const &\ntype: n13: std::string\ntype: v13: ns3::AttributeValue const &\ntype: n14: std::string\ntype: v14: ns3::AttributeValue const &\ntype: n15: std::string\ntype: v15: ns3::AttributeValue const &" },
-    {(char *) "AddChildQueueDiscs", (PyCFunction) _wrap_PyNs3TrafficControlHelper_AddChildQueueDiscs, METH_VARARGS|METH_KEYWORDS, "AddChildQueueDiscs(handle, classes, type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08, n09, v09, n10, v10, n11, v11, n12, v12, n13, v13, n14, v14, n15, v15)\n\ntype: handle: uint16_t\ntype: classes: ns3::TrafficControlHelper::ClassIdList const &\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &\ntype: n09: std::string\ntype: v09: ns3::AttributeValue const &\ntype: n10: std::string\ntype: v10: ns3::AttributeValue const &\ntype: n11: std::string\ntype: v11: ns3::AttributeValue const &\ntype: n12: std::string\ntype: v12: ns3::AttributeValue const &\ntype: n13: std::string\ntype: v13: ns3::AttributeValue const &\ntype: n14: std::string\ntype: v14: ns3::AttributeValue const &\ntype: n15: std::string\ntype: v15: ns3::AttributeValue const &" },
-    {(char *) "AddInternalQueues", (PyCFunction) _wrap_PyNs3TrafficControlHelper_AddInternalQueues, METH_VARARGS|METH_KEYWORDS, "AddInternalQueues(handle, count, type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08)\n\ntype: handle: uint16_t\ntype: count: uint16_t\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &" },
-    {(char *) "AddPacketFilter", (PyCFunction) _wrap_PyNs3TrafficControlHelper_AddPacketFilter, METH_VARARGS|METH_KEYWORDS, "AddPacketFilter(handle, type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08)\n\ntype: handle: uint16_t\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &" },
-    {(char *) "AddQueueDiscClasses", (PyCFunction) _wrap_PyNs3TrafficControlHelper_AddQueueDiscClasses, METH_VARARGS|METH_KEYWORDS, "AddQueueDiscClasses(handle, count, type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08)\n\ntype: handle: uint16_t\ntype: count: uint16_t\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &" },
-    {(char *) "Default", (PyCFunction) _wrap_PyNs3TrafficControlHelper_Default, METH_VARARGS|METH_KEYWORDS|METH_STATIC, "Default(nTxQueues)\n\ntype: nTxQueues: std::size_t" },
-    {(char *) "Install", (PyCFunction) _wrap_PyNs3TrafficControlHelper_Install, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "SetQueueLimits", (PyCFunction) _wrap_PyNs3TrafficControlHelper_SetQueueLimits, METH_VARARGS|METH_KEYWORDS, "SetQueueLimits(type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08)\n\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &" },
-    {(char *) "SetRootQueueDisc", (PyCFunction) _wrap_PyNs3TrafficControlHelper_SetRootQueueDisc, METH_VARARGS|METH_KEYWORDS, "SetRootQueueDisc(type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08, n09, v09, n10, v10, n11, v11, n12, v12, n13, v13, n14, v14, n15, v15)\n\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &\ntype: n09: std::string\ntype: v09: ns3::AttributeValue const &\ntype: n10: std::string\ntype: v10: ns3::AttributeValue const &\ntype: n11: std::string\ntype: v11: ns3::AttributeValue const &\ntype: n12: std::string\ntype: v12: ns3::AttributeValue const &\ntype: n13: std::string\ntype: v13: ns3::AttributeValue const &\ntype: n14: std::string\ntype: v14: ns3::AttributeValue const &\ntype: n15: std::string\ntype: v15: ns3::AttributeValue const &" },
-    {(char *) "Uninstall", (PyCFunction) _wrap_PyNs3TrafficControlHelper_Uninstall, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "AddChildQueueDisc", (PyCFunction) _wrap_PyNs3TrafficControlHelper_AddChildQueueDisc, METH_KEYWORDS|METH_VARARGS, "AddChildQueueDisc(handle, classId, type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08, n09, v09, n10, v10, n11, v11, n12, v12, n13, v13, n14, v14, n15, v15)\n\ntype: handle: uint16_t\ntype: classId: uint16_t\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &\ntype: n09: std::string\ntype: v09: ns3::AttributeValue const &\ntype: n10: std::string\ntype: v10: ns3::AttributeValue const &\ntype: n11: std::string\ntype: v11: ns3::AttributeValue const &\ntype: n12: std::string\ntype: v12: ns3::AttributeValue const &\ntype: n13: std::string\ntype: v13: ns3::AttributeValue const &\ntype: n14: std::string\ntype: v14: ns3::AttributeValue const &\ntype: n15: std::string\ntype: v15: ns3::AttributeValue const &" },
+    {(char *) "AddChildQueueDiscs", (PyCFunction) _wrap_PyNs3TrafficControlHelper_AddChildQueueDiscs, METH_KEYWORDS|METH_VARARGS, "AddChildQueueDiscs(handle, classes, type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08, n09, v09, n10, v10, n11, v11, n12, v12, n13, v13, n14, v14, n15, v15)\n\ntype: handle: uint16_t\ntype: classes: ns3::TrafficControlHelper::ClassIdList const &\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &\ntype: n09: std::string\ntype: v09: ns3::AttributeValue const &\ntype: n10: std::string\ntype: v10: ns3::AttributeValue const &\ntype: n11: std::string\ntype: v11: ns3::AttributeValue const &\ntype: n12: std::string\ntype: v12: ns3::AttributeValue const &\ntype: n13: std::string\ntype: v13: ns3::AttributeValue const &\ntype: n14: std::string\ntype: v14: ns3::AttributeValue const &\ntype: n15: std::string\ntype: v15: ns3::AttributeValue const &" },
+    {(char *) "AddInternalQueues", (PyCFunction) _wrap_PyNs3TrafficControlHelper_AddInternalQueues, METH_KEYWORDS|METH_VARARGS, "AddInternalQueues(handle, count, type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08)\n\ntype: handle: uint16_t\ntype: count: uint16_t\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &" },
+    {(char *) "AddPacketFilter", (PyCFunction) _wrap_PyNs3TrafficControlHelper_AddPacketFilter, METH_KEYWORDS|METH_VARARGS, "AddPacketFilter(handle, type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08)\n\ntype: handle: uint16_t\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &" },
+    {(char *) "AddQueueDiscClasses", (PyCFunction) _wrap_PyNs3TrafficControlHelper_AddQueueDiscClasses, METH_KEYWORDS|METH_VARARGS, "AddQueueDiscClasses(handle, count, type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08)\n\ntype: handle: uint16_t\ntype: count: uint16_t\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &" },
+    {(char *) "Default", (PyCFunction) _wrap_PyNs3TrafficControlHelper_Default, METH_KEYWORDS|METH_VARARGS|METH_STATIC, "Default(nTxQueues)\n\ntype: nTxQueues: std::size_t" },
+    {(char *) "Install", (PyCFunction) _wrap_PyNs3TrafficControlHelper_Install, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "SetQueueLimits", (PyCFunction) _wrap_PyNs3TrafficControlHelper_SetQueueLimits, METH_KEYWORDS|METH_VARARGS, "SetQueueLimits(type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08)\n\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &" },
+    {(char *) "SetRootQueueDisc", (PyCFunction) _wrap_PyNs3TrafficControlHelper_SetRootQueueDisc, METH_KEYWORDS|METH_VARARGS, "SetRootQueueDisc(type, n01, v01, n02, v02, n03, v03, n04, v04, n05, v05, n06, v06, n07, v07, n08, v08, n09, v09, n10, v10, n11, v11, n12, v12, n13, v13, n14, v14, n15, v15)\n\ntype: type: std::string\ntype: n01: std::string\ntype: v01: ns3::AttributeValue const &\ntype: n02: std::string\ntype: v02: ns3::AttributeValue const &\ntype: n03: std::string\ntype: v03: ns3::AttributeValue const &\ntype: n04: std::string\ntype: v04: ns3::AttributeValue const &\ntype: n05: std::string\ntype: v05: ns3::AttributeValue const &\ntype: n06: std::string\ntype: v06: ns3::AttributeValue const &\ntype: n07: std::string\ntype: v07: ns3::AttributeValue const &\ntype: n08: std::string\ntype: v08: ns3::AttributeValue const &\ntype: n09: std::string\ntype: v09: ns3::AttributeValue const &\ntype: n10: std::string\ntype: v10: ns3::AttributeValue const &\ntype: n11: std::string\ntype: v11: ns3::AttributeValue const &\ntype: n12: std::string\ntype: v12: ns3::AttributeValue const &\ntype: n13: std::string\ntype: v13: ns3::AttributeValue const &\ntype: n14: std::string\ntype: v14: ns3::AttributeValue const &\ntype: n15: std::string\ntype: v15: ns3::AttributeValue const &" },
+    {(char *) "Uninstall", (PyCFunction) _wrap_PyNs3TrafficControlHelper_Uninstall, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3TrafficControlHelper__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -2855,7 +2855,7 @@ _wrap_PyNs3PacketFilter_GetTypeId(void)
 }
 
 static PyMethodDef PyNs3PacketFilter_methods[] = {
-    {(char *) "Classify", (PyCFunction) _wrap_PyNs3PacketFilter_Classify, METH_VARARGS|METH_KEYWORDS, "Classify(item)\n\ntype: item: ns3::Ptr< ns3::QueueDiscItem >" },
+    {(char *) "Classify", (PyCFunction) _wrap_PyNs3PacketFilter_Classify, METH_KEYWORDS|METH_VARARGS, "Classify(item)\n\ntype: item: ns3::Ptr< ns3::QueueDiscItem >" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PacketFilter_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "DoDispose", (PyCFunction) PyNs3PacketFilter__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3PacketFilter__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
@@ -2926,7 +2926,7 @@ PyTypeObject PyNs3PacketFilter_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PacketFilter(arg0)\nPacketFilter()",                        /* Documentation string */
     (traverseproc)PyNs3PacketFilter__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PacketFilter__tp_clear,             /* tp_clear */
@@ -4366,11 +4366,11 @@ _wrap_PyNs3QueueDisc_SetQuota(PyNs3QueueDisc *self, PyObject *args, PyObject *kw
 }
 
 static PyMethodDef PyNs3QueueDisc_methods[] = {
-    {(char *) "AddPacketFilter", (PyCFunction) _wrap_PyNs3QueueDisc_AddPacketFilter, METH_VARARGS|METH_KEYWORDS, "AddPacketFilter(filter)\n\ntype: filter: ns3::Ptr< ns3::PacketFilter >" },
-    {(char *) "AddQueueDiscClass", (PyCFunction) _wrap_PyNs3QueueDisc_AddQueueDiscClass, METH_VARARGS|METH_KEYWORDS, "AddQueueDiscClass(qdClass)\n\ntype: qdClass: ns3::Ptr< ns3::QueueDiscClass >" },
-    {(char *) "Classify", (PyCFunction) _wrap_PyNs3QueueDisc_Classify, METH_VARARGS|METH_KEYWORDS, "Classify(item)\n\ntype: item: ns3::Ptr< ns3::QueueDiscItem >" },
+    {(char *) "AddPacketFilter", (PyCFunction) _wrap_PyNs3QueueDisc_AddPacketFilter, METH_KEYWORDS|METH_VARARGS, "AddPacketFilter(filter)\n\ntype: filter: ns3::Ptr< ns3::PacketFilter >" },
+    {(char *) "AddQueueDiscClass", (PyCFunction) _wrap_PyNs3QueueDisc_AddQueueDiscClass, METH_KEYWORDS|METH_VARARGS, "AddQueueDiscClass(qdClass)\n\ntype: qdClass: ns3::Ptr< ns3::QueueDiscClass >" },
+    {(char *) "Classify", (PyCFunction) _wrap_PyNs3QueueDisc_Classify, METH_KEYWORDS|METH_VARARGS, "Classify(item)\n\ntype: item: ns3::Ptr< ns3::QueueDiscItem >" },
     {(char *) "Dequeue", (PyCFunction) _wrap_PyNs3QueueDisc_Dequeue, METH_NOARGS, "Dequeue()\n\n" },
-    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3QueueDisc_Enqueue, METH_VARARGS|METH_KEYWORDS, "Enqueue(item)\n\ntype: item: ns3::Ptr< ns3::QueueDiscItem >" },
+    {(char *) "Enqueue", (PyCFunction) _wrap_PyNs3QueueDisc_Enqueue, METH_KEYWORDS|METH_VARARGS, "Enqueue(item)\n\ntype: item: ns3::Ptr< ns3::QueueDiscItem >" },
     {(char *) "GetCurrentSize", (PyCFunction) _wrap_PyNs3QueueDisc_GetCurrentSize, METH_NOARGS, "GetCurrentSize()\n\n" },
     {(char *) "GetMaxSize", (PyCFunction) _wrap_PyNs3QueueDisc_GetMaxSize, METH_NOARGS, "GetMaxSize()\n\n" },
     {(char *) "GetNBytes", (PyCFunction) _wrap_PyNs3QueueDisc_GetNBytes, METH_NOARGS, "GetNBytes()\n\n" },
@@ -4378,21 +4378,21 @@ static PyMethodDef PyNs3QueueDisc_methods[] = {
     {(char *) "GetNPacketFilters", (PyCFunction) _wrap_PyNs3QueueDisc_GetNPacketFilters, METH_NOARGS, "GetNPacketFilters()\n\n" },
     {(char *) "GetNPackets", (PyCFunction) _wrap_PyNs3QueueDisc_GetNPackets, METH_NOARGS, "GetNPackets()\n\n" },
     {(char *) "GetNQueueDiscClasses", (PyCFunction) _wrap_PyNs3QueueDisc_GetNQueueDiscClasses, METH_NOARGS, "GetNQueueDiscClasses()\n\n" },
-    {(char *) "GetPacketFilter", (PyCFunction) _wrap_PyNs3QueueDisc_GetPacketFilter, METH_VARARGS|METH_KEYWORDS, "GetPacketFilter(i)\n\ntype: i: std::size_t" },
-    {(char *) "GetQueueDiscClass", (PyCFunction) _wrap_PyNs3QueueDisc_GetQueueDiscClass, METH_VARARGS|METH_KEYWORDS, "GetQueueDiscClass(i)\n\ntype: i: std::size_t" },
+    {(char *) "GetPacketFilter", (PyCFunction) _wrap_PyNs3QueueDisc_GetPacketFilter, METH_KEYWORDS|METH_VARARGS, "GetPacketFilter(i)\n\ntype: i: std::size_t" },
+    {(char *) "GetQueueDiscClass", (PyCFunction) _wrap_PyNs3QueueDisc_GetQueueDiscClass, METH_KEYWORDS|METH_VARARGS, "GetQueueDiscClass(i)\n\ntype: i: std::size_t" },
     {(char *) "GetQuota", (PyCFunction) _wrap_PyNs3QueueDisc_GetQuota, METH_NOARGS, "GetQuota()\n\n" },
     {(char *) "GetStats", (PyCFunction) _wrap_PyNs3QueueDisc_GetStats, METH_NOARGS, "GetStats()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3QueueDisc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetWakeMode", (PyCFunction) _wrap_PyNs3QueueDisc_GetWakeMode, METH_NOARGS, "GetWakeMode()\n\n" },
     {(char *) "Peek", (PyCFunction) _wrap_PyNs3QueueDisc_Peek, METH_NOARGS, "Peek()\n\n" },
     {(char *) "Run", (PyCFunction) _wrap_PyNs3QueueDisc_Run, METH_NOARGS, "Run()\n\n" },
-    {(char *) "SetMaxSize", (PyCFunction) _wrap_PyNs3QueueDisc_SetMaxSize, METH_VARARGS|METH_KEYWORDS, "SetMaxSize(size)\n\ntype: size: ns3::QueueSize" },
-    {(char *) "SetQuota", (PyCFunction) _wrap_PyNs3QueueDisc_SetQuota, METH_VARARGS|METH_KEYWORDS, "SetQuota(quota)\n\ntype: quota: uint32_t const" },
+    {(char *) "SetMaxSize", (PyCFunction) _wrap_PyNs3QueueDisc_SetMaxSize, METH_KEYWORDS|METH_VARARGS, "SetMaxSize(size)\n\ntype: size: ns3::QueueSize" },
+    {(char *) "SetQuota", (PyCFunction) _wrap_PyNs3QueueDisc_SetQuota, METH_KEYWORDS|METH_VARARGS, "SetQuota(quota)\n\ntype: quota: uint32_t const" },
     {(char *) "DoDispose", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
-    {(char *) "DropAfterDequeue", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DropAfterDequeue, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "DropBeforeEnqueue", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DropBeforeEnqueue, METH_VARARGS|METH_KEYWORDS, NULL },
-    {(char *) "Mark", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_Mark, METH_VARARGS|METH_KEYWORDS, NULL },
+    {(char *) "DropAfterDequeue", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DropAfterDequeue, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "DropBeforeEnqueue", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_DropBeforeEnqueue, METH_KEYWORDS|METH_VARARGS, NULL },
+    {(char *) "Mark", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_Mark, METH_KEYWORDS|METH_VARARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
     {(char *) "NotifyConstructionCompleted", (PyCFunction) PyNs3QueueDisc__PythonHelper::_wrap_NotifyConstructionCompleted, METH_NOARGS, NULL },
     {NULL, NULL, 0, NULL}
@@ -4460,7 +4460,7 @@ PyTypeObject PyNs3QueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "QueueDisc(policy, unit)\nQueueDisc(policy)",                        /* Documentation string */
     (traverseproc)PyNs3QueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3QueueDisc__tp_clear,             /* tp_clear */
@@ -5300,10 +5300,10 @@ _wrap_PyNs3QueueDiscStats__copy__(PyNs3QueueDiscStats *self)
 }
 
 static PyMethodDef PyNs3QueueDiscStats_methods[] = {
-    {(char *) "GetNDroppedBytes", (PyCFunction) _wrap_PyNs3QueueDiscStats_GetNDroppedBytes, METH_VARARGS|METH_KEYWORDS, "GetNDroppedBytes(reason)\n\ntype: reason: std::string" },
-    {(char *) "GetNDroppedPackets", (PyCFunction) _wrap_PyNs3QueueDiscStats_GetNDroppedPackets, METH_VARARGS|METH_KEYWORDS, "GetNDroppedPackets(reason)\n\ntype: reason: std::string" },
-    {(char *) "GetNMarkedBytes", (PyCFunction) _wrap_PyNs3QueueDiscStats_GetNMarkedBytes, METH_VARARGS|METH_KEYWORDS, "GetNMarkedBytes(reason)\n\ntype: reason: std::string" },
-    {(char *) "GetNMarkedPackets", (PyCFunction) _wrap_PyNs3QueueDiscStats_GetNMarkedPackets, METH_VARARGS|METH_KEYWORDS, "GetNMarkedPackets(reason)\n\ntype: reason: std::string" },
+    {(char *) "GetNDroppedBytes", (PyCFunction) _wrap_PyNs3QueueDiscStats_GetNDroppedBytes, METH_KEYWORDS|METH_VARARGS, "GetNDroppedBytes(reason)\n\ntype: reason: std::string" },
+    {(char *) "GetNDroppedPackets", (PyCFunction) _wrap_PyNs3QueueDiscStats_GetNDroppedPackets, METH_KEYWORDS|METH_VARARGS, "GetNDroppedPackets(reason)\n\ntype: reason: std::string" },
+    {(char *) "GetNMarkedBytes", (PyCFunction) _wrap_PyNs3QueueDiscStats_GetNMarkedBytes, METH_KEYWORDS|METH_VARARGS, "GetNMarkedBytes(reason)\n\ntype: reason: std::string" },
+    {(char *) "GetNMarkedPackets", (PyCFunction) _wrap_PyNs3QueueDiscStats_GetNMarkedPackets, METH_KEYWORDS|METH_VARARGS, "GetNMarkedPackets(reason)\n\ntype: reason: std::string" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3QueueDiscStats__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -5871,7 +5871,7 @@ _wrap_PyNs3QueueDiscClass__copy__(PyNs3QueueDiscClass *self)
 static PyMethodDef PyNs3QueueDiscClass_methods[] = {
     {(char *) "GetQueueDisc", (PyCFunction) _wrap_PyNs3QueueDiscClass_GetQueueDisc, METH_NOARGS, "GetQueueDisc()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3QueueDiscClass_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetQueueDisc", (PyCFunction) _wrap_PyNs3QueueDiscClass_SetQueueDisc, METH_VARARGS|METH_KEYWORDS, "SetQueueDisc(qd)\n\ntype: qd: ns3::Ptr< ns3::QueueDisc >" },
+    {(char *) "SetQueueDisc", (PyCFunction) _wrap_PyNs3QueueDiscClass_SetQueueDisc, METH_KEYWORDS|METH_VARARGS, "SetQueueDisc(qd)\n\ntype: qd: ns3::Ptr< ns3::QueueDisc >" },
     {(char *) "DoDispose", (PyCFunction) PyNs3QueueDiscClass__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3QueueDiscClass__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3QueueDiscClass__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -5942,7 +5942,7 @@ PyTypeObject PyNs3QueueDiscClass_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "QueueDiscClass(arg0)\nQueueDiscClass()",                        /* Documentation string */
     (traverseproc)PyNs3QueueDiscClass__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3QueueDiscClass__tp_clear,             /* tp_clear */
@@ -7000,16 +7000,16 @@ _wrap_PyNs3RedQueueDisc_AssignStreams(PyNs3RedQueueDisc *self, PyObject *args, P
 
 static PyMethodDef PyNs3RedQueueDisc_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3RedQueueDisc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetAredAlpha", (PyCFunction) _wrap_PyNs3RedQueueDisc_SetAredAlpha, METH_VARARGS|METH_KEYWORDS, "SetAredAlpha(alpha)\n\ntype: alpha: double" },
+    {(char *) "SetAredAlpha", (PyCFunction) _wrap_PyNs3RedQueueDisc_SetAredAlpha, METH_KEYWORDS|METH_VARARGS, "SetAredAlpha(alpha)\n\ntype: alpha: double" },
     {(char *) "GetAredAlpha", (PyCFunction) _wrap_PyNs3RedQueueDisc_GetAredAlpha, METH_NOARGS, "GetAredAlpha()\n\n" },
-    {(char *) "SetAredBeta", (PyCFunction) _wrap_PyNs3RedQueueDisc_SetAredBeta, METH_VARARGS|METH_KEYWORDS, "SetAredBeta(beta)\n\ntype: beta: double" },
+    {(char *) "SetAredBeta", (PyCFunction) _wrap_PyNs3RedQueueDisc_SetAredBeta, METH_KEYWORDS|METH_VARARGS, "SetAredBeta(beta)\n\ntype: beta: double" },
     {(char *) "GetAredBeta", (PyCFunction) _wrap_PyNs3RedQueueDisc_GetAredBeta, METH_NOARGS, "GetAredBeta()\n\n" },
-    {(char *) "SetFengAdaptiveA", (PyCFunction) _wrap_PyNs3RedQueueDisc_SetFengAdaptiveA, METH_VARARGS|METH_KEYWORDS, "SetFengAdaptiveA(a)\n\ntype: a: double" },
+    {(char *) "SetFengAdaptiveA", (PyCFunction) _wrap_PyNs3RedQueueDisc_SetFengAdaptiveA, METH_KEYWORDS|METH_VARARGS, "SetFengAdaptiveA(a)\n\ntype: a: double" },
     {(char *) "GetFengAdaptiveA", (PyCFunction) _wrap_PyNs3RedQueueDisc_GetFengAdaptiveA, METH_NOARGS, "GetFengAdaptiveA()\n\n" },
-    {(char *) "SetFengAdaptiveB", (PyCFunction) _wrap_PyNs3RedQueueDisc_SetFengAdaptiveB, METH_VARARGS|METH_KEYWORDS, "SetFengAdaptiveB(b)\n\ntype: b: double" },
+    {(char *) "SetFengAdaptiveB", (PyCFunction) _wrap_PyNs3RedQueueDisc_SetFengAdaptiveB, METH_KEYWORDS|METH_VARARGS, "SetFengAdaptiveB(b)\n\ntype: b: double" },
     {(char *) "GetFengAdaptiveB", (PyCFunction) _wrap_PyNs3RedQueueDisc_GetFengAdaptiveB, METH_NOARGS, "GetFengAdaptiveB()\n\n" },
-    {(char *) "SetTh", (PyCFunction) _wrap_PyNs3RedQueueDisc_SetTh, METH_VARARGS|METH_KEYWORDS, "SetTh(minTh, maxTh)\n\ntype: minTh: double\ntype: maxTh: double" },
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3RedQueueDisc_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "SetTh", (PyCFunction) _wrap_PyNs3RedQueueDisc_SetTh, METH_KEYWORDS|METH_VARARGS, "SetTh(minTh, maxTh)\n\ntype: minTh: double\ntype: maxTh: double" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3RedQueueDisc_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "DoDispose", (PyCFunction) PyNs3RedQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3RedQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3RedQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -7079,7 +7079,7 @@ PyTypeObject PyNs3RedQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "RedQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3RedQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3RedQueueDisc__tp_clear,             /* tp_clear */
@@ -8025,13 +8025,13 @@ _wrap_PyNs3TbfQueueDisc_GetSecondBucketTokens(PyNs3TbfQueueDisc *self)
 
 static PyMethodDef PyNs3TbfQueueDisc_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3TbfQueueDisc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetBurst", (PyCFunction) _wrap_PyNs3TbfQueueDisc_SetBurst, METH_VARARGS|METH_KEYWORDS, "SetBurst(burst)\n\ntype: burst: uint32_t" },
+    {(char *) "SetBurst", (PyCFunction) _wrap_PyNs3TbfQueueDisc_SetBurst, METH_KEYWORDS|METH_VARARGS, "SetBurst(burst)\n\ntype: burst: uint32_t" },
     {(char *) "GetBurst", (PyCFunction) _wrap_PyNs3TbfQueueDisc_GetBurst, METH_NOARGS, "GetBurst()\n\n" },
-    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3TbfQueueDisc_SetMtu, METH_VARARGS|METH_KEYWORDS, "SetMtu(mtu)\n\ntype: mtu: uint32_t" },
+    {(char *) "SetMtu", (PyCFunction) _wrap_PyNs3TbfQueueDisc_SetMtu, METH_KEYWORDS|METH_VARARGS, "SetMtu(mtu)\n\ntype: mtu: uint32_t" },
     {(char *) "GetMtu", (PyCFunction) _wrap_PyNs3TbfQueueDisc_GetMtu, METH_NOARGS, "GetMtu()\n\n" },
-    {(char *) "SetRate", (PyCFunction) _wrap_PyNs3TbfQueueDisc_SetRate, METH_VARARGS|METH_KEYWORDS, "SetRate(rate)\n\ntype: rate: ns3::DataRate" },
+    {(char *) "SetRate", (PyCFunction) _wrap_PyNs3TbfQueueDisc_SetRate, METH_KEYWORDS|METH_VARARGS, "SetRate(rate)\n\ntype: rate: ns3::DataRate" },
     {(char *) "GetRate", (PyCFunction) _wrap_PyNs3TbfQueueDisc_GetRate, METH_NOARGS, "GetRate()\n\n" },
-    {(char *) "SetPeakRate", (PyCFunction) _wrap_PyNs3TbfQueueDisc_SetPeakRate, METH_VARARGS|METH_KEYWORDS, "SetPeakRate(peakRate)\n\ntype: peakRate: ns3::DataRate" },
+    {(char *) "SetPeakRate", (PyCFunction) _wrap_PyNs3TbfQueueDisc_SetPeakRate, METH_KEYWORDS|METH_VARARGS, "SetPeakRate(peakRate)\n\ntype: peakRate: ns3::DataRate" },
     {(char *) "GetPeakRate", (PyCFunction) _wrap_PyNs3TbfQueueDisc_GetPeakRate, METH_NOARGS, "GetPeakRate()\n\n" },
     {(char *) "GetFirstBucketTokens", (PyCFunction) _wrap_PyNs3TbfQueueDisc_GetFirstBucketTokens, METH_NOARGS, "GetFirstBucketTokens()\n\n" },
     {(char *) "GetSecondBucketTokens", (PyCFunction) _wrap_PyNs3TbfQueueDisc_GetSecondBucketTokens, METH_NOARGS, "GetSecondBucketTokens()\n\n" },
@@ -8104,7 +8104,7 @@ PyTypeObject PyNs3TbfQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "TbfQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3TbfQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TbfQueueDisc__tp_clear,             /* tp_clear */
@@ -9196,16 +9196,16 @@ _wrap_PyNs3TrafficControlLayer_SetRootQueueDiscOnDevice(PyNs3TrafficControlLayer
 }
 
 static PyMethodDef PyNs3TrafficControlLayer_methods[] = {
-    {(char *) "DeleteRootQueueDiscOnDevice", (PyCFunction) _wrap_PyNs3TrafficControlLayer_DeleteRootQueueDiscOnDevice, METH_VARARGS|METH_KEYWORDS, "DeleteRootQueueDiscOnDevice(device)\n\ntype: device: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "DeleteRootQueueDiscOnDevice", (PyCFunction) _wrap_PyNs3TrafficControlLayer_DeleteRootQueueDiscOnDevice, METH_KEYWORDS|METH_VARARGS, "DeleteRootQueueDiscOnDevice(device)\n\ntype: device: ns3::Ptr< ns3::NetDevice >" },
     {(char *) "GetInstanceTypeId", (PyCFunction) _wrap_PyNs3TrafficControlLayer_GetInstanceTypeId, METH_NOARGS, "GetInstanceTypeId()\n\n" },
-    {(char *) "GetRootQueueDiscOnDevice", (PyCFunction) _wrap_PyNs3TrafficControlLayer_GetRootQueueDiscOnDevice, METH_VARARGS|METH_KEYWORDS, "GetRootQueueDiscOnDevice(device)\n\ntype: device: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "GetRootQueueDiscOnDevice", (PyCFunction) _wrap_PyNs3TrafficControlLayer_GetRootQueueDiscOnDevice, METH_KEYWORDS|METH_VARARGS, "GetRootQueueDiscOnDevice(device)\n\ntype: device: ns3::Ptr< ns3::NetDevice >" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3TrafficControlLayer_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "Receive", (PyCFunction) _wrap_PyNs3TrafficControlLayer_Receive, METH_VARARGS|METH_KEYWORDS, "Receive(device, p, protocol, from, to, packetType)\n\ntype: device: ns3::Ptr< ns3::NetDevice >\ntype: p: ns3::Ptr< ns3::Packet const >\ntype: protocol: uint16_t\ntype: from: ns3::Address const &\ntype: to: ns3::Address const &\ntype: packetType: ns3::NetDevice::PacketType" },
-    {(char *) "RegisterProtocolHandler", (PyCFunction) _wrap_PyNs3TrafficControlLayer_RegisterProtocolHandler, METH_VARARGS|METH_KEYWORDS, "RegisterProtocolHandler(handler, protocolType, device)\n\ntype: handler: ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >\ntype: protocolType: uint16_t\ntype: device: ns3::Ptr< ns3::NetDevice >" },
+    {(char *) "Receive", (PyCFunction) _wrap_PyNs3TrafficControlLayer_Receive, METH_KEYWORDS|METH_VARARGS, "Receive(device, p, protocol, from, to, packetType)\n\ntype: device: ns3::Ptr< ns3::NetDevice >\ntype: p: ns3::Ptr< ns3::Packet const >\ntype: protocol: uint16_t\ntype: from: ns3::Address const &\ntype: to: ns3::Address const &\ntype: packetType: ns3::NetDevice::PacketType" },
+    {(char *) "RegisterProtocolHandler", (PyCFunction) _wrap_PyNs3TrafficControlLayer_RegisterProtocolHandler, METH_KEYWORDS|METH_VARARGS, "RegisterProtocolHandler(handler, protocolType, device)\n\ntype: handler: ns3::Callback< void, ns3::Ptr< ns3::NetDevice >, ns3::Ptr< ns3::Packet const >, unsigned short, ns3::Address const &, ns3::Address const &, ns3::NetDevice::PacketType, ns3::empty, ns3::empty, ns3::empty >\ntype: protocolType: uint16_t\ntype: device: ns3::Ptr< ns3::NetDevice >" },
     {(char *) "ScanDevices", (PyCFunction) _wrap_PyNs3TrafficControlLayer_ScanDevices, METH_NOARGS, "ScanDevices()\n\n" },
-    {(char *) "Send", (PyCFunction) _wrap_PyNs3TrafficControlLayer_Send, METH_VARARGS|METH_KEYWORDS, "Send(device, item)\n\ntype: device: ns3::Ptr< ns3::NetDevice >\ntype: item: ns3::Ptr< ns3::QueueDiscItem >" },
-    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3TrafficControlLayer_SetNode, METH_VARARGS|METH_KEYWORDS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
-    {(char *) "SetRootQueueDiscOnDevice", (PyCFunction) _wrap_PyNs3TrafficControlLayer_SetRootQueueDiscOnDevice, METH_VARARGS|METH_KEYWORDS, "SetRootQueueDiscOnDevice(device, qDisc)\n\ntype: device: ns3::Ptr< ns3::NetDevice >\ntype: qDisc: ns3::Ptr< ns3::QueueDisc >" },
+    {(char *) "Send", (PyCFunction) _wrap_PyNs3TrafficControlLayer_Send, METH_KEYWORDS|METH_VARARGS, "Send(device, item)\n\ntype: device: ns3::Ptr< ns3::NetDevice >\ntype: item: ns3::Ptr< ns3::QueueDiscItem >" },
+    {(char *) "SetNode", (PyCFunction) _wrap_PyNs3TrafficControlLayer_SetNode, METH_KEYWORDS|METH_VARARGS, "SetNode(node)\n\ntype: node: ns3::Ptr< ns3::Node >" },
+    {(char *) "SetRootQueueDiscOnDevice", (PyCFunction) _wrap_PyNs3TrafficControlLayer_SetRootQueueDiscOnDevice, METH_KEYWORDS|METH_VARARGS, "SetRootQueueDiscOnDevice(device, qDisc)\n\ntype: device: ns3::Ptr< ns3::NetDevice >\ntype: qDisc: ns3::Ptr< ns3::QueueDisc >" },
     {(char *) "DoDispose", (PyCFunction) PyNs3TrafficControlLayer__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3TrafficControlLayer__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3TrafficControlLayer__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -9275,7 +9275,7 @@ PyTypeObject PyNs3TrafficControlLayer_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "TrafficControlLayer()",                        /* Documentation string */
     (traverseproc)PyNs3TrafficControlLayer__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3TrafficControlLayer__tp_clear,             /* tp_clear */
@@ -10270,7 +10270,7 @@ PyTypeObject PyNs3CoDelQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "CoDelQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3CoDelQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CoDelQueueDisc__tp_clear,             /* tp_clear */
@@ -11257,8 +11257,8 @@ static PyMethodDef PyNs3CobaltQueueDisc_methods[] = {
     {(char *) "GetInterval", (PyCFunction) _wrap_PyNs3CobaltQueueDisc_GetInterval, METH_NOARGS, "GetInterval()\n\n" },
     {(char *) "GetDropNext", (PyCFunction) _wrap_PyNs3CobaltQueueDisc_GetDropNext, METH_NOARGS, "GetDropNext()\n\n" },
     {(char *) "GetPdrop", (PyCFunction) _wrap_PyNs3CobaltQueueDisc_GetPdrop, METH_NOARGS, "GetPdrop()\n\n" },
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3CobaltQueueDisc_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
-    {(char *) "Time2CoDel", (PyCFunction) _wrap_PyNs3CobaltQueueDisc_Time2CoDel, METH_VARARGS|METH_KEYWORDS, "Time2CoDel(t)\n\ntype: t: ns3::Time" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3CobaltQueueDisc_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "Time2CoDel", (PyCFunction) _wrap_PyNs3CobaltQueueDisc_Time2CoDel, METH_KEYWORDS|METH_VARARGS, "Time2CoDel(t)\n\ntype: t: ns3::Time" },
     {(char *) "DoDispose", (PyCFunction) PyNs3CobaltQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3CobaltQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3CobaltQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -11328,7 +11328,7 @@ PyTypeObject PyNs3CobaltQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "CobaltQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3CobaltQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3CobaltQueueDisc__tp_clear,             /* tp_clear */
@@ -12262,7 +12262,7 @@ PyTypeObject PyNs3FifoQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "FifoQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3FifoQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FifoQueueDisc__tp_clear,             /* tp_clear */
@@ -12473,9 +12473,9 @@ static PyMethodDef PyNs3FqCoDelFlow_methods[] = {
     {(char *) "GetDeficit", (PyCFunction) _wrap_PyNs3FqCoDelFlow_GetDeficit, METH_NOARGS, "GetDeficit()\n\n" },
     {(char *) "GetStatus", (PyCFunction) _wrap_PyNs3FqCoDelFlow_GetStatus, METH_NOARGS, "GetStatus()\n\n" },
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FqCoDelFlow_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "IncreaseDeficit", (PyCFunction) _wrap_PyNs3FqCoDelFlow_IncreaseDeficit, METH_VARARGS|METH_KEYWORDS, "IncreaseDeficit(deficit)\n\ntype: deficit: int32_t" },
-    {(char *) "SetDeficit", (PyCFunction) _wrap_PyNs3FqCoDelFlow_SetDeficit, METH_VARARGS|METH_KEYWORDS, "SetDeficit(deficit)\n\ntype: deficit: uint32_t" },
-    {(char *) "SetStatus", (PyCFunction) _wrap_PyNs3FqCoDelFlow_SetStatus, METH_VARARGS|METH_KEYWORDS, "SetStatus(status)\n\ntype: status: ns3::FqCoDelFlow::FlowStatus" },
+    {(char *) "IncreaseDeficit", (PyCFunction) _wrap_PyNs3FqCoDelFlow_IncreaseDeficit, METH_KEYWORDS|METH_VARARGS, "IncreaseDeficit(deficit)\n\ntype: deficit: int32_t" },
+    {(char *) "SetDeficit", (PyCFunction) _wrap_PyNs3FqCoDelFlow_SetDeficit, METH_KEYWORDS|METH_VARARGS, "SetDeficit(deficit)\n\ntype: deficit: uint32_t" },
+    {(char *) "SetStatus", (PyCFunction) _wrap_PyNs3FqCoDelFlow_SetStatus, METH_KEYWORDS|METH_VARARGS, "SetStatus(status)\n\ntype: status: ns3::FqCoDelFlow::FlowStatus" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3FqCoDelFlow__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
@@ -12539,7 +12539,7 @@ PyTypeObject PyNs3FqCoDelFlow_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "FqCoDelFlow(arg0)\nFqCoDelFlow()",                        /* Documentation string */
     (traverseproc)PyNs3FqCoDelFlow__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FqCoDelFlow__tp_clear,             /* tp_clear */
@@ -13447,7 +13447,7 @@ _wrap_PyNs3FqCoDelQueueDisc_GetQuantum(PyNs3FqCoDelQueueDisc *self)
 
 static PyMethodDef PyNs3FqCoDelQueueDisc_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3FqCoDelQueueDisc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetQuantum", (PyCFunction) _wrap_PyNs3FqCoDelQueueDisc_SetQuantum, METH_VARARGS|METH_KEYWORDS, "SetQuantum(quantum)\n\ntype: quantum: uint32_t" },
+    {(char *) "SetQuantum", (PyCFunction) _wrap_PyNs3FqCoDelQueueDisc_SetQuantum, METH_KEYWORDS|METH_VARARGS, "SetQuantum(quantum)\n\ntype: quantum: uint32_t" },
     {(char *) "GetQuantum", (PyCFunction) _wrap_PyNs3FqCoDelQueueDisc_GetQuantum, METH_NOARGS, "GetQuantum()\n\n" },
     {(char *) "DoDispose", (PyCFunction) PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3FqCoDelQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
@@ -13518,7 +13518,7 @@ PyTypeObject PyNs3FqCoDelQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "FqCoDelQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3FqCoDelQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3FqCoDelQueueDisc__tp_clear,             /* tp_clear */
@@ -14399,7 +14399,7 @@ PyTypeObject PyNs3MqQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "MqQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3MqQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3MqQueueDisc__tp_clear,             /* tp_clear */
@@ -15333,7 +15333,7 @@ PyTypeObject PyNs3PfifoFastQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PfifoFastQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3PfifoFastQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PfifoFastQueueDisc__tp_clear,             /* tp_clear */
@@ -16246,7 +16246,7 @@ _wrap_PyNs3PieQueueDisc_AssignStreams(PyNs3PieQueueDisc *self, PyObject *args, P
 static PyMethodDef PyNs3PieQueueDisc_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PieQueueDisc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
     {(char *) "GetQueueDelay", (PyCFunction) _wrap_PyNs3PieQueueDisc_GetQueueDelay, METH_NOARGS, "GetQueueDelay()\n\n" },
-    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3PieQueueDisc_AssignStreams, METH_VARARGS|METH_KEYWORDS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
+    {(char *) "AssignStreams", (PyCFunction) _wrap_PyNs3PieQueueDisc_AssignStreams, METH_KEYWORDS|METH_VARARGS, "AssignStreams(stream)\n\ntype: stream: int64_t" },
     {(char *) "DoDispose", (PyCFunction) PyNs3PieQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3PieQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PieQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -16316,7 +16316,7 @@ PyTypeObject PyNs3PieQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PieQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3PieQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PieQueueDisc__tp_clear,             /* tp_clear */
@@ -17161,8 +17161,8 @@ _wrap_PyNs3PrioQueueDisc_GetBandForPriority(PyNs3PrioQueueDisc *self, PyObject *
 
 static PyMethodDef PyNs3PrioQueueDisc_methods[] = {
     {(char *) "GetTypeId", (PyCFunction) _wrap_PyNs3PrioQueueDisc_GetTypeId, METH_NOARGS|METH_STATIC, "GetTypeId()\n\n" },
-    {(char *) "SetBandForPriority", (PyCFunction) _wrap_PyNs3PrioQueueDisc_SetBandForPriority, METH_VARARGS|METH_KEYWORDS, "SetBandForPriority(prio, band)\n\ntype: prio: uint8_t\ntype: band: uint16_t" },
-    {(char *) "GetBandForPriority", (PyCFunction) _wrap_PyNs3PrioQueueDisc_GetBandForPriority, METH_VARARGS|METH_KEYWORDS, "GetBandForPriority(prio)\n\ntype: prio: uint8_t" },
+    {(char *) "SetBandForPriority", (PyCFunction) _wrap_PyNs3PrioQueueDisc_SetBandForPriority, METH_KEYWORDS|METH_VARARGS, "SetBandForPriority(prio, band)\n\ntype: prio: uint8_t\ntype: band: uint16_t" },
+    {(char *) "GetBandForPriority", (PyCFunction) _wrap_PyNs3PrioQueueDisc_GetBandForPriority, METH_KEYWORDS|METH_VARARGS, "GetBandForPriority(prio)\n\ntype: prio: uint8_t" },
     {(char *) "DoDispose", (PyCFunction) PyNs3PrioQueueDisc__PythonHelper::_wrap_DoDispose, METH_NOARGS, NULL },
     {(char *) "DoInitialize", (PyCFunction) PyNs3PrioQueueDisc__PythonHelper::_wrap_DoInitialize, METH_NOARGS, NULL },
     {(char *) "NotifyNewAggregate", (PyCFunction) PyNs3PrioQueueDisc__PythonHelper::_wrap_NotifyNewAggregate, METH_NOARGS, NULL },
@@ -17232,7 +17232,7 @@ PyTypeObject PyNs3PrioQueueDisc_Type = {
     (getattrofunc)NULL,     /* tp_getattro */
     (setattrofunc)NULL,     /* tp_setattro */
     (PyBufferProcs*)NULL,  /* tp_as_buffer */
-    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_DEFAULT|Py_TPFLAGS_BASETYPE,                      /* tp_flags */
+    Py_TPFLAGS_HAVE_GC|Py_TPFLAGS_BASETYPE|Py_TPFLAGS_DEFAULT,                      /* tp_flags */
     "PrioQueueDisc()",                        /* Documentation string */
     (traverseproc)PyNs3PrioQueueDisc__tp_traverse,     /* tp_traverse */
     (inquiry)PyNs3PrioQueueDisc__tp_clear,             /* tp_clear */
@@ -17505,8 +17505,8 @@ _wrap_PyNs3PriomapValue__copy__(PyNs3PriomapValue *self)
 
 static PyMethodDef PyNs3PriomapValue_methods[] = {
     {(char *) "Copy", (PyCFunction) _wrap_PyNs3PriomapValue_Copy, METH_NOARGS, "Copy()\n\n" },
-    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3PriomapValue_DeserializeFromString, METH_VARARGS|METH_KEYWORDS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
-    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3PriomapValue_SerializeToString, METH_VARARGS|METH_KEYWORDS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "DeserializeFromString", (PyCFunction) _wrap_PyNs3PriomapValue_DeserializeFromString, METH_KEYWORDS|METH_VARARGS, "DeserializeFromString(value, checker)\n\ntype: value: std::string\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
+    {(char *) "SerializeToString", (PyCFunction) _wrap_PyNs3PriomapValue_SerializeToString, METH_KEYWORDS|METH_VARARGS, "SerializeToString(checker)\n\ntype: checker: ns3::Ptr< ns3::AttributeChecker const >" },
     {(char *) "__copy__", (PyCFunction) _wrap_PyNs3PriomapValue__copy__, METH_NOARGS, NULL},
     {NULL, NULL, 0, NULL}
 };
