@@ -115,7 +115,7 @@
 #include "ns3/sigo-module.h"
 #include "ns3/jbr-module.h"
 #include "ns3/nearest-module.h"
-#include "ns3/livelytower-module.h"
+#include "ns3/lively-module.h"
 #include "ns3/applications-module.h"
 #include "ns3/itu-r-1411-los-propagation-loss-model.h"
 #include "ns3/ocb-wifi-mac.h"
@@ -130,7 +130,7 @@
 #include "ns3/netanim-module.h"
 #include "ns3/yans-wifi-helper.h"
 //#include "../src/shutoushu/model/shutoushu-routing-protocol.h"
-#include "ns3/hirai-module.h"
+//#include "ns3/hirai-module.h"
 
 using namespace ns3;
 using namespace dsr;
@@ -551,6 +551,7 @@ RoutingHelper::SetupRoutingPacketReceive (Ipv4Address addr, Ptr<Node> node)
 void
 RoutingHelper::SetupRoutingProtocol (NodeContainer &c)
 {
+  std::cout<<"sdjasdkjsafhfwue"<<"\n";
   AodvHelper aodv;
   OlsrHelper olsr;
   DsdvHelper dsdv;
@@ -560,8 +561,8 @@ RoutingHelper::SetupRoutingProtocol (NodeContainer &c)
   ShutoushuHelper shutoushu;
   SigoHelper sigo;
   JbrHelper jbr;
-  //NearestHelper nearest;
-  LivelytowerHelper livelytower;
+  NearestHelper nearest;
+  //LivelyHelper lively;
   DsrMainHelper dsrMain;
   Ipv4ListRoutingHelper list;
   InternetStackHelper internet;
@@ -640,14 +641,14 @@ RoutingHelper::SetupRoutingProtocol (NodeContainer &c)
                    "protocol done"
                 << "\n\n";
     break;
-    // case 9://Nearest Tower 
-    //   list.Add (nearest, 100);
-    //   m_protocolName = "Nearest Tower";
-    //   std::cout << "obstacle debug ---------------------------------------------------------nearest "
-    //                "protocol done"
-    //             << "\n\n";
-    //   break;
-    // //   case 10://Lively Tower 
+    case 9://Nearest Tower 
+      list.Add (nearest, 100);
+      m_protocolName = "Nearest Tower";
+      std::cout << "obstacle debug ---------------------------------------------------------nearest "
+                   "protocol done"
+                << "\n\n";
+      break;
+    // case 10://Lively Tower 
     //   list.Add (lively, 100);
     //   m_protocolName = "Lively Tower";
     //   std::cout << "obstacle debug ---------------------------------------------------------lively "
@@ -1743,7 +1744,7 @@ VanetRoutingExperiment::Run ()
 
   // m_traceFile = "src/wave/examples/no_signal/no_signal_" + std::to_string(node_num) + ".tcl"; //モビリティ入力ファイル
 
-  AnimationInterface anim ("fly_n");
+  AnimationInterface anim ("lively_test");
 
   // anim.UpdateNodeSize (1, 20, 1);
   // anim.UpdateNodeSize (40, 20, 1);

@@ -38,7 +38,6 @@ namespace hirai {
 enum MessageType {
   HIRAITYPE_SEND = 1, //HIRAI SEND
   HIRAITYPE_HELLO = 2 //HIRAI HELLO
-
 };
 
 /**

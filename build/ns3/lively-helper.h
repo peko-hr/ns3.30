@@ -18,8 +18,8 @@
  * Author: Alberto Gallegos <ramonet@fc.ritsumei.ac.jp>
  *         Ritsumeikan University, Shiga, Japan
  */
-#ifndef SAMPLE_HELPER_H
-#define SAMPLE_HELPER_H
+#ifndef LIVELY_HELPER_H
+#define LIVELY_HELPER_H
 
 #include "ns3/object-factory.h"
 #include "ns3/node.h"
@@ -29,7 +29,7 @@
 namespace ns3 {
 /**
  * \ingroup lively
- * \brief Helper class that adds SAMPLE routing to nodes.
+ * \brief Helper class that adds LIVELY routing to nodes.
  */
 class LivelyHelper : public Ipv4RoutingHelper
 {
@@ -51,7 +51,7 @@ public:
    *
    * This method will be called by ns3::InternetStackHelper::Install
    *
-   * \todo support installing SAMPLE on the subset of all available IP interfaces
+   * \todo support installing LIVELY on the subset of all available IP interfaces
    */
   virtual Ptr<Ipv4RoutingProtocol> Create (Ptr<Node> node) const;
   /**
@@ -68,17 +68,17 @@ public:
    * should have previously been called by the user.
    *
    * \param stream first stream index to use
-   * \param c NodeContainer of the set of nodes for which SAMPLE
+   * \param c NodeContainer of the set of nodes for which LIVELY
    *          should be modified to use a fixed stream
    * \return the number of stream indices assigned by this helper
    */
   int64_t AssignStreams (NodeContainer c, int64_t stream);
 
 private:
-  /** the factory to create SAMPLE routing object */
+  /** the factory to create LIVELY routing object */
   ObjectFactory m_agentFactory;
 };
 
 }
 
-#endif /* SAMPLE_HELPER_H */
+#endif /* LIVELY_HELPER_H */

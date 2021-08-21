@@ -7236,7 +7236,7 @@
   },
   {
     "directory": "/home/peko_ubu/workspace/ns-3-allinone/ns3.30/build",
-    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/hirai -I../src/hirai -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SQLITE3=1 -DHAVE_IF_TUN_H=1 -DHAVE_GSL=1 ../src/hirai/model/hirai-packet.cc -c -o/home/peko_ubu/workspace/ns-3-allinone/ns3.30/build/src/hirai/model/hirai-packet.cc.1.o",
+    "command": "/usr/bin/g++ -O0 -ggdb -g3 -Wall -Werror -std=c++11 -frounding-math -fstrict-aliasing -Wstrict-aliasing -fPIC -pthread -Isrc/hirai -I../src/hirai -I. -I.. -DNS3_BUILD_PROFILE_DEBUG -DNS3_ASSERT_ENABLE -DNS3_LOG_ENABLE -DHAVE_SYS_IOCTL_H=1 -DHAVE_IF_NETS_H=1 -DHAVE_NET_ETHERNET_H=1 -DHAVE_PACKET_H=1 -DHAVE_SQLITE3=1 -DHAVE_IF_TUN_H=1 -DHAVE_GSL=1 ../src/hirai/model/hirai-packet.cc -c -o/home/peko_ubu/workspace/ns-3-allinone/ns3.30/build/src/hirai/model/hirai-packet.cc.1.o",
     "file": "../src/hirai/model/hirai-packet.cc"
   },
   {

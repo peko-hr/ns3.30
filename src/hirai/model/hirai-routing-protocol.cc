@@ -76,6 +76,9 @@ int Grobal_StartTime = 20;
 int Grobal_SourceNodeNum = 10;
 int Grobal_Seed = 10008;
 
+
+
+
 RoutingProtocol::RoutingProtocol ()
 {
 }

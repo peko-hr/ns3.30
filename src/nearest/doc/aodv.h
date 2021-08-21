@@ -16,23 +16,23 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
  * Based on 
- *      NS-2 SAMPLE model developed by the CMU/MONARCH group and optimized and
+ *      NS-2 NEAREST model developed by the CMU/MONARCH group and optimized and
  *      tuned by Samir Das and Mahesh Marina, University of Cincinnati;
  * 
- *      SAMPLE-UU implementation by Erik Nordström of Uppsala University
- *      http://core.it.uu.se/core/index.php/SAMPLE-UU
+ *      NEAREST-UU implementation by Erik Nordström of Uppsala University
+ *      http://core.it.uu.se/core/index.php/NEAREST-UU
  *
  * Authors: Elena Buchatskaia <borovkovaes@iitp.ru>
  *          Pavel Boyko <boyko@iitp.ru>
  */
 
-#ifndef SAMPLE_H
-#define SAMPLE_H
+#ifndef NEAREST_H
+#define NEAREST_H
 
 /**
- * \defgroup nearest SAMPLE Routing
+ * \defgroup nearest NEAREST Routing
  *
- * This section documents the API of the ns-3 SAMPLE module. For a generic functional description, please refer to the ns-3 manual.
+ * This section documents the API of the ns-3 NEAREST module. For a generic functional description, please refer to the ns-3 manual.
  */
 
-#endif /* SAMPLE_H */
+#endif /* NEAREST_H */

@@ -14,6 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ * 
+ * 
+ * 
+ * 
+ * 
+ * チェック項目　ノード数　シミュレーション時間　ブロードキャスト開始時間　ファイル読み取りのファイル名
+ * 
+ ./waf --run "scratch/ns2-mobility-trace --traceFile=/home/peko_ubu/ped2000pas1000.tcl --nodeNum=3000 --duration=301.0 --logFile=ns2-mob.log"
+ ./waf --run "Lsgo-SimulationScenario --buildings=0 --protocol=2 --lossModel=4 --scenario=3 "
+ building=0 影響なし lossmodel=4 logdistance model
+
  *
  */
 #define NS_LOG_APPEND_CONTEXT                                                \
@@ -45,6 +56,7 @@
 #include <sstream>
 #include <vector>
 #include <random>
+#include <sys/stat.h>
 
 #include "ns3/mobility-module.h"
 
@@ -55,11 +67,17 @@ NS_LOG_COMPONENT_DEFINE ("NearestRoutingProtocol");
 namespace nearest {
 NS_OBJECT_ENSURE_REGISTERED (RoutingProtocol);
 
-/// UDP Port for SAMPLE control traffic
-const uint32_t RoutingProtocol::SAMPLE_PORT = 654;
-int posx = 0; //送信者の位置情報
-int posy = 0;
-int maxLenge = 0; // 受信者との距離マックス
+/// UDP Port for NEAREST control traffic
+const uint32_t RoutingProtocol::NEAREST_PORT = 654;
+int numVehicle = 0; //グローバル変数
+int broadcastCount = 0;
+int recvDistinationCount = 0;
+int Grobal_StartTime = 20;
+int Grobal_SourceNodeNum = 10;
+int Grobal_Seed = 10008;
+
+
+
 
 RoutingProtocol::RoutingProtocol ()
 {
@@ -95,7 +113,7 @@ RoutingProtocol::PrintRoutingTable (Ptr<OutputStreamWrapper> stream, Time::Unit 
   *stream->GetStream () << "Node: " << m_ipv4->GetObject<Node> ()->GetId ()
                         << "; Time: " << Now ().As (unit)
                         << ", Local time: " << GetObject<Node> ()->GetLocalTime ().As (unit)
-                        << ", SAMPLE Routing table" << std::endl;
+                        << ", NEAREST Routing table" << std::endl;
 
   //Print routing table here.
   *stream->GetStream () << std::endl;
@@ -114,7 +132,7 @@ RoutingProtocol::RouteOutput (Ptr<Packet> p, const Ipv4Header &header, Ptr<NetDe
                               Socket::SocketErrno &sockerr)
 {
 
-  //std::cout << "Route Ouput Node: " << m_ipv4->GetObject<Node> ()->GetId () << "\n";
+  //std::cout<<"Route Ouput Node: "<<m_ipv4->GetObject<Node> ()->GetId ()<<"\n";
   Ptr<Ipv4Route> route;
 
   if (!p)
@@ -172,7 +190,7 @@ RoutingProtocol::NotifyInterfaceUp (uint32_t i)
   NS_ASSERT (socket != 0);
   socket->SetRecvCallback (MakeCallback (&RoutingProtocol::RecvNearest, this));
   socket->BindToNetDevice (l3->GetNetDevice (i));
-  socket->Bind (InetSocketAddress (iface.GetLocal (), SAMPLE_PORT));
+  socket->Bind (InetSocketAddress (iface.GetLocal (), NEAREST_PORT));
   socket->SetAllowBroadcast (true);
   socket->SetIpRecvTtl (true);
   m_socketAddresses.insert (std::make_pair (socket, iface));
@@ -182,7 +200,7 @@ RoutingProtocol::NotifyInterfaceUp (uint32_t i)
   NS_ASSERT (socket != 0);
   socket->SetRecvCallback (MakeCallback (&RoutingProtocol::RecvNearest, this));
   socket->BindToNetDevice (l3->GetNetDevice (i));
-  socket->Bind (InetSocketAddress (iface.GetBroadcast (), SAMPLE_PORT));
+  socket->Bind (InetSocketAddress (iface.GetBroadcast (), NEAREST_PORT));
   socket->SetAllowBroadcast (true);
   socket->SetIpRecvTtl (true);
   m_socketSubnetBroadcastAddresses.insert (std::make_pair (socket, iface));
@@ -193,37 +211,6 @@ RoutingProtocol::NotifyInterfaceUp (uint32_t i)
     }
 
   NS_ASSERT (m_mainAddress != Ipv4Address ());
-
-  /*  for (uint32_t i = 0; i < m_ipv4->GetNInterfaces (); i++)
-        {
-
-          // Use primary address, if multiple
-          Ipv4Address addr = m_ipv4->GetAddress (i, 0).GetLocal ();
-        //  std::cout<<"############### "<<addr<<" |ninterface "<<m_ipv4->GetNInterfaces ()<<"\n";
-       
-
-              TypeId tid = TypeId::LookupByName ("ns3::UdpSocketFactory");
-              Ptr<Node> theNode = GetObject<Node> ();
-              Ptr<Socket> socket = Socket::CreateSocket (theNode,tid);
-              InetSocketAddress inetAddr (m_ipv4->GetAddress (i, 0).GetLocal (), SAMPLE_PORT);
-              if (socket->Bind (inetAddr))
-                {
-                  NS_FATAL_ERROR ("Failed to bind() ZEAL socket");
-                }
-              socket->BindToNetDevice (m_ipv4->GetNetDevice (i));
-              socket->SetAllowBroadcast (true);
-              socket->SetRecvCallback (MakeCallback (&RoutingProtocol::RecvNearest, this));
-              //socket->SetAttribute ("IpTtl",UintegerValue (1));
-              socket->SetRecvPktInfo (true);
-
-              m_socketAddresses[socket] = m_ipv4->GetAddress (i, 0);
-
-              //  NS_LOG_DEBUG ("Socket Binding on ip " << m_mainAddress << " interface " << i);
-
-              break;
-           
-        }
-*/
 }
 
 void
@@ -244,105 +231,158 @@ RoutingProtocol::NotifyRemoveAddress (uint32_t i, Ipv4InterfaceAddress address)
 void
 RoutingProtocol::DoInitialize (void)
 {
-  Ptr<MobilityModel> mobility = m_ipv4->GetObject<Node> ()->GetObject<MobilityModel> ();
-  Vector pos = mobility->GetPosition ();
-
-
   int32_t id = m_ipv4->GetObject<Node> ()->GetId ();
-  std::cout<<"--topology--  id " << id << "x_pos " << pos.x << "y_pos" << pos.y << "\n";
+  //int32_t time = Simulator::Now ().GetMicroSeconds ();
+  m_trans[id] = 1;
+
+  numVehicle++;
+  if (id == 1)
+    {
+      Simulator::Schedule (Seconds (Grobal_StartTime - 2), &RoutingProtocol::SourceAndDestination, this);
+      //std::cout << "a + " << "\n";
+      //Simulator::Schedule (Seconds (20.0), &RoutingProtocol::SendNearestBroadcast, this, id, 9, 100, 600, 0);
+      //SendNearestBroadcast(id, 9,100,600, 0);
+      //sourcecount[id]=1;
+      //source_time[id]=time;
+    }
+
+
+  //**結果出力******************************************//
+  for (int i = 1; i < 301; i++)
+    {
+      if (id == 0){
+        Simulator::Schedule (Seconds (i), &RoutingProtocol::SimulationResult,
+                             this); //結果出力関数
+                             }
+      Simulator::Schedule (Seconds (i), &RoutingProtocol::SetMyPos,this);
+    
+    }
+
+  for (int i = 0; i < Grobal_SourceNodeNum; i++)
+  {
+    //std::cout << "a + " << i << "\n";
+    Simulator::Schedule (Seconds (Grobal_StartTime + i), &RoutingProtocol::PreparationForSend, this);
+  }
   
-
-  //std::cout << "broadcast will be send\n";
-  //SendXBroadcast();
-  for (int i = 0; i < 100; i++)
-    {
-      if (id == 0)
-        {
-          // Simulator::Schedule (Seconds (i), &RoutingProtocol::SendXBroadcast, this);
-        }
-    }
-  for (int i = 1; i < 100; i++)
-    {
-      if (id == 0)
-        {
-          Simulator::Schedule (Seconds (i), &RoutingProtocol::SimulationResult,
-                               this); //結果出力関数
-          // std::cout << "time " << Simulator::Now ().GetMicroSeconds () << "\n";
-        }
-    }
 }
 
 void
-RoutingProtocol::RecvNearest (Ptr<Socket> socket)
+RoutingProtocol::SourceAndDestination ()
+{
+  std::cout << "\nsource function\n";
+  for (int i = 0; i < numVehicle; i++) ///node数　設定する
+    {
+      // if (m_my_posx[i] >= SourceLowX && m_my_posx[i] <= SourceHighX && m_my_posy[i] >= SourceLowY &&
+      //     m_my_posy[i] <= SourceHighY)
+      //   {
+          source_list.push_back (i);
+          des_list.push_back (i);
+          //std::cout<<"source list id" << i << " position x"<<m_my_posx[i]<<" y"<<m_my_posy[i]<<"\n";
+        // }
+    }
+
+  std::mt19937 get_rand_mt (Grobal_Seed);
+
+
+  std::shuffle (des_list.begin (), des_list.end (), get_rand_mt);
+  std::shuffle (source_list.begin (), source_list.end (), get_rand_mt);
+
+  
+  for (int i = 0; i < 10; i++)
+    {
+      std::cout << "shuffle source id" << source_list[i] << "\n";
+    }
+  std::cout << "\nshuffle destination id" << des_list[0] << "\n\n";
+
+
+}// source list random 10kotoru
+
+void
+RoutingProtocol::PreparationForSend ()
 {
   int32_t id = m_ipv4->GetObject<Node> ()->GetId ();
-  std::cout << "In recv Nearest(Node " << m_ipv4->GetObject<Node> ()->GetId () << ")\n";
-  Ptr<MobilityModel> mobility = m_ipv4->GetObject<Node> ()->GetObject<MobilityModel> ();
-  Vector recvpos = mobility->GetPosition ();
+  int time = Simulator::Now ().GetSeconds ();
 
-  Address sourceAddress;
-  Ptr<Packet> packet = socket->RecvFrom (sourceAddress);
-  TypeHeader tHeader (SAMPLETYPE_HELLO);
-  packet->RemoveHeader (tHeader);
-
-  HelloHeader helloheader;
-  packet->RemoveHeader (helloheader); //近隣ノードからのhello packet
-  //int32_t recv_hello_id = helloheader.GetNodeId (); //NOde ID
-  int32_t recv_hello_posx = helloheader.GetPosX (); //Node xposition
-  int32_t recv_hello_posy = helloheader.GetPosY (); //Node yposition
-  int send_road = distinctionRoad (recv_hello_posx, recv_hello_posy);
-  int recv_road = distinctionRoad (recvpos.x, recvpos.y);
-
-  double distance = std::sqrt ((recv_hello_posx - recvpos.x) * (recv_hello_posx - recvpos.x) +
-                               (recv_hello_posy - recvpos.y) * (recv_hello_posy - recvpos.y));
-
-  if (send_road != recv_road) //受信ノードと送信ノードの道路IDが違うならば
+  if (time >= Grobal_StartTime)
     {
-      // std::cout << "異なる道路\n";
-      recvCount[id]++;
-      // std::cout << "In recv Nearest(Node " << m_ipv4->GetObject<Node> ()->GetId () << ")"
-      //           << "x=" << recvpos.x << "y=" << recvpos.y << "distance" << distance << "\n";
-    }
-  else
-    {
-    }
+      //std::cout<<"time" << time - Grobal_StartTime << "\n";
+      //std::cout<<"id" << id << "\n"; se
+      //std::cout<<"source_list" << source_list[time - Grobal_StartTime] << "\n";
+      if (id == source_list[time - Grobal_StartTime])
+        {
+          int index_time =
+              time -
+              Grobal_StartTime; //example time16 simstarttime15のときm_source_id = 1 すなわち２つめのsourceid
 
-  if (distance > maxLenge)
-    maxLenge = distance;
+          Ptr<MobilityModel> mobility = m_ipv4->GetObject<Node> ()->GetObject<MobilityModel> ();
+          Vector mypos = mobility->GetPosition ();
+          //int MicroSeconds = Simulator::Now ().GetMicroSeconds ();
+          //m_start_time[des_list[index_time]] = MicroSeconds + 300000; //秒数をずらし多分足す
+          //std::cout << "m_start_time" << m_start_time[des_list[index_time]] << "\n";
+          double shift_time = 0.3; //送信時間を0.3秒ずらす
 
-  if (distance > 150)
-    std::cout << "送信者との距離 " << distance << "\n";
+          // SendLsgoBroadcast (0, des_list[index_time], m_my_posx[des_list[index_time]], m_my_posy[des_list[index_time]], 1);
+          Simulator::Schedule (Seconds (shift_time), &RoutingProtocol::SendNearestBroadcast, this, source_list[index_time],
+                               des_list[0], m_my_posx[des_list[0]], m_my_posy[des_list[0]], 1);
+          sourcecount[id] = 1;
+          std::cout<< "\n\nid" << source_list[index_time] << " broadcast" << "\n";
+          //std::cout<< "\n\n\nid" << source_list[1] << " broadcast" << "\n";
+          //std::cout<< "\n\n\nid" << source_list[2] << " broadcast" << "\n";
+          //std::cout<< "\n\n\nid" << source_list[3] << " broadcast" << "\n";
+          std::cout << "source node point x=" << mypos.x << " y=" << mypos.y
+                  //  << "des node point x=" << m_my_posx[des_list[index_time]]
+                  //  << "y=" << m_my_posy[des_list[index_time]] 
+                  << "\n";
+        }
+    }
+}
+
+
+void
+RoutingProtocol::SendToNearest (Ptr<Socket> socket, Ptr<Packet> packet, Ipv4Address destination,
+                                  int32_t hopcount, int32_t des_id)
+{
+      broadcastCount++;
+      socket->SendTo (packet, 0, InetSocketAddress (destination, NEAREST_PORT));
+      //int time = Simulator::Now ().GetSeconds ();
+
+      //int index_time = time - Grobal_StartTime; 
+      //example time16 simstarttime15のときm_source_id = 1 すなわち２つめのsourceid
 }
 
 void
-RoutingProtocol::SendXBroadcast (void)
+RoutingProtocol::SendNearestBroadcast (int32_t pri_value, int32_t des_id, int32_t des_x,
+                                         int32_t des_y, int32_t hopcount) //pri_value 自分のid
 {
+
   for (std::map<Ptr<Socket>, Ipv4InterfaceAddress>::const_iterator j = m_socketAddresses.begin ();
        j != m_socketAddresses.end (); ++j)
     {
-      int32_t id = m_ipv4->GetObject<Node> ()->GetId ();
-
+      //int32_t id = m_ipv4->GetObject<Node> ()->GetId ();
       Ptr<MobilityModel> mobility = m_ipv4->GetObject<Node> ()->GetObject<MobilityModel> ();
       Vector mypos = mobility->GetPosition ();
-      posx = mypos.x;
-      posy = mypos.y;
-      std::cout << "id" << id << "broadcast"
-                << "x=" << posx << "y=" << posy << "time" << Simulator::Now ().GetSeconds ()
-                << "\n";
+
+
       Ptr<Socket> socket = j->first;
       Ipv4InterfaceAddress iface = j->second;
       Ptr<Packet> packet = Create<Packet> ();
 
-      // RrepHeader rrepHeader (0, 3, Ipv4Address ("10.1.1.15"), 5, Ipv4Address ("10.1.1.13"),
-      //                        Seconds (3));
-      // packet->AddHeader (rrepHeader);
-      HelloHeader helloHeader (id, mypos.x, mypos.y);
-      packet->AddHeader (helloHeader);
+      if (hopcount != 0) //source node じゃなかったら
+        {
+          hopcount++;
+        }
+      // SendHeader sendHeader (des_id, des_x, des_y, hopcount, pri_id[1], pri_id[2], pri_id[3],
+      //                        pri_id[4], pri_id[5]);
 
-      TypeHeader tHeader (SAMPLETYPE_HELLO);
+      SendHeader sendHeader (des_id, des_x, des_y, hopcount, mypos.x, mypos.y, pri_value,
+                            0, 0);
+
+      packet->AddHeader (sendHeader);
+
+      TypeHeader tHeader (NEARESTTYPE_SEND);
       packet->AddHeader (tHeader);
 
-      // Send to all-hosts broadcast if on /32 addr, subnet-directed otherwise
+     
       Ipv4Address destination;
       if (iface.GetMask () == Ipv4Mask::GetOnes ())
         {
@@ -352,84 +392,276 @@ RoutingProtocol::SendXBroadcast (void)
         {
           destination = iface.GetBroadcast ();
         }
-      socket->SendTo (packet, 0, InetSocketAddress (destination, SAMPLE_PORT));
-      std::cout << "broadcast sent\n";
+
+        Time Jitter = Time (MicroSeconds (m_uniformRandomVariable->GetInteger (0, 50000)));
+        Simulator::Schedule (Jitter, &RoutingProtocol::SendToNearest, this,
+                                 socket, packet, destination, hopcount, des_id);
+        
     }
-}
+} // namespace nearest
 
-int
-RoutingProtocol::distinctionRoad (int x_point, int y_point)
+void
+RoutingProtocol::RecvNearest (Ptr<Socket> socket)
 {
-    /// 道路1〜30  31〜61
-  int gridRange = 200;
-  int x = 0;
-  int y = 0;
-  int colomnCount = 1;
-  int interRange = 10; //交差点の大きさ interRange × interRange の正方形
+  int32_t id = m_ipv4->GetObject<Node> ()->GetId ();
+  int time = Simulator::Now ().GetMicroSeconds ();
+  Ptr<MobilityModel> mobility = m_ipv4->GetObject<Node> ()->GetObject<MobilityModel> ();
+  Vector mypos = mobility->GetPosition (); //受信したやつの位置情報
+  double sourceDistance;
+  double myDistance;
 
-  for (int roadId = 1; roadId <= 60; roadId++)
-    {   
-        if (roadId <= 30)
+  Address sourceAddress;
+  Ptr<Packet> packet = socket->RecvFrom (sourceAddress);
+  TypeHeader tHeader (NEARESTTYPE_HELLO);
+  packet->RemoveHeader (tHeader);
+
+  if (!tHeader.IsValid ())
+    {
+      NS_LOG_DEBUG ("Senko protocol message " << packet->GetUid ()
+                                              << " with unknown type received: " << tHeader.Get ()
+                                              << ". Drop");
+      return; // drop
+    }
+  switch (tHeader.Get ())
+    {
+      case NEARESTTYPE_HELLO: { //hello message を受け取った場合
+
+        // if (m_trans[id] == 0)
+        //   break;
+        HelloHeader helloheader;
+        packet->RemoveHeader (helloheader); //近隣ノードからのhello packet
+        int32_t recv_hello_id = helloheader.GetNodeId (); //NOde ID
+        int32_t recv_hello_posx = helloheader.GetPosX (); //Node xposition
+        int32_t recv_hello_posy = helloheader.GetPosY (); //Node yposition
+        //int32_t recv_hello_time = Simulator::Now ().GetMicroSeconds (); //
+
+        // // ////*********recv hello packet log*****************////////////////
+        std::cout << "Node ID " << id << "が受信したHello packetは"
+                  << "id:" << recv_hello_id << "xposition" << recv_hello_posx << "yposition"
+                  << recv_hello_posy << "\n";
+        // // ////*********************************************////////////////
+        SaveXpoint (recv_hello_id, recv_hello_posx);
+        SaveYpoint (recv_hello_id, recv_hello_posy);
+        //SaveRecvTime (recv_hello_id, recv_hello_time);
+        // SaveRelation (recv_hello_id, recv_hello_posx, recv_hello_posy);
+
+        break; //breakがないとエラー起きる
+      }
+      case NEARESTTYPE_SEND: {
+
+        SendHeader sendheader;
+        packet->RemoveHeader (sendheader);
+
+        int32_t des_id = sendheader.GetDesId ();
+        int32_t des_x = sendheader.GetPosX ();
+        int32_t des_y = sendheader.GetPosY ();
+        int32_t hopcount = sendheader.GetHopcount ();
+        int32_t packet_x = sendheader.GetId1 (); //送信元のx座標
+        int32_t packet_y = sendheader.GetId2 (); //送信元のy座標
+        int32_t source_id = sendheader.GetId3 (); 
+
+        sourceDistance = getDistance (packet_x,  packet_y,  des_x, des_y); //送信車両と宛先ノードとの距離
+        myDistance = getDistance (mypos.x,  mypos.y,  des_x,  des_y); //自分と宛先ノードとの距離
+        
+
+        if (des_id == id || myDistance < 1000) //宛先が自分だったら
           {
-            if (x + interRange < x_point && x_point < x + gridRange - interRange && y - interRange < y_point && y_point < y + interRange) 
-            {
-              return roadId;
-            }
-            if(colomnCount == 5)
-            {
-              colomnCount = 1;
-              x = 0;
-              y = y + gridRange;
-            }
-            else {
-              x = x+ gridRange;
-              colomnCount++;
+            if(destinationcount[source_id]!=1){//後で直す
+            destinationcount[source_id]=1;
+            std::cout << "time" << Simulator::Now ().GetMicroSeconds () << "  id" << id << "のDisまでの距離は" << myDistance 
+                      << " で受信しました " << "source_id" << source_id << "　source_x"<<packet_x<<"　source_y"<<packet_y<<" 受信成功しました-------------\n\n";
+            //std::cout << "id" << id << " myDistance" << myDistance << "\n";
+            des_time[source_id] = time;//あとで直す
             }
 
-            if(roadId == 30)
+          // p_recv_x.push_back (mypos.x);
+          // p_recv_y.push_back (mypos.y);
+          // p_recv_time.push_back (Simulator::Now ().GetMicroSeconds ());
+          // p_hopcount.push_back (hopcount);
+          // p_recv_id.push_back (id);
+          // //p_source_id.push_back (send_id);
+          // p_destination_id.push_back (des_id);
+          // p_destination_x.push_back (des_x);
+          // p_destination_y.push_back (des_y);
+          // p_pri_1.push_back (pri_id[0]);
+          // p_pri_2.push_back (pri_id[1]);
+          // p_pri_3.push_back (pri_id[2]);
+          break;
+          }
+          else{
+            
+
+            if(sourceDistance > myDistance)
             {
-              x = 0;
-              y = 0;
+              // SendNearestBroadcast (int32_t pri_value, int32_t des_id, int32_t des_x,
+              //                            int32_t des_y, int32_t hopcount) 
+              //std::cout<<"id"<<id<<"は自分のほうが近いので再ブロードキャストを行います\n";
+              //std::cout<<"destination id"<<des_id<<" des_x"<<des_x<<" des_y"<<des_y<<"\n";
+              SendNearestBroadcast(source_id, des_id, des_x, des_y, hopcount);
+              //std::cout << "sourceDistance " << sourceDistance << "\n" << "myDistance" << myDistance << "\n\n";
             }
           }
-        else //31〜
-          {
-            if (x - interRange < x_point && x_point < x + interRange && y +  interRange < y_point && y_point < y + gridRange -  interRange) 
-            {
-              return roadId;
-            }
-            if(colomnCount == 6)
-            {
-              colomnCount = 1;
-              x = 0;
-              y = y + gridRange;
-            }
-            else {
-              x = x+ gridRange;
-              colomnCount++;
-            }
+        break;
       }
     }
-  return 0; // ０を返す = 交差点ノード
 }
 
 void
-RoutingProtocol::SimulationResult (void) //
+RoutingProtocol::SaveXpoint (int32_t map_id, int32_t map_xpoint)
 {
-  if (Simulator::Now ().GetSeconds () == 16)
-    {
-      for (auto itr = recvCount.begin (); itr != recvCount.end (); itr++)
-        {
-          std::cout << "recv hello packet id = " << itr->first // キーを表示
-                    << "取得数 " << itr->second << "\n"; // 値を表示
-        }
-      std::cout << "recv max lenge " << maxLenge << "\n";
-      std::cout << "m_beta" << 9.0 << "\n";
-      std::cout << "m_beta" << 30.2 << "\n";
-    }
+  m_xpoint[map_id] = map_xpoint;
 }
 
-std::map<int, int> RoutingProtocol::recvCount;
+void
+RoutingProtocol::SaveYpoint (int32_t map_id, int32_t map_ypoint)
+{
+  m_ypoint[map_id] = map_ypoint;
+}
 
-} //namespace nearest
-} //namespace ns3
+int
+RoutingProtocol::getDistance (double x, double y, double x2, double y2)
+{
+  double distance = std::sqrt ((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y));
+
+  return (int) distance;
+}
+
+double
+RoutingProtocol::getAngle (double a_x, double a_y, double b_x, double b_y, double c_x, double c_y)
+{
+  double BA_x = a_x - b_x; //ベクトルAのｘ座標
+  double BA_y = a_y - b_y; //ベクトルAのy座標
+  double BC_x = c_x - b_x; //ベクトルCのｘ座標
+  double BC_y = c_y - b_y; //ベクトルCのy座標
+
+  double BABC = BA_x * BC_x + BA_y * BC_y;
+  double BA_2 = (BA_x * BA_x) + (BA_y * BA_y);
+  double BC_2 = (BC_x * BC_x) + (BC_y * BC_y);
+
+  //double radian = acos (cos);
+  //double angle = radian * 180 / 3.14159265;
+
+  double radian = acos (BABC / (std::sqrt (BA_2 * BC_2)));
+  double angle = radian * 180 / 3.14159265; //ラジアンから角度に変換
+  return angle;
+}
+
+void
+RoutingProtocol::SetMyPos (void)
+{
+  int32_t id = m_ipv4->GetObject<Node> ()->GetId ();
+  Ptr<MobilityModel> mobility = m_ipv4->GetObject<Node> ()->GetObject<MobilityModel> ();
+  Vector mypos = mobility->GetPosition ();
+  m_my_posx[id] = mypos.x;
+  m_my_posy[id] = mypos.y;
+}
+
+
+void
+RoutingProtocol::Trans (int node_id)
+{
+  m_trans[node_id] = 1;
+}
+
+void
+RoutingProtocol::NoTrans (int node_id)
+{
+  //m_trans[node_id] = 0;
+  //std::cout << "time" << Simulator::Now ().GetSeconds () << "node id" << node_id
+  //<< "が通信不可能になりました\n";
+}
+
+
+// シミュレーション結果の出力関数
+void
+RoutingProtocol::SimulationResult (void) //
+{
+  int desCount = 0;
+
+  std::cout<<"time" << Simulator::Now().GetSeconds ()<< "\n";
+  int totaldelay;
+
+  if(Simulator::Now().GetSeconds () == 300)
+  {
+    for (auto itr = sourcecount.begin (); itr != sourcecount.end (); itr++)
+            {
+              desCount++;
+              std::cout <<"source id keytest" << itr->first << "\n";
+            }
+     for (auto itr = des_time.begin (); itr != des_time.end (); itr++)
+            {
+              std::cout <<"destime keytest" << itr->first << "\n";
+              totaldelay =  des_time[itr->first] - source_time[itr->first];
+            }      
+  
+  std::cout<<"recv count" << destinationcount.size()  << "\n";
+  std::cout<<"PDR" << double(destinationcount.size()) / double(sourcecount.size())  << "\n";
+  std::cout<<"Delay" << double(totaldelay) / double (des_time.size()) << "\n";
+  std::cout<< "broadcast count" << broadcastCount << "\n";
+  std::cout<<"Overhead"<< double(broadcastCount) / double(destinationcount.size()) <<"\n";
+  std::cout << "broadcast数は" << broadcastCount << "\n";
+
+  std::string filename;
+  //std::string send_filename;
+
+  std::string grid_dir = "data/grid_side_Range600";
+  std::cout<<"grid_side packet csv \n";
+    filename = grid_dir + "/grid_side_" + std::to_string (Grobal_Seed) + "nodenum_" +
+                       std::to_string (numVehicle) + ".csv";
+    //send_filename = shadow_dir + "/send_lsgo/lsgo-seed_" + std::to_string (Grobal_Seed) + "nodenum_" +
+    //                        std::to_string (numVehicle) + ".csv";
+        
+    const char *dir = grid_dir.c_str();
+    struct stat statBuf;
+
+    if (stat(dir, &statBuf) != 0) //directoryがなかったら
+    {
+      std::cout<<"ディレクトリが存在しないので作成します\n";
+      mkdir(dir, S_IRWXU);
+    }
+    
+      std::ofstream result (filename);
+      result << "PDR"
+             << ","
+             << "delay"
+             << ","
+             << "Overhead" << std::endl;
+
+      result << double(destinationcount.size()) / double(sourcecount.size())
+             << ","
+             << double(totaldelay) / double (des_time.size()) 
+             << ","
+             << double(broadcastCount) / double(destinationcount.size())  << std::endl;
+      
+      // for (int i = 0; i < packetCount; i++)
+      //   {
+      //     packetTrajectory << p_recv_x[i] << ", "<< p_recv_y[i] << ", " << p_recv_time[i]
+      //                      << ", " << p_hopcount[i] << ", " << p_recv_id[i] << ", "
+      //                      << p_destination_id[i] << ", "
+      //                      << p_destination_x[i] << ", " << p_destination_y[i] << ", " << p_pri_1[i]
+      //                      << ", " << p_pri_2[i] << ", " << p_pri_3[i] << std::endl;
+      //   }
+  }
+}
+  
+
+std::map<int, int> RoutingProtocol::broadcount; //key 0 value broudcast数
+std::map<int, int> RoutingProtocol::m_start_time; //key destination_id value　送信時間
+std::map<int, int> RoutingProtocol::m_finish_time; //key destination_id value 受信時間
+std::map<int, double> RoutingProtocol::m_my_posx; // key node id value position x
+std::map<int, double> RoutingProtocol::m_my_posy; // key node id value position y
+std::map<int, int> RoutingProtocol::m_trans; //key node id value　通信可能かどうか1or0
+std::map<int, int> RoutingProtocol::m_stop_count; //key node id value 止まっている時間カウント
+std::map<int, int> RoutingProtocol::m_node_start_time; //key node id value 止まっている時間カウント
+std::map<int, int> RoutingProtocol::m_node_finish_time; //key node id value 止まっている時間カウント
+std::map<int, int> RoutingProtocol::m_source_id;
+std::map<int, int> RoutingProtocol::m_des_id;
+std::map<int, int> RoutingProtocol::destinationcount;
+std::map<int, int> RoutingProtocol::sourcecount;
+std::map<int, int> RoutingProtocol::source_time;
+std::map<int, int> RoutingProtocol::des_time;
+std::vector<int> RoutingProtocol::source_list;
+std::vector<int> RoutingProtocol::des_list;
+
+} // namespace nearest
+} // namespace ns3

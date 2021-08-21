@@ -64,7 +64,7 @@
 //#include "../src/hirai/model/hirai-routing-protocol.cc"
 //#include "ns3/senko-module.h"
 #include "ns3/hirai-module.h"
-#include "ns3/nearest-module.h"
+//#include "ns3/nearest-module.h"
 //#include "ns3/lively-module.h"
 #include "ns3/netanim-module.h"
 //#include "ns3/sample-module.h"

@@ -1,22 +1,22 @@
 .. include:: replace.txt
 
-Ad Hoc On-Demand Distance Vector (SAMPLE)
+Ad Hoc On-Demand Distance Vector (NEAREST)
 ---------------------------------------
 
 This model implements the base specification of the Ad Hoc On-Demand 
-Distance Vector (SAMPLE) protocol. The implementation is based on 
+Distance Vector (NEAREST) protocol. The implementation is based on 
 :rfc:`3561`.
 
 The model was written by Elena Buchatskaia and Pavel Boyko of ITTP RAS,
-and is based on the ns-2 SAMPLE model developed by the CMU/MONARCH group
+and is based on the ns-2 NEAREST model developed by the CMU/MONARCH group
 and optimized and tuned by Samir Das and Mahesh Marina, University of
-Cincinnati, and also on the SAMPLE-UU implementation by Erik Nordström of 
+Cincinnati, and also on the NEAREST-UU implementation by Erik Nordström of 
 Uppsala University.
 
 Model Description
 *****************
 
-The source code for the SAMPLE model lives in the directory `src/nearest`.
+The source code for the NEAREST model lives in the directory `src/nearest`.
 
 Design
 ++++++
@@ -34,7 +34,7 @@ Parameter default values are drawn from the RFC and allow the
 enabling/disabling protocol features, such as broadcasting HELLO messages, 
 broadcasting data packets and so on.
 
-SAMPLE discovers routes on demand.  Therefore, the SAMPLE model buffers all 
+NEAREST discovers routes on demand.  Therefore, the NEAREST model buffers all 
 packets while a route request packet (RREQ) is disseminated. 
 A packet queue is implemented in nearest-rqueue.cc. A smart pointer to 
 the packet, ``ns3::Ipv4RoutingProtocol::ErrorCallback``,
@@ -50,10 +50,10 @@ Some elements of protocol operation aren't described in the RFC. These
 elements generally concern cooperation of different OSI model layers.
 The model uses the following heuristics:
 
-* This SAMPLE implementation can detect the presence of unidirectional 
+* This NEAREST implementation can detect the presence of unidirectional 
   links and avoid them if necessary.  If the node the model receives an
   RREQ for is a neighbor, the cause may be a unidirectional link.
-  This heuristic is taken from SAMPLE-UU implementation and can be disabled.
+  This heuristic is taken from NEAREST-UU implementation and can be disabled.
 * Protocol operation strongly depends on broken link detection mechanism. 
   The model implements two such heuristics.  First, this implementation 
   support HELLO messages. However HELLO messages are not a good way to 
@@ -83,7 +83,7 @@ are not implemented:
 #. RREP, RREQ and HELLO message extensions.
 
 These techniques require direct access to IP header, which contradicts
-the assertion from the SAMPLE RFC that SAMPLE works over UDP.  This model uses
+the assertion from the NEAREST RFC that NEAREST works over UDP.  This model uses
 UDP for simplicity, hindering the ability to implement certain protocol 
 optimizations. The model doesn't use low layer raw sockets because they 
 are not portable.
