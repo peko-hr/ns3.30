@@ -2531,7 +2531,7 @@ VanetRoutingExperiment::SetupScenario ()
 
       m_mobility = 1;
       m_nNodes = node_num=3000; //変更すべきところ
-      m_TotalSimTime = Grobal_StartTime + Grobal_SourceNodeNum + 2; //変更すべきところ
+      m_TotalSimTime = 301; //変更すべきところ
       m_nodeSpeed = 0;
       m_nodePause = 0;
       m_CSVfileName = "";
