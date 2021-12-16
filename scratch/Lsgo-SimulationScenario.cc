@@ -489,7 +489,7 @@ private:
 
   double m_TotalSimTime; ///< seconds
   uint32_t
-      m_protocol; ///< routing protocol; 0=NONE, 1=OLSR, 2=AODV, 3=DSDV, 4=DSR, 5=SAMPLE 6=LSGO 7=SHUTOUSHU 8=SIGO 9=NEAREST 10=LIVELY 11=HYBRID
+      m_protocol; ///< routing protocol; 0=NONE, 1=OLSR, 2=AODV, 3=DSDV, 4=DSR, 5=SAMPLE 6=LSGO 7=SHUTOUSHU 8=SIGO 9=Inside battery 10=Inside epidemic 11=Inside greedy 12=Outside adaptive 13=Outside sales
   uint32_t m_port; ///< port
   uint32_t m_nSinks; ///< number of sink nodes (< all nodes)
   int m_routingTables; ///< dump routing table (at t=5 sec).  0=No, 1=Yes
@@ -563,6 +563,7 @@ RoutingHelper::SetupRoutingProtocol (NodeContainer &c)
   JbrHelper jbr;
   NearestHelper nearest;
   LivelyHelper lively;
+//  HybridHelper hybrid;
   DsrMainHelper dsrMain;
   Ipv4ListRoutingHelper list;
   InternetStackHelper internet;
@@ -641,26 +642,42 @@ RoutingHelper::SetupRoutingProtocol (NodeContainer &c)
                    "protocol done"
                 << "\n\n";
     break;
-    case 9://Nearest Tower 
+    case 9://Inside Battery 
       list.Add (nearest, 100);
-      m_protocolName = "Nearest Tower";
-      std::cout << "obstacle debug ---------------------------------------------------------nearest "
+      m_protocolName = "Inside Battery";
+      std::cout << "obstacle debug ---------------------------------------------------------inside battery "
                    "protocol done"
                 << "\n\n";
       break;
-    case 10://Lively Tower 
+    case 10://Inside epidemic 
       list.Add (lively, 100);
-      m_protocolName = "Lively Tower";
-      std::cout << "obstacle debug ---------------------------------------------------------lively "
+      m_protocolName = "Inside epidemic";
+      std::cout << "obstacle debug ---------------------------------------------------------inside epidemic "
                    "protocol done"
                 << "\n\n";
       break;
-      // case 11://Hybrid Tower 
-      // list.Add (hybrid, 100);
-      // m_protocolName = "Hybrid Tower";
-      // std::cout << "obstacle debug ---------------------------------------------------------hybrid "
-      //              "protocol done"
-      //           << "\n\n";
+    case 11://Inside greedy 
+      list.Add (nearest, 100);
+      m_protocolName = "Inside greedy";
+      std::cout << "obstacle debug ---------------------------------------------------------inside greedy "
+                    "protocol done"
+                 << "\n\n";
+
+      break;
+    case 12://Outside adaptive 
+      list.Add (nearest, 100);
+      m_protocolName = "Outside adaptive";
+      std::cout << "obstacle debug ---------------------------------------------------------outside adaptive "
+                    "protocol done"
+                 << "\n\n";
+
+      break;
+    case 13://Outside sales 
+      list.Add (nearest, 100);
+      m_protocolName = "Outside sales";
+      std::cout << "obstacle debug ---------------------------------------------------------outside sales "
+                    "protocol done"
+                 << "\n\n";
 
     default:
       NS_FATAL_ERROR ("No such protocol:" << m_protocol);
@@ -2538,10 +2555,10 @@ VanetRoutingExperiment::SetupScenario ()
       m_CSVfileName = "";
       std::cout << "\n\n\n\n\n\n\n tcl file = " << m_traceFile << "\n\n\n\n\n\n";
 
-      // hirai Nearest Tower用
+      // hirai Inside Battery用
       if (m_protocol == 9)
       {
-        std::cout << " Nearest Tower start \n";
+        std::cout << " Inside Battery start \n";
       }
 
 
@@ -2574,10 +2591,73 @@ VanetRoutingExperiment::SetupScenario ()
       //     Topology::LoadBuildings(bldgFile);
       //   }
 
-    // hirai Lively Tower用
+    // hirai Inside epidemic用
       if (m_protocol == 10)
       {
-        std::cout << " Lively Tower start \n";
+        std::cout << " Inside epidemic start \n";
+      }
+      //以下、よくわからないので残したまま
+      if (m_txSafetyRange3 == 150.0)
+        {
+          // txdistances
+          m_txSafetyRange1 = 50.0;
+          m_txSafetyRange2 = 100.0;
+          m_txSafetyRange3 = 200.0;
+          m_txSafetyRange4 = 300.0;
+          m_txSafetyRange5 = 400.0;
+          m_txSafetyRange6 = 500.0;
+          m_txSafetyRange7 = 600.0;
+          m_txSafetyRange8 = 800.0;
+          m_txSafetyRange9 = 1000.0;
+          m_txSafetyRange10 = 1500.0;
+        }
+
+    // hirai Inside Greeedy用
+      if (m_protocol == 11)
+      {
+        std::cout << " Inside Greedy start \n";
+      }
+      //以下、よくわからないので残したまま
+      if (m_txSafetyRange3 == 150.0)
+        {
+          // txdistances
+          m_txSafetyRange1 = 50.0;
+          m_txSafetyRange2 = 100.0;
+          m_txSafetyRange3 = 200.0;
+          m_txSafetyRange4 = 300.0;
+          m_txSafetyRange5 = 400.0;
+          m_txSafetyRange6 = 500.0;
+          m_txSafetyRange7 = 600.0;
+          m_txSafetyRange8 = 800.0;
+          m_txSafetyRange9 = 1000.0;
+          m_txSafetyRange10 = 1500.0;
+        }
+
+    // hirai Outside adaptive用
+      if (m_protocol == 12)
+      {
+        std::cout << " Outside adaptive start \n";
+      }
+      //以下、よくわからないので残したまま
+      if (m_txSafetyRange3 == 150.0)
+        {
+          // txdistances
+          m_txSafetyRange1 = 50.0;
+          m_txSafetyRange2 = 100.0;
+          m_txSafetyRange3 = 200.0;
+          m_txSafetyRange4 = 300.0;
+          m_txSafetyRange5 = 400.0;
+          m_txSafetyRange6 = 500.0;
+          m_txSafetyRange7 = 600.0;
+          m_txSafetyRange8 = 800.0;
+          m_txSafetyRange9 = 1000.0;
+          m_txSafetyRange10 = 1500.0;
+        }
+
+    // hirai Outside sales用
+      if (m_protocol == 13)
+      {
+        std::cout << " Outside sales start \n";
       }
       //以下、よくわからないので残したまま
       if (m_txSafetyRange3 == 150.0)
