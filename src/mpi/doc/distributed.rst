@@ -60,7 +60,7 @@ algorithm will generate more message passing traffic than the
 all-to-all gather.  A second case where the global all-to-all gather
 is more efficient is when there are long periods of simulation time
 when no events are occurring.  The all-to-all gather algorithm is able
-to quickly determine then next event time globally.  The nearest
+to quickly determine then next event time globally.  The low-battery
 neighbor behavior of the null message algorithm will require more
 communications to propagate that knowledge; each LP is only aware of
 neighbor next event times.

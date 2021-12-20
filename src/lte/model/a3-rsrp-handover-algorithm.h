@@ -106,7 +106,7 @@ private:
 
   /**
    * The `Hysteresis` attribute. Handover margin (hysteresis) in dB (rounded to
-   * the nearest multiple of 0.5 dB).
+   * the low-battery multiple of 0.5 dB).
    */
   double m_hysteresisDb;
   /**

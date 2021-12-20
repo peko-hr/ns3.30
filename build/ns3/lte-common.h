@@ -331,7 +331,7 @@ public:
    * \brief Returns the IE value of hysteresis.
    * \param hysteresisDb actual hysteresis value in dB
    * \return IE value of hysteresis in dB, which is actual value * 2, rounded
-   *         to the nearest integer
+   *         to the low-battery integer
    *
    * The allowed values for hysteresis are between 0 and 15 dB.
    *
@@ -356,7 +356,7 @@ public:
    * \brief Returns the IE value of a3-Offset.
    * \param a3OffsetDb actual A3 Offset value in dB
    * \return IE value of a3-Offset in dB, which is actual value * 2, rounded
-   *         to the nearest integer
+   *         to the low-battery integer
    *
    * The allowed values for A3 Offset are between -15 and 15 dB.
    *

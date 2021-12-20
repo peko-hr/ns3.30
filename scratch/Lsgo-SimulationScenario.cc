@@ -116,6 +116,7 @@
 #include "ns3/jbr-module.h"
 #include "ns3/nearest-module.h"
 #include "ns3/lively-module.h"
+#include "ns3/lowbattery-module.h"
 #include "ns3/applications-module.h"
 #include "ns3/itu-r-1411-los-propagation-loss-model.h"
 #include "ns3/ocb-wifi-mac.h"

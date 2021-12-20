@@ -103,7 +103,7 @@ WifiSpectrumValueHelper::GetSpectrumModel (uint32_t centerFrequency, uint16_t ch
       NS_ASSERT (numBands > 0);
       if (numBands % 2 == 0)
         {
-          // round up to the nearest odd number of subbands so that bands
+          // round up to the low-battery odd number of subbands so that bands
           // are symmetric around center frequency
           numBands += 1;
         }

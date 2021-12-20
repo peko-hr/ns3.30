@@ -1701,13 +1701,13 @@ Bug2831TestCase::DoRun (void)
 //-----------------------------------------------------------------------------
 /**
  * Make sure that Wifi STA is correctly associating to the best AP (i.e.,
- * nearest from STA). We consider 3 AP and 1 STA. This test case consisted of
+ * low-battery from STA). We consider 3 AP and 1 STA. This test case consisted of
  * three sub tests:
  *   - The best AP sends its beacon later than the other APs. STA is expected
  *     to associate to the best AP.
  *   - The STA is using active scanning instead of passive, the rest of the
  *     APs works normally. STA is expected to associate to the best AP
- *   - The nearest AP is turned off after sending beacon and while STA is
+ *   - The low-battery AP is turned off after sending beacon and while STA is
  *     still scanning. STA is expected to associate to the second best AP.
  *
  * See \bugid{2399}
@@ -1740,11 +1740,11 @@ private:
   void TurnApOff (Ptr<Node> apNode);
   /**
    * Setup test
-   * \param nearestApBeaconGeneration set BeaconGeneration attribute of the nearest AP
+   * \param low-batteryApBeaconGeneration set BeaconGeneration attribute of the low-battery AP
    * \param staActiveProbe set ActiveProbing attribute of the STA
    * \return node container containing all nodes
    */
-  NodeContainer Setup (bool nearestApBeaconGeneration, bool staActiveProbe);
+  NodeContainer Setup (bool low-batteryApBeaconGeneration, bool staActiveProbe);
 
   Mac48Address m_associatedApBssid; ///< Associated AP's bssid
 };
@@ -1781,12 +1781,12 @@ StaWifiMacScanningTestCase::TurnApOff (Ptr<Node> apNode)
 }
 
 NodeContainer
-StaWifiMacScanningTestCase::Setup (bool nearestApBeaconGeneration, bool staActiveProbe)
+StaWifiMacScanningTestCase::Setup (bool low-batteryApBeaconGeneration, bool staActiveProbe)
 {
   NodeContainer apNodes;
   apNodes.Create (2);
 
-  Ptr<Node> apNodeNearest = CreateObject<Node> ();
+  Ptr<Node> apNodeLow-battery = CreateObject<Node> ();
   Ptr<Node> staNode = CreateObject<Node> ();
 
   YansWifiPhyHelper phy = YansWifiPhyHelper::Default ();
@@ -1798,13 +1798,13 @@ StaWifiMacScanningTestCase::Setup (bool nearestApBeaconGeneration, bool staActiv
   wifi.SetRemoteStationManager ("ns3::ConstantRateWifiManager");
 
   WifiMacHelper mac;
-  NetDeviceContainer apDevice, apDeviceNearest;
+  NetDeviceContainer apDevice, apDeviceLow-battery;
   mac.SetType ("ns3::ApWifiMac",
                "BeaconGeneration", BooleanValue (true));
   apDevice = wifi.Install (phy, mac, apNodes);
   mac.SetType ("ns3::ApWifiMac",
-               "BeaconGeneration", BooleanValue (nearestApBeaconGeneration));
-  apDeviceNearest = wifi.Install (phy, mac, apNodeNearest);
+               "BeaconGeneration", BooleanValue (low-batteryApBeaconGeneration));
+  apDeviceLow-battery = wifi.Install (phy, mac, apNodeLow-battery);
 
   NetDeviceContainer staDevice;
   mac.SetType ("ns3::StaWifiMac",
@@ -1814,19 +1814,19 @@ StaWifiMacScanningTestCase::Setup (bool nearestApBeaconGeneration, bool staActiv
   MobilityHelper mobility;
   Ptr<ListPositionAllocator> positionAlloc = CreateObject<ListPositionAllocator> ();
   positionAlloc->Add (Vector (0.0, 0.0, 0.0));  // Furthest AP
-  positionAlloc->Add (Vector (10.0, 0.0, 0.0)); // Second nearest AP
-  positionAlloc->Add (Vector (5.0, 5.0, 0.0));  // Nearest AP
+  positionAlloc->Add (Vector (10.0, 0.0, 0.0)); // Second low-battery AP
+  positionAlloc->Add (Vector (5.0, 5.0, 0.0));  // Low-battery AP
   positionAlloc->Add (Vector (6.0, 5.0, 0.0));  // STA
   mobility.SetPositionAllocator (positionAlloc);
 
   mobility.SetMobilityModel ("ns3::ConstantPositionMobilityModel");
   mobility.Install (apNodes);
-  mobility.Install (apNodeNearest);
+  mobility.Install (apNodeLow-battery);
   mobility.Install (staNode);
 
   Config::Connect ("/NodeList/*/DeviceList/*/$ns3::WifiNetDevice/Mac/$ns3::StaWifiMac/Assoc", MakeCallback (&StaWifiMacScanningTestCase::AssocCallback, this));
 
-  NodeContainer allNodes = NodeContainer (apNodes, apNodeNearest, staNode);
+  NodeContainer allNodes = NodeContainer (apNodes, apNodeLow-battery, staNode);
   return allNodes;
 }
 
@@ -1838,16 +1838,16 @@ StaWifiMacScanningTestCase::DoRun (void)
     RngSeedManager::SetRun (1);
 
     NodeContainer nodes = Setup (false, false);
-    Ptr<Node> nearestAp = nodes.Get (2);
-    Mac48Address nearestApAddr = DynamicCast<WifiNetDevice> (nearestAp->GetDevice (0))->GetMac ()->GetAddress ();
+    Ptr<Node> low-batteryAp = nodes.Get (2);
+    Mac48Address low-batteryApAddr = DynamicCast<WifiNetDevice> (low-batteryAp->GetDevice (0))->GetMac ()->GetAddress ();
 
-    Simulator::Schedule (Seconds (0.05), &StaWifiMacScanningTestCase::TurnBeaconGenerationOn, this, nearestAp);
+    Simulator::Schedule (Seconds (0.05), &StaWifiMacScanningTestCase::TurnBeaconGenerationOn, this, low-batteryAp);
 
     Simulator::Stop (Seconds (0.2));
     Simulator::Run ();
     Simulator::Destroy ();
 
-    NS_TEST_ASSERT_MSG_EQ (m_associatedApBssid, nearestApAddr, "STA is associated to the wrong AP");
+    NS_TEST_ASSERT_MSG_EQ (m_associatedApBssid, low-batteryApAddr, "STA is associated to the wrong AP");
   }
   m_associatedApBssid = Mac48Address ();
   {
@@ -1855,14 +1855,14 @@ StaWifiMacScanningTestCase::DoRun (void)
     RngSeedManager::SetRun (1);
 
     NodeContainer nodes = Setup (true, true);
-    Ptr<Node> nearestAp = nodes.Get (2);
-    Mac48Address nearestApAddr = DynamicCast<WifiNetDevice> (nearestAp->GetDevice (0))->GetMac ()->GetAddress ();
+    Ptr<Node> low-batteryAp = nodes.Get (2);
+    Mac48Address low-batteryApAddr = DynamicCast<WifiNetDevice> (low-batteryAp->GetDevice (0))->GetMac ()->GetAddress ();
 
     Simulator::Stop (Seconds (0.2));
     Simulator::Run ();
     Simulator::Destroy ();
 
-    NS_TEST_ASSERT_MSG_EQ (m_associatedApBssid, nearestApAddr, "STA is associated to the wrong AP");
+    NS_TEST_ASSERT_MSG_EQ (m_associatedApBssid, low-batteryApAddr, "STA is associated to the wrong AP");
   }
   m_associatedApBssid = Mac48Address ();
   {
@@ -1870,16 +1870,16 @@ StaWifiMacScanningTestCase::DoRun (void)
     RngSeedManager::SetRun (1);
 
     NodeContainer nodes = Setup (true, false);
-    Ptr<Node> nearestAp = nodes.Get (2);
-    Mac48Address secondNearestApAddr = DynamicCast<WifiNetDevice> (nodes.Get (1)->GetDevice (0))->GetMac ()->GetAddress ();
+    Ptr<Node> low-batteryAp = nodes.Get (2);
+    Mac48Address secondLow-batteryApAddr = DynamicCast<WifiNetDevice> (nodes.Get (1)->GetDevice (0))->GetMac ()->GetAddress ();
 
-    Simulator::Schedule (Seconds (0.1), &StaWifiMacScanningTestCase::TurnApOff, this, nearestAp);
+    Simulator::Schedule (Seconds (0.1), &StaWifiMacScanningTestCase::TurnApOff, this, low-batteryAp);
 
     Simulator::Stop (Seconds (1.5));
     Simulator::Run ();
     Simulator::Destroy ();
 
-    NS_TEST_ASSERT_MSG_EQ (m_associatedApBssid, secondNearestApAddr, "STA is associated to the wrong AP");
+    NS_TEST_ASSERT_MSG_EQ (m_associatedApBssid, secondLow-batteryApAddr, "STA is associated to the wrong AP");
   }
 }
 

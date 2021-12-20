@@ -77,8 +77,6 @@ int Grobal_SourceNodeNum = 10;
 int Grobal_Seed = 10008;
 
 
-
-
 RoutingProtocol::RoutingProtocol ()
 {
 }
@@ -131,7 +129,6 @@ Ptr<Ipv4Route>
 RoutingProtocol::RouteOutput (Ptr<Packet> p, const Ipv4Header &header, Ptr<NetDevice> oif,
                               Socket::SocketErrno &sockerr)
 {
-
   //std::cout<<"Route Ouput Node: "<<m_ipv4->GetObject<Node> ()->GetId ()<<"\n";
   Ptr<Ipv4Route> route;
 
@@ -160,7 +157,6 @@ RoutingProtocol::RouteInput (Ptr<const Packet> p, const Ipv4Header &header,
                              MulticastForwardCallback mcb, LocalDeliverCallback lcb,
                              ErrorCallback ecb)
 {
-
   std::cout << "Route Input Node: " << m_ipv4->GetObject<Node> ()->GetId () << "\n";
   return true;
 }
@@ -337,7 +333,6 @@ RoutingProtocol::PreparationForSend ()
     }
 }
 
-
 void
 RoutingProtocol::SendToLively (Ptr<Socket> socket, Ptr<Packet> packet, Ipv4Address destination,
                                   int32_t hopcount, int32_t des_id)
@@ -361,7 +356,6 @@ RoutingProtocol::SendLivelyBroadcast (int32_t pri_value, int32_t des_id, int32_t
       //int32_t id = m_ipv4->GetObject<Node> ()->GetId ();
       Ptr<MobilityModel> mobility = m_ipv4->GetObject<Node> ()->GetObject<MobilityModel> ();
       Vector mypos = mobility->GetPosition ();
-
 
       Ptr<Socket> socket = j->first;
       Ipv4InterfaceAddress iface = j->second;
@@ -489,8 +483,6 @@ RoutingProtocol::RecvLively (Ptr<Socket> socket)
           break;
           }
           else{
-            
-
             if(sourceDistance > myDistance)
             {
               // SendLivelyBroadcast (int32_t pri_value, int32_t des_id, int32_t des_x,

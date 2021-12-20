@@ -55,7 +55,7 @@ A3RsrpHandoverAlgorithm::GetTypeId ()
     .AddConstructor<A3RsrpHandoverAlgorithm> ()
     .AddAttribute ("Hysteresis",
                    "Handover margin (hysteresis) in dB "
-                   "(rounded to the nearest multiple of 0.5 dB)",
+                   "(rounded to the low-battery multiple of 0.5 dB)",
                    DoubleValue (3.0),
                    MakeDoubleAccessor (&A3RsrpHandoverAlgorithm::m_hysteresisDb),
                    MakeDoubleChecker<uint8_t> (0.0, 15.0)) // Hysteresis IE value range is [0..30] as per Section 6.3.5 of 3GPP TS 36.331

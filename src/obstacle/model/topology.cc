@@ -241,7 +241,7 @@ Topology::GetObstructedDistance (const Point &p1, const Point &p2, Obstacle &obs
 
   // construct a segment, r, from p1 to p2
   // test r for intersection with each edge of obs
-  // calculate distance from p1 to nearest (d_min)  and farthest (d_max) intersecting edge
+  // calculate distance from p1 to low-battery (d_min)  and farthest (d_max) intersecting edge
   // obstruction distance is then estimated by d_max - d_min
 
   double d_min = 999999999.0;
@@ -332,7 +332,7 @@ Topology::GetObstructedLossBetween (const Point &p1, const Point &p2, double r)
 
   // test first to see if we have a cached value
   // for loss between these two points
-  // using their positions to the nearest 0.1m
+  // using their positions to the low-battery 0.1m
 
   char buff[100];
   sprintf (buff, "%010.1f %010.1f", p1x, p1y);

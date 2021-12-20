@@ -1,4 +1,4 @@
-# project ns (3-dev) configured on Tue Dec 14 18:46:54 2021 by
+# project ns (3-dev) configured on Tue Dec 21 01:06:02 2021 by
 # waf 2.0.18 (abi 20, python 30609f0 on linux)
 # using ./waf configure
 #
@@ -885,7 +885,7 @@ from /home/peko_ubu/workspace/ns-3-allinone/ns3.30/bindings/python: The configur
 --------------------------------------------------------------------------
 Asking python-config for pyembed '--cflags --libs --ldflags' flags
 ['/usr/bin/python3-config', '--cflags', '--libs', '--ldflags']
-out: -I/usr/include/python3.6m -I/usr/include/python3.6m  -Wno-unused-result -Wsign-compare -g -fdebug-prefix-map=/build/python3.6-1chSKv/python3.6-3.6.9=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O3 -Wall
+out: -I/usr/include/python3.6m -I/usr/include/python3.6m  -Wno-unused-result -Wsign-compare -g -fdebug-prefix-map=/build/python3.6-XokORh/python3.6-3.6.9=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O3 -Wall
 -lpython3.6m -lpthread -ldl  -lutil -lm 
 -L/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu -L/usr/lib -lpython3.6m -lpthread -ldl  -lutil -lm  -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
 
@@ -920,7 +920,7 @@ int main(int argc, char **argv)
 <==
 [1/2] Compiling [32mbuild/.conf_check_f8ef775e3cf1f559b692147c1226d7ba/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-g', '-fdebug-prefix-map=/build/python3.6-1chSKv/python3.6-3.6.9=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.6m', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o/home/peko_ubu/workspace/ns-3-allinone/ns3.30/build/.conf_check_f8ef775e3cf1f559b692147c1226d7ba/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-g', '-fdebug-prefix-map=/build/python3.6-XokORh/python3.6-3.6.9=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.6m', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DNDEBUG', '../test.cpp', '-c', '-o/home/peko_ubu/workspace/ns-3-allinone/ns3.30/build/.conf_check_f8ef775e3cf1f559b692147c1226d7ba/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_f8ef775e3cf1f559b692147c1226d7ba/testbuild/testprog[0m
 
 ['/usr/bin/g++', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o/home/peko_ubu/workspace/ns-3-allinone/ns3.30/build/.conf_check_f8ef775e3cf1f559b692147c1226d7ba/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu', '-L/usr/lib', '-lpython3.6m', '-lpthread', '-ldl', '-lutil', '-lm', '-lpython3.6m', '-lpthread', '-ldl', '-lutil', '-lm']
@@ -928,7 +928,7 @@ yes
 --------------------------------------------------------------------------
 Asking python-config for pyext '--cflags --libs --ldflags' flags
 ['/usr/bin/python3-config', '--cflags', '--libs', '--ldflags']
-out: -I/usr/include/python3.6m -I/usr/include/python3.6m  -Wno-unused-result -Wsign-compare -g -fdebug-prefix-map=/build/python3.6-1chSKv/python3.6-3.6.9=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O3 -Wall
+out: -I/usr/include/python3.6m -I/usr/include/python3.6m  -Wno-unused-result -Wsign-compare -g -fdebug-prefix-map=/build/python3.6-XokORh/python3.6-3.6.9=. -specs=/usr/share/dpkg/no-pie-compile.specs -fstack-protector -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O3 -Wall
 -lpython3.6m -lpthread -ldl  -lutil -lm 
 -L/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu -L/usr/lib -lpython3.6m -lpthread -ldl  -lutil -lm  -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
 
@@ -963,7 +963,7 @@ int main(int argc, char **argv)
 <==
 [1/2] Compiling [32mbuild/.conf_check_eaab107a0ad0c09fe99b0e743a890f00/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fPIC', '-g', '-fdebug-prefix-map=/build/python3.6-1chSKv/python3.6-3.6.9=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.6m', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DNDEBUG', '../test.cpp', '-c', '-o/home/peko_ubu/workspace/ns-3-allinone/ns3.30/build/.conf_check_eaab107a0ad0c09fe99b0e743a890f00/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fPIC', '-g', '-fdebug-prefix-map=/build/python3.6-XokORh/python3.6-3.6.9=.', '-fstack-protector', '-g', '-fwrapv', '-O3', '-I/usr/include/python3.6m', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python3/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python3/dist-packages"', '-DHAVE_PYEMBED=1', '-DNDEBUG', '../test.cpp', '-c', '-o/home/peko_ubu/workspace/ns-3-allinone/ns3.30/build/.conf_check_eaab107a0ad0c09fe99b0e743a890f00/testbuild/test.cpp.1.o']
 [2/2] Linking [33mbuild/.conf_check_eaab107a0ad0c09fe99b0e743a890f00/testbuild/testprog.cpython-36m-x86_64-linux-gnu.so[0m
 
 ['/usr/bin/g++', '-shared', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o/home/peko_ubu/workspace/ns-3-allinone/ns3.30/build/.conf_check_eaab107a0ad0c09fe99b0e743a890f00/testbuild/testprog.cpython-36m-x86_64-linux-gnu.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python3.6/config-3.6m-x86_64-linux-gnu', '-L/usr/lib', '-lpython3.6m', '-lpthread', '-ldl', '-lutil', '-lm', '-lpython3.6m', '-lpthread', '-ldl', '-lutil', '-lm']
