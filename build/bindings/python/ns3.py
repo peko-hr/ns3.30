@@ -31,7 +31,6 @@ from ns.propagation import *
 from ns.sixlowpan import *
 from ns.spectrum import *
 from ns.stats import *
-from ns.tap_bridge import *
 from ns.topology_read import *
 from ns.traffic_control import *
 from ns.uan import *
